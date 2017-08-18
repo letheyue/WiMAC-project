@@ -1,0 +1,1325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="C91E4F21DDB9ED6C3F4F3B836744EA93" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;Calculates the Log-Likelihood Ratios (LLR), i.e. the LLR soft bit values, for power normalized noisy complex QAM symbols.&lt;/p&gt;\n\n&lt;p&gt;This VI uses approximations which allow to calculate the LLR metrics in a simplified, but computational efficient manner.&lt;/p&gt;\n\n&lt;p&gt;These approximations corresponds to calculating the LLR values as distance of the received equalized QAM symbol to the nearest corresponding partition/decision boundary.&lt;/p&gt;\n\n&lt;p&gt;I and Q part of the received equalized QAM symbol are handle separately.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Latency: 10 cycles&lt;/strong&gt;&lt;/p&gt;"</p.UserDescription>
+    <Icon Id="613" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="2622" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="2623" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="2624" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="2625" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="2626" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Id="2627" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="2628" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]LLR&#xD;&#xA;DEMAPPER" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+            <FontSetting FontSize="5" Id="2629" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="135" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="14" />
+      <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 50" Parameter="17" />
+      <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 140" Parameter="1935" />
+      <ConnectorPaneTerminal Hotspot="0 35" />
+      <ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 110" Parameter="2561" />
+      <ConnectorPaneTerminal Hotspot="25 0" ListViewHotspot="0 125" Parameter="2582" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 95" Parameter="1999" />
+      <ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 65" Parameter="23" />
+      <ConnectorPaneTerminal Hotspot="40 25" />
+      <ConnectorPaneTerminal Hotspot="40 35" />
+      <ConnectorPaneTerminal Hotspot="15 40" ListViewHotspot="0 80" Parameter="26" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="-450 75 40 15" DataItem="26" Id="27" Label="53" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="-450 220 40 15" DataItem="14" Id="15" Label="49" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="-450 125 40 15" DataItem="17" Id="18" Label="50" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="822 125 40 15" DataItem="23" Id="24" Label="52" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <FeedbackNode ArrowDirection="Right" Bounds="405 120 30 20" DelayCount="4" EnableTerminalVisible="False" Id="514" />
+      <FeedbackNode ArrowDirection="Right" Bounds="81.5 70 30 20" EnableTerminalVisible="False" Id="522" />
+      <FeedbackNode ArrowDirection="Right" Bounds="81.5 175 30 20" EnableTerminalVisible="False" Id="525" />
+      <FeedbackNode ArrowDirection="Right" Bounds="81.5 120 30 20" EnableTerminalVisible="False" Id="526" />
+      <FeedbackNode ArrowDirection="Right" Bounds="785 215 30 20" EnableTerminalVisible="False" Id="555" />
+      <FeedbackNode ArrowDirection="Right" Bounds="785 120 30 20" EnableTerminalVisible="False" Id="556" />
+      <Wire Id="911" Joints="N(556:output) N(24:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="915" Joints="N(514:output) N(556:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="919" Joints="N(27:Value) N(2094:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="936" Joints="N(526:output) N(514:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="938" Joints="N(2094:s? t:f) N(522:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <ComplexToRealImaginary Bounds="-35 220 30 30" Id="1602" />
+      <CaseStructure Bounds="240 275 70 70" DataType="UInt8" Default="1768" Id="1643" Selected="1768" UserSelectorBounds="0 0 70 17">
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1644" Pattern="0">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1648" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x8</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1649" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1652" Joints="N(1648:Out) N(1653:1644)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1654" Joints="N(1649:Out) v(-5) N(1655:1644)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1645" Pattern="1">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1650" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF8</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1651" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1656" Joints="N(1650:Out) N(1653:1645)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1657" Joints="N(1651:Out) v(-5) N(1655:1645)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1768" Pattern="Default">
+          <Literal Bounds="10.5 20 39.5 16" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1769" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1770" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1771" Joints="N(1769:Out) N(1653:1768)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1772" Joints="N(1770:Out) v(-5) N(1655:1768)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="1646" Terminals="1643=1647, 1644, 1645, 1768" />
+        <CaseStructure.Tunnel Bounds="61 25 13 10" Docking="Right" Id="1653" Terminals="1643=1676, 1644=1652, 1645=1656, 1768=1771" />
+        <CaseStructure.Tunnel Bounds="61 35 13 10" Docking="Right" Id="1655" Terminals="1643=1677, 1644=1654, 1645=1657, 1768=1772" />
+      </CaseStructure>
+      <Wire Id="1647" Joints="N(2063:R1) h(103.5) v(65) N(1646:1643)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="395 220 40 40" DomainName="NI.Appframeworks.Common" Id="1658" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="395 290 40 40" DomainName="NI.Appframeworks.Common" Id="1659" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="395 360 40 40" DomainName="NI.Appframeworks.Common" Id="1660" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="395 430 40 40" DomainName="NI.Appframeworks.Common" Id="1661" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Literal Bounds="383 230 12 10" DataType="FXP(6.0)" Facade="DockedConstantFacade" Id="1663" Label="1664" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:" />
+        <DockedConstantFacade UndockedSize="40 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="1665" Joints="N(1663:Out) h(5) v(-20) h(-10) v(20) N(1658:L1)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="383 240 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="1666" Label="1667" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>False</p.Data>
+        <BooleanBehavior />
+        <DockedConstantFacade UndockedSize="26 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="1668" Joints="N(1666:Out) N(1658:L2)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="80 275 30 15" Id="1670" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>1</p.Text>
+      </Comment>
+      <Wire Id="1676" Joints="N(1653:1643) N(1659:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1677" Joints="N(1655:1643) N(1659:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="240 345 70 70" DataType="UInt8" Default="1680" Id="1679" Selected="1680" UserSelectorBounds="0 0 70 17">
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1680" Pattern="0, Default">
+          <Literal Bounds="10.5 20 39.5 16" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1685" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1686" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1687" Joints="N(1685:Out) N(1683:1680)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1688" Joints="N(1686:Out) v(-5) N(1684:1680)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1694" Pattern="2">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1695" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x4</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1696" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1697" Joints="N(1695:Out) N(1683:1694)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1698" Joints="N(1696:Out) v(-5) N(1684:1694)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1699" Pattern="3">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1700" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFFC</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1701" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1702" Joints="N(1700:Out) N(1683:1699)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1703" Joints="N(1701:Out) v(-5) N(1684:1699)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1704" Pattern="4">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1705" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xC</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1706" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1707" Joints="N(1705:Out) N(1683:1704)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1708" Joints="N(1706:Out) v(-5) N(1684:1704)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1709" Pattern="5">
+          <Literal Bounds="8 20 42 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1710" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF4</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1711" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1712" Joints="N(1710:Out) N(1683:1709)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1713" Joints="N(1711:Out) v(-5) N(1684:1709)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="1682" Terminals="1679=2068, 1680, 1694, 1699, 1704, 1709" />
+        <CaseStructure.Tunnel Bounds="61 25 13 10" Docking="Right" Id="1683" Terminals="1679=1714, 1680=1687, 1694=1697, 1699=1702, 1704=1707, 1709=1712" />
+        <CaseStructure.Tunnel Bounds="61 35 13 10" Docking="Right" Id="1684" Terminals="1679=1715, 1680=1688, 1694=1698, 1699=1703, 1704=1708, 1709=1713" />
+      </CaseStructure>
+      <Wire Id="1714" Joints="N(1683:1679) N(1660:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1715" Joints="N(1684:1679) N(1660:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="240 415 70 70" DataType="UInt8" Default="1719" Id="1718" Selected="1719" UserSelectorBounds="0 0 70 17">
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1719" Pattern="0, Default">
+          <Literal Bounds="10.5 20 39.5 16" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1727" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1728" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1729" Joints="N(1727:Out) N(1725:1719)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1730" Joints="N(1728:Out) v(-5) N(1726:1719)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1720" Pattern="2">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1731" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x2</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1732" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1733" Joints="N(1731:Out) N(1725:1720)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1734" Joints="N(1732:Out) v(-5) N(1726:1720)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1721" Pattern="3">
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1736" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1738" Joints="N(1736:Out) v(-5) N(1726:1721)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2447" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFFE</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Wire Id="2448" Joints="N(2447:Out) N(1725:1721)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1722" Pattern="4">
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1740" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1742" Joints="N(1740:Out) v(-5) N(1726:1722)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2449" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x6</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Wire Id="2450" Joints="N(2449:Out) N(1725:1722)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1723" Pattern="5">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1743" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFFA</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1744" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1745" Joints="N(1743:Out) N(1725:1723)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1746" Joints="N(1744:Out) v(-5) N(1726:1723)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1748" Pattern="8">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1749" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xA</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1750" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1751" Joints="N(1749:Out) N(1725:1748)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1752" Joints="N(1750:Out) v(-5) N(1726:1748)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1753" Pattern="9">
+          <Literal Bounds="8 20 42 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1754" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF6</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1755" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1756" Joints="N(1754:Out) N(1725:1753)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1757" Joints="N(1755:Out) v(-5) N(1726:1753)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1758" Pattern="16">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1759" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xE</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1760" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1761" Joints="N(1759:Out) N(1725:1758)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1762" Joints="N(1760:Out) v(-5) N(1726:1758)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="1763" Pattern="17">
+          <Literal Bounds="8 20 42 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1764" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF2</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1765" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="1766" Joints="N(1764:Out) N(1725:1763)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1767" Joints="N(1765:Out) v(-5) N(1726:1763)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="1724" Terminals="1718=1747, 1719, 1720, 1721, 1722, 1723, 1748, 1753, 1758, 1763" />
+        <CaseStructure.Tunnel Bounds="61 25 13 10" Docking="Right" Id="1725" Terminals="1718=1773, 1719=1729, 1720=1733, 1721=2448, 1722=2450, 1723=1745, 1748=1751, 1753=1756, 1758=1761, 1763=1766" />
+        <CaseStructure.Tunnel Bounds="61 35 13 10" Docking="Right" Id="1726" Terminals="1718=1774, 1719=1730, 1720=1734, 1721=1738, 1722=1742, 1723=1746, 1748=1752, 1753=1757, 1758=1762, 1763=1767" />
+      </CaseStructure>
+      <Wire Id="1747" Joints="N(2063:R3) h(83.5) v(185) N(1724:1718)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1773" Joints="N(1725:1718) N(1661:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1774" Joints="N(1726:1718) N(1661:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1781" Joints="N(522:output) h(243.5) v(175) B(2) N(1658:L3) B(2) v(70) B(4) N(1659:L3) B(4) v(70) B(6) N(1660:L3) B(6) v(70) B(8) N(1661:L3) B(8) v(75) B(10) N(1803:L3) B(10) v(70) B(12) N(1804:L3) B(12) v(70) B(14) N(1805:L3) B(14) v(70) N(1806:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1802" Joints="N(2070:R1) h(103.5) v(65) N(2455:2451)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="395 505 40 40" DomainName="NI.Appframeworks.Common" Id="1803" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="395 575 40 40" DomainName="NI.Appframeworks.Common" Id="1804" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="395 645 40 40" DomainName="NI.Appframeworks.Common" Id="1805" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="395 715 40 40" DomainName="NI.Appframeworks.Common" Id="1806" Target="LLR\ Softbit\ Calculation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data" />
+            <Parameter Id="L1" Desc="border" />
+            <Parameter Id="L2" Desc="negate" />
+            <Parameter Id="L3" Desc="scale" />
+            <Parameter Id="R0" Desc="softbit" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.0)" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(9.8)" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="1807" Joints="N(2070:R0) h(223.5) B(1) N(1803:L0) B(1) v(70) B(3) N(1804:L0) B(3) v(70) B(5) N(1805:L0) B(5) v(70) N(1806:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="80 475 30 15" Id="1808" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>1</p.Text>
+      </Comment>
+      <Wire Id="1809" Joints="N(2456:2451) N(1804:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1810" Joints="N(2457:2451) N(1804:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1840" Joints="N(2070:R2) h(93.5) v(125) N(2476:2470)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1841" Joints="N(2477:2470) N(1805:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1842" Joints="N(2478:2470) N(1805:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1892" Joints="N(2070:R3) h(83.5) v(185) N(2509:2499)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1893" Joints="N(2510:2499) N(1806:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1894" Joints="N(2511:2499) N(1806:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="383 516 12 10" DataType="FXP(6.0)" Facade="DockedConstantFacade" Id="1895" Label="1899" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:" />
+        <DockedConstantFacade UndockedSize="40 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="1896" Joints="N(1895:Out) h(-5) v(-1) N(1803:L1)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="383 526 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="1897" Label="1900" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>False</p.Data>
+        <BooleanBehavior />
+        <DockedConstantFacade UndockedSize="26 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="1898" Joints="N(1897:Out) h(-5) v(-1) N(1803:L2)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1902" Joints="N(2245:data out) h(35) v(270) N(2070:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1903" Joints="N(2234:data out) N(2063:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="405 175 30 20" DelayCount="4" EnableTerminalVisible="False" Id="1908" />
+      <Wire Id="1910" Joints="N(525:output) N(1908:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="470 135 280 610" DataType="@429b54a6a2be4ad3a95b8bfc059cba96" Default="1913" Id="1911" Selected="1912" UserSelectorBounds="68 0 144 17">
+        <CaseStructure.Case Bounds="5 5 270 600" Id="1912" Pattern="&quot;LTE&quot;">
+          <CaseStructure Bounds="70 35 185 560" DataType="@74a6a15c09714036a3cf6e04e48709c3" Default="2103" Id="2102" Selected="2103" UserSelectorBounds="19 0 147 17">
+            <CaseStructure.Case Bounds="5 5 175 550" Id="2103" Pattern="&quot;BPSK&quot;, Default">
+              <BuildArray Bounds="125 40 40 80" CanToggle="False" Id="2118" Terminals="outArray=2119, c0t0v=2179, c1t0v=2122, c2t0v=2122, c3t0v=2122, c4t0v=2122, c5t0v=2122, c6t0v=2122, c7t0v=2122" VerticalChunkCount="8" />
+              <Wire Id="2119" Joints="N(2118:outArray) N(2117:2103)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2122" Joints="N(2440:2103) h(106) v(30) B(2) N(2118:c1t0v) B(2) v(10) B(4) N(2118:c2t0v) B(4) v(10) B(6) N(2118:c3t0v) B(6) v(10) B(8) N(2118:c4t0v) B(8) v(10) B(10) N(2118:c5t0v) B(10) v(10) B(12) N(2118:c6t0v) B(12) v(10) N(2118:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Add Bounds="20 40 30 30" Id="2175" Terminals="o=2179, c0t0v=2178, c1t0v=2177">
+                <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="o" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+              </Add>
+              <Wire Id="2177" Joints="N(2113:2103) h(11) v(-270) N(2175:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2178" Joints="N(2109:2103) N(2175:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2179" Joints="N(2175:o) h(5) v(-10) N(2118:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Comment Bounds="20 125 144 68" Id="2568" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>"Correct calculation \r\nwould be sqrt(I²+Q²)\r\nbut simple add \r\nperforms sufficient and\r\nis way cheaper."</p.Text>
+              </Comment>
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 175 550" Id="2104" Pattern="&quot;QPSK&quot;">
+              <BuildArray Bounds="90 40 40 80" CanToggle="False" Id="2124" Terminals="outArray=2125, c0t0v=2126, c1t0v=2127, c2t0v=2129, c3t0v=2129, c4t0v=2129, c5t0v=2129, c6t0v=2129, c7t0v=2129" VerticalChunkCount="8" />
+              <Wire Id="2125" Joints="N(2124:outArray) N(2117:2104)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2126" Joints="N(2109:2104) N(2124:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2127" Joints="N(2113:2104) h(5) v(-275) N(2124:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2129" Joints="N(2440:2104) h(72) v(40) B(2) N(2124:c2t0v) B(2) v(10) B(4) N(2124:c3t0v) B(4) v(10) B(6) N(2124:c4t0v) B(6) v(10) B(8) N(2124:c5t0v) B(8) v(10) B(10) N(2124:c6t0v) B(10) v(10) N(2124:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 175 550" Id="2105" Pattern="&quot;16-QAM&quot;">
+              <BuildArray Bounds="110 40 40 80" CanToggle="False" Id="2131" Terminals="outArray=2132, c0t0v=2133, c1t0v=2182, c2t0v=2181, c3t0v=2136, c4t0v=2138, c5t0v=2138, c6t0v=2138, c7t0v=2138" VerticalChunkCount="8" />
+              <Wire Id="2132" Joints="N(2131:outArray) N(2117:2105)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2133" Joints="N(2109:2105) N(2131:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2136" Joints="N(2114:2105) h(26) v(-325) N(2131:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2138" Joints="N(2440:2105) h(91) v(60) B(2) N(2131:c4t0v) B(2) v(10) B(4) N(2131:c5t0v) B(4) v(10) B(6) N(2131:c6t0v) B(6) v(10) N(2131:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2181" Joints="N(2110:2105) h(5) v(-50) N(2131:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2182" Joints="N(2113:2105) h(16) v(-275) N(2131:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 175 550" Id="2106" Pattern="&quot;64-QAM&quot;">
+              <BuildArray Bounds="115 40 40 80" CanToggle="False" Id="2140" Terminals="outArray=2141, c0t0v=2142, c1t0v=2187, c2t0v=2191, c3t0v=2186, c4t0v=2196, c5t0v=2147, c6t0v=2149, c7t0v=2149" VerticalChunkCount="8" />
+              <Wire Id="2141" Joints="N(2140:outArray) N(2117:2106)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2142" Joints="N(2109:2106) N(2140:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2147" Joints="N(2115:2106) h(46) v(-375) N(2140:c5t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2149" Joints="N(2440:2106) h(101) v(80) B(2) N(2140:c6t0v) B(2) v(10) N(2140:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2186" Joints="N(2114:2106) h(36) v(-325) N(2140:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2187" Joints="N(2113:2106) h(26) v(-275) N(2140:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2191" Joints="N(2110:2106) h(6) v(-50) N(2140:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2196" Joints="N(2111:2106) h(16) v(-100) N(2140:c4t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 175 550" Id="2107" Pattern="&quot;256-QAM&quot;">
+              <ArrayLiteral Bounds="50 40 101 26" DataType="FXP(8.0)[8]" Facade="NationalInstruments.MocCommon.SourceModel.IArrayBehavior" Id="2171" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>
+                  <Array Lengths="8">
+                    <Elements>0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</Elements>
+                  </Array>
+                </p.Data>
+                <ArrayBehavior ElementType="FXP(5.3)">
+                  <p.DefaultElementValue>0x0</p.DefaultElementValue>
+                </ArrayBehavior>
+                <Literal Bounds="47 5 40 15" DataType="FXP(8.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2172">
+                  <p.Data>0x0</p.Data>
+                  <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_8_0:G6" />
+                </Literal>
+              </ArrayLiteral>
+              <Wire Id="2173" Joints="N(2171:Out) N(2117:2107)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Comment Bounds="25 95 135 42" Id="2174" xmlns="http://www.ni.com/MocCommon">
+                <p.Text>"256 QAM not defined\r\nin LTE"</p.Text>
+              </Comment>
+            </CaseStructure.Case>
+            <CaseStructure.Selector Bounds="-4 5 13 10" Docking="Left" Id="2108" Terminals="2102=2169, 2103, 2104, 2105, 2106, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 45 13 10" Docking="Left" Id="2109" Terminals="2102=2205, 2103=2178, 2104=2126, 2105=2133, 2106=2142, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="2110" Terminals="2102=2208, 2103, 2104, 2105=2181, 2106=2191, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 185 13 10" Docking="Left" Id="2111" Terminals="2102=2216, 2103, 2104, 2105, 2106=2196, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 330 13 10" Docking="Left" Id="2113" Terminals="2102=2221, 2103=2177, 2104=2127, 2105=2182, 2106=2187, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 400 13 10" Docking="Left" Id="2114" Terminals="2102=2223, 2103, 2104, 2105=2136, 2106=2186, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 470 13 10" Docking="Left" Id="2115" Terminals="2102=2225, 2103, 2104, 2105, 2106=2147, 2107" />
+            <CaseStructure.Tunnel Bounds="176 45 13 10" Docking="Right" Id="2117" Terminals="2102=2445, 2103=2119, 2104=2125, 2105=2132, 2106=2141, 2107=2173" />
+            <CaseStructure.Tunnel Bounds="-4 255 13 10" Docking="Left" Id="2219" Terminals="2102=2218, 2103, 2104, 2105, 2106, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 540 13 10" Docking="Left" Id="2228" Terminals="2102=2227, 2103, 2104, 2105, 2106, 2107" />
+            <CaseStructure.Tunnel Bounds="-4 25 13 10" Docking="Left" Id="2440" Terminals="2102=2439, 2103=2122, 2104=2129, 2105=2138, 2106=2149, 2107" />
+          </CaseStructure>
+          <Wire Id="2169" Joints="N(1923:1912) N(2108:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Negate Bounds="20 70 30 30" Id="2202">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Wire Id="2204" Joints="N(1956:1912) N(2202:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2205" Joints="N(2202:-x) N(2109:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Negate Bounds="20 140 30 30" Id="2206">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Wire Id="2207" Joints="N(1959:1912) N(2206:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2208" Joints="N(2206:-x) N(2110:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Negate Bounds="20 210 30 30" Id="2209">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Negate Bounds="20 280 30 30" Id="2210">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Negate Bounds="20 355 30 30" Id="2211">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Negate Bounds="20 425 30 30" Id="2212">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Negate Bounds="20 495 30 30" Id="2213">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Negate Bounds="20 565 30 30" Id="2214">
+            <ConfigurableDataTypeTerminal DataType="FXP(8.0)" DesiredType="FXP(8.0)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+          </Negate>
+          <Wire Id="2215" Joints="N(1964:1912) N(2209:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2216" Joints="N(2209:-x) N(2111:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2217" Joints="N(1970:1912) N(2210:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2218" Joints="N(2210:-x) N(2219:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2220" Joints="N(1974:1912) N(2211:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2221" Joints="N(2211:-x) N(2113:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2222" Joints="N(1977:1912) N(2212:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2223" Joints="N(2212:-x) N(2114:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2224" Joints="N(1983:1912) N(2213:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2225" Joints="N(2213:-x) N(2115:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2226" Joints="N(1987:1912) N(2214:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2227" Joints="N(2214:-x) N(2228:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2439" Joints="N(2434:1912) N(2440:2102)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2445" Joints="N(2117:2102) N(1995:1912)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 270 600" Id="1913" Pattern="&quot;WIFI&quot;, Default">
+          <CaseStructure Bounds="70 35 180 565" DataType="@74a6a15c09714036a3cf6e04e48709c3" Default="1919" Id="1918" Selected="1950" UserSelectorBounds="20 0 141 17">
+            <CaseStructure.Case Bounds="5 5 170 555" Id="1919" Pattern="&quot;BPSK&quot;, Default">
+              <BuildArray Bounds="80 40 40 80" CanToggle="False" Id="2012" Terminals="outArray=2013, c0t0v=2014, c1t0v=2017, c2t0v=2017, c3t0v=2017, c4t0v=2017, c5t0v=2017, c6t0v=2017, c7t0v=2017" VerticalChunkCount="8" />
+              <Wire Id="2013" Joints="N(2012:outArray) N(1996:1919)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2014" Joints="N(1954:1919) N(2012:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2017" Joints="N(2431:1919) h(66) v(30) B(2) N(2012:c1t0v) B(2) v(10) B(4) N(2012:c2t0v) B(4) v(10) B(6) N(2012:c3t0v) B(6) v(10) B(8) N(2012:c4t0v) B(8) v(10) B(10) N(2012:c5t0v) B(10) v(10) B(12) N(2012:c6t0v) B(12) v(10) N(2012:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 170 555" Id="1920" Pattern="&quot;QPSK&quot;">
+              <BuildArray Bounds="90 40 40 80" CanToggle="False" Id="2024" Terminals="outArray=2025, c0t0v=2026, c1t0v=2027, c2t0v=2030, c3t0v=2030, c4t0v=2030, c5t0v=2030, c6t0v=2030, c7t0v=2030" VerticalChunkCount="8" />
+              <Wire Id="2025" Joints="N(2024:outArray) N(1996:1920)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2026" Joints="N(1954:1920) N(2024:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2027" Joints="N(1973:1920) h(5) v(-275) N(2024:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2030" Joints="N(2431:1920) h(72) v(40) B(2) N(2024:c2t0v) B(2) v(10) B(4) N(2024:c3t0v) B(4) v(10) B(6) N(2024:c4t0v) B(6) v(10) B(8) N(2024:c5t0v) B(8) v(10) B(10) N(2024:c6t0v) B(10) v(10) N(2024:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 170 555" Id="1949" Pattern="&quot;16-QAM&quot;">
+              <BuildArray Bounds="110 40 40 80" CanToggle="False" Id="2036" Terminals="outArray=2037, c0t0v=2038, c1t0v=2039, c2t0v=2040, c3t0v=2041, c4t0v=2044, c5t0v=2044, c6t0v=2044, c7t0v=2044" VerticalChunkCount="8" />
+              <Wire Id="2037" Joints="N(2036:outArray) N(1996:1949)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2038" Joints="N(1954:1949) N(2036:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2039" Joints="N(1961:1949) h(5) v(-60) N(2036:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2040" Joints="N(1973:1949) h(16) v(-265) N(2036:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2041" Joints="N(1979:1949) h(26) v(-325) N(2036:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2044" Joints="N(2431:1949) h(91) v(60) B(2) N(2036:c4t0v) B(2) v(10) B(4) N(2036:c5t0v) B(4) v(10) B(6) N(2036:c6t0v) B(6) v(10) N(2036:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 170 555" Id="1950" Pattern="&quot;64-QAM&quot;">
+              <BuildArray Bounds="115 40 40 80" CanToggle="False" Id="2048" Terminals="outArray=2049, c0t0v=2050, c1t0v=2051, c2t0v=2052, c3t0v=2053, c4t0v=2054, c5t0v=2055, c6t0v=2058, c7t0v=2058" VerticalChunkCount="8" />
+              <Wire Id="2049" Joints="N(2048:outArray) N(1996:1950)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2050" Joints="N(1954:1950) N(2048:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2051" Joints="N(1961:1950) h(6) v(-60) N(2048:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2052" Joints="N(1966:1950) h(16) v(-120) N(2048:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2053" Joints="N(1973:1950) h(26) v(-255) N(2048:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2054" Joints="N(1979:1950) h(36) v(-315) N(2048:c4t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2055" Joints="N(1982:1950) h(46) v(-375) N(2048:c5t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="2058" Joints="N(2431:1950) h(101) v(80) B(2) N(2048:c6t0v) B(2) v(10) N(2048:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 170 555" Id="1951" Pattern="&quot;256-QAM&quot;">
+              <BuildArray Bounds="85 40 40 80" CanToggle="False" Id="1952" Terminals="outArray=1994, c0t0v=1953, c1t0v=1962, c2t0v=1967, c3t0v=1989, c4t0v=1990, c5t0v=1991, c6t0v=1992, c7t0v=1993" VerticalChunkCount="8" />
+              <Wire Id="1953" Joints="N(1954:1951) N(1952:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1962" Joints="N(1961:1951) h(11) v(-60) N(1952:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1967" Joints="N(1966:1951) h(21) v(-120) N(1952:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1989" Joints="N(1969:1951) h(31) v(-180) N(1952:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1990" Joints="N(1973:1951) h(41) v(-245) N(1952:c4t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1991" Joints="N(1979:1951) h(51) v(-305) N(1952:c5t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1992" Joints="N(1982:1951) h(61) v(-365) N(1952:c6t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1993" Joints="N(1986:1951) h(71) v(-425) N(1952:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+              <Wire Id="1994" Joints="N(1952:outArray) N(1996:1951)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Selector Bounds="-4 5 13 10" Docking="Left" Id="1921" Terminals="1918=1922, 1919, 1920, 1949, 1950, 1951" />
+            <CaseStructure.Tunnel Bounds="-4 45 13 10" Docking="Left" Id="1954" Terminals="1918=1955, 1919=2014, 1920=2026, 1949=2038, 1950=2050, 1951=1953" />
+            <CaseStructure.Tunnel Bounds="-4 115 13 10" Docking="Left" Id="1961" Terminals="1918=1960, 1919, 1920, 1949=2039, 1950=2051, 1951=1962" />
+            <CaseStructure.Tunnel Bounds="-4 185 13 10" Docking="Left" Id="1966" Terminals="1918=1965, 1919, 1920, 1949, 1950=2052, 1951=1967" />
+            <CaseStructure.Tunnel Bounds="-4 255 13 10" Docking="Left" Id="1969" Terminals="1918=1971, 1919, 1920, 1949, 1950, 1951=1989" />
+            <CaseStructure.Tunnel Bounds="-4 330 13 10" Docking="Left" Id="1973" Terminals="1918=1975, 1919, 1920=2027, 1949=2040, 1950=2053, 1951=1990" />
+            <CaseStructure.Tunnel Bounds="-4 400 13 10" Docking="Left" Id="1979" Terminals="1918=1978, 1919, 1920, 1949=2041, 1950=2054, 1951=1991" />
+            <CaseStructure.Tunnel Bounds="-4 470 13 10" Docking="Left" Id="1982" Terminals="1918=1984, 1919, 1920, 1949, 1950=2055, 1951=1992" />
+            <CaseStructure.Tunnel Bounds="-4 540 13 10" Docking="Left" Id="1986" Terminals="1918=1988, 1919, 1920, 1949, 1950, 1951=1993" />
+            <CaseStructure.Tunnel Bounds="171 45 13 10" Docking="Right" Id="1996" Terminals="1918=1997, 1919=2013, 1920=2025, 1949=2037, 1950=2049, 1951=1994" />
+            <CaseStructure.Tunnel Bounds="-4 25 13 10" Docking="Left" Id="2431" Terminals="1918=2430, 1919=2017, 1920=2030, 1949=2044, 1950=2058, 1951" />
+          </CaseStructure>
+          <Wire Id="1922" Joints="N(1923:1913) N(1921:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1955" Joints="N(1956:1913) N(1954:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1960" Joints="N(1959:1913) N(1961:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1965" Joints="N(1964:1913) N(1966:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1971" Joints="N(1970:1913) N(1969:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1975" Joints="N(1974:1913) N(1973:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1978" Joints="N(1977:1913) N(1979:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1984" Joints="N(1983:1913) N(1982:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1988" Joints="N(1987:1913) N(1986:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1997" Joints="N(1996:1918) N(1995:1913)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2430" Joints="N(2434:1913) N(2431:1918)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="1914" Terminals="1911=2200, 1912, 1913" />
+        <CaseStructure.Tunnel Bounds="-4 45 13 10" Docking="Left" Id="1923" Terminals="1911=1924, 1912=2169, 1913=1922" />
+        <CaseStructure.Tunnel Bounds="-4 85 13 10" Docking="Left" Id="1956" Terminals="1911=1957, 1912=2204, 1913=1955" />
+        <CaseStructure.Tunnel Bounds="-4 155 13 10" Docking="Left" Id="1959" Terminals="1911=1958, 1912=2207, 1913=1960" />
+        <CaseStructure.Tunnel Bounds="-4 225 13 10" Docking="Left" Id="1964" Terminals="1911=1963, 1912=2215, 1913=1965" />
+        <CaseStructure.Tunnel Bounds="-4 295 13 10" Docking="Left" Id="1970" Terminals="1911=1968, 1912=2217, 1913=1971" />
+        <CaseStructure.Tunnel Bounds="-4 370 13 10" Docking="Left" Id="1974" Terminals="1911=1972, 1912=2220, 1913=1975" />
+        <CaseStructure.Tunnel Bounds="-4 440 13 10" Docking="Left" Id="1977" Terminals="1911=1976, 1912=2222, 1913=1978" />
+        <CaseStructure.Tunnel Bounds="-4 510 13 10" Docking="Left" Id="1983" Terminals="1911=1981, 1912=2224, 1913=1984" />
+        <CaseStructure.Tunnel Bounds="-4 580 13 10" Docking="Left" Id="1987" Terminals="1911=1985, 1912=2226, 1913=1988" />
+        <CaseStructure.Tunnel Bounds="271 85 13 10" Docking="Right" Id="1995" Terminals="1911=1998, 1912=2445, 1913=1997" />
+        <CaseStructure.Tunnel Bounds="-4 65 13 10" Docking="Left" Id="2434" Terminals="1911=2433, 1912=2439, 1913=2430" />
+      </CaseStructure>
+      <Wire Id="1924" Joints="N(1908:output) N(1923:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="-450 25 40 15" DataItem="1935" Id="1937" Label="1939" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="FXP(8.8)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="1957" Joints="N(1658:R0) N(1956:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1958" Joints="N(1659:R0) N(1959:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1963" Joints="N(1660:R0) N(1964:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1968" Joints="N(1661:R0) N(1970:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1972" Joints="N(1803:R0) N(1974:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1976" Joints="N(1804:R0) N(1977:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1981" Joints="N(1805:R0) N(1983:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1985" Joints="N(1806:R0) N(1987:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1998" Joints="N(1995:1911) N(555:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="827 220 40 15" DataItem="1999" Id="2004" Label="2006" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="FXP(8.0)[8]" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <MethodCall Bounds="76.5 220 40 40" DomainName="NI.Appframeworks.Common" Id="2063" Target="LLR\ Border\ Decision\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R1" Desc="border 0" />
+            <Parameter Id="R2" Desc="border 1" />
+            <Parameter Id="R3" Desc="border 2" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.10)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="2068" Joints="N(2063:R2) h(93.5) v(125) N(1682:1679)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="76.5 505 40 40" DomainName="NI.Appframeworks.Common" Id="2070" Target="LLR\ Border\ Decision\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R1" Desc="border 0" />
+            <Parameter Id="R2" Desc="border 1" />
+            <Parameter Id="R3" Desc="border 2" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="FXP(6.10)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="FXP(6.10)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Comment Bounds="-25 0 150 28" Id="553" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"invert due to xilinx way \r\nto interpret LLRs"</p.Text>
+      </Comment>
+      <Negate Bounds="-15 50 30 30" Id="2093">
+        <ConfigurableDataTypeTerminal DataType="FXP(9.8)" DesiredType="FXP(9.8)" Direction="Output" GuardBits="12" Hotspot="30 15" Id="-x" LimitStrategy="Error" TypeOverrideKind="Exact" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Saturate:ConvergentRounding" xmlns="http://www.ni.com/PlatformFramework" />
+      </Negate>
+      <Select Bounds="40 60 40 40" Id="2094" />
+      <Wire Id="2095" Joints="N(2093:-x) N(2094:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <WireComment AttachedTo="2570" Bounds="240 217 56 16" Id="2100" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>56</p.ExpandedWidth>
+        <p.Point>268 225</p.Point>
+        <p.Text>I Path</p.Text>
+      </WireComment>
+      <WireComment AttachedTo="1807" Bounds="245 502 60 16" Id="2101" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>60</p.ExpandedWidth>
+        <p.Point>275 510</p.Point>
+        <p.Text>Q Path</p.Text>
+      </WireComment>
+      <Wire Id="2200" Joints="N(2563:Value) N(1914:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="460 45 217 28" Id="2229" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"sign intepretation swapped between\r\nWIFI and LTE"</p.Text>
+      </Comment>
+      <ArrayLiteral Bounds="805 203 12 10" DataType="FXP(8.0)[8]" Facade="DockedConstantFacade" Id="2230" Label="2232" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>
+          <Array Lengths="8">
+            <Elements>0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</Elements>
+          </Array>
+        </p.Data>
+        <ArrayBehavior ElementType="FXP(8.0)">
+          <p.DefaultElementValue>0x0</p.DefaultElementValue>
+        </ArrayBehavior>
+        <Literal Bounds="47 5 40 15" DataType="FXP(8.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2231">
+          <p.Data>0x0</p.Data>
+          <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_8_0:G6" />
+        </Literal>
+        <DockedConstantFacade UndockedSize="101 26" />
+      </ArrayLiteral>
+      <Wire Facade="WireInvisibleFacade" Id="2233" Joints="N(2230:Out) h(5) v(-10) h(-22) N(555:initial value)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <ReinterpretNumber Bounds="5 220 30 15" Id="2234" RestrictToSameWordLength="True" />
+      <Wire Id="2240" Joints="N(1602:x) N(2234:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="-34.5 205 39.5 16" DataType="FXP(6.10)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2241" Label="2242" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_10:" />
+      </Literal>
+      <Wire Id="2243" Joints="N(2241:Out) h(15) N(2234:type) B(2) N(2245:type)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2244" Joints="N(1602:y) N(2245:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <ReinterpretNumber Bounds="5 235 30 15" Id="2245" RestrictToSameWordLength="True" />
+      <HighThroughputMultiply Bounds="-110 215 36 55" Id="2247" PipeliningStages="3" RegisterOutputs="True" WithFourWireMode="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+        <ConfigurableDataTypeTerminal DataType="CFXP(2.14)" DesiredType="FXP(2.14)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x*y" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Wrap:Truncate" xmlns="http://www.ni.com/PlatformFramework" />
+      </HighThroughputMultiply>
+      <Wire Id="2249" Joints="N(15:Value) N(2247:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <HighThroughputMultiply Bounds="-110 20 36 55" Id="2253" PipeliningStages="3" RegisterOutputs="True" WithFourWireMode="True" xmlns="http://www.ni.com/LabVIEW.FPGA">
+        <ConfigurableDataTypeTerminal DataType="FXP(9.8)" DesiredType="FXP(9.8)" Direction="Output" GuardBits="12" Hotspot="36 20" Id="x*y" LimitStrategy="Error" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimit="MaximumWordLength" WordLengthLimitOffset="16" WordLengthReductionMode="Wrap:Truncate" xmlns="http://www.ni.com/PlatformFramework" />
+      </HighThroughputMultiply>
+      <Literal Bounds="-122 55 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="2257" Label="2258" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>True</p.Data>
+        <BooleanBehavior />
+        <DockedConstantFacade UndockedSize="26 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="2259" Joints="N(2257:Out) N(2253:input valid)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="-122 250 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="2260" Label="2261" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>True</p.Data>
+        <BooleanBehavior />
+        <DockedConstantFacade UndockedSize="26 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="2262" Joints="N(2260:Out) N(2247:input valid)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="-380 285 220 100" DataType="@74a6a15c09714036a3cf6e04e48709c3" Default="2266" Id="2265" Selected="2266" UserSelectorBounds="36 0 147 17">
+        <CaseStructure.Case Bounds="5 5 210 90" Id="2266" Pattern="&quot;BPSK&quot;, Default">
+          <Literal Bounds="16.5 70 39.5 16" DataType="UFXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2277" Label="2279" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x800000</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_0_24:" />
+          </Literal>
+          <Literal Bounds="17 15 172 16" DataType="UFXP(1.23)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2278" Label="2280" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFF</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_1_23:" />
+          </Literal>
+          <Wire Id="2281" Joints="N(2278:Out) N(2271:2266)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2282" Joints="N(2277:Out) h(145) v(-30) N(2273:2266)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="2277" Bounds="16 51 51 14" Id="2279" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>sqrt(1)/2</p.Text>
+          </NodeLabel>
+          <NodeLabel AttachedTo="2278" Bounds="17 34 41 14" Id="2280" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>inverse</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 210 90" Id="2267" Pattern="&quot;QPSK&quot;">
+          <Literal Bounds="15 70 181 15" DataType="UFXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2251" Label="2252" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xB504F3</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_0_24:" />
+          </Literal>
+          <Literal Bounds="15 15 174 15" DataType="UFXP(1.23)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2263" Label="2264" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xB504F3</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_1_23:" />
+          </Literal>
+          <Wire Id="2270" Joints="N(2263:Out) N(2271:2267)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2272" Joints="N(2251:Out) h(5) v(-30) N(2273:2267)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="2251" Bounds="15 51 46 16" Id="2252" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>sqrt(2)/2</p.Text>
+          </NodeLabel>
+          <NodeLabel AttachedTo="2263" Bounds="15 33 38 16" Id="2264" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>inverse</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 210 90" Id="2283" Pattern="&quot;16-QAM&quot;">
+          <Literal Bounds="15 70 181 15" DataType="UFXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2284" Label="2286" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xCA62C2</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_0_24:" />
+          </Literal>
+          <Literal Bounds="15 15 174 15" DataType="UFXP(1.23)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2285" Label="2287" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xA1E89B</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_1_23:" />
+          </Literal>
+          <Wire Id="2288" Joints="N(2285:Out) N(2271:2283)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2289" Joints="N(2284:Out) h(5) v(-30) N(2273:2283)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="2284" Bounds="15 51 52 16" Id="2286" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>sqrt(10)/4</p.Text>
+          </NodeLabel>
+          <NodeLabel AttachedTo="2285" Bounds="15 33 38 16" Id="2287" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>inverse</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 210 90" Id="2300" Pattern="&quot;64-QAM&quot;">
+          <Literal Bounds="15 70 181 15" DataType="UFXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2301" Label="2303" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xCF623A</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_0_24:" />
+          </Literal>
+          <Literal Bounds="15 15 174 15" DataType="UFXP(1.23)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2302" Label="2304" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x9E01B3</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_1_23:" />
+          </Literal>
+          <Wire Id="2305" Joints="N(2302:Out) N(2271:2300)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2306" Joints="N(2301:Out) h(5) v(-30) N(2273:2300)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="2301" Bounds="15 51 52 16" Id="2303" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>sqrt(42)/8</p.Text>
+          </NodeLabel>
+          <NodeLabel AttachedTo="2302" Bounds="15 33 38 16" Id="2304" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>inverse</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 210 90" Id="2307" Pattern="&quot;256-QAM&quot;">
+          <Literal Bounds="15 70 181 15" DataType="UFXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2308" Label="2310" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xD09D4E</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_0_24:" />
+          </Literal>
+          <Literal Bounds="15 15 174 15" DataType="UFXP(1.23)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2309" Label="2311" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x9D130E</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:UFXP_1_23:" />
+          </Literal>
+          <Wire Id="2312" Joints="N(2309:Out) N(2271:2307)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2313" Joints="N(2308:Out) h(5) v(-30) N(2273:2307)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="2308" Bounds="15 51 65 16" Id="2310" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>sqrt(170)/16</p.Text>
+          </NodeLabel>
+          <NodeLabel AttachedTo="2309" Bounds="15 33 38 16" Id="2311" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>inverse</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="2268" Terminals="2265=2293, 2266, 2267, 2283, 2300, 2307" />
+        <CaseStructure.Tunnel Bounds="211 20 13 10" Docking="Right" Id="2271" Terminals="2265=2324, 2266=2281, 2267=2270, 2283=2288, 2300=2305, 2307=2312" />
+        <CaseStructure.Tunnel Bounds="211 45 13 10" Docking="Right" Id="2273" Terminals="2265=2276, 2266=2282, 2267=2272, 2283=2289, 2300=2306, 2307=2313" />
+      </CaseStructure>
+      <Wire Id="2276" Joints="N(2273:2265) h(21) v(-95) N(2247:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="-105 120 30 20" DelayCount="4" EnableTerminalVisible="False" Id="2290" />
+      <FeedbackNode ArrowDirection="Right" Bounds="-105 175 30 20" DelayCount="4" EnableTerminalVisible="False" Id="2291" />
+      <Wire Id="2293" Joints="N(2580:Value) h(15) B(1) N(2291:input) B(1) v(145) N(2268:2265)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2294" Joints="N(2291:output) N(525:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2296" Joints="N(18:Value) N(2290:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2297" Joints="N(2290:output) N(526:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="-380 240 222 28" Id="2298" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"prescaling to align with borders\r\ncompensated together w/ noise coeff"</p.Text>
+      </Comment>
+      <Comment Bounds="-60 255 120 28" Id="2299" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>""multiply" by 16\r\nfor integer borders"</p.Text>
+      </Comment>
+      <Wire Id="2316" Joints="N(2247:x*y) N(1602:x + iy)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="235 -115 122 15" Id="2317" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>Overall latency: 10</p.Text>
+      </Comment>
+      <Wire Id="2324" Joints="N(2271:2265) h(11) v(-265) N(2253:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="405.5 200 39.5 16" DataType="FXP(8.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2015" Label="2016" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_8_0:" />
+      </Literal>
+      <Wire Id="2433" Joints="N(2015:Out) N(2434:1911)" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="245 560 70 70" DataType="UInt8" Default="2454" Id="2451" Selected="2454" UserSelectorBounds="0 0 70 17">
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2452" Pattern="0">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2458" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x8</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2459" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2460" Joints="N(2458:Out) N(2456:2452)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2461" Joints="N(2459:Out) v(-5) N(2457:2452)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2453" Pattern="1">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2462" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF8</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2463" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2464" Joints="N(2462:Out) N(2456:2453)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2465" Joints="N(2463:Out) v(-5) N(2457:2453)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2454" Pattern="Default">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2466" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2467" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2468" Joints="N(2466:Out) N(2456:2454)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2469" Joints="N(2467:Out) v(-5) N(2457:2454)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="2455" Terminals="2451=1802, 2452, 2453, 2454" />
+        <CaseStructure.Tunnel Bounds="61 25 13 10" Docking="Right" Id="2456" Terminals="2451=1809, 2452=2460, 2453=2464, 2454=2468" />
+        <CaseStructure.Tunnel Bounds="61 35 13 10" Docking="Right" Id="2457" Terminals="2451=1810, 2452=2461, 2453=2465, 2454=2469" />
+      </CaseStructure>
+      <CaseStructure Bounds="245 630 70 70" DataType="UInt8" Default="2471" Id="2470" Selected="2471" UserSelectorBounds="0 0 70 17">
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2471" Pattern="0, Default">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2479" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2480" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2481" Joints="N(2479:Out) N(2477:2471)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2482" Joints="N(2480:Out) v(-5) N(2478:2471)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2472" Pattern="2">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2483" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x4</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2484" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2485" Joints="N(2483:Out) N(2477:2472)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2486" Joints="N(2484:Out) v(-5) N(2478:2472)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2473" Pattern="3">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2487" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFFC</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2488" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2489" Joints="N(2487:Out) N(2477:2473)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2490" Joints="N(2488:Out) v(-5) N(2478:2473)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2474" Pattern="4">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2491" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xC</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2492" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2493" Joints="N(2491:Out) N(2477:2474)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2494" Joints="N(2492:Out) v(-5) N(2478:2474)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2475" Pattern="5">
+          <Literal Bounds="8 20 42 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2495" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF4</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2496" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2497" Joints="N(2495:Out) N(2477:2475)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2498" Joints="N(2496:Out) v(-5) N(2478:2475)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="2476" Terminals="2470=1840, 2471, 2472, 2473, 2474, 2475" />
+        <CaseStructure.Tunnel Bounds="61 25 13 10" Docking="Right" Id="2477" Terminals="2470=1841, 2471=2481, 2472=2485, 2473=2489, 2474=2493, 2475=2497" />
+        <CaseStructure.Tunnel Bounds="61 35 13 10" Docking="Right" Id="2478" Terminals="2470=1842, 2471=2482, 2472=2486, 2473=2490, 2474=2494, 2475=2498" />
+      </CaseStructure>
+      <CaseStructure Bounds="245 700 70 70" DataType="UInt8" Default="2500" Id="2499" Selected="2508" UserSelectorBounds="0 0 70 17">
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2500" Pattern="0, Default">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2512" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2513" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2514" Joints="N(2512:Out) N(2510:2500)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2515" Joints="N(2513:Out) v(-5) N(2511:2500)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2501" Pattern="2">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2516" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x2</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2517" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2518" Joints="N(2516:Out) N(2510:2501)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2519" Joints="N(2517:Out) v(-5) N(2511:2501)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2502" Pattern="3">
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2520" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2521" Joints="N(2520:Out) v(-5) N(2511:2502)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2522" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFFE</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Wire Id="2523" Joints="N(2522:Out) N(2510:2502)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2503" Pattern="4">
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2524" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2525" Joints="N(2524:Out) v(-5) N(2511:2503)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2526" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x6</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Wire Id="2527" Joints="N(2526:Out) N(2510:2503)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2504" Pattern="5">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2528" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFFA</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2529" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2530" Joints="N(2528:Out) N(2510:2504)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2531" Joints="N(2529:Out) v(-5) N(2511:2504)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2505" Pattern="8">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2532" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xA</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2533" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2534" Joints="N(2532:Out) N(2510:2505)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2535" Joints="N(2533:Out) v(-5) N(2511:2505)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2506" Pattern="9">
+          <Literal Bounds="8 20 42 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2536" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF6</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2537" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2538" Joints="N(2536:Out) N(2510:2506)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2539" Joints="N(2537:Out) v(-5) N(2511:2506)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2507" Pattern="16">
+          <Literal Bounds="10 20 40 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2540" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xE</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2541" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>False</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2542" Joints="N(2540:Out) N(2510:2507)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2543" Joints="N(2541:Out) v(-5) N(2511:2507)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 60 60" Id="2508" Pattern="17">
+          <Literal Bounds="8 20 42 15" DataType="FXP(6.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2544" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0xFFFFFFFFFFFFFFF2</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_6_0:G6" />
+          </Literal>
+          <Literal Bounds="25 35 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="2545" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>True</p.Data>
+            <BooleanBehavior />
+          </Literal>
+          <Wire Id="2546" Joints="N(2544:Out) N(2510:2508)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2547" Joints="N(2545:Out) v(-5) N(2511:2508)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="2509" Terminals="2499=1892, 2500, 2501, 2502, 2503, 2504, 2505, 2506, 2507, 2508" />
+        <CaseStructure.Tunnel Bounds="61 25 13 10" Docking="Right" Id="2510" Terminals="2499=1893, 2500=2514, 2501=2518, 2502=2523, 2503=2527, 2504=2530, 2505=2534, 2506=2538, 2507=2542, 2508=2546" />
+        <CaseStructure.Tunnel Bounds="61 35 13 10" Docking="Right" Id="2511" Terminals="2499=1894, 2500=2515, 2501=2519, 2502=2521, 2503=2525, 2504=2531, 2505=2535, 2506=2539, 2507=2543, 2508=2547" />
+      </CaseStructure>
+      <Wire Id="2554" Joints="N(555:output) N(2004:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2558" Joints="N(1937:Value) N(2253:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2560" Joints="N(2253:x*y) h(39) v(25) B(2) N(2093:x) B(2) v(30) N(2094:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="-450 155 40 15" DataItem="2561" Id="2563" Label="2567" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@429b54a6a2be4ad3a95b8bfc059cba96" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="2570" Joints="N(2063:R0) h(223.5) B(1) N(1658:L0) B(1) v(70) B(3) N(1659:L0) B(3) v(70) B(5) N(1660:L0) B(5) v(70) N(1661:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <NodeLabel AttachedTo="27" Bounds="-538 75 83 14" Id="53" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>invert LLR sign</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="15" Bounds="-494 220 39 14" Id="49" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>data in</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="18" Bounds="-495 125 40 14" Id="50" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>valid in</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="24" Bounds="867 125 46 16" Id="52" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>valid out</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1663" Bounds="383 230 0 0" Id="1664" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>border</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1666" Bounds="383 240 0 0" Id="1667" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>negate</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1895" Bounds="383 516 0 0" Id="1899" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>border</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1897" Bounds="383 526 0 0" Id="1900" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>negate</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1937" Bounds="-545 25 90 14" Id="1939" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>noise coefficient</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="2004" Bounds="872 220 36 16" Id="2006" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>output</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="2230" Bounds="805 203 0 0" Id="2232" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>initial value</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="2241" Bounds="-34.5 205 0 0" Id="2242" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>x</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="2257" Bounds="-122 55 0 0" Id="2258" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>input valid</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="2260" Bounds="-122 250 0 0" Id="2261" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>input valid</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="2015" Bounds="405.5 200 0 0" Id="2016" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>element</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="2563" Bounds="-568 155 113 14" Id="2567" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>bit mapping scheme</p.Text>
+      </NodeLabel>
+      <DataAccessor Bounds="-450 180 40 15" DataItem="2582" Id="2580" Label="2581" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NodeLabel AttachedTo="2580" Bounds="-517 180 62 14" Id="2581" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>modulation</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="16" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[ComplexNumber]0x1;0x0" Label="[UIModel]41" Left="[float]335" Maximum="[ComplexNumber]0x7FFFp-14;0x7FFFp-14" MinHeight="[float]22" Minimum="[ComplexNumber]0xFp+1;0xFp+1" RadixVisibility="[SMVisibility]Collapsed" Top="[float]36" Value="{DataItemBinding Id=14}" ValueFormatter="[string]LVFXP:CFXP_2_14&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]CFXP(2.14)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="19" IsReadOnly="[bool]False" Label="[UIModel]42" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]94" TrueContent="[string]On" Value="{DataItemBinding Id=17}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="25" IsReadOnly="[bool]True" Label="[UIModel]44" Left="[float]564" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]94" TrueContent="[string]On" Value="{DataItemBinding Id=23}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="28" IsReadOnly="[bool]False" Label="[UIModel]45" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]180" TrueContent="[string]On" Value="{DataItemBinding Id=26}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="41" LabelOwner="[UIModel]16" Left="[float]335" Text="[string]data in" Top="[float]13" Width="[float]37" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="42" LabelOwner="[UIModel]19" Left="[float]335" Text="[string]valid in" Top="[float]71" Width="[float]38" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="44" LabelOwner="[UIModel]25" Left="[float]564" Text="[string]valid out" Top="[float]71" Width="[float]46" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="45" LabelOwner="[UIModel]28" Left="[float]335" Text="[string]invert LLR sign" Top="[float]157" Width="[float]77" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1938" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1" Label="[UIModel]2076" Left="[float]335" Maximum="[Number]0x7FFFp-8" MinHeight="[float]22" Minimum="[Number]0xFp+7" Top="[float]324" Value="{DataItemBinding Id=1935}" ValueFormatter="[string]LVFXP:FXP_8_8&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]FXP(8.8)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="2076" LabelOwner="[UIModel]1938" Left="[float]335" Text="[string]noise coefficient" Top="[float]301" Width="[float]87" xmlns="http://www.ni.com/PanelCommon" />
+      <ArrayViewer ArrayElement="[UIModel]2002" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]8" Height="[float]36" Id="2005" IsFixedSize="[bool]True" Label="[UIModel]2571" Left="[float]564" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]36" Value="{DataItemBinding Id=1999}" Width="[float]114" xmlns="http://www.ni.com/PanelCommon">
+        <p.DefaultElementValue>0x0</p.DefaultElementValue>
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="2002" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[Number]0x1" Left="[float]53" Maximum="[Number]0x7F" MinHeight="[float]22" Minimum="[Number]0xFp+7" Name="[string]Child" Top="[float]7" Value="[Number]0x0" ValueFormatter="[string]LVFXP:FXP_8_0&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]FXP(8.0)" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      </ArrayViewer>
+      <Label Height="[float]16" Id="2571" LabelOwner="[UIModel]2005" Left="[float]564" Text="[string]output" Top="[float]13" Width="[float]36" xmlns="http://www.ni.com/PanelCommon" />
+      <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="2564" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]2572" Left="[float]443" Top="[float]36" Value="{DataItemBinding Id=2561}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <EnumSelectorInfo DisplayValue="[string]WIFI" Value="[ushort]0" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]LTE" Value="[ushort]1" ValueType="[Type]UInt16" />
+      </EnumSelector>
+      <Label Height="[float]16" Id="2572" LabelOwner="[UIModel]2564" Left="[float]443" Text="[string]bit mapping scheme" Top="[float]13" Width="[float]109" xmlns="http://www.ni.com/PanelCommon" />
+      <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="2592" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]2593" Left="[float]335" Top="[float]266" Value="{DataItemBinding Id=2582}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" p4:ControlDefinitionChecksum="ZuCLy+vrbMMDMH4f/3F9jg==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <p4:p.TypeDefinitionTargets>
+          <p4:TypeDefinitionTarget TargetName="Modulation\.gtype:ControlDefinition" />
+        </p4:p.TypeDefinitionTargets>
+        <EnumSelectorInfo DisplayValue="[string]BPSK" Value="[ushort]0" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]QPSK" Value="[ushort]1" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]16-QAM" Value="[ushort]2" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]64-QAM" Value="[ushort]3" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]256-QAM" Value="[ushort]4" ValueType="[Type]UInt16" />
+      </EnumSelector>
+      <Label Height="[float]16" Id="2593" LabelOwner="[UIModel]2592" Left="[float]335" Text="[string]modulation" Top="[float]243" Width="[float]62" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem CallDirection="Input" CallIndex="1" DataType="CFXP(2.14)" Id="14" Name="data in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0;0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;power normalized noisy complex QAM input data&lt;/p&gt;&lt;p&gt;(in noise-less case the mean power over all possible QAM symbol constellations is assumed to be 1)&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="2" DataType="Boolean" Id="17" Name="valid in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;marks valid QAM input data&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="2" DataType="Boolean" Id="23" Name="valid out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Marks valid LLR output data&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="3" DataType="Boolean" Id="26" Name="invert LLR sign" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>True</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;boolean switch to enable the sign inversion for the LLR output values&lt;/p&gt;\n\n&lt;ul&gt;\n\t&lt;li&gt;Normal interpretation (invert llr == false)\n\t&lt;ul&gt;\n\t\t&lt;li&gt;LLR &amp;gt; 0 indicates logical bit value 1&lt;/li&gt;\n\t\t&lt;li&gt;LLR &amp;lt; 0 indicates logical bit value 0&lt;/li&gt;\n\t&lt;/ul&gt;\n\t&lt;/li&gt;\n\t&lt;li&gt;Inverted interpretation (invert llr == true)\n\t&lt;ul&gt;\n\t\t&lt;li&gt;LLR &amp;gt; 0 indicates logical bit value 0&lt;/li&gt;\n\t\t&lt;li&gt;LLR &amp;lt; 0 indicates logical bit value 1&lt;/li&gt;\n\t&lt;/ul&gt;\n\t&lt;/li&gt;\n&lt;/ul&gt;"</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="4" CallUsage="Optional" DataType="FXP(8.8)" Id="1935" Name="noise coefficient" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x3200</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;inverse noise variance - can be varied with every QAM input symbol&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="FXP(8.0)[8]" Id="1999" Name="output" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>null</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;LLR output data - array of 8 LLR values per QAM input symbol&lt;/p&gt;&lt;p&gt;Note: For lower order modulation schemes unused LLR output values will be set to zero.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="5" DataType="@429b54a6a2be4ad3a95b8bfc059cba96" Id="2561" Name="bit mapping scheme" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;defines the used bit-pattern-to-QAM symbol mapping scheme (LTE, WIFI)&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="@74a6a15c09714036a3cf6e04e48709c3" Id="2582" Name="modulation" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+        <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+      </p.TypeDefinitionTargets>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;used modulation scheme (BPSK, QPSK, 16QAM, 64QAM, 256QAM [for WIFI only])&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <IconTable xmlns="http://www.ni.com/PlatformFramework">
+      <p.IconModel Target="LLR\ Softbit\ Calculation\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]LLR SOFTBIT&#xD;&#xA;CALC" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="LLR\ Border\ Decision\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]LLR BORDER&#xD;&#xA;DECISION" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+    </IconTable>
+  </VirtualInstrument>
+  <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+    <p.TypeReference TypeId="429b54a6a2be4ad3a95b8bfc059cba96">
+      <Enumeration>
+        <Members>
+          <EnumerationMember Value="0" Name="WIFI" />
+          <EnumerationMember Value="1" Name="LTE" />
+        </Members>
+        <DataType>
+          <UInt16 />
+        </DataType>
+      </Enumeration>
+    </p.TypeReference>
+    <p.TypeReference TypeId="74a6a15c09714036a3cf6e04e48709c3">
+      <Typedef TypedefName="Modulation.gtype" UnderlyingType="@86155ab615ef42daa1e7e4a2d09bd39f" />
+    </p.TypeReference>
+    <p.TypeReference TypeId="86155ab615ef42daa1e7e4a2d09bd39f">
+      <Enumeration>
+        <Members>
+          <EnumerationMember Value="0" Name="BPSK" />
+          <EnumerationMember Value="1" Name="QPSK" />
+          <EnumerationMember Value="2" Name="16-QAM" />
+          <EnumerationMember Value="3" Name="64-QAM" />
+          <EnumerationMember Value="4" Name="256-QAM" />
+        </Members>
+        <DataType>
+          <UInt16 />
+        </DataType>
+      </Enumeration>
+    </p.TypeReference>
+  </DataTypeReferenceTable>
+</SourceFile>

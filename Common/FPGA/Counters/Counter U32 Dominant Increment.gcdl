@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="BA4BA4FBB57C4750A3BD3B57440AD785" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Implements a counter that wraps at unsigned 32 bit border.&lt;/p&gt;&lt;p&gt;Increment is executed on assertion of reset as well (result will be 1).&lt;/p&gt;&lt;p&gt;no latency&lt;/p&gt;</p.UserDescription>
+    <Icon Id="37" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Background="[SMSolidColorBrush]#00ffffff" Height="[float]50" Id="106" Left="[float]0" Top="[float]0" Width="[float]50">
+        <Canvas Id="107" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 46,50 L 4,50 C 1.791,50 0,48.209 0,46 L 0,4 C 0,1.791 1.791,0 4,0 L 46,0 C 48.209,0 50,1.791 50,4 L 50,46 C 50,48.209 48.209,50 46,50 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]50" Id="108" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 46,49 L 4,49 C 2.343,49 1,47.657 1,46 L 1,4 C 1,2.343 2.343,1 4,1 L 46,1 C 47.657,1 49,2.343 49,4 L 49,46 C 49,47.657 47.657,49 46,49 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]50" Id="109" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 4,2 L 46,2 C 47.105,2 48,2.895 48,4 L 48,46 C 48,47.105 47.105,48 46,48 L 4,48 C 2.895,48 2,47.105 2,46 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]50" Id="110" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 29.903,41.49 L 30.619,43.574 L 29.187,43.574 L 29.903,41.49 Z M 48,38 L 48,46 C 48,47.1 47.1,48 46,48 L 4,48 L 28,38 L 48,38 Z M 32.934,45.816 L 30.785,40 L 29.058,40 L 26.91,45.816 L 28.422,45.816 L 28.827,44.64 L 30.979,44.64 L 31.384,45.816 L 32.934,45.816 Z M 37.937,40 L 33.77,40 L 33.77,45.816 L 35.262,45.816 L 35.262,43.332 L 37.742,43.332 L 37.742,42.207 L 35.262,42.207 L 35.262,41.125 L 37.938,41.125 L 37.938,40 Z M 47,40 L 45.471,40 L 44.534,44.004 L 43.516,40 L 42.02,40 L 40.947,44.004 L 40.054,40 L 38.489,40 L 40.055,45.816 L 41.714,45.816 L 42.731,42.027 L 43.771,45.816 L 45.434,45.816 L 47,40 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]50" Id="111" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Text Height="[float]37" Id="112" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]COUNT U32&#xD;&#xA;DOMINANT&#xD;&#xA;INCREMENT" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]48">
+            <FontSetting FontSize="6" Id="113" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="50" Id="11" ListViewHeight="75" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="16" />
+      <ConnectorPaneTerminal Hotspot="0 15" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" />
+      <ConnectorPaneTerminal Hotspot="0 45" />
+      <ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 65" Parameter="22" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="35 0" />
+      <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 50" Parameter="19" />
+      <ConnectorPaneTerminal Hotspot="50 15" />
+      <ConnectorPaneTerminal Hotspot="50 25" />
+      <ConnectorPaneTerminal Hotspot="50 35" />
+      <ConnectorPaneTerminal Hotspot="50 45" />
+      <ConnectorPaneTerminal Hotspot="15 50" />
+      <ConnectorPaneTerminal Hotspot="25 50" />
+      <ConnectorPaneTerminal Hotspot="35 50" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="12" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="13" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="14">
+      <DataAccessor Bounds="345 100 40 15" DataItem="19" Id="20" Label="29" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt32" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="65 100 40 15" DataItem="16" Id="17" Label="28" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="65 135 40 15" DataItem="22" Id="23" Label="30" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Literal Bounds="65 120 40 15" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="31" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+      </Literal>
+      <Literal Bounds="195 160 40 15" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="32" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+      </Literal>
+      <Select Bounds="270 85 40 40" Id="33" />
+      <FeedbackNode Bounds="220 180 30 20" EnableTerminalVisible="False" Id="34" />
+      <Select Bounds="120 120 40 40" Id="35" />
+      <Increment Bounds="180 55 30 30" Id="36" />
+      <Wire Id="46" Joints="N(32:Out) N(34:initial value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="49" Joints="N(36:x+1) h(50) v(20) N(33:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="51" Joints="N(31:Out) N(35:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="52" Joints="N(23:Value) N(35:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="53" Joints="N(17:Value) N(33:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="68" Joints="N(34:output) h(-105) v(-35) N(35:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="69" Joints="N(33:s? t:f) h(15) B(1) N(20:Value) B(1) v(85) N(34:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="70" Joints="N(35:s? t:f) h(10) v(-20) B(2) N(33:f) B(2) v(-50) N(36:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <NodeLabel AttachedTo="20" Bounds="390 100 52 16" Id="29" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>count out</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="17" Bounds="6 100 54 16" Id="28" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>increment</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="23" Bounds="34 135 26 16" Id="30" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>reset</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="15" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="18" IsReadOnly="[bool]False" Label="[UIModel]25" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]36" TrueContent="[string]On" Value="{DataItemBinding Id=16}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="21" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]26" Left="[float]415" MinHeight="[float]22" Top="[float]36" Value="{DataItemBinding Id=19}" ValueType="[Type]UInt32" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="24" IsReadOnly="[bool]False" Label="[UIModel]27" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]122" TrueContent="[string]On" Value="{DataItemBinding Id=22}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="25" LabelOwner="[UIModel]18" Left="[float]335" Text="[string]increment" Top="[float]14" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Id="26" LabelOwner="[UIModel]21" Left="[float]415" Text="[string]count out" Top="[float]14" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Id="27" LabelOwner="[UIModel]24" Left="[float]335" Text="[string]reset" Top="[float]100" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="Boolean" Id="16" Name="increment" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>True</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Increments the counter by one.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="UInt32" Id="19" Name="count out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;current counter value&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="2" DataType="Boolean" Id="22" Name="reset" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;resets the counter to 0.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+  </VirtualInstrument>
+</SourceFile>

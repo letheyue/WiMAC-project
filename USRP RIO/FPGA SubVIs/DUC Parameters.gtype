@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="40D79223CC67B3E737CC5F4C6D20B40D" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@f81f609c0a1e46778c4a71bb01a4b8ca" Friends="" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+			<TypeDefinitionTarget TargetName="niInstr\ DSP\ v1\ Shared\.lvlib__IQ\ Impairments\.gtype" />
+			<TypeDefinitionTarget TargetName="niInstr\ DSP\ v1\ Shared\.lvlib__IQ\ Gain\.gtype" />
+		</p.TypeDefinitionTargets>
+		<Icon Id="15" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="16" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="17" Left="[float]0" TemplateName="GrayNoText" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="18" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="19" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]40" Id="20" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]40">
+					<LVImage Height="[float]30" Id="21" Left="[float]5" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACdSURBVEhL7Y5BEoAgDAP9/6cxGsAKbWmd8cYeGBPaxaP8xlYPbPXAVg9s9YCpPt7U1kAd0HfmUcd+vXxTc0N7zbA4Pam5MWX774Cyfzfy7LxDu7MU8oMwyrPzBHWHOFdkboC5D9hERGk1CJZpNZuIKKeW0bkiCzXoE86yblmqgTrUsW5DapDaJ1E1mEcdL0ioAaYltc3wZSfIb+pSThE1rdFD2eXVAAAAAElFTkSuQmCC" Top="[float]5" Width="[float]30" />
+				</Canvas>
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@f81f609c0a1e46778c4a71bb01a4b8ca" Id="22" Name="Cluster">
+			<p.DefaultValue>0x0_0x0_0x0_0x0_0x0_0x0_0x0_0x0_0x0_0x0_0x0_0x0_0x0_0x0_</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="niInstr\ DSP\ v1\ Shared\.lvlib__IQ\ Impairments\.gtype" />
+				<TypeDefinitionTarget TargetName="niInstr\ DSP\ v1\ Shared\.lvlib__IQ\ Gain\.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="10" xmlns="http://www.ni.com/PlatformFramework">
+		<ProjectSettings Id="11" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Bindings="Envoy,DefinitionReference,DefaultTarget,EmbeddedReference,ScopingEnvoy,NameScopingEnvoy" Id="12" ModelDefinitionType="DefaultTarget" Name="DUC\ Parameters\.gtype" NameTracksFileName="True">
+			<DefaultTarget />
+			<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,NationalInstruments.PanelCommon.SourceModel.ControlDefinition,EmbeddedReference" Id="13" ModelDefinitionType="NationalInstruments.PanelCommon.SourceModel.ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="14" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@f81f609c0a1e46778c4a71bb01a4b8ca" Height="[float]710" Id="24" Label="[UIModel]63" Left="[float]79" Top="[float]36" Value="{DataItemBinding Id=22}" Width="[float]106" xmlns="http://www.ni.com/PanelCommon">
+						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="27" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-48" Label="[UIModel]64" Left="[float]5" Maximum="[Number]0x7FFFFFFFFFFFp-48" MinHeight="[float]22" Minimum="[Number]0xFp-1" Top="[float]22" Value="{ClusterBinding FieldName=frequency\ shift}" ValueFormatter="[string]LVFXP:FXP_0_48&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(0.48)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@3cee102ae3704fd383294047822a2a00" Height="[float]348" Id="68" Label="[UIModel]85" Left="[float]5" Top="[float]87" Value="{ClusterBinding FieldName=impairments}" Width="[float]88" p7:ControlDefinitionChecksum="uQBVrRBYBHV9p7Shdyfryw==" xmlns:p7="http://www.ni.com/PanelCommon">
+							<p7:p.TypeDefinitionTargets>
+								<p7:TypeDefinitionTarget TargetName="niInstr\ DSP\ v1\ Shared\.lvlib__IQ\ Impairments\.gtype:ControlDefinition" />
+							</p7:p.TypeDefinitionTargets>
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="69" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]77" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]22" Value="{ClusterBinding FieldName=inline\ gain\ I}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="70" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]78" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]64" Value="{ClusterBinding FieldName=inline\ gain\ Q}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="71" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]79" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]106" Value="{ClusterBinding FieldName=cross\ gain\ I}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="72" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]80" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]148" Value="{ClusterBinding FieldName=cross\ gain\ Q}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="73" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]81" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]190" Value="{ClusterBinding FieldName=pre-gain\ offset\ I}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="74" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]82" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]232" Value="{ClusterBinding FieldName=pre-gain\ offset\ Q}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="75" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]83" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]274" Value="{ClusterBinding FieldName=post-gain\ offset\ I}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="76" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-17" Label="[UIModel]84" Left="[float]5" Maximum="[Number]0x1FFFFp-17" MinHeight="[float]22" Minimum="[Number]0xF" Top="[float]316" Value="{ClusterBinding FieldName=post-gain\ offset\ Q}" ValueFormatter="[string]LVFXP:FXP_1_17&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(1.17)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Id="77" LabelOwner="[UIModel]69" Left="[float]5" Text="[string]inline gain I" Top="[float]-1" />
+							<p7:Label Id="78" LabelOwner="[UIModel]70" Left="[float]5" Text="[string]inline gain Q" Top="[float]41" />
+							<p7:Label Id="79" LabelOwner="[UIModel]71" Left="[float]5" Text="[string]cross gain I" Top="[float]83" />
+							<p7:Label Id="80" LabelOwner="[UIModel]72" Left="[float]5" Text="[string]cross gain Q" Top="[float]125" />
+							<p7:Label Id="81" LabelOwner="[UIModel]73" Left="[float]5" Text="[string]pre-gain offset I" Top="[float]167" />
+							<p7:Label Id="82" LabelOwner="[UIModel]74" Left="[float]5" Text="[string]pre-gain offset Q" Top="[float]209" />
+							<p7:Label Id="83" LabelOwner="[UIModel]75" Left="[float]5" Text="[string]post-gain offset I" Top="[float]251" />
+							<p7:Label Id="84" LabelOwner="[UIModel]76" Left="[float]5" Text="[string]post-gain offset Q" Top="[float]293" />
+						</Cluster>
+						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="49" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-21" Label="[UIModel]65" Left="[float]5" Maximum="[Number]0x0FFFFFp-21" MinHeight="[float]22" Minimum="[Number]0xFp-1" Top="[float]455" Value="{ClusterBinding FieldName=phase}" ValueFormatter="[string]LVFXP:FXP_0_21&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(0.21)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="52" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-47" Label="[UIModel]66" Left="[float]5" Maximum="[Number]0x0FFFFFFFFFFFFp-47" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]497" Value="{ClusterBinding FieldName=input\ sample\ rate}" ValueFormatter="[string]LVFXP:UFXP_1_47&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]UFXP(1.47)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@f0c58db74555460ca44f3de55e9f395c" Height="[float]96" Id="87" Label="[UIModel]92" Left="[float]5" Top="[float]562" Value="{ClusterBinding FieldName=gain}" Width="[float]88" p7:ControlDefinitionChecksum="BvarvHIrzYPZW098YSiY2A==" xmlns:p7="http://www.ni.com/PanelCommon">
+							<p7:p.TypeDefinitionTargets>
+								<p7:TypeDefinitionTarget TargetName="niInstr\ DSP\ v1\ Shared\.lvlib__IQ\ Gain\.gtype:ControlDefinition" />
+							</p7:p.TypeDefinitionTargets>
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="88" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-21" Label="[UIModel]90" Left="[float]5" Maximum="[Number]0x7FFFFFp-21" MinHeight="[float]22" Minimum="[Number]0xFp+2" Top="[float]22" Value="{ClusterBinding FieldName=gain\ I}" ValueFormatter="[string]LVFXP:FXP_3_21&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(3.21)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<NumericText BaseName="[string]Numeric" Height="[float]22" Id="89" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-21" Label="[UIModel]91" Left="[float]5" Maximum="[Number]0x7FFFFFp-21" MinHeight="[float]22" Minimum="[Number]0xFp+2" Top="[float]64" Value="{ClusterBinding FieldName=gain\ Q}" ValueFormatter="[string]LVFXP:FXP_3_21&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(3.21)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+							<p7:Label Id="90" LabelOwner="[UIModel]88" Left="[float]5" Text="[string]gain I" Top="[float]-1" />
+							<p7:Label Id="91" LabelOwner="[UIModel]89" Left="[float]5" Text="[string]gain Q" Top="[float]41" />
+						</Cluster>
+						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="62" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1p-18" Label="[UIModel]67" Left="[float]5" Maximum="[Number]0x1FFFFp-18" MinHeight="[float]22" Minimum="[Number]0xFp-1" Top="[float]678" Value="{ClusterBinding FieldName=delay}" ValueFormatter="[string]LVFXP:FXP_0_18&gt;&gt;Decimal, Uppercase, Signed:G6" ValueType="[Type]FXP(0.18)" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Id="64" LabelOwner="[UIModel]27" Left="[float]5" Text="[string]frequency shift" Top="[float]-1" />
+						<Label Id="65" LabelOwner="[UIModel]49" Left="[float]5" Text="[string]phase" Top="[float]432" />
+						<Label Id="66" LabelOwner="[UIModel]52" Left="[float]5" Text="[string]input sample rate" Top="[float]474" />
+						<Label Id="67" LabelOwner="[UIModel]62" Left="[float]5" Text="[string]delay" Top="[float]655" />
+						<Label Id="85" LabelOwner="[UIModel]68" Left="[float]5" Text="[string]impairments" Top="[float]64" />
+						<Label Id="92" LabelOwner="[UIModel]87" Left="[float]5" Text="[string]gain" Top="[float]539" />
+					</Cluster>
+					<Label Id="63" LabelOwner="[UIModel]24" Left="[float]79" Text="[string]DUC Parameters" Top="[float]13" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="f81f609c0a1e46778c4a71bb01a4b8ca">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="frequency shift">
+						<DataType>
+							<FXP Right="48" Left="0" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="impairments">
+						<DataType>
+							<Typedef TypedefName="niInstr DSP v1 Shared.lvlib__IQ Impairments.gtype" UnderlyingType="@c51a2be02fad4706891f998aae15862a" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="phase">
+						<DataType>
+							<FXP Right="21" Left="0" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="input sample rate">
+						<DataType>
+							<UFXP Right="47" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="gain">
+						<DataType>
+							<Typedef TypedefName="niInstr DSP v1 Shared.lvlib__IQ Gain.gtype" UnderlyingType="@b5a67389e2f04aecbb500715523e520f" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="delay">
+						<DataType>
+							<FXP Right="18" Left="0" />
+						</DataType>
+					</Field>
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="3cee102ae3704fd383294047822a2a00">
+			<Typedef TypedefName="niInstr DSP v1 Shared.lvlib__IQ Impairments.gtype" UnderlyingType="@c51a2be02fad4706891f998aae15862a" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="f0c58db74555460ca44f3de55e9f395c">
+			<Typedef TypedefName="niInstr DSP v1 Shared.lvlib__IQ Gain.gtype" UnderlyingType="@b5a67389e2f04aecbb500715523e520f" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="c51a2be02fad4706891f998aae15862a">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="inline gain I">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="inline gain Q">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="cross gain I">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="cross gain Q">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="pre-gain offset I">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="pre-gain offset Q">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="post-gain offset I">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="post-gain offset Q">
+						<DataType>
+							<FXP Right="17" Left="1" />
+						</DataType>
+					</Field>
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="b5a67389e2f04aecbb500715523e520f">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="gain I">
+						<DataType>
+							<FXP Right="21" Left="3" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="gain Q">
+						<DataType>
+							<FXP Right="21" Left="3" />
+						</DataType>
+					</Field>
+				</Members>
+			</Composite>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

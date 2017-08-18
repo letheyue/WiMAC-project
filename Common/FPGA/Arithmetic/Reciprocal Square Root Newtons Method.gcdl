@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="24BB27AC100BF52926672B16816C1903" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Calculates one iteration of newtons method for a reciprocal square root.&lt;/p&gt;&lt;p&gt;Takes the value x and a estimation for the result.&lt;/p&gt;&lt;p&gt;Equation is: q(n+1)=1/2 *q(n)(3-x*q(n)^2) --&gt; 1/sqrt(x)&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Latency: 7 cycles&lt;/strong&gt;&lt;/p&gt;</p.UserDescription>
+    <Icon Id="84" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="172" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="173" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="174" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="175" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="176" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Id="177" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="178" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]RCPR SQRT&#xD;&#xA;NEWTONS&#xD;&#xA;METHOD" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+            <FontSetting FontSize="5" Id="179" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="105" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="14" />
+      <ConnectorPaneTerminal Hotspot="0 15" />
+      <ConnectorPaneTerminal Hotspot="0 25" ListViewHotspot="0 50" Parameter="17" />
+      <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 65" Parameter="20" />
+      <ConnectorPaneTerminal Hotspot="15 0" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 80" Parameter="23" />
+      <ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 95" Parameter="26" />
+      <ConnectorPaneTerminal Hotspot="40 25" />
+      <ConnectorPaneTerminal Hotspot="40 35" />
+      <ConnectorPaneTerminal Hotspot="15 40" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="725 195 40 15" DataItem="23" Id="24" Label="45" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UFXP(1.17)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="60 195 40 15" DataItem="14" Id="15" Label="42" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UFXP(1.17)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="60 180 40 15" DataItem="17" Id="18" Label="43" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UFXP(0.36)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="60 300 40 15" DataItem="20" Id="21" Label="44" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="725 300 40 15" DataItem="26" Id="27" Label="46" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Comment Bounds="245 80 276 28" Id="83" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"Newton's method - first iteration\r\nq(n+1)=1/2 *q(n)(3-x*q(n)^2) ---&gt; 1/sqrt(x)"</p.Text>
+      </Comment>
+      <Literal Bounds="580.5 185 39.5 16" DataType="Int16" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="63" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>-1</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+      </Literal>
+      <Literal Bounds="360.5 210 39.5 16" DataType="FXP(10.38)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="64" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0xC000000000</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_10_38&gt;&gt;Decimal, Uppercase, Signed:G6" />
+      </Literal>
+      <DSP48E AlumodeRegister="False" ArithmeticZ="Zero" Bounds="205 180 40 40" CRegister="False" CarryinRegister="False" CarryinselRegister="False" EnableMode="Individual" Id="66" MultcarryinRegister="False" OpmodeRegister="False" TermsString="a;FXP(6.24);Input;b;FXP(2.16);Input;bcout;FXP(2.16);Output;p;FXP(8.40);Output" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <ToFixedPoint Bounds="270 190 50 10" Id="67">
+        <ConfigurableDataTypeTerminal DataType="FXP(8.22)" DesiredType="FXP(8.22)" Direction="Output" GuardBits="12" Hotspot="50 5" Id="fixed-point" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimitOffset="16" WordLengthReductionMode="Wrap:Truncate" xmlns="http://www.ni.com/PlatformFramework" />
+      </ToFixedPoint>
+      <ToFixedPoint Bounds="665 195 50 10" Id="68">
+        <ConfigurableDataTypeTerminal DataType="UFXP(1.17)" DesiredType="UFXP(1.17)" Direction="Output" Hotspot="50 5" Id="fixed-point" TypeOverrideKind="Exact" Usage="Optional" WordLengthReductionMode="Wrap:Truncate" xmlns="http://www.ni.com/PlatformFramework" />
+      </ToFixedPoint>
+      <ToFixedPoint Bounds="115 180 50 10" Id="69">
+        <ConfigurableDataTypeTerminal DataType="FXP(6.24)" DesiredType="FXP(6.24)" Direction="Output" GuardBits="12" Hotspot="50 5" Id="fixed-point" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimitOffset="16" WordLengthReductionMode="Wrap:Truncate" xmlns="http://www.ni.com/PlatformFramework" />
+      </ToFixedPoint>
+      <ToFixedPoint Bounds="115 190 50 10" Id="70">
+        <ConfigurableDataTypeTerminal DataType="FXP(2.16)" DesiredType="FXP(2.16)" Direction="Output" Hotspot="50 5" Id="fixed-point" TypeOverrideKind="Exact" Usage="Optional" WordLengthReductionMode="Wrap:Truncate" xmlns="http://www.ni.com/PlatformFramework" />
+      </ToFixedPoint>
+      <DSP48E AlumodeRegister="False" ArithmeticZ="Zero" Bounds="540 200 40 40" CRegister="False" CarryinRegister="False" CarryinselRegister="False" EnableMode="Individual" Id="71" MultcarryinRegister="False" NumOfARegs="0" NumOfAcoutRegs="0" NumOfBRegs="2" OpmodeRegister="False" TermsString="a;FXP(8.22);Input;b;FXP(2.16);Input;p;FXP(10.38);Output;" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <DSP48E AlumodeRegister="False" ArithmeticSign="Sub" Bounds="410 190 40 40" CarryinRegister="False" CarryinselRegister="False" Id="72" MultcarryinRegister="False" NumOfARegs="0" NumOfAcoutRegs="0" NumOfBRegs="2" NumOfBcoutRegs="2" OpmodeRegister="False" TermsString="a;FXP(8.22);Input;bcin;FXP(2.16);Input;bcout;FXP(2.16);Output;c;FXP(10.38);Input;p;FXP(10.38);Output;" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <ToFixedPoint Bounds="470 200 50 10" Id="73">
+        <ConfigurableDataTypeTerminal DataType="FXP(8.22)" DesiredType="FXP(8.22)" Direction="Output" GuardBits="12" Hotspot="50 5" Id="fixed-point" TypeOverrideKind="Exact" Usage="Optional" WordLengthLimitOffset="16" WordLengthReductionMode="Wrap:Truncate" xmlns="http://www.ni.com/PlatformFramework" />
+      </ToFixedPoint>
+      <ScaleByPowerOf2 Bounds="630 185 30 30" Id="74" />
+      <FeedbackNode ArrowDirection="Right" Bounds="440 295 30 20" DelayCount="7" EnableTerminalVisible="False" Id="75" />
+      <FeedbackNode ArrowDirection="Right" Bounds="210 240 30 20" DelayCount="3" EnableTerminalVisible="False" Id="77" />
+      <Wire Id="91" Joints="N(71:p) N(74:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="94" Joints="N(18:Value) N(69:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="95" Joints="N(68:fixed-point) N(24:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="98" Joints="N(74:x*2^n) N(68:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="103" Joints="N(15:Value) h(10) v(-5) N(70:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="104" Joints="N(64:Out) N(72:c)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="107" Joints="N(75:output) N(27:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="109" Joints="N(72:p) N(73:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="110" Joints="N(66:bcout) h(5) v(-20) h(150) v(40) N(72:bcin)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="111" Joints="N(63:Out) N(74:n)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="112" Joints="N(73:fixed-point) N(71:a)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="113" Joints="N(67:fixed-point) N(72:a)" xmlns="http://www.ni.com/PlatformFramework" />
+      <WireComment AttachedTo="110" Bounds="305 157 46 16" Id="125" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>46</p.ExpandedWidth>
+        <p.Point>328 165</p.Point>
+        <p.Text>q(n)</p.Text>
+      </WireComment>
+      <Wire Id="127" Joints="N(70:fixed-point) h(15) B(1) N(66:b) B(1) v(55) N(77:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="129" Joints="N(69:fixed-point) N(66:a)" xmlns="http://www.ni.com/PlatformFramework" />
+      <WireComment AttachedTo="113" Bounds="329.5 187 60 16" Id="131" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>60</p.ExpandedWidth>
+        <p.Point>359.5 195</p.Point>
+        <p.Text>x*q(n)</p.Text>
+      </WireComment>
+      <Wire Id="133" Joints="N(66:p) N(67:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="134" Joints="N(77:output) h(290) v(-35) N(71:b)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="135" Joints="N(21:Value) N(75:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <WireComment AttachedTo="134" Bounds="312.5 242 46 16" Id="136" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>46</p.ExpandedWidth>
+        <p.Point>335.5 250</p.Point>
+        <p.Text>q(n)</p.Text>
+      </WireComment>
+      <NodeLabel AttachedTo="24" Bounds="770 195 88 14" Id="45" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>q(n+1) 1/sqrt()</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="15" Bounds="-17 195 72 14" Id="42" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>q(n) 1/sqrt()</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="18" Bounds="45 180 10 14" Id="43" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>x</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="21" Bounds="-4 300 59 14" Id="44" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>input valid</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="27" Bounds="770 300 66 14" Id="46" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>output valid</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="16" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]35" Left="[float]316" Maximum="[Number]0x3FFFFp-17" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]36" Value="{DataItemBinding Id=14}" ValueFormatter="[string]LVFXP:UFXP_1_17&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]UFXP(1.17)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="19" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x0FFFFFFFFFp-36" Label="[UIModel]36" Left="[float]316" Maximum="[Number]0x0FFFFFFFFFp-36" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]94" Value="{DataItemBinding Id=17}" ValueFormatter="[string]LVFXP:UFXP_0_36&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]UFXP(0.36)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="22" IsReadOnly="[bool]False" Label="[UIModel]37" Left="[float]335" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]152" TrueContent="[string]On" Value="{DataItemBinding Id=20}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="25" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]38" Left="[float]415" Maximum="[Number]0x3FFFFp-17" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]36" Value="{DataItemBinding Id=23}" ValueFormatter="[string]LVFXP:UFXP_1_17&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]UFXP(1.17)" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="28" IsReadOnly="[bool]True" Label="[UIModel]39" Left="[float]415" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]94" TrueContent="[string]On" Value="{DataItemBinding Id=26}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="35" LabelOwner="[UIModel]16" Left="[float]316" Text="[string]q(n) 1/sqrt()" Top="[float]13" Width="[float]64" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="36" LabelOwner="[UIModel]19" Left="[float]316" Text="[string]x" Top="[float]71" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="37" LabelOwner="[UIModel]22" Left="[float]335" Text="[string]input valid" Top="[float]129" Width="[float]56" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="38" LabelOwner="[UIModel]25" Left="[float]415" Text="[string]q(n+1) 1/sqrt()" Top="[float]13" Width="[float]78" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="39" LabelOwner="[UIModel]28" Left="[float]415" Text="[string]output valid" Top="[float]71" Width="[float]64" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="1" DataType="UFXP(1.17)" Id="14" Name="q(n) 1/sqrt()" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;estimation of the result that should be increased in precision&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="2" DataType="UFXP(0.36)" Id="17" Name="x" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;value to calculate the reciprocal square root from&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="3" DataType="Boolean" Id="20" Name="input valid" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The valid flag of "x"&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="UFXP(1.17)" Id="23" Name="q(n+1) 1/sqrt()" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;reciprocal square root of x after one interation starting from estimation q(n)&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="2" DataType="Boolean" Id="26" Name="output valid" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;valid flag for "q(n+1) 1/sqrt()"&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+  </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,814 @@
+802.11 AFW Resources.grsc
+131251566690333287
+802.11 Application Framework.html
+131251451626753850
+802.11 Design USRP RIO v2.0.1.lvcodedb
+131251566941702085
+802.11 Design USRP RIO v2.0.1.lvproject
+131251566657852980
+802.11 Design USRP RIO v2.0.1.lvprojectcache
+131251573523703254
+802.11 Host.gvi
+131251557036895941
+802.11 v2.0.1\FPGA\Events\802.11 Event FIFO Round Robin.gcdl
+131251557037195988
+802.11 v2.0.1\FPGA\Events\802.11 MacChannelState.ind to Event.gcdl
+131251557037295886
+802.11 v2.0.1\FPGA\Events\802.11 MacTxStatus.ind to Event.gcdl
+131251557037395883
+802.11 v2.0.1\FPGA\Events\802.11 PHY Parameter to U8.gcdl
+131251557037495883
+802.11 v2.0.1\FPGA\Events\802.11 PhyAgc.ind to Event.gcdl
+131251557037696001
+802.11 v2.0.1\FPGA\Events\802.11 PhyAgcState.ind to Event.gcdl
+131251557037996009
+802.11 v2.0.1\FPGA\Events\802.11 PhyCcaTiming.ind to Event.gcdl
+131251557038196013
+802.11 v2.0.1\FPGA\Events\802.11 PhyRxEnd.ind to Event.gcdl
+131251557038296012
+802.11 v2.0.1\FPGA\Events\802.11 PhyRxStart.ind to Event.gcdl
+131251557038395910
+802.11 v2.0.1\FPGA\Events\802.11 PhyTxEnd.ind to Event.gcdl
+131251557038596013
+802.11 v2.0.1\FPGA\Events\802.11 PhyTxStart.req to Event.gcdl
+131251557038696006
+802.11 v2.0.1\FPGA\Events\802.11 U8 to PHY Parameter.gcdl
+131251557038995902
+802.11 v2.0.1\FPGA\Events\802.11 Write Event to FIFO.gcdl
+131251557039095899
+802.11 v2.0.1\FPGA\Events\802.11 Write RX Events.gcdl
+131251557039395911
+802.11 v2.0.1\FPGA\Events\802.11 Write TX Events.gcdl
+131251557039695916
+802.11 v2.0.1\FPGA\RX\802.11 DC Offset Correction.gcdl
+131251557055996351
+802.11 v2.0.1\FPGA\RX\802.11 Internal Loopback Throttle Control.gcdl
+131251557056196352
+802.11 v2.0.1\FPGA\RX\802.11 PHY-SAP Read MAC.gcdl
+131251557057496244
+802.11 v2.0.1\FPGA\RX\802.11 PHY-SAP Write PHY.gcdl
+131251557059396302
+802.11 v2.0.1\FPGA\RX\802.11 RX Data Sink.gcdl
+131251557059796290
+802.11 v2.0.1\FPGA\RX\802.11 RX Data Source.gcdl
+131251557059996312
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Bit Process Configurator.gcdl
+131251557039995916
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Deinterleaver.gcdl
+131251557040295934
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Depuncturer.gcdl
+131251557040495922
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Descrambler Init State.gcdl
+131251557040595909
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Descrambler.gcdl
+131251557040695945
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 LLR Demapper.gcdl
+131251557040895929
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Mask PSDU.gcdl
+131251557041097731
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Packet Terminator.gcdl
+131251557041196026
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 RX Bit Processing.gcdl
+131251557041495951
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Softbit Serializer.gcdl
+131251557041696065
+802.11 v2.0.1\FPGA\RX\Bit Processing\802.11 Viterbi Wrapper.gcdl
+131251557041996074
+802.11 v2.0.1\FPGA\RX\Host Communication\802.11 Capture PHY RX Indications.gcdl
+131251557042096083
+802.11 v2.0.1\FPGA\RX\Host Communication\802.11 Capture RX Samples.gcdl
+131251557042196089
+802.11 v2.0.1\FPGA\RX\Host Communication\802.11 Prepare Channel Estimation for T2H.gcdl
+131251557042496093
+802.11 v2.0.1\FPGA\RX\Host Communication\802.11 Prepare RX IQ Data for T2H.gcdl
+131251557042696095
+802.11 v2.0.1\FPGA\RX\Host Communication\802.11 RX Bit Processing Data Sink.gcdl
+131251557042996101
+802.11 v2.0.1\FPGA\RX\Host Communication\802.11 Trigger Capture RX Samples.gcdl
+131251557043096091
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Channel Estimation Inverse Magnitude.gcdl
+131251557043196109
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Channel Estimation.gcdl
+131251557043396099
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Create Sample Timing.gcdl
+131251557043596114
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Cyclic Prefix Removal.gcdl
+131251557043696103
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Demapper.gcdl
+131251557043996115
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Multiply CFX4.21 by BPSK Symbol.gcdl
+131251557043996115
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Normalize by Inverse Magnitude.gcdl
+131251557044096124
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Pilot Phase Correction.gcdl
+131251557044296114
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Pilot Phase Estimation.gcdl
+131251557044396130
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Reverse Channel Estimate Rotation.gcdl
+131251557044496118
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 RX IQ Processing.gcdl
+131251557044996027
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 VHT-SIG-A-2 Rotation.gcdl
+131251557045096131
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Xilinx FFT.gcdl
+131251557045296148
+802.11 v2.0.1\FPGA\RX\IQ Processing\802.11 Zero Forcing Equalization.gcdl
+131251557045496154
+802.11 v2.0.1\FPGA\RX\MAC\802.11 A-MPDU Frame Validate.gcdl
+131251557045896150
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Add Sample Index.gcdl
+131251557045896150
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Address Check.gcdl
+131251557046096162
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Address Extract.gcdl
+131251557046196152
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Channel State.gcdl
+131251557046296154
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Determine MPDU Header Length.gcdl
+131251557046396168
+802.11 v2.0.1\FPGA\RX\MAC\802.11 FCS Check.gcdl
+131251557046496160
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Filter Control.gcdl
+131251557046796164
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Frame Control Evaluation.gcdl
+131251557046996167
+802.11 v2.0.1\FPGA\RX\MAC\802.11 MAC RX Statistics.gcdl
+131251557047196064
+802.11 v2.0.1\FPGA\RX\MAC\802.11 MAC RX.gcdl
+131251557047496188
+802.11 v2.0.1\FPGA\RX\MAC\802.11 MPDU Delimiter Validate.gcdl
+131251557047796194
+802.11 v2.0.1\FPGA\RX\MAC\802.11 MPDU Filter.gcdl
+131251557048196206
+802.11 v2.0.1\FPGA\RX\MAC\802.11 MPDU Recognize.gcdl
+131251557048996209
+802.11 v2.0.1\FPGA\RX\MAC\802.11 MPDU Validate.gcdl
+131251557049296213
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Read Data FIFO.gcdl
+131251557049496215
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Serialize RX Indication.gcdl
+131251557050696258
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Update RX Indication.gcdl
+131251557050896241
+802.11 v2.0.1\FPGA\RX\MAC\802.11 Write Length Field.gcdl
+131251557050996260
+802.11 v2.0.1\FPGA\RX\Power Measurement\802.11 AGC.gcdl
+131251557051196155
+802.11 v2.0.1\FPGA\RX\Power Measurement\802.11 Calculate Signal Power.gcdl
+131251557051296262
+802.11 v2.0.1\FPGA\RX\Power Measurement\802.11 FIR Low Pass Filter.gcdl
+131251557051396263
+802.11 v2.0.1\FPGA\RX\Power Measurement\802.11 Logarithm Base 10.gcdl
+131251557051696260
+802.11 v2.0.1\FPGA\RX\Power Measurement\802.11 Power Measurement.gcdl
+131251557051896272
+802.11 v2.0.1\FPGA\RX\Power Measurement\802.11 Signal Filter.gcdl
+131251557052096278
+802.11 v2.0.1\FPGA\RX\State Machines\802.11 Derive RX Configuration.gcdl
+131251557052496285
+802.11 v2.0.1\FPGA\RX\State Machines\802.11 L-SIG Calculation.gcdl
+131251557052796164
+802.11 v2.0.1\FPGA\RX\State Machines\802.11 L-SIG Validator.gcdl
+131251557052996171
+802.11 v2.0.1\FPGA\RX\State Machines\802.11 RX PHY State Machine.gcdl
+131251557053996192
+802.11 v2.0.1\FPGA\RX\State Machines\802.11 VHT-SIG-A Calculation.gcdl
+131251557054096305
+802.11 v2.0.1\FPGA\RX\State Machines\802.11 VHT-SIG-A Validator.gcdl
+131251557054296319
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Approximate Magnitude.gcdl
+131251557054396311
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Autocorrelation.gcdl
+131251557054496323
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Calcuate Timing Metric.gcdl
+131251557054696321
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 CFO Removal.gcdl
+131251557054896330
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Frame Alignment.gcdl
+131251557054996322
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 LTF-2 Synchronization.gcdl
+131251557055196325
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Manual Packet Start Generator.gcdl
+131251557055296326
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Synchronization.gcdl
+131251557055596345
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Timing Metric Evaluation.gcdl
+131251557055696343
+802.11 v2.0.1\FPGA\RX\Synchronization\802.11 Timing Metric Peak Search.gcdl
+131251557055896347
+802.11 v2.0.1\FPGA\Shared\CRC\802.11 CRC32 Calculation U8.gcdl
+131251557060096320
+802.11 v2.0.1\FPGA\Shared\CRC\802.11 CRC32 Compute.gcdl
+131251557060196422
+802.11 v2.0.1\FPGA\Shared\CRC\802.11 CRC8 Calculation U8.gcdl
+131251557060296424
+802.11 v2.0.1\FPGA\Shared\CRC\802.11 CRC8 Calculation.gcdl
+131251557060396436
+802.11 v2.0.1\FPGA\Shared\CRC\802.11 CRC8 Compute.gcdl
+131251557060496426
+802.11 v2.0.1\FPGA\Shared\Interleaver\802.11 Interleaver First Permutation.gcdl
+131251557060696443
+802.11 v2.0.1\FPGA\Shared\Interleaver\802.11 Interleaver Second Permutation.gcdl
+131251557060896444
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 AC Subcarrier Mapper.gcdl
+131251557060996332
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 AC Subcarrier to Frequency Offset Index.gcdl
+131251557061096438
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 Field Mapper.gcdl
+131251557061396443
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 Legacy Subcarrier Mapper.gcdl
+131251557061496347
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 Legacy Subcarrier to Frequency Offset Index.gcdl
+131251557061596352
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 Multiply CFX2.14 by BPSK Symbol.gcdl
+131251557061696356
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 Pilot LUT.gcdl
+131251557061796344
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 Timing Generator.gcdl
+131251557062196349
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 VHT LTF 20MHz LUT.gcdl
+131251557062296346
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 VHT LTF 40MHz LUT.gcdl
+131251557062396347
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 VHT LTF 80MHz LUT.gcdl
+131251557062496328
+802.11 v2.0.1\FPGA\Shared\IQ Processing\802.11 VHT STF 20MHz LUT.gcdl
+131251557062496328
+802.11 v2.0.1\FPGA\Shared\Modulation\802.11 Bit to Modulation Symbol.gcdl
+131251557062696375
+802.11 v2.0.1\FPGA\Shared\Modulation\802.11 BPSK Symbol to Modulation Symbol.gcdl
+131251557062796371
+802.11 v2.0.1\FPGA\Shared\Modulation\802.11 QPSK Symbol to Modulation Symbol.gcdl
+131251557062796371
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 Calculate Number of All Symbols.gcdl
+131251557063096372
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 Calculate N_SYM.gcdl
+131251557063196386
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 Frame Description to Type and Subtype.gcdl
+131251557063396367
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 Frame Type and Subtype to Description.gcdl
+131251557063496362
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 Map Settings to N_DBPS.gcdl
+131251557063696383
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 MCS to Coding Parameter.gcdl
+131251557063996392
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 Modulation Constants.gcdl
+131251557064096398
+802.11 v2.0.1\FPGA\Shared\Parameter Calculation\802.11 OFDM Symbol Type Mapper.gcdl
+131251557064296403
+802.11 v2.0.1\FPGA\Shared\Scrambler\802.11 Scrambler Compute.gcdl
+131251557064396410
+802.11 v2.0.1\FPGA\Shared\Scrambler\802.11 Scrambler Sequence Generator.gcdl
+131251557064496399
+802.11 v2.0.1\FPGA\TX\802.11 PHY TX Request Handler.gcdl
+131251557077296766
+802.11 v2.0.1\FPGA\TX\802.11 PHY-SAP Read PHY.gcdl
+131251557078596771
+802.11 v2.0.1\FPGA\TX\802.11 PHY-SAP Write MAC.gcdl
+131251557079996801
+802.11 v2.0.1\FPGA\TX\802.11 TX Data Sink.gcdl
+131251557080796818
+802.11 v2.0.1\FPGA\TX\802.11 TX Data Source.gcdl
+131251557080896835
+802.11 v2.0.1\FPGA\TX\802.11 TX MAC Bypass.gcdl
+131251557081096829
+802.11 v2.0.1\FPGA\TX\802.11 TX Vector Consistency Check.gcdl
+131251557081296728
+802.11 v2.0.1\FPGA\TX\Bit Processing\802.11 Bit Serializer.gcdl
+131251557067596464
+802.11 v2.0.1\FPGA\TX\Bit Processing\802.11 Convolutional Encoder Core.gcdl
+131251557067696495
+802.11 v2.0.1\FPGA\TX\Bit Processing\802.11 Convolutional Encoder.gcdl
+131251557067996570
+802.11 v2.0.1\FPGA\TX\Bit Processing\802.11 Interleaver.gcdl
+131251557068196584
+802.11 v2.0.1\FPGA\TX\Bit Processing\802.11 Puncturer.gcdl
+131251557068396589
+802.11 v2.0.1\FPGA\TX\Bit Processing\802.11 Scrambler.gcdl
+131251557068496592
+802.11 v2.0.1\FPGA\TX\Bit Processing\802.11 TX Bit Processing.gcdl
+131251557068796585
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 Configure TX Bit Processing Parameter.gcdl
+131251557064696389
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 Data State Initializer.gcdl
+131251557064996387
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 L-SIG Generator.gcdl
+131251557065296388
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 Padding Field Generator.gcdl
+131251557065496428
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 PSDU Field Generator.gcdl
+131251557065696420
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 Service Field Generator.gcdl
+131251557065796410
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 Tail Field Generator.gcdl
+131251557065996434
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 TX OFDM Symbol Type Trigger.gcdl
+131251557066096540
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 TX PHY Data Generator.gcdl
+131251557066296539
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 TX PHY State Machine.gcdl
+131251557066696422
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 VHT-SIG-A CRC Calculation.gcdl
+131251557066996548
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 VHT-SIG-A Generator.gcdl
+131251557067196557
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 VHT-SIG-B CRC Calculation.gcdl
+131251557067296568
+802.11 v2.0.1\FPGA\TX\Bit Processing\State Machines\802.11 VHT-SIG-B Generator.gcdl
+131251557067496474
+802.11 v2.0.1\FPGA\TX\Host Communication\802.11 Capture PHY TX Indications.gcdl
+131251557068896598
+802.11 v2.0.1\FPGA\TX\Host Communication\802.11 Pack Bit and Modulation into U8.gcdl
+131251557068996490
+802.11 v2.0.1\FPGA\TX\Host Communication\802.11 TX Bit Processing Data Sink.gcdl
+131251557069196491
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Channel Duplication.gcdl
+131251557069396496
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Channel Rotation.gcdl
+131251557069496567
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Create Packet Structure.gcdl
+131251557069696467
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Data Assembler.gcdl
+131251557069796476
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Data Modulator.gcdl
+131251557069996502
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Determine TX IQ Processing Parameter.gcdl
+131251557070396516
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 IFFT Prescale.gcdl
+131251557070396516
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 L-LTF Assembler.gcdl
+131251557070596631
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 L-STF Assembler.gcdl
+131251557071296633
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Pilot Assembler.gcdl
+131251557071496651
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 TX IQ Processing.gcdl
+131251557071896642
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 VHT-LTF Assembler.gcdl
+131251557071996658
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 VHT-STF Assembler.gcdl
+131251557072296671
+802.11 v2.0.1\FPGA\TX\IQ Processing\802.11 Xilinx IFFT.gcdl
+131251557072396623
+802.11 v2.0.1\FPGA\TX\MAC\802.11 A-MPDU Generator.gcdl
+131251557072596671
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Address Field Generator.gcdl
+131251557072696688
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Backoff.gcdl
+131251557072896676
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Data Manager.gcdl
+131251557072996669
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Data Pump.gcdl
+131251557073396682
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Deserialize TX Request.gcdl
+131251557073796681
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Duration Field Generator.gcdl
+131251557073896583
+802.11 v2.0.1\FPGA\TX\MAC\802.11 FCS Add.gcdl
+131251557074196703
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Frame Control Field Generator.gcdl
+131251557074296703
+802.11 v2.0.1\FPGA\TX\MAC\802.11 MAC Frame Header Generator.gcdl
+131251557074596708
+802.11 v2.0.1\FPGA\TX\MAC\802.11 MAC TX Statistics.gcdl
+131251557074696696
+802.11 v2.0.1\FPGA\TX\MAC\802.11 MAC TX.gcdl
+131251557075196708
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Prepare ACK.gcdl
+131251557075496731
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Prepare MPDU.gcdl
+131251557075796615
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Request Scheduler.gcdl
+131251557076296734
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Select Energy Detect Signal.gcdl
+131251557076496744
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Sequence Control Field Generator.gcdl
+131251557076596737
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Timer Global Clock.gcdl
+131251557076696657
+802.11 v2.0.1\FPGA\TX\MAC\802.11 Timing Control.gcdl
+131251557076896741
+802.11 v2.0.1\Host\Configuration\802.11 Configure Data Source.gvi
+131251556853693380
+802.11 v2.0.1\Host\Configuration\802.11 Configure Dynamic Parameters.gvi
+131251556855893410
+802.11 v2.0.1\Host\Configuration\802.11 Configure Static Parameters.gvi
+131251556858793431
+802.11 v2.0.1\Host\Configuration\802.11 Host Init.gvi
+131251556862693490
+802.11 v2.0.1\Host\Configuration\802.11 Host Release.gvi
+131251556865093529
+802.11 v2.0.1\Host\Configuration\802.11 Random Bit Generator.gvi
+131251556865393532
+802.11 v2.0.1\Host\Configuration\802.11 Reset Statistics.gvi
+131251556868293571
+802.11 v2.0.1\Host\Configuration\802.11 Set Power Calibration Offset.gvi
+131251556871393600
+802.11 v2.0.1\Host\Configuration\802.11 Setup DMA FIFOs.gvi
+131251556873893628
+802.11 v2.0.1\Host\Conversion\802.11 Events to String.gvi
+131251556874293648
+802.11 v2.0.1\Host\Conversion\802.11 Moving Average.gvi
+131251556874393634
+802.11 v2.0.1\Host\Conversion\802.11 PHY Parameter to U8.gvi
+131251556874493635
+802.11 v2.0.1\Host\Conversion\802.11 Prepare Channel Estimation.gvi
+131251556876293668
+802.11 v2.0.1\Host\Conversion\802.11 Prepare Constellation.gvi
+131251556878493567
+802.11 v2.0.1\Host\Conversion\802.11 Prepare RX Power Spectrum.gvi
+131251556880893605
+802.11 v2.0.1\Host\Conversion\802.11 Prepare Throughput Measurements.gvi
+131251556883093624
+802.11 v2.0.1\Host\Conversion\802.11 Prepare TX Power Spectrum.gvi
+131251556885593676
+802.11 v2.0.1\Host\Conversion\802.11 Read Event FIFO.gvi
+131251556888693834
+802.11 v2.0.1\Host\Conversion\802.11 Read Target Registers.gvi
+131251556890893734
+802.11 v2.0.1\Host\Conversion\802.11 Subcarrier Format to Configuration.gvi
+131251556891093860
+802.11 v2.0.1\Host\Conversion\802.11 U8 to PHY Parameter.gvi
+131251556891393866
+802.11 v2.0.1\Host\Conversion\802.11 Unbundle Session.gvi
+131251556894393904
+802.11 v2.0.1\Host\Conversion\802.11 Unpack RX Constellation.gvi
+131251556894493905
+802.11 v2.0.1\Host\Transmission\802.11 Receive RX ICP.gvi
+131251556896593814
+802.11 v2.0.1\Host\Transmission\802.11 Receive UDP Data.gvi
+131251556897293940
+802.11 v2.0.1\Host\Transmission\802.11 Send PN Data.gvi
+131251556897393929
+802.11 v2.0.1\Host\Transmission\802.11 Send TX ICP.gvi
+131251556899993977
+802.11 v2.0.1\Host\Transmission\802.11 Send UDP Data.gvi
+131251556900693974
+802.11 v2.0.1\Types\802.11 FGPA Reference.gtype
+131232527809139660
+802.11 v2.0.1\Types\802.11 Host Session.gtype
+131236951005142310
+802.11 v2.0.1\Types\802.11 PHY-SAP.gtype
+131231551838936440
+Builds\802.11 FPGA USRP RIO 120 MHz BW STA.lvbitx
+131231551838936440
+Builds\802.11 FPGA USRP RIO 120 MHz BW STA.lvinfo
+131231551838936440
+Builds\802.11 FPGA USRP RIO 160 MHz BW STA.lvbitx
+131231551838936440
+Builds\802.11 FPGA USRP RIO 160 MHz BW STA.lvinfo
+131231551838936440
+Builds\802.11 FPGA USRP RIO 40 MHz BW STA.lvbitx
+131231551838936440
+Builds\802.11 FPGA USRP RIO 40 MHz BW STA.lvinfo
+131231551838936440
+Common\FPGA\Arithmetic\18x25 +-AxB +-CxD.gcdl
+131251557081396736
+Common\FPGA\Arithmetic\18x25 Complex Multiplication.gcdl
+131251557081496731
+Common\FPGA\Arithmetic\25x16 Linear Interpolation.gcdl
+131251557081496731
+Common\FPGA\Arithmetic\25x35 +-AxB +-CxD.gcdl
+131251557081796811
+Common\FPGA\Arithmetic\25x35 Complex Multiplication.gcdl
+131251557081896795
+Common\FPGA\Arithmetic\3.13x2.23 Complex Multiplication.gcdl
+131251557081996810
+Common\FPGA\Arithmetic\Leading Zero Digits U16.gcdl
+131251557081996810
+Common\FPGA\Arithmetic\Leading Zero Digits U2.gcdl
+131251557082096742
+Common\FPGA\Arithmetic\Leading Zero Digits U32.gcdl
+131251557082196799
+Common\FPGA\Arithmetic\Leading Zero Digits U4.gcdl
+131251557082296856
+Common\FPGA\Arithmetic\Leading Zero Digits U8.gcdl
+131251557082396740
+Common\FPGA\Arithmetic\Left Barrel Shift U32.gcdl
+131251557082396740
+Common\FPGA\Arithmetic\Reciprocal Square Root Newtons Method.gcdl
+131251557082596771
+Common\FPGA\Arithmetic\Reciprocal Square Root.gcdl
+131251557082696805
+Common\FPGA\Arithmetic\Shift Right Round Saturate.gcdl
+131251557082796780
+Common\FPGA\Arithmetic\U25 Modulo U18.gcdl
+131251557082896739
+Common\FPGA\Counters\Counter U16 With Init.gcdl
+131251557082996723
+Common\FPGA\Counters\Counter U32 Dominant Increment.gcdl
+131251557082996723
+Common\FPGA\Counters\Mod N Counter U3 No Latency.gcdl
+131251557083096741
+Common\FPGA\Counters\Mod N Indexer U16 v2.gcdl
+131251557083196833
+Common\FPGA\Counters\Mod N Indexer U16 with Initialization.gcdl
+131251557083296864
+Common\FPGA\Counters\Mod N Indexer U16 with Reset.gcdl
+131251557083396774
+Common\FPGA\Counters\Mod N Indexer U16.gcdl
+131251557083396774
+Common\FPGA\Counters\Mod N Indexer U32 v2.gcdl
+131251557083496880
+Common\FPGA\Counters\Mod N Indexer U32 with Reset.gcdl
+131251557083596872
+Common\FPGA\Counters\Mod N Indexer U32.gcdl
+131251557083696883
+Common\FPGA\Counters\Mod N Indexer U8 v2.gcdl
+131251557083796873
+Common\FPGA\Counters\Mod N Indexer U8 with Initialization and Reset.gcdl
+131251557083896888
+Common\FPGA\Counters\Mod N Indexer U8 with Initialization.gcdl
+131251557083996889
+Common\FPGA\Counters\Mod N Indexer U8 with Reset.gcdl
+131251557083996889
+Common\FPGA\Counters\Mod N Indexer U8.gcdl
+131251557084096880
+Common\FPGA\Counters\Mod N Latch U16 with Reset.gcdl
+131251557084196893
+Common\FPGA\Counters\Mod N Latch U32 with Reset.gcdl
+131251557084296892
+Common\FPGA\Counters\Mod N Latch U8 with Reset.gcdl
+131251557084396888
+Common\FPGA\Counters\Pulse to Strobe U16 w Enable.gcdl
+131251557084496791
+Common\FPGA\Counters\Pulse to Strobe U16.gcdl
+131251557084596901
+Common\FPGA\Counters\Pulse to Strobe U32 w Enable.gcdl
+131251557084696889
+Common\FPGA\Counters\Pulse to Strobe U32.gcdl
+131251557084696889
+Common\FPGA\Counters\Pulse to Strobe U8 w Enable.gcdl
+131251557084896856
+Common\FPGA\Counters\Pulse to Strobe U8.gcdl
+131251557084996897
+Common\FPGA\FIFO\FIFO Overflow Counter.gcdl
+131251557085096911
+Common\FPGA\FIFO\FIFO Underflow Counter.gcdl
+131251557085096911
+Common\FPGA\RX\Bit Processing\LLR Border Decision.gcdl
+131251557087996955
+Common\FPGA\RX\Bit Processing\LLR Demapper.gcdl
+131251557088496856
+Common\FPGA\RX\Bit Processing\LLR Softbit Calculation.gcdl
+131251557088596869
+Common\FPGA\RX\Bit Processing\Softbit to Signed Magnitude.gcdl
+131251557088696983
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi 802.11 Branch Metric Computation.gcdl
+131251557085196899
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi 802.11 Constants.gcdl
+131251557085296912
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Add Compare Select 8x.gcdl
+131251557085596920
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Add Compare Select.gcdl
+131251557085696923
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Bit Reordering.gcdl
+131251557085796911
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Combine Traceback Output.gcdl
+131251557085996926
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Find Best State 16x.gcdl
+131251557086096818
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Find Best State 2x.gcdl
+131251557086196933
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Find Best State 32x.gcdl
+131251557086296921
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Find Best State 4x.gcdl
+131251557086396935
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Find Best State 8x.gcdl
+131251557086496938
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Find Best State.gcdl
+131251557086796945
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi LTE Branch Metric Computation.gcdl
+131251557086896834
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi LTE Constants.gcdl
+131251557086996834
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Path Metric Computation.gcdl
+131251557087296909
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Traceback Calculation.gcdl
+131251557087396870
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi Traceback Memory.gcdl
+131251557087496902
+Common\FPGA\RX\Bit Processing\Viterbi\Viterbi.gcdl
+131251557087896965
+Common\FPGA\TX\Modulation\16-QAM Modulation.gcdl
+131251557088796974
+Common\FPGA\TX\Modulation\256-QAM Modulation.gcdl
+131251557088796974
+Common\FPGA\TX\Modulation\64-QAM Modulation.gcdl
+131251557088896984
+Common\FPGA\TX\Modulation\BPSK Modulation.gcdl
+131251557088996976
+Common\FPGA\TX\Modulation\LTE BPSK Modulation.gcdl
+131251557089096988
+Common\FPGA\TX\Modulation\Map LTE to Common Modulation Symbol.gcdl
+131251557089296998
+Common\FPGA\TX\Modulation\Modulation.gcdl
+131251557089596995
+Common\FPGA\TX\Modulation\QPSK Modulation.gcdl
+131251557089596995
+Common\FPGA\Type Conversion\Bits to Array.gcdl
+131251557089696989
+Common\FPGA\Type Conversion\CFX0.16 to U32.gcdl
+131251557089796897
+Common\FPGA\Type Conversion\CFX1.15 to U32.gcdl
+131251557089896894
+Common\FPGA\Type Conversion\CFX10.15 to U64.gcdl
+131251557089896894
+Common\FPGA\Type Conversion\CFX2.14 to U32.gcdl
+131251557089996994
+Common\FPGA\Type Conversion\CFX3.13 to U32.gcdl
+131251557089996994
+Common\FPGA\Type Conversion\CFX4.21 to U64.gcdl
+131251557090096899
+Common\FPGA\Type Conversion\U32 to CFX1.15.gcdl
+131251557090096899
+Common\FPGA\Type Conversion\U32 to CFX2.14.gcdl
+131251557090197015
+Common\FPGA\Type Conversion\U32 to CFX3.13.gcdl
+131251557090297002
+Common\Host\BLER Calculation.gvi
+131251556902294007
+Common\Host\Check Stop.gvi
+131251556902294007
+Common\Host\Clear Stop.gvi
+131251556902393993
+Common\Host\CRC32.gvi
+131251556902493886
+Common\Host\Create Stop Notifier.gvi
+131251556902593997
+Common\Host\Create Stop.gvi
+131251556902694009
+Common\Host\Get Socket Option.gvi
+131251556902893996
+Common\Host\PN9 Sequence Generator.gvi
+131251556902893996
+Common\Host\Random Unsigned.gvi
+131251556902994013
+Common\Host\Search U8 array.gvi
+131251556903394017
+Common\Host\Set Socket Option.gvi
+131251556903494005
+Common\Host\Stop On Error.gvi
+131251556903594019
+Common\Host\Data Transfer Protocol\DTP Add Header and CRC.gvi
+131251556900794008
+Common\Host\Data Transfer Protocol\DTP Check Header and CRC.gvi
+131251556900893986
+Common\Host\Data Transfer Protocol\DTP Extract Packet.gvi
+131251556901093987
+Common\Host\Data Transfer Protocol\DTP Header.gvi
+131251556901093987
+Common\Host\Type Conversion\U32 to CFX1.15.gvi
+131251556901193942
+Common\Host\Type Conversion\U32 to CFX2.14.gvi
+131251556901293978
+Common\Host\Type Conversion\U32 to CFX3.13.gvi
+131251556901293978
+Common\Host\Type Conversion\U64 to CFX10.15.gvi
+131251556901393990
+Common\Host\USRP\Check USRP Data Clock Rate and Bandwidth.gvi
+131251556901993877
+Common\Host\USRP\Read Device Bandwidth.gvi
+131251556902093994
+Common\Types\DTP Extract States.gtype
+131206459907980410
+Common\Types\DTP Pending Data.gtype
+131128779339729570
+Common\Types\DTP Send Status.gtype
+131206459907980410
+Common\Types\Modulation.gtype
+131206459907980410
+Common\Types\TX Modulation Bit Mapping Scheme.gtype
+131206459907980410
+Common\Types\TX Modulation Symbol.gtype
+131206459907980410
+Common\Types\USRP bandwidth.gtype
+131242048167448490
+documentation\802.11 Design.png
+130585206523026590
+images\80211_advanced_tab.png
+131245293961335090
+images\80211_basic_tab.png
+131245293961335090
+images\clip_image002.png
+131105610147111940
+images\clip_image003.png
+131245293961335090
+images\clip_image005.png
+131103930457205320
+images\clip_image007.png
+131103930457205320
+images\clip_image009.png
+131103930457205320
+images\clip_image015.png
+131103930457205320
+images\clip_image017.png
+131103930457205320
+images\clip_image019.png
+131103930457205320
+images\clip_image021.png
+131103930457205320
+USRP RIO\802.11 FPGA STA.gvi
+131251557031295877
+USRP RIO\802.11 Host\802.11 Abort RF Streams.gvi
+131251556963494782
+USRP RIO\802.11 Host\802.11 Apply RX Gain.gvi
+131251556966794818
+USRP RIO\802.11 Host\802.11 Close FPGA Target.gvi
+131251556970894886
+USRP RIO\802.11 Host\802.11 Configure AGC Registers.gvi
+131251556974994811
+USRP RIO\802.11 Host\802.11 Configure RF Streams.gvi
+131251556978394963
+USRP RIO\802.11 Host\802.11 Configure RX RF.gvi
+131251556982494908
+USRP RIO\802.11 Host\802.11 Configure TX RF.gvi
+131251556985695066
+USRP RIO\802.11 Host\802.11 Determine RX Reference Level at Minimum Gain.gvi
+131251556989795003
+USRP RIO\802.11 Host\802.11 FPGA Target Configuration.gvi
+131251556989795003
+USRP RIO\802.11 Host\802.11 Gain Control.gvi
+131251556992695027
+USRP RIO\802.11 Host\802.11 Open FPGA Target.gvi
+131251556996095095
+USRP RIO\802.11 Host\802.11 Setup FPGA Target.gvi
+131251556999295256
+USRP RIO\FPGA SubVIs\6-1 Mux.gcdl
+131251557092297039
+USRP RIO\FPGA SubVIs\802.11 USRP Stream RX.gcdl
+131251557092696931
+USRP RIO\FPGA SubVIs\802.11 USRP Stream TX.gcdl
+131251557093496954
+USRP RIO\FPGA SubVIs\ATR Gain Bit Mask WBX Tx.gcdl
+131251557093596976
+USRP RIO\FPGA SubVIs\ATR Gain Bit Mask.gcdl
+131251557093596976
+USRP RIO\FPGA SubVIs\Construct ATR.gcdl
+131251557094396980
+USRP RIO\FPGA SubVIs\Core Stream Controller.gcdl
+131251557094596980
+USRP RIO\FPGA SubVIs\Create Resources.gvi
+131251556999995279
+USRP RIO\FPGA SubVIs\DDC (Multi-Channel).gcdl
+131251557094996970
+USRP RIO\FPGA SubVIs\DDC (Single Channel).gcdl
+131251557095296988
+USRP RIO\FPGA SubVIs\DDC Parameters.gtype
+131236951005142310
+USRP RIO\FPGA SubVIs\DUC (Multi-Channel).gcdl
+131251557095597006
+USRP RIO\FPGA SubVIs\DUC (Single Channel).gcdl
+131251557096096979
+USRP RIO\FPGA SubVIs\DUC Parameters.gtype
+131236951005142310
+USRP RIO\FPGA SubVIs\Encode Send Radio CMDs.gcdl
+131251557096297006
+USRP RIO\FPGA SubVIs\Input Stream Control.gcdl
+131251557096396988
+USRP RIO\FPGA SubVIs\LEDs.gvi
+131251557000495288
+USRP RIO\FPGA SubVIs\Output Stream Control.gcdl
+131251557096697014
+USRP RIO\FPGA SubVIs\Registers.gcdl
+131251557097697030
+USRP RIO\FPGA SubVIs\Remove Read Completion Typedef.gcdl
+131251557097797028
+USRP RIO\FPGA SubVIs\Remove Read Completions Typedef.gcdl
+131251557097897023
+USRP RIO\FPGA SubVIs\Retrieve FPGA Scoped Instruction.gcdl
+131251557097897023
+USRP RIO\FPGA SubVIs\Set Gain.gcdl
+131251557098197039
+USRP RIO\FPGA SubVIs\Stream Control Parameters.gtype
+131236951005142310
+USRP RIO\FPGA SubVIs\Stream Control State.gtype
+131236951005142310
+USRP RIO\Host SubVIs\Abort Stream.gvi
+131251557003495238
+USRP RIO\Host SubVIs\Calculate Sample Rate.gvi
+131251557003495238
+USRP RIO\Host SubVIs\Check Stream Status.gvi
+131251557007695335
+USRP RIO\Host SubVIs\Close Device.gvi
+131251557008195330
+USRP RIO\Host SubVIs\Configure Frequency Shift.gvi
+131251557010995355
+USRP RIO\Host SubVIs\Configure Frequency.gvi
+131251557012595520
+USRP RIO\Host SubVIs\Configure Signal (Common).gvi
+131251557015895569
+USRP RIO\Host SubVIs\Configure Signal (Gain).gvi
+131251557016895599
+USRP RIO\Host SubVIs\Configure Signal (Level).gvi
+131251557017395490
+USRP RIO\Host SubVIs\Configure Signal Mode.gtype
+131236951005142310
+USRP RIO\Host SubVIs\Configure Signal Parameters.gtype
+131236951005142310
+USRP RIO\Host SubVIs\Configure Stream.gvi
+131251557018795641
+USRP RIO\Host SubVIs\Initiate Stream.gvi
+131251557023095707
+USRP RIO\Host SubVIs\ni USRP Calculate Level From Gain.gvi
+131251557024095739

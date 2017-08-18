@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="7E09955DCCECD095408B3D96FC8830B8" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Converts the 2s complement reprentation of sofbits to signed magniture required by Xilinx Viterbi core.&lt;/p&gt;&lt;p&gt;Latency = 0 clock cycles&lt;/p&gt;</p.UserDescription>
+    <Icon Id="37" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="131" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="132" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="133" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="134" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="135" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Id="136" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="137" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]SOFTBIT TO&#xD;&#xA;SIGNED&#xD;&#xA;MAGNITUDE" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+            <FontSetting FontSize="5" Id="138" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="75" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal />
+      <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 35" Parameter="14" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 65" Parameter="65" />
+      <ConnectorPaneTerminal Hotspot="15 0" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" />
+      <ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 50" Parameter="17" />
+      <ConnectorPaneTerminal Hotspot="40 25" />
+      <ConnectorPaneTerminal Hotspot="40 35" />
+      <ConnectorPaneTerminal Hotspot="15 40" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="255 190 40 15" DataItem="14" Id="15" Label="22" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="FXP(8.0)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="580 195 40 15" DataItem="17" Id="18" Label="23" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt8" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Comment Bounds="330 115 220 28" Id="36" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>2s complement to signed magnitude</p.Text>
+      </Comment>
+      <DataAccessor Bounds="255 245 40 15" DataItem="65" Id="63" Label="64" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NumberToBooleanArray Bounds="310 190 30 10" Id="68" />
+      <DeleteFromArray Bounds="365 190 40 40" Id="69" Terminals="inArray=70, length (1), outArray=74, deleted=89, index0=72" />
+      <Wire Id="70" Joints="N(68:Boolean array) N(69:inArray)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="310 220 40 15" DataType="Int32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="71" Label="82" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>7</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+      </Literal>
+      <Wire Id="72" Joints="N(71:Out) N(69:index0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <LogicalExclusiveOr Bounds="430 190 30 20" Id="73" Terminals="o=76, c0t0v=74, c1t0v=89" />
+      <Wire Id="74" Joints="N(69:outArray) N(73:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <BuildArray Bounds="480 195 40 20" CanToggle="False" ConcatenateInputs="True" Id="75" Terminals="outArray=78, c0t0v=76, c1t0v=81" VerticalChunkCount="2" />
+      <Wire Id="76" Joints="N(73:o) N(75:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <BooleanArrayToNumber Bounds="535 195 30 10" Id="77" />
+      <Wire Id="78" Joints="N(75:outArray) N(77:Boolean array)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="81" Joints="N(94:o) h(10) v(-35) N(75:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="83" Joints="N(15:Value) N(68:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="84" Joints="N(77:number) N(18:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="89" Joints="N(69:deleted) h(8) B(1) v(-10) N(73:c1t0v) B(1) v(25) N(94:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="90" Joints="N(63:Value) N(94:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <LogicalExclusiveOr Bounds="430 235 30 20" Id="94" InvertedTerminals="100" Terminals="o=81, c0t0v=89, c1t0v=90" />
+      <Comment Bounds="395 80 85 28" Id="95" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>Latency = 0</p.Text>
+      </Comment>
+      <NodeLabel AttachedTo="15" Bounds="203 190 47 16" Id="22" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>softbit in</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="18" Bounds="625 195 56 16" Id="23" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>softbit out</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="63" Bounds="173 245 77 16" Id="64" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>invert LLR sign</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="71" Bounds="310 220 0 0" Id="82" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>index</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="16" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1" Label="[UIModel]20" Left="[float]316" Maximum="[Number]0x7F" MinHeight="[float]22" Minimum="[Number]0xFp+7" Top="[float]36" Value="{DataItemBinding Id=14}" ValueFormatter="[string]LVFXP:FXP_8_0&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]FXP(8.0)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="19" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]21" Left="[float]415" MinHeight="[float]22" Top="[float]36" Value="{DataItemBinding Id=17}" ValueType="[Type]UInt8" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="20" LabelOwner="[UIModel]16" Left="[float]316" Text="[string]softbit in" Top="[float]13" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Id="21" LabelOwner="[UIModel]19" Left="[float]415" Text="[string]softbit out" Top="[float]13" xmlns="http://www.ni.com/PanelCommon" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="66" IsReadOnly="[bool]False" Label="[UIModel]67" Left="[float]316" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]91" TrueContent="[string]On" Value="{DataItemBinding Id=65}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="67" LabelOwner="[UIModel]66" Left="[float]316" Text="[string]invert LLR sign" Top="[float]68" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem CallDirection="Input" CallIndex="1" DataType="FXP(8.0)" Id="14" Name="softbit in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;softbit represented as I8 value, where -128 is strong zero and 127 is strong one&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="1" DataType="UInt8" Id="17" Name="softbit out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>127</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Signed magnitude represenation of the softbit, where the MSB represents zero or one&lt;/p&gt;&lt;p&gt;The bits 0-6 contain a binary value for the possiblity of the softbit.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="0" DataType="Boolean" Id="65" Name="invert LLR sign" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;inverts the scaling of data in&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+  </VirtualInstrument>
+</SourceFile>

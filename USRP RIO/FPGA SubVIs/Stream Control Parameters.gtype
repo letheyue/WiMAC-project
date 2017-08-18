@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="EE7E302D4B8185DA180F5F6C69C59B8A" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<TypeDefinition DataType="@054551cabede4d0f90c94b29a1c21692" Friends="" Id="1" xmlns="http://www.ni.com/MocCommon">
+		<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+			<TypeDefinitionTarget TargetName="Stream\ Control\ State\.gtype" />
+		</p.TypeDefinitionTargets>
+		<Icon Id="15" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+			<IconPanel Height="[float]40" Id="16" Left="[float]0" Top="[float]0" Width="[float]40">
+				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="17" Left="[float]0" TemplateName="GrayNoText" Top="[float]0">
+					<Rectangle Fill="[SMSolidColorBrush]#ff727272" Id="18" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+					<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" Id="19" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+				</IconTemplate>
+				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]40" Id="20" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]40">
+					<LVImage Height="[float]30" Id="21" Left="[float]5" Source="[SMEmbeddedImageSource]iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADqSURBVEhL7ZGBDcMgDATZiZ1YIbN4hczinejbHzkIBRJVrapKnBzUGOf6JKl+jaXuWOqOpe74a3XO+XK9RUrZtk1OCjvYMjUsI/zxGbAU0aIqXgT/gK0ztUpqK7wp2UysJDpQZ9GstXiJlfapoStOqEEoRivVSWtjb9Qg1OjQTi+Yq3F2qhv7u6lJdPzDmR1GK7EXjS9pA7gA1W3R+wRkNJ2D34wMTO35ruHQBJwSRkTd993cuPWjY+tMPVonYMBc7gV8FxH8UI/g85fE1pG3gf1H6liDaE74QOoRK3XHT1NPOIYG3Kjfp9YXoWvl8V4rR90AAAAASUVORK5CYII=" Top="[float]5" Width="[float]30" />
+				</Canvas>
+			</IconPanel>
+		</Icon>
+		<DataItem DataType="@054551cabede4d0f90c94b29a1c21692" Id="22" Name="Cluster">
+			<p.DefaultValue>False_0_0_0_</p.DefaultValue>
+			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+				<TypeDefinitionTarget TargetName="Stream\ Control\ State\.gtype" />
+			</p.TypeDefinitionTargets>
+		</DataItem>
+	</TypeDefinition>
+	<EnvoyManagerFile Id="10" xmlns="http://www.ni.com/PlatformFramework">
+		<ProjectSettings Id="11" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Bindings="Envoy,DefinitionReference,DefaultTarget,EmbeddedReference,ScopingEnvoy,NameScopingEnvoy" Id="12" ModelDefinitionType="DefaultTarget" Name="Stream\ Control\ Parameters\.gtype" NameTracksFileName="True">
+			<DefaultTarget />
+			<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,NationalInstruments.PanelCommon.SourceModel.ControlDefinition,EmbeddedReference" Id="13" ModelDefinitionType="NationalInstruments.PanelCommon.SourceModel.ControlDefinition" Name="ControlDefinition">
+				<ControlDefinition DefaultDirection="Control" Id="14" xmlns="http://www.ni.com/MocCommon">
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@054551cabede4d0f90c94b29a1c21692" Height="[float]231" Id="24" Label="[UIModel]37" Left="[float]77" Top="[float]36" Value="{DataItemBinding Id=22}" Width="[float]108" xmlns="http://www.ni.com/PanelCommon">
+						<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="27" IsReadOnly="[bool]False" Label="[UIModel]38" Left="[float]5" MinHeight="[float]36" MinWidth="[float]36" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]22" TrueContent="[string]On" Value="{ClusterBinding FieldName=finite}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="30" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]39" Left="[float]5" MinHeight="[float]22" Top="[float]92" Value="{ClusterBinding FieldName=samples\ remaining}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="41" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]42" Left="[float]5" Top="[float]157" Value="{ClusterBinding FieldName=state}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" p7:ControlDefinitionChecksum="Ydj1Wv0+W/QH2LzbcyKYSA==" xmlns:p7="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+							<p7:p.TypeDefinitionTargets>
+								<p7:TypeDefinitionTarget TargetName="Stream\ Control\ State\.gtype:ControlDefinition" />
+							</p7:p.TypeDefinitionTargets>
+							<EnumSelectorInfo DisplayValue="[string]Idle" Value="[ushort]0" ValueType="[Type]UInt16" />
+							<EnumSelectorInfo DisplayValue="[string]Active" Value="[ushort]1" ValueType="[Type]UInt16" />
+						</EnumSelector>
+						<NumericText BaseName="[string]Numeric" Height="[float]22" Id="36" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]40" Left="[float]5" MinHeight="[float]22" Top="[float]199" Value="{ClusterBinding FieldName=samples\ processed}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+						<Label Id="38" LabelOwner="[UIModel]27" Left="[float]5" Text="[string]finite" Top="[float]-1" />
+						<Label Id="39" LabelOwner="[UIModel]30" Left="[float]5" Text="[string]samples remaining" Top="[float]69" />
+						<Label Id="40" LabelOwner="[UIModel]36" Left="[float]5" Text="[string]samples processed" Top="[float]176" />
+						<Label Id="42" LabelOwner="[UIModel]41" Left="[float]5" Text="[string]state" Top="[float]134" />
+					</Cluster>
+					<Label Id="37" LabelOwner="[UIModel]24" Left="[float]77" Text="[string]stream control parameters" Top="[float]13" xmlns="http://www.ni.com/PanelCommon" />
+				</ControlDefinition>
+			</EmbeddedDefinitionReference>
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+		<p.TypeReference TypeId="054551cabede4d0f90c94b29a1c21692">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="finite" DataType="Boolean" />
+					<Field FieldAccessPolicy="ReadWrite" Name="samples remaining" DataType="UInt32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="state">
+						<DataType>
+							<Typedef TypedefName="Stream Control State.gtype" UnderlyingType="@afc6c545a250434a9c02449c35efac15" />
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="samples processed" DataType="UInt32" />
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="afc6c545a250434a9c02449c35efac15">
+			<Enumeration>
+				<Members>
+					<EnumerationMember Value="0" Name="Idle" />
+					<EnumerationMember Value="1" Name="Active" />
+				</Members>
+				<DataType>
+					<UInt16 />
+				</DataType>
+			</Enumeration>
+		</p.TypeReference>
+	</DataTypeReferenceTable>
+</SourceFile>

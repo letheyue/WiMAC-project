@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="133065CB09070519809C09E11931A38A" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;Writes TX baseband samples to the RF, internal loopback, and T2H FIFOs.&lt;/p&gt;&lt;p&gt;\n&lt;strong&gt;Latency: 0 cycles&lt;/strong&gt;\n&lt;/p&gt;"</p.UserDescription>
+    <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]50" Id="218" Left="[float]0" Top="[float]0" Width="[float]50">
+        <Canvas Id="219" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 46,50 L 4,50 C 1.791,50 0,48.209 0,46 L 0,4 C 0,1.791 1.791,0 4,0 L 46,0 C 48.209,0 50,1.791 50,4 L 50,46 C 50,48.209 48.209,50 46,50 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]50" Id="220" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 46,49 L 4,49 C 2.343,49 1,47.657 1,46 L 1,4 C 1,2.343 2.343,1 4,1 L 46,1 C 47.657,1 49,2.343 49,4 L 49,46 C 49,47.657 47.657,49 46,49 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]50" Id="221" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 4,2 L 46,2 C 47.105,2 48,2.895 48,4 L 48,46 C 48,47.105 47.105,48 46,48 L 4,48 C 2.895,48 2,47.105 2,46 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]50" Id="222" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 12.426,7.684 C 12.34,7.645 12.215,7.597 12.051,7.539 C 11.887,7.481 11.748,7.432 11.637,7.391 C 11.526,7.493 11.424,7.616 11.334,7.76 C 11.244,7.904 11.199,8.067 11.199,8.246 C 11.199,8.517 11.297,8.732 11.49,8.892 C 11.683,9.052 11.937,9.132 12.25,9.132 C 12.334,9.132 12.432,9.12 12.543,9.095 C 12.654,9.07 12.752,9.032 12.832,8.98 C 12.926,8.92 13.002,8.85 13.059,8.769 C 13.116,8.688 13.145,8.579 13.145,8.441 C 13.145,8.253 13.098,8.111 13.004,8.015 C 12.91,7.919 12.717,7.809 12.426,7.684 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="223" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 17.867,5.137 C 17.547,5.137 17.318,5.286 17.179,5.585 C 17.04,5.884 16.972,6.387 16.972,7.096 C 16.972,7.787 17.042,8.284 17.183,8.59 C 17.324,8.896 17.552,9.048 17.867,9.048 C 18.182,9.048 18.41,8.896 18.551,8.59 C 18.692,8.284 18.762,7.785 18.762,7.089 C 18.762,6.385 18.694,5.884 18.555,5.586 C 18.416,5.288 18.187,5.137 17.867,5.137 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="224" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 11.93,6.211 C 12.002,6.242 12.102,6.281 12.229,6.326 C 12.356,6.371 12.508,6.423 12.688,6.48 C 12.807,6.339 12.893,6.213 12.946,6.101 C 12.999,5.989 13.024,5.851 13.024,5.687 C 13.024,5.489 12.948,5.332 12.795,5.214 C 12.642,5.096 12.44,5.038 12.188,5.038 C 12.094,5.038 11.999,5.05 11.901,5.073 C 11.803,5.096 11.713,5.13 11.633,5.175 C 11.557,5.219 11.494,5.277 11.445,5.349 C 11.396,5.421 11.371,5.502 11.371,5.593 C 11.371,5.747 11.414,5.866 11.502,5.952 C 11.59,6.038 11.732,6.125 11.93,6.211 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="225" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 46,2 L 4,2 C 2.895,2 2,2.895 2,4 L 2,12 L 48,12 L 48,4 C 48,2.895 47.105,2 46,2 Z M 13.979,9.641 C 13.54,9.969 12.938,10.133 12.172,10.133 C 11.742,10.133 11.373,10.089 11.067,10 C 10.761,9.911 10.506,9.789 10.305,9.633 C 10.108,9.479 9.961,9.3 9.866,9.094 C 9.771,8.888 9.723,8.667 9.723,8.43 C 9.723,8.138 9.809,7.88 9.979,7.655 C 10.149,7.43 10.444,7.233 10.864,7.063 L 10.864,7.039 C 10.526,6.883 10.276,6.686 10.118,6.449 C 9.96,6.212 9.879,5.938 9.879,5.625 C 9.879,5.164 10.092,4.787 10.52,4.492 C 10.948,4.197 11.502,4.051 12.188,4.051 C 12.907,4.051 13.469,4.184 13.877,4.451 C 14.285,4.718 14.488,5.074 14.488,5.519 C 14.488,5.795 14.402,6.041 14.23,6.257 C 14.058,6.473 13.794,6.657 13.441,6.808 L 13.441,6.831 C 13.847,6.985 14.148,7.192 14.343,7.452 C 14.538,7.712 14.636,8.02 14.636,8.374 C 14.637,8.891 14.418,9.313 13.979,9.641 Z M 20.141,8.403 C 20.053,8.79 19.914,9.107 19.727,9.355 C 19.534,9.608 19.288,9.799 18.985,9.928 C 18.682,10.057 18.311,10.121 17.868,10.121 C 17.432,10.121 17.061,10.056 16.755,9.926 C 16.448,9.796 16.198,9.603 16.009,9.347 C 15.816,9.092 15.677,8.774 15.591,8.395 C 15.505,8.016 15.462,7.581 15.462,7.091 C 15.462,6.586 15.507,6.147 15.595,5.774 C 15.683,5.401 15.824,5.086 16.017,4.828 C 16.21,4.573 16.46,4.381 16.767,4.253 C 17.074,4.126 17.441,4.062 17.869,4.062 C 18.314,4.062 18.687,4.128 18.99,4.259 C 19.293,4.391 19.539,4.587 19.732,4.847 C 19.921,5.102 20.06,5.417 20.146,5.791 C 20.232,6.165 20.275,6.597 20.275,7.087 C 20.275,7.577 20.229,8.016 20.141,8.403 Z M 26,10 L 21.434,10 L 21.434,9.039 C 21.784,8.787 22.133,8.518 22.483,8.234 C 22.833,7.95 23.114,7.705 23.325,7.5 C 23.639,7.195 23.864,6.93 23.997,6.703 C 24.13,6.476 24.196,6.252 24.196,6.031 C 24.196,5.765 24.11,5.56 23.94,5.416 C 23.77,5.272 23.524,5.199 23.204,5.199 C 22.964,5.199 22.712,5.248 22.448,5.347 C 22.184,5.446 21.938,5.572 21.712,5.726 L 21.587,5.726 L 21.587,4.434 C 21.773,4.353 22.044,4.272 22.405,4.192 C 22.766,4.112 23.128,4.071 23.489,4.071 C 24.218,4.071 24.774,4.224 25.157,4.53 C 25.54,4.836 25.731,5.269 25.731,5.829 C 25.731,6.196 25.639,6.545 25.456,6.876 C 25.273,7.207 24.991,7.548 24.614,7.899 C 24.378,8.118 24.139,8.319 23.899,8.503 C 23.659,8.687 23.489,8.815 23.387,8.888 L 26,8.888 L 26,10 Z M 28.574,10 L 27.113,10 L 27.113,8.465 L 28.574,8.465 L 28.574,10 Z M 34.211,10 L 30.328,10 L 30.328,8.984 L 31.555,8.984 L 31.555,5.91 L 30.328,5.91 L 30.328,4.961 C 30.516,4.961 30.695,4.95 30.867,4.928 C 31.039,4.906 31.181,4.867 31.297,4.813 C 31.432,4.748 31.533,4.663 31.602,4.559 C 31.671,4.455 31.709,4.325 31.719,4.168 L 33.012,4.168 L 33.012,8.984 L 34.211,8.984 L 34.211,10 Z M 39.898,10 L 36.015,10 L 36.015,8.984 L 37.242,8.984 L 37.242,5.91 L 36.015,5.91 L 36.015,4.961 C 36.203,4.961 36.382,4.95 36.554,4.928 C 36.726,4.906 36.868,4.867 36.984,4.813 C 37.119,4.748 37.22,4.663 37.289,4.559 C 37.358,4.455 37.396,4.325 37.406,4.168 L 38.699,4.168 L 38.699,8.984 L 39.898,8.984 L 39.898,10 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="226" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Text Height="[float]37" Id="227" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]TX DATA&#xD;&#xA;SINK" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]12" Width="[float]48">
+            <FontSetting FontSize="6" Id="228" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="50" Id="9" ListViewHeight="150" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 65" Parameter="73" />
+      <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 80" Parameter="74" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" />
+      <ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 35" Parameter="71" />
+      <ConnectorPaneTerminal Hotspot="25 0" ListViewHotspot="0 50" Parameter="72" />
+      <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 95" Parameter="75" />
+      <ConnectorPaneTerminal Hotspot="50 15" ListViewHotspot="150 110" Parameter="76" />
+      <ConnectorPaneTerminal Hotspot="50 25" ListViewHotspot="150 125" Parameter="77" />
+      <ConnectorPaneTerminal Hotspot="50 35" />
+      <ConnectorPaneTerminal Hotspot="15 50" />
+      <ConnectorPaneTerminal Hotspot="25 50" />
+      <ConnectorPaneTerminal Hotspot="0 45" />
+      <ConnectorPaneTerminal Hotspot="35 0" ListViewHotspot="0 140" Parameter="101" />
+      <ConnectorPaneTerminal Hotspot="50 45" />
+      <ConnectorPaneTerminal Hotspot="35 50" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <Wire Id="14" Joints="N(49:Value) h(15) v(-40) B(2) N(22:data) B(2) v(-90) B(4) N(24:data) B(4) v(-80) N(17:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="15" Joints="N(50:Value) h(55) B(1) N(28:c1t0v) B(1) v(-20) B(3) N(22:Control Protocol Input) B(3) v(-70) B(5) N(35:c1t0v) B(5) v(-20) B(7) N(24:Control Protocol Input) B(7) v(-60) B(9) N(42:c1t0v) B(9) v(-20) N(16:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FIFOWrite Bounds="340 2780 46 65" Id="16" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <MethodCall Bounds="280 2790 40 40" DomainName="NI.Appframeworks.Common" Id="17" Target="CFX3\.13\ to\ U32\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="CFXP(3.13)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="18" Joints="N(17:R0) N(16:data)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="21" Joints="N(103:Value) N(16:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FIFOWrite Bounds="340 2950 46 65" Id="22" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <Wire Id="23" Joints="N(48:Value) N(22:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FIFOWrite Bounds="340 2860 46 65" Id="24" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <Wire Id="25" Joints="N(47:Value) N(24:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="26" Joints="N(27:output) N(28:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="400 3000 30 20" EnableTerminalVisible="False" Id="27" />
+      <LogicalAnd Bounds="450 3005 25 20" Id="28" InvertedTerminals="010" Terminals="o=30, c0t0v=26, c1t0v=15" />
+      <MethodCall Bounds="485 3010 50 50" DomainName="NI.LabVIEW.ExtShared" Id="29" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="increment" />
+            <Parameter Id="T0" Desc="reset" />
+            <Parameter Id="R0" Desc="count out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt16" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="30" Joints="N(28:o) N(29:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="31" Joints="N(29:R0) N(53:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="32" Joints="N(22:Control Protocol Output) N(27:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="33" Joints="N(34:output) N(35:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="400 2910 30 20" EnableTerminalVisible="False" Id="34" />
+      <LogicalAnd Bounds="450 2915 25 20" Id="35" InvertedTerminals="010" Terminals="o=37, c0t0v=33, c1t0v=15" />
+      <MethodCall Bounds="485 2920 50 50" DomainName="NI.LabVIEW.ExtShared" Id="36" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="increment" />
+            <Parameter Id="T0" Desc="reset" />
+            <Parameter Id="R0" Desc="count out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt16" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="37" Joints="N(35:o) N(36:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="38" Joints="N(36:R0) N(52:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="39" Joints="N(24:Control Protocol Output) N(34:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="40" Joints="N(41:output) N(42:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="400 2830 30 20" EnableTerminalVisible="False" Id="41" />
+      <LogicalAnd Bounds="450 2835 25 20" Id="42" InvertedTerminals="010" Terminals="o=44, c0t0v=40, c1t0v=15" />
+      <MethodCall Bounds="485 2840 50 50" DomainName="NI.LabVIEW.ExtShared" Id="43" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="increment" />
+            <Parameter Id="T0" Desc="reset" />
+            <Parameter Id="R0" Desc="count out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt16" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="44" Joints="N(42:o) N(43:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="45" Joints="N(43:R0) N(51:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="46" Joints="N(16:Control Protocol Output) N(41:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="220 2860 40 15" DataItem="71" Id="47" Label="61" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@7f56305224174c13b6c48f636677ecd8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="220 2950 40 15" DataItem="72" Id="48" Label="62" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@7f56305224174c13b6c48f636677ecd8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="220 3000 40 15" DataItem="73" Id="49" Label="63" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="CFXP(3.13)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="220 3015 40 15" DataItem="74" Id="50" Label="64" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="564 2840 40 15" DataItem="75" Id="51" Label="65" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="564 2920 40 15" DataItem="76" Id="52" Label="66" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="564 3010 40 15" DataItem="77" Id="53" Label="67" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt16" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Literal Bounds="505 2998 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="54" Label="68" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>False</p.Data>
+        <BooleanBehavior />
+        <DockedConstantFacade UndockedSize="26 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="55" Joints="N(54:Out) h(5) v(-10) h(-22) N(29:T0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="505 2908 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="56" Label="69" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>False</p.Data>
+        <BooleanBehavior />
+        <DockedConstantFacade UndockedSize="26 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="57" Joints="N(56:Out) h(5) v(-10) h(-22) N(36:T0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="505 2828 12 10" DataType="Boolean" Facade="DockedConstantFacade" Id="58" Label="70" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>False</p.Data>
+        <BooleanBehavior />
+        <DockedConstantFacade UndockedSize="26 15" />
+      </Literal>
+      <Wire Facade="WireInvisibleFacade" Id="59" Joints="N(58:Out) h(5) v(-10) h(-22) N(43:T0)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="220 2780 40 15" DataItem="101" Id="103" Label="105" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@f7749f0760a740b58b9dd19509b419bb" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NodeLabel AttachedTo="47" Bounds="138 2860 77 14" Id="61" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>TX to RF FIFO</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="48" Bounds="90 2950 125 14" Id="62" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>internal loopback FIFO</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="49" Bounds="175 3000 40 14" Id="63" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>sample</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="50" Bounds="156 3015 59 14" Id="64" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>input valid</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="51" Bounds="609 2840 138 14" Id="65" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>T2H FIFO overflow count</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="52" Bounds="609 2920 163 14" Id="66" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>TX to RF FIFO overflow count</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="53" Bounds="609 3010 211 14" Id="67" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>internal loopback FIFO overflow count</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="54" Bounds="505 2998 0 0" Id="68" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>reset</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="56" Bounds="505 2908 0 0" Id="69" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>reset</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="58" Bounds="505 2828 0 0" Id="70" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>reset</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="103" Bounds="163 2780 52 14" Id="105" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>T2H FIFO</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@7f56305224174c13b6c48f636677ecd8" Height="[float]22" Id="78" Label="[UIModel]106" Left="[float]101" SelectedResource="{DataItemBinding Id=71}" Top="[float]46" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]62" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <Label Height="[float]16" Id="106" LabelOwner="[UIModel]78" Left="[float]101" Text="[string]TX to RF FIFO" Top="[float]23" Width="[float]72" xmlns="http://www.ni.com/PanelCommon" />
+      <FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@7f56305224174c13b6c48f636677ecd8" Height="[float]22" Id="79" Label="[UIModel]107" Left="[float]101" SelectedResource="{DataItemBinding Id=72}" Top="[float]103" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]62" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <Label Height="[float]16" Id="107" LabelOwner="[UIModel]79" Left="[float]101" Text="[string]internal loopback FIFO" Top="[float]80" Width="[float]120" xmlns="http://www.ni.com/PanelCommon" />
+      <FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@f7749f0760a740b58b9dd19509b419bb" Height="[float]22" Id="104" Label="[UIModel]108" Left="[float]101" SelectedResource="{DataItemBinding Id=101}" Top="[float]160" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]62" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+      <Label Height="[float]16" Id="108" LabelOwner="[UIModel]104" Left="[float]101" Text="[string]T2H FIFO" Top="[float]137" Width="[float]49" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="80" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[ComplexNumber]0x1;0x0" Label="[UIModel]109" Left="[float]247" Maximum="[ComplexNumber]0x7FFFp-13;0x7FFFp-13" MinHeight="[float]22" Minimum="[ComplexNumber]0xFp+2;0xFp+2" RadixVisibility="[SMVisibility]Collapsed" Top="[float]46" Value="{DataItemBinding Id=73}" ValueFormatter="[string]LVFXP:CFXP_3_13&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]CFXP(3.13)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="109" LabelOwner="[UIModel]80" Left="[float]247" Text="[string]sample" Top="[float]23" Width="[float]38" xmlns="http://www.ni.com/PanelCommon" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="81" IsReadOnly="[bool]False" Label="[UIModel]110" Left="[float]247" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]103" TrueContent="[string]On" Value="{DataItemBinding Id=74}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="110" LabelOwner="[UIModel]81" Left="[float]247" Text="[string]input valid" Top="[float]80" Width="[float]56" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="82" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]83" Left="[float]359" MinHeight="[float]22" Top="[float]160" Value="{DataItemBinding Id=75}" ValueType="[Type]UInt16" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="83" LabelOwner="[UIModel]82" Left="[float]359" Text="[string]T2H FIFO overflow count" Top="[float]137" Width="[float]131" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="84" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]85" Left="[float]359" MinHeight="[float]22" Top="[float]46" Value="{DataItemBinding Id=76}" ValueType="[Type]UInt16" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="85" LabelOwner="[UIModel]84" Left="[float]359" Text="[string]TX to RF FIFO overflow count" Top="[float]23" Width="[float]154" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="86" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]87" Left="[float]359" MinHeight="[float]22" Top="[float]103" Value="{DataItemBinding Id=77}" ValueType="[Type]UInt16" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="87" LabelOwner="[UIModel]86" Left="[float]359" Text="[string]internal loopback FIFO overflow count" Top="[float]80" Width="[float]202" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="@7f56305224174c13b6c48f636677ecd8" Id="71" Name="TX to RF FIFO" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>""</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;FIFO reference for the TX to RF FIFO.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="1" DataType="@7f56305224174c13b6c48f636677ecd8" Id="72" Name="internal loopback FIFO" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>""</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;FIFO reference for the internal loopback FIFO.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="2" DataType="CFXP(3.13)" Id="73" Name="sample" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0;0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Baseband sample from TX I/Q processing.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="3" DataType="Boolean" Id="74" Name="input valid" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Valid flag for the sample input.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="UInt16" Id="75" Name="T2H FIFO overflow count" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Number of overflows that occurred while writing to the T2H FIFO.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="UInt16" Id="76" Name="TX to RF FIFO overflow count" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Number of overflows that occurred while writing to the TX to RF FIFO.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="2" DataType="UInt16" Id="77" Name="internal loopback FIFO overflow count" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Number of overflows that occurred while writing to the T2H internal loopback FIFO.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="4" DataType="@f7749f0760a740b58b9dd19509b419bb" Id="101" Name="T2H FIFO" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>T2H TX Baseband</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;FIFO reference for the T2H FIFO.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <IconTable xmlns="http://www.ni.com/PlatformFramework">
+      <p.IconModel Target="CFX3\.13\ to\ U32\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]CFX3.13 TO&#xD;&#xA;U32" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Count\ Up\ U16\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 50 50">
+              <IconPanel Background="[SMSolidColorBrush]#00ffffff" Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+                <Canvas Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
+                  <Path Data="[PathGeometry]M 49,46 C 49,47.65 47.65,49 46,49 L 4,49 C 2.35,49 1,47.65 1,46 L 1,4 C 1,2.35 2.35,1 4,1 L 46,1 C 47.65,1 49,2.35 49,4 L 49,46 Z" Fill="[SMSolidColorBrush]#ffffffff" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+                  <Path Data="[PathGeometry]M 46,1 C 47.654,1 49,2.346 49,4 L 49,46 C 49,47.654 47.654,49 46,49 L 4,49 C 2.346,49 1,47.654 1,46 L 1,4 C 1,2.346 2.346,1 4,1 L 46,1  M 46,0 L 4,0 C 1.8,0 0,1.8 0,4 L 0,46 C 0,48.2 1.8,50 4,50 L 46,50 C 48.2,50 50,48.2 50,46 L 50,4 C 50,1.8 48.2,0 46,0 L 46,0 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+                  <Path Data="[PathGeometry]M 48,46 C 48,47.1 47.1,48 46,48 L 4,48 C 2.9,48 2,47.1 2,46 L 2,4 C 2,2.9 2.9,2 4,2 L 46,2 C 47.1,2 48,2.9 48,4 L 48,46 Z" Fill="[SMSolidColorBrush]#ffebebeb" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+                  <Path Data="[PathGeometry]M 21,22 L 24.494,18.021 L 28,22 L 25,21 L 25,23 L 24,23 L 24,21 L 21,22 Z M 48,4 L 48,12 L 2,12 L 2,4 C 2,2.9 2.9,2 4,2 L 46,2 C 47.1,2 48,2.9 48,4 Z M 6,6 L 4,6 L 4,7 L 6,7 L 6,6 Z M 9,4 L 7,4 L 7,10 L 9,10 L 9,4 Z M 12,4 L 10,4 L 10,10 L 12,10 L 12,4 Z M 15,4 L 13,4 L 13,10 L 15,10 L 15,4 Z M 20,6.503 L 17,4 L 18.005,6 L 16,6 L 16,7 L 18.006,7.002 L 17,9 L 20,6.503 Z" Fill="[SMSolidColorBrush]#ffb83b64" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+                  <Path Data="[PathGeometry]M 24,25 L 24,39 L 15,39 L 15,25 L 24,25 Z M 22.35,34.604 L 20.702,34.604 L 20.702,27.98 L 18.924,27.98 C 18.909,28.195 18.856,28.375 18.763,28.517 C 18.67,28.661 18.531,28.777 18.344,28.867 C 18.187,28.942 17.99,28.995 17.753,29.025 C 17.516,29.055 17.27,29.071 17.012,29.071 L 17.012,30.377 L 18.699,30.377 L 18.699,34.604 L 17.012,34.604 L 17.012,36 L 22.351,36 L 22.351,34.604 Z M 34,25 L 34,39 L 25,39 L 25,25 L 34,25 Z M 33.02,34.469 L 29.427,34.469 C 29.566,34.369 29.801,34.193 30.13,33.941 C 30.459,33.688 30.787,33.412 31.112,33.111 C 31.632,32.628 32.017,32.159 32.27,31.704 C 32.522,31.249 32.649,30.769 32.649,30.265 C 32.649,29.495 32.385,28.9 31.859,28.479 C 31.333,28.058 30.568,27.848 29.565,27.848 C 29.068,27.848 28.571,27.904 28.075,28.015 C 27.579,28.125 27.204,28.237 26.95,28.347 L 26.95,30.125 L 27.122,30.125 C 27.434,29.914 27.771,29.74 28.135,29.604 C 28.498,29.467 28.845,29.399 29.174,29.399 C 29.614,29.399 29.952,29.499 30.187,29.698 C 30.421,29.896 30.539,30.178 30.539,30.544 C 30.539,30.849 30.447,31.156 30.266,31.468 C 30.082,31.78 29.775,32.145 29.342,32.564 C 29.051,32.847 28.665,33.183 28.184,33.574 C 27.703,33.965 27.222,34.333 26.743,34.68 L 26.743,36 L 33.021,36 L 33.021,34.469 Z M 44,39 L 35,39 L 35,25 L 44,25 L 44,39 Z M 41.93,31.924 C 41.726,31.848 41.533,31.798 41.35,31.774 L 41.35,31.698 C 41.801,31.602 42.164,31.379 42.44,31.03 C 42.716,30.68 42.854,30.284 42.854,29.841 C 42.854,29.504 42.783,29.21 42.639,28.96 C 42.495,28.709 42.278,28.496 41.984,28.32 C 41.737,28.174 41.423,28.056 41.044,27.968 C 40.665,27.88 40.223,27.836 39.718,27.836 C 39.198,27.836 38.687,27.891 38.182,28 C 37.677,28.109 37.278,28.223 36.984,28.341 L 36.984,30.076 L 37.183,30.076 C 37.552,29.857 37.933,29.689 38.328,29.573 C 38.722,29.457 39.087,29.398 39.424,29.398 C 39.56,29.398 39.723,29.41 39.912,29.431 C 40.101,29.452 40.266,29.495 40.406,29.56 C 40.531,29.617 40.635,29.695 40.718,29.793 C 40.801,29.891 40.842,30.021 40.842,30.183 C 40.842,30.401 40.802,30.567 40.723,30.679 C 40.645,30.792 40.527,30.882 40.369,30.95 C 40.219,31.014 40.035,31.055 39.82,31.073 C 39.605,31.092 39.359,31.1 39.08,31.1 L 38.623,31.1 L 38.623,32.529 L 39.063,32.529 C 39.274,32.529 39.503,32.532 39.751,32.537 C 39.998,32.543 40.209,32.574 40.385,32.632 C 40.561,32.685 40.701,32.776 40.809,32.903 C 40.917,33.03 40.971,33.211 40.971,33.443 C 40.971,33.683 40.931,33.867 40.852,33.994 C 40.774,34.121 40.668,34.229 40.536,34.318 C 40.368,34.433 40.162,34.507 39.919,34.542 C 39.675,34.576 39.449,34.593 39.241,34.593 C 38.887,34.593 38.496,34.525 38.068,34.389 C 37.64,34.253 37.272,34.092 36.964,33.906 L 36.755,33.906 L 36.755,35.663 C 37.052,35.792 37.438,35.908 37.912,36.012 C 38.386,36.116 38.955,36.167 39.618,36.167 C 40.198,36.167 40.691,36.107 41.097,35.987 C 41.503,35.867 41.857,35.694 42.158,35.469 C 42.466,35.236 42.694,34.956 42.843,34.631 C 42.991,34.305 43.066,33.953 43.066,33.578 C 43.066,33.244 43.014,32.977 42.911,32.777 C 42.808,32.577 42.668,32.401 42.492,32.251 C 42.32,32.107 42.134,31.998 41.93,31.924 Z M 14,25 L 14,39 L 5,39 L 5,25 L 14,25 Z M 12.678,30.214 C 12.561,29.7 12.37,29.268 12.11,28.916 C 11.844,28.558 11.505,28.288 11.089,28.107 C 10.674,27.926 10.16,27.836 9.548,27.836 C 8.961,27.836 8.456,27.924 8.033,28.1 C 7.61,28.275 7.266,28.538 7.002,28.89 C 6.737,29.244 6.544,29.678 6.422,30.191 C 6.3,30.703 6.239,31.307 6.239,32.002 C 6.239,32.676 6.298,33.273 6.417,33.795 C 6.534,34.316 6.727,34.752 6.991,35.104 C 7.253,35.455 7.595,35.72 8.016,35.899 C 8.439,36.079 8.95,36.168 9.547,36.168 C 10.155,36.168 10.668,36.08 11.083,35.902 C 11.498,35.724 11.839,35.463 12.104,35.115 C 12.362,34.774 12.551,34.339 12.673,33.806 C 12.795,33.273 12.856,32.671 12.856,31.997 C 12.856,31.323 12.797,30.729 12.678,30.214 Z M 10.486,34.061 C 10.293,34.48 9.98,34.69 9.547,34.69 C 9.114,34.69 8.801,34.48 8.608,34.061 C 8.415,33.641 8.317,32.957 8.317,32.007 C 8.317,31.031 8.413,30.339 8.602,29.929 C 8.791,29.519 9.107,29.313 9.547,29.313 C 9.987,29.313 10.303,29.519 10.492,29.929 C 10.681,30.339 10.777,31.029 10.777,31.996 C 10.777,32.953 10.68,33.641 10.486,34.061 Z" Fill="[SMSolidColorBrush]#b2000000" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+    </IconTable>
+  </VirtualInstrument>
+  <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+    <p.TypeReference TypeId="7f56305224174c13b6c48f636677ecd8">
+      <Attributed>
+        <AttributedType>
+          <Generic>
+            <Constraints>
+              <Attributed>
+                <AttributedType>
+                  <Composite Id="1" Name="FifoReadInterface" ReferenceClass="" Interface="">
+                    <GenericTypeDefinition>
+                      <Attributed>
+                        <AttributedType>
+                          <Composite Id="2" Name="FifoReadInterface" ReferenceClass="" Interface="">
+                            <GenericTypeDefinition>
+                              <Composite RefId="2" />
+                            </GenericTypeDefinition>
+                            <GenericParameters>
+                              <Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+                            </GenericParameters>
+                            <BaseType>
+                              <Void />
+                            </BaseType>
+                            <Members>
+                              <Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+                              <Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+                              <Function Id="3" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+                                <DeclaringType>
+                                  <Composite RefId="2" />
+                                </DeclaringType>
+                                <GenericTypeDefinition>
+                                  <Void />
+                                </GenericTypeDefinition>
+                                <Parameters>
+                                  <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+                                    <DataType>
+                                      <Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+                                    </DataType>
+                                  </Parameter>
+                                  <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+                                  <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+                                </Parameters>
+                              </Function>
+                            </Members>
+                          </Composite>
+                        </AttributedType>
+                        <AttributeValues>
+                          <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+                          <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+                          <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+                        </AttributeValues>
+                      </Attributed>
+                    </GenericTypeDefinition>
+                    <ClosedGenericParameters>
+                      <CFXP Right="13" Left="3" />
+                    </ClosedGenericParameters>
+                    <BaseType>
+                      <Void />
+                    </BaseType>
+                    <Members>
+                      <Field FieldAccessPolicy="Read" Name="used elements" DataType="UInt32" />
+                      <Field FieldAccessPolicy="Read" Name="full threshold met?" DataType="Boolean" />
+                      <Function Id="4" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+                        <DeclaringType>
+                          <Composite RefId="1" />
+                        </DeclaringType>
+                        <GenericTypeDefinition>
+                          <Void />
+                        </GenericTypeDefinition>
+                        <Parameters>
+                          <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+                            <DataType>
+                              <CFXP Right="13" Left="3" />
+                            </DataType>
+                          </Parameter>
+                          <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
+                          <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
+                        </Parameters>
+                      </Function>
+                    </Members>
+                  </Composite>
+                </AttributedType>
+                <AttributeValues>
+                  <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+                  <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+                  <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+                </AttributeValues>
+              </Attributed>
+              <Attributed>
+                <AttributedType>
+                  <Composite Id="5" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+                    <GenericTypeDefinition>
+                      <Attributed>
+                        <AttributedType>
+                          <Composite Id="6" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+                            <GenericTypeDefinition>
+                              <Composite RefId="6" />
+                            </GenericTypeDefinition>
+                            <GenericParameters>
+                              <Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+                            </GenericParameters>
+                            <BaseType>
+                              <Void />
+                            </BaseType>
+                            <Members>
+                              <Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+                              <Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+                              <Function Id="7" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+                                <DeclaringType>
+                                  <Composite RefId="6" />
+                                </DeclaringType>
+                                <GenericTypeDefinition>
+                                  <Void />
+                                </GenericTypeDefinition>
+                                <Parameters>
+                                  <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+                                  <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+                                    <DataType>
+                                      <Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+                                    </DataType>
+                                  </Parameter>
+                                  <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+                                </Parameters>
+                              </Function>
+                            </Members>
+                          </Composite>
+                        </AttributedType>
+                        <AttributeValues>
+                          <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+                          <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+                          <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+                        </AttributeValues>
+                      </Attributed>
+                    </GenericTypeDefinition>
+                    <ClosedGenericParameters>
+                      <CFXP Right="13" Left="3" />
+                    </ClosedGenericParameters>
+                    <BaseType>
+                      <Void />
+                    </BaseType>
+                    <Members>
+                      <Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+                      <Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+                      <Function Id="8" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+                        <DeclaringType>
+                          <Composite RefId="5" />
+                        </DeclaringType>
+                        <GenericTypeDefinition>
+                          <Void />
+                        </GenericTypeDefinition>
+                        <Parameters>
+                          <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+                          <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+                            <DataType>
+                              <CFXP Right="13" Left="3" />
+                            </DataType>
+                          </Parameter>
+                          <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+                        </Parameters>
+                      </Function>
+                    </Members>
+                  </Composite>
+                </AttributedType>
+                <AttributeValues>
+                  <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+                  <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+                  <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+                </AttributeValues>
+              </Attributed>
+            </Constraints>
+          </Generic>
+        </AttributedType>
+        <AttributeValues>
+          <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+          <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+          <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+        </AttributeValues>
+      </Attributed>
+    </p.TypeReference>
+    <p.TypeReference TypeId="f7749f0760a740b58b9dd19509b419bb">
+      <Attributed>
+        <AttributedType>
+          <Generic>
+            <Constraints>
+              <Attributed>
+                <AttributedType>
+                  <Composite Id="1" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+                    <GenericTypeDefinition>
+                      <Attributed>
+                        <AttributedType>
+                          <Composite Id="2" Name="FifoWriteInterface" ReferenceClass="" Interface="">
+                            <GenericTypeDefinition>
+                              <Composite RefId="2" />
+                            </GenericTypeDefinition>
+                            <GenericParameters>
+                              <Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+                            </GenericParameters>
+                            <BaseType>
+                              <Void />
+                            </BaseType>
+                            <Members>
+                              <Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+                              <Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+                              <Function Id="3" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+                                <DeclaringType>
+                                  <Composite RefId="2" />
+                                </DeclaringType>
+                                <GenericTypeDefinition>
+                                  <Void />
+                                </GenericTypeDefinition>
+                                <Parameters>
+                                  <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+                                  <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+                                    <DataType>
+                                      <Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+                                    </DataType>
+                                  </Parameter>
+                                  <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+                                </Parameters>
+                              </Function>
+                            </Members>
+                          </Composite>
+                        </AttributedType>
+                        <AttributeValues>
+                          <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+                          <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+                          <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+                        </AttributeValues>
+                      </Attributed>
+                    </GenericTypeDefinition>
+                    <ClosedGenericParameters>
+                      <UInt32 />
+                    </ClosedGenericParameters>
+                    <BaseType>
+                      <Void />
+                    </BaseType>
+                    <Members>
+                      <Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
+                      <Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
+                      <Function Id="4" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+                        <DeclaringType>
+                          <Composite RefId="1" />
+                        </DeclaringType>
+                        <GenericTypeDefinition>
+                          <Void />
+                        </GenericTypeDefinition>
+                        <Parameters>
+                          <Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
+                          <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="UInt32" />
+                          <Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
+                        </Parameters>
+                      </Function>
+                    </Members>
+                  </Composite>
+                </AttributedType>
+                <AttributeValues>
+                  <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+                  <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+                  <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+                </AttributeValues>
+              </Attributed>
+            </Constraints>
+          </Generic>
+        </AttributedType>
+        <AttributeValues>
+          <AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+          <AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
+          <AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+        </AttributeValues>
+      </Attributed>
+    </p.TypeReference>
+    <p.TypeReference TypeId="c843328a30f744cbb29e05526807c415">
+      <Generic />
+    </p.TypeReference>
+  </DataTypeReferenceTable>
+</SourceFile>

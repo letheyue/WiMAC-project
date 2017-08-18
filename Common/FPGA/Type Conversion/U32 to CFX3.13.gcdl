@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="05BCFA59522A510159E470A4616E4554" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Converts unsigned 32 bit integer to CFX3.13.&lt;/p&gt;&lt;p&gt;The upper 16 bit are mapped to the imaginary part&lt;/p&gt;&lt;p&gt;and the lower 16 bit to the real part.&lt;/p&gt;&lt;p&gt;no latency&lt;/p&gt;</p.UserDescription>
+    <Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="99" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="100" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="101" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="102" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="103" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Id="104" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="105" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]U32 TO&#xD;&#xA;CFX3.13" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+            <FontSetting FontSize="5" Id="106" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="60" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="19" />
+      <ConnectorPaneTerminal Hotspot="15 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="0 50" Parameter="26" />
+      <ConnectorPaneTerminal Hotspot="15 40" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+      <ConnectorPaneTerminal Hotspot="40 15" />
+      <ConnectorPaneTerminal Hotspot="0 15" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" />
+      <ConnectorPaneTerminal Hotspot="40 25" />
+      <ConnectorPaneTerminal Hotspot="40 35" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="-65 -35 40 15" DataItem="19" Id="20" Label="23" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="235 -20 40 15" DataItem="26" Id="27" Label="28" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="CFXP(3.13)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="41" Joints="N(20:Value) N(42:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <SplitNumber Bounds="-10 -45 30 30" Id="42" />
+      <ToWordInteger Bounds="45 -30 30 10" Id="43" />
+      <ReinterpretNumber Bounds="100 -30 30 15" Id="44" RestrictToSameWordLength="True" />
+      <Literal Bounds="65 -60 40 15" DataType="FXP(3.13)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="45" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_3_13:G6" />
+      </Literal>
+      <Wire Id="46" Joints="N(45:Out) h(10) B(1) h(35) N(48:type) B(1) N(44:type)" xmlns="http://www.ni.com/PlatformFramework" />
+      <ToWordInteger Bounds="45 -15 30 10" Id="47" />
+      <ReinterpretNumber Bounds="135 -15 30 15" Id="48" RestrictToSameWordLength="True" />
+      <Wire Id="50" Joints="N(47:16bit integer) N(48:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="51" Joints="N(44:data out) N(54:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="52" Joints="N(43:16bit integer) N(44:data in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <RealAndImaginaryToComplex Bounds="190 -30 30 30" Id="54" />
+      <Wire Id="56" Joints="N(48:data out) N(54:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="57" Joints="N(54:x + iy) N(27:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="58" Joints="N(42:low(x\)) N(43:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="59" Joints="N(42:high(x\)) h(15) v(30) N(47:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="-25 -125 302 55" Id="62" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"Converts unsigned 32 bit integer to CFX3.13.\r\nThe upper 16 bit are mapped to the imaginary part\r\nand the lower 16 bit to the real part."</p.Text>
+      </Comment>
+      <Comment Bounds="70 -165 75 28" Id="63" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>no latency</p.Text>
+      </Comment>
+      <NodeLabel AttachedTo="20" Bounds="-107 -35 37 16" Id="23" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>data in</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="27" Bounds="280 -20 45 16" Id="28" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>data out</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="21" Label="[UIModel]22" Left="[float]109" MinHeight="[float]22" Top="[float]64" Value="{DataItemBinding Id=19}" ValueType="[Type]UInt32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="22" LabelOwner="[UIModel]21" Left="[float]109" Text="[string]data in" Top="[float]41" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="24" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ComplexNumber]0x1;0x0" Label="[UIModel]25" Left="[float]259" Maximum="[ComplexNumber]0x7FFFp-13;0x7FFFp-13" MinHeight="[float]22" Minimum="[ComplexNumber]0xFp+2;0xFp+2" RadixVisibility="[SMVisibility]Collapsed" Top="[float]64" Value="{DataItemBinding Id=26}" ValueFormatter="[string]LVFXP:CFXP_3_13&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]CFXP(3.13)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="25" LabelOwner="[UIModel]24" Left="[float]259" Text="[string]data out" Top="[float]41" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="UInt32" Id="19" Name="data in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;value as as unsigned 32 bit integer&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="CFXP(3.13)" Id="26" Name="data out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0;0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;conversion result CFX3.13&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+  </VirtualInstrument>
+</SourceFile>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="7B7B2EAD9F541DC7FE72A1DEE1F0B5E7" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;Sets/gets the configuration values for the instrument design libraries by connecting them to the Register Bus.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;Input Parameters&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;register instruction&lt;/b&gt; is the register bus instruction to execute.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;config.resources&lt;/b&gt; are references to the configuration registers.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;sync.resources&lt;/b&gt; are references to the synchronization registers.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;time.resources&lt;/b&gt; are references to the time registers.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;Output Parameters&lt;/b&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;read completion out&lt;/b&gt; is the output of the last executed register instruction.&lt;/p&gt;\n\n&lt;p&gt;&lt;b&gt;ready for input&lt;/b&gt; is a flow control signal that indicates whether the Registers node is ready to accept a new instruction.&lt;/p&gt;"</p.UserDescription>
+    <Icon Id="26" ListViewIconCrop="0 0 20 10" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Id="387" Left="[float]0" Top="[float]0" Width="[float]20">
+        <IconTemplate Id="714" Left="[float]0" TemplateName="Blank" Top="[float]0" />
+        <Rectangle EditMode="[ShapeEditMode]EditablePath" Fill="[SMSolidColorBrush]#00ffffff" Height="[float]9" Id="715" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Stroke="[SMSolidColorBrush]#ff000000" StrokeThickness="[float]1" Top="[float]0" Width="[float]20" />
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="10" Id="10" ListViewHeight="70" ListViewWidth="150" Width="20" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="655" />
+      <ConnectorPaneTerminal Hotspot="20 5" ListViewHotspot="150 50" Parameter="665" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="11" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Height="[float]1600" Id="12" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000">
+      <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@a8ce56836fa14ed48c02ebb87214f4fc" Height="[float]124" Id="656" Label="[UIModel]661" Left="[float]97" Top="[float]36" Value="{DataItemBinding Id=655}" Width="[float]88" p4:ControlDefinitionChecksum="UdrjOheGud7kcRN0NMHG2Q==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+        <p4:p.TypeDefinitionTargets>
+          <p4:TypeDefinitionTarget TargetName="niInstr\ Register\ Bus\ v1\ FPGA\.lvlib__Read\ Completion\.gtype:ControlDefinition" />
+        </p4:p.TypeDefinitionTargets>
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="657" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]659" Left="[float]5" MinHeight="[float]22" Top="[float]22" Value="{ClusterBinding FieldName=data}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="658" IsReadOnly="[bool]False" Label="[UIModel]660" Left="[float]5" MinHeight="[float]36" MinWidth="[float]36" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]64" TrueContent="[string]On" Value="{ClusterBinding FieldName=valid}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <p4:Label Id="659" LabelOwner="[UIModel]657" Left="[float]5" Text="[string]data" Top="[float]-1" />
+        <p4:Label Id="660" LabelOwner="[UIModel]658" Left="[float]5" Text="[string]valid" Top="[float]41" />
+      </Cluster>
+      <Label Id="661" LabelOwner="[UIModel]656" Left="[float]97" Text="[string]read completion in" Top="[float]13" xmlns="http://www.ni.com/PanelCommon" />
+      <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@85cd2154817a470c967fc42870a54d01" Height="[float]111" Id="668" Left="[float]0" Name="[string]read completion out" Top="[float]0" Value="{DataItemBinding Id=665}" Width="[float]88" xmlns="http://www.ni.com/PanelCommon">
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="671" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[uint]1" Label="[UIModel]676" Left="[float]5" MinHeight="[float]22" Top="[float]23" Value="{ClusterBinding FieldName=data}" ValueFormatter="[string]LV:G6" ValueType="[Type]UInt32" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="674" IsReadOnly="[bool]True" Label="[UIModel]677" Left="[float]5" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]68" TrueContent="[string]On" Value="{ClusterBinding FieldName=valid}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <Label Id="676" LabelOwner="[UIModel]671" Left="[float]5" Text="[string]data" Top="[float]0" />
+        <Label Id="677" LabelOwner="[UIModel]674" Left="[float]5" Text="[string]valid" Top="[float]45" />
+      </Cluster>
+    </FrontPanelUnplacedItems>
+    <BlockDiagram Id="13">
+      <DataAccessor Bounds="410 160 40 15" DataItem="655" Id="663" Label="664" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@a8ce56836fa14ed48c02ebb87214f4fc" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NodeLabel AttachedTo="663" Bounds="302 160 103 14" Id="664" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>read completion in</p.Text>
+      </NodeLabel>
+      <DataAccessor Bounds="620 160 40 15" DataItem="665" Id="667" Label="675" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@85cd2154817a470c967fc42870a54d01" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NodeLabel AttachedTo="667" Bounds="665 160 111 14" Id="675" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>read completion out</p.Text>
+      </NodeLabel>
+      <PropertyNode Bounds="460 160 61 50" HasErrorTerminals="False" Id="678" InstanceDataType="@a8ce56836fa14ed48c02ebb87214f4fc" Mode="InstanceProperties" Template="List">
+        <PropertyItemTerminal DataType="UInt32" Hotspot="61 15" Id="c0t0v" Path="data" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="61 30" Id="c1t0v" Path="valid" Usage="Optional" />
+      </PropertyNode>
+      <Wire Id="679" Joints="N(663:Value) N(678:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <PropertyNode Bounds="545 160 64 50" HasErrorTerminals="False" Id="680" InstanceDataType="@85cd2154817a470c967fc42870a54d01" Mode="InstanceProperties" Template="List">
+        <PropertyItemTerminal Action="Write" DataType="UInt32" Hotspot="0 15" Id="c0t0v" Path="data" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 30" Id="c1t0v" Path="valid" Usage="Required" />
+      </PropertyNode>
+      <ClusterLiteral Bounds="533 160 12 10" DataType="@85cd2154817a470c967fc42870a54d01" Facade="DockedConstantFacade" Id="681" Label="686" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0_False_</p.Data>
+        <ClusterBehavior AutoArrange="ArrangeVertically" />
+        <Literal Bounds="5 19 39.5 16" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="682" Label="683">
+          <p.Data>0</p.Data>
+          <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+        </Literal>
+        <NodeLabel AttachedTo="682" Bounds="5 2 25 14" Id="683" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>data</p.Text>
+        </NodeLabel>
+        <Literal Bounds="5 52 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="684" Label="685">
+          <p.Data>False</p.Data>
+          <BooleanBehavior />
+        </Literal>
+        <NodeLabel AttachedTo="684" Bounds="5 35 27 14" Id="685" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>valid</p.Text>
+        </NodeLabel>
+        <DockedConstantFacade UndockedSize="62.5 77" />
+      </ClusterLiteral>
+      <NodeLabel AttachedTo="681" Bounds="533 160 0 0" Id="686" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>read completion out</p.Text>
+      </NodeLabel>
+      <Wire Facade="WireInvisibleFacade" Id="688" Joints="N(681:Out) N(680:instance in)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="689" Joints="N(678:c1t0v) N(680:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="690" Joints="N(678:c0t0v) N(680:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="691" Joints="N(680:instance out) N(667:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="14" Left="[float]0" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]2000" />
+    <DataItem CallDirection="Input" CallIndex="0" DataType="@a8ce56836fa14ed48c02ebb87214f4fc" Id="655" Name="read completion in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0_False_</p.DefaultValue>
+      <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+        <TypeDefinitionTarget TargetName="niInstr\ Register\ Bus\ v1\ FPGA\.lvlib__Read\ Completion\.gtype" />
+      </p.TypeDefinitionTargets>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="@85cd2154817a470c967fc42870a54d01" Id="665" Name="read completion out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0_False_</p.DefaultValue>
+    </DataItem>
+  </VirtualInstrument>
+  <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+    <p.TypeReference TypeId="a8ce56836fa14ed48c02ebb87214f4fc">
+      <Typedef TypedefName="niInstr Register Bus v1 FPGA.lvlib__Read Completion.gtype" UnderlyingType="@85cd2154817a470c967fc42870a54d01" />
+    </p.TypeReference>
+    <p.TypeReference TypeId="85cd2154817a470c967fc42870a54d01">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="data" DataType="UInt32" />
+          <Field FieldAccessPolicy="ReadWrite" Name="valid" DataType="Boolean" />
+        </Members>
+      </Composite>
+    </p.TypeReference>
+  </DataTypeReferenceTable>
+</SourceFile>

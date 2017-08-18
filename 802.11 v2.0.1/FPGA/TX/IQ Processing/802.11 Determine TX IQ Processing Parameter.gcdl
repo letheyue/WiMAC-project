@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="1A5DDC2188920095F1A5FA34899FA7CB" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;Determines the following TX I/Q processing parameters for the current OFDM symbol.&lt;/p&gt;&lt;p&gt;&amp;#8226;CP length: 64 by default, but changes for L-LTF. Refer to Equation 22-23 in IEEE Standard 802.11ac-2013.&lt;/p&gt;&lt;p&gt;&amp;#8226;Duplicate Channel indicator: channel duplication is only enabled in 802.11ac mode for L-STF (22.3.8.2.2), L-LTF (22.3.8.2.3), L-SIG (22.3.4.4), VHT-STF (22.3.8.3.4)), VHT-LTF (22.3.8.3.5), and VHT-SIG-A (22.3.4.5).&lt;/p&gt;&lt;p&gt;&amp;#8226;bandwidth: bandwidth needed for channel duplication and rotation decision.&lt;/p&gt;&lt;p&gt;&amp;#8226;tone scaling factor: sets the correct tone scaling factor according to Table 22-8 of IEEE Standard 802.11ac-2013.&lt;/p&gt;&lt;p&gt;&amp;#8226;last unrotated subcarrier: all subsequent subcarriers are rotated. In 802.11a mode, this value is 255, which prevents channel rotation. In 802.11ac mode, the rotation depends on whether the fields are legacy or VHT encoded. Refer to section 22.3.7.5 and section 22.3.4 of IEEE Standard 802.11ac-2013 for more details.&lt;/p&gt;&lt;p&gt;\n&lt;strong&gt;Latency: 1 cycle.&lt;/strong&gt;\n&lt;/p&gt;"</p.UserDescription>
+    <Icon Id="2" ListViewIconCrop="0 0 50 50" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]50" Id="2226" Left="[float]0" Top="[float]0" Width="[float]50">
+        <Canvas Id="2227" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 46,50 L 4,50 C 1.791,50 0,48.209 0,46 L 0,4 C 0,1.791 1.791,0 4,0 L 46,0 C 48.209,0 50,1.791 50,4 L 50,46 C 50,48.209 48.209,50 46,50 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]50" Id="2228" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 46,49 L 4,49 C 2.343,49 1,47.657 1,46 L 1,4 C 1,2.343 2.343,1 4,1 L 46,1 C 47.657,1 49,2.343 49,4 L 49,46 C 49,47.657 47.657,49 46,49 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]50" Id="2229" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 4,2 L 46,2 C 47.105,2 48,2.895 48,4 L 48,46 C 48,47.105 47.105,48 46,48 L 4,48 C 2.895,48 2,47.105 2,46 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]50" Id="2230" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 12.426,7.684 C 12.34,7.645 12.215,7.597 12.051,7.539 C 11.887,7.481 11.748,7.432 11.637,7.391 C 11.526,7.493 11.424,7.616 11.334,7.76 C 11.244,7.904 11.199,8.067 11.199,8.246 C 11.199,8.517 11.297,8.732 11.49,8.892 C 11.683,9.052 11.937,9.132 12.25,9.132 C 12.334,9.132 12.432,9.12 12.543,9.095 C 12.654,9.07 12.752,9.032 12.832,8.98 C 12.926,8.92 13.002,8.85 13.059,8.769 C 13.116,8.688 13.145,8.579 13.145,8.441 C 13.145,8.253 13.098,8.111 13.004,8.015 C 12.91,7.919 12.717,7.809 12.426,7.684 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="2231" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 17.867,5.137 C 17.547,5.137 17.318,5.286 17.179,5.585 C 17.04,5.884 16.972,6.387 16.972,7.096 C 16.972,7.787 17.042,8.284 17.183,8.59 C 17.324,8.896 17.552,9.048 17.867,9.048 C 18.182,9.048 18.41,8.896 18.551,8.59 C 18.692,8.284 18.762,7.785 18.762,7.089 C 18.762,6.385 18.694,5.884 18.555,5.586 C 18.416,5.288 18.187,5.137 17.867,5.137 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="2232" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 11.93,6.211 C 12.002,6.242 12.102,6.281 12.229,6.326 C 12.356,6.371 12.508,6.423 12.688,6.48 C 12.807,6.339 12.893,6.213 12.946,6.101 C 12.999,5.989 13.024,5.851 13.024,5.687 C 13.024,5.489 12.948,5.332 12.795,5.214 C 12.642,5.096 12.44,5.038 12.188,5.038 C 12.094,5.038 11.999,5.05 11.901,5.073 C 11.803,5.096 11.713,5.13 11.633,5.175 C 11.557,5.219 11.494,5.277 11.445,5.349 C 11.396,5.421 11.371,5.502 11.371,5.593 C 11.371,5.747 11.414,5.866 11.502,5.952 C 11.59,6.038 11.732,6.125 11.93,6.211 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="2233" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Path Data="[PathGeometry]M 46,2 L 4,2 C 2.895,2 2,2.895 2,4 L 2,12 L 48,12 L 48,4 C 48,2.895 47.105,2 46,2 Z M 13.979,9.641 C 13.54,9.969 12.938,10.133 12.172,10.133 C 11.742,10.133 11.373,10.089 11.067,10 C 10.761,9.911 10.506,9.789 10.305,9.633 C 10.108,9.479 9.961,9.3 9.866,9.094 C 9.771,8.888 9.723,8.667 9.723,8.43 C 9.723,8.138 9.809,7.88 9.979,7.655 C 10.149,7.43 10.444,7.233 10.864,7.063 L 10.864,7.039 C 10.526,6.883 10.276,6.686 10.118,6.449 C 9.96,6.212 9.879,5.938 9.879,5.625 C 9.879,5.164 10.092,4.787 10.52,4.492 C 10.948,4.197 11.502,4.051 12.188,4.051 C 12.907,4.051 13.469,4.184 13.877,4.451 C 14.285,4.718 14.488,5.074 14.488,5.519 C 14.488,5.795 14.402,6.041 14.23,6.257 C 14.058,6.473 13.794,6.657 13.441,6.808 L 13.441,6.831 C 13.847,6.985 14.148,7.192 14.343,7.452 C 14.538,7.712 14.636,8.02 14.636,8.374 C 14.637,8.891 14.418,9.313 13.979,9.641 Z M 20.141,8.403 C 20.053,8.79 19.914,9.107 19.727,9.355 C 19.534,9.608 19.288,9.799 18.985,9.928 C 18.682,10.057 18.311,10.121 17.868,10.121 C 17.432,10.121 17.061,10.056 16.755,9.926 C 16.448,9.796 16.198,9.603 16.009,9.347 C 15.816,9.092 15.677,8.774 15.591,8.395 C 15.505,8.016 15.462,7.581 15.462,7.091 C 15.462,6.586 15.507,6.147 15.595,5.774 C 15.683,5.401 15.824,5.086 16.017,4.828 C 16.21,4.573 16.46,4.381 16.767,4.253 C 17.074,4.126 17.441,4.062 17.869,4.062 C 18.314,4.062 18.687,4.128 18.99,4.259 C 19.293,4.391 19.539,4.587 19.732,4.847 C 19.921,5.102 20.06,5.417 20.146,5.791 C 20.232,6.165 20.275,6.597 20.275,7.087 C 20.275,7.577 20.229,8.016 20.141,8.403 Z M 26,10 L 21.434,10 L 21.434,9.039 C 21.784,8.787 22.133,8.518 22.483,8.234 C 22.833,7.95 23.114,7.705 23.325,7.5 C 23.639,7.195 23.864,6.93 23.997,6.703 C 24.13,6.476 24.196,6.252 24.196,6.031 C 24.196,5.765 24.11,5.56 23.94,5.416 C 23.77,5.272 23.524,5.199 23.204,5.199 C 22.964,5.199 22.712,5.248 22.448,5.347 C 22.184,5.446 21.938,5.572 21.712,5.726 L 21.587,5.726 L 21.587,4.434 C 21.773,4.353 22.044,4.272 22.405,4.192 C 22.766,4.112 23.128,4.071 23.489,4.071 C 24.218,4.071 24.774,4.224 25.157,4.53 C 25.54,4.836 25.731,5.269 25.731,5.829 C 25.731,6.196 25.639,6.545 25.456,6.876 C 25.273,7.207 24.991,7.548 24.614,7.899 C 24.378,8.118 24.139,8.319 23.899,8.503 C 23.659,8.687 23.489,8.815 23.387,8.888 L 26,8.888 L 26,10 Z M 28.574,10 L 27.113,10 L 27.113,8.465 L 28.574,8.465 L 28.574,10 Z M 34.211,10 L 30.328,10 L 30.328,8.984 L 31.555,8.984 L 31.555,5.91 L 30.328,5.91 L 30.328,4.961 C 30.516,4.961 30.695,4.95 30.867,4.928 C 31.039,4.906 31.181,4.867 31.297,4.813 C 31.432,4.748 31.533,4.663 31.602,4.559 C 31.671,4.455 31.709,4.325 31.719,4.168 L 33.012,4.168 L 33.012,8.984 L 34.211,8.984 L 34.211,10 Z M 39.898,10 L 36.015,10 L 36.015,8.984 L 37.242,8.984 L 37.242,5.91 L 36.015,5.91 L 36.015,4.961 C 36.203,4.961 36.382,4.95 36.554,4.928 C 36.726,4.906 36.868,4.867 36.984,4.813 C 37.119,4.748 37.22,4.663 37.289,4.559 C 37.358,4.455 37.396,4.325 37.406,4.168 L 38.699,4.168 L 38.699,8.984 L 39.898,8.984 L 39.898,10 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]50" Id="2234" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
+          <Text Height="[float]37" Id="2235" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]GET TX IQ&#xD;&#xA;PROCESSING&#xD;&#xA;PARAM" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]12" Width="[float]48">
+            <FontSetting FontSize="6" Id="2236" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="50" Id="9" ListViewHeight="105" ListViewWidth="150" Width="50" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 80" Parameter="1874" />
+      <ConnectorPaneTerminal Hotspot="0 15" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" />
+      <ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 35" Parameter="199" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="50 5" ListViewHotspot="150 65" Parameter="1701" />
+      <ConnectorPaneTerminal Hotspot="50 15" />
+      <ConnectorPaneTerminal Hotspot="50 25" />
+      <ConnectorPaneTerminal Hotspot="50 35" />
+      <ConnectorPaneTerminal Hotspot="15 50" />
+      <ConnectorPaneTerminal Hotspot="25 50" />
+      <ConnectorPaneTerminal Hotspot="0 45" />
+      <ConnectorPaneTerminal Hotspot="35 0" ListViewHotspot="0 50" Parameter="242" />
+      <ConnectorPaneTerminal Hotspot="50 45" />
+      <ConnectorPaneTerminal Hotspot="35 50" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="335 1350 40 15" DataItem="199" Id="200" Label="204" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@c958f15602ab42d89409e77a3ef59694" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="335 2135 40 15" DataItem="242" Id="243" Label="244" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Comment Bounds="1265 1210 83 15" Id="603" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>Latency = 2</p.Text>
+      </Comment>
+      <Select Bounds="1350 1415 40 40" Id="880" />
+      <Select Bounds="1275 1440 40 40" Id="882" />
+      <Literal Bounds="1210.5 1470 39.5 16" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="884" Label="885" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>64</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+      </Literal>
+      <Literal Bounds="1212 1415 42 16" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="887" Label="888" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>128</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+      </Literal>
+      <Wire Id="889" Joints="N(887:Out) N(880:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="1210.5 1440 39.5 16" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="891" Label="892" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+      </Literal>
+      <Wire Id="900" Joints="N(882:s? t:f) h(15) v(-10) N(880:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="901" Joints="N(891:Out) N(882:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="902" Joints="N(884:Out) N(882:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="1210 1330 179 68" Id="910" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"CP is 64 sample by default\r\nException are the L-LTF field\r\nwhere the CP of the first is of\r\ndouble length an CP of \r\nsecond is zero."</p.Text>
+      </Comment>
+      <WireComment AttachedTo="2032" Bounds="880 1497 65 16" Id="935" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>65</p.ExpandedWidth>
+        <p.Point>912.5 1505</p.Point>
+        <p.Text>L-Fields</p.Text>
+      </WireComment>
+      <FeedbackNode ArrowDirection="Right" Bounds="1900 1415 30 20" EnableTerminalVisible="False" Id="936" />
+      <Select Bounds="1545 1845 40 40" Id="1198" />
+      <Select Bounds="1495 1975 40 40" Id="1201" />
+      <Wire Id="1246" Joints="N(1629:1609) h(40) v(15) N(1201:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1256" Joints="N(1201:s? t:f) h(5) v(-115) N(1198:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <WireComment AttachedTo="1855" Bounds="885 1427 64 16" Id="1259" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>64</p.ExpandedWidth>
+        <p.Point>917 1435</p.Point>
+        <p.Text>L-LTF 1</p.Text>
+      </WireComment>
+      <WireComment AttachedTo="1857" Bounds="885 1452 64 16" Id="1260" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>64</p.ExpandedWidth>
+        <p.Point>917 1460</p.Point>
+        <p.Text>L-LTF 2</p.Text>
+      </WireComment>
+      <WireComment AttachedTo="1845" Bounds="1020 1582 71 16" Id="1261" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>71</p.ExpandedWidth>
+        <p.Point>1055.5 1590</p.Point>
+        <p.Text>VHT-STF</p.Text>
+      </WireComment>
+      <ClusterLiteral Bounds="1608 1420 12 10" DataType="@2d3be313a7714e568fc465be5958db38" Facade="DockedConstantFacade" Id="1311" Label="1340" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0_0_False_0_0x0_</p.Data>
+        <ClusterBehavior AutoArrange="ArrangeVertically" />
+        <Literal Bounds="5 55 40 15" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1346" Label="1347">
+          <p.Data>0</p.Data>
+          <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+        </Literal>
+        <Literal Bounds="5 89 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="1348" Label="1349">
+          <p.Data>False</p.Data>
+          <BooleanBehavior />
+        </Literal>
+        <Literal Bounds="5 123 40 15" DataType="Int8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1371" Label="1372">
+          <p.Data>0</p.Data>
+          <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+        </Literal>
+        <Literal Bounds="5 21 103 15" DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1453" Label="1455">
+          <p.Data>0</p.Data>
+          <EnumBehavior Id="1454" />
+        </Literal>
+        <Literal Bounds="5 157 40 15" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1592" Label="1593">
+          <p.Data>0x0</p.Data>
+          <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+        </Literal>
+        <DockedConstantFacade UndockedSize="218 182" />
+        <NodeLabel AttachedTo="1346" Bounds="5 36 52 16" Id="1347" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>CP length</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="1348" Bounds="5 70 97 16" Id="1349" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>Duplicate Channel</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="1371" Bounds="5 104 195 16" Id="1372" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>last unrotated frequency offset index</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="1453" Bounds="5 2 57 16" Id="1455" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>bandwidth</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="1592" Bounds="5 138 98 16" Id="1593" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>tone scaling factor</p.Text>
+        </NodeLabel>
+      </ClusterLiteral>
+      <LogicalOr Bounds="985 1500 25 20" Id="1353" Terminals="o=2100, c0t0v=2032, c1t0v=1845" />
+      <PropertyNode Bounds="1620 1420 265 95" HasErrorTerminals="False" Id="1356" InstanceDataType="@2d3be313a7714e568fc465be5958db38" Mode="InstanceProperties" Template="List">
+        <PropertyItemTerminal Action="Write" DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Hotspot="0 75" Id="c0t0v" Path="bandwidth" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="UInt8" Hotspot="0 15" Id="c1t0v" Path="CP length" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 30" Id="c2t0v" Path="Duplicate Channel" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="Int8" Hotspot="0 45" Id="c3t0v" Path="last unrotated frequency offset index" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="FXP(0.24)" Hotspot="0 60" Id="c4t0v" Path="tone scaling factor" Usage="Required" />
+      </PropertyNode>
+      <Wire Id="1359" Joints="N(880:s? t:f) N(1356:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1377" Joints="N(1198:s? t:f) h(10) v(-385) N(1356:c4t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1378" Joints="N(1356:instance out) N(936:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <IsEqual Bounds="880 1630 30 30" Id="1441" />
+      <Literal Bounds="785 1645 75 15" DataType="@c958f15602ab42d89409e77a3ef59694" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1443" Label="1445" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0</p.Data>
+        <EnumBehavior Id="1444" />
+      </Literal>
+      <Wire Id="1446" Joints="N(1443:Out) N(1441:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <LogicalOr Bounds="985 1535 25 20" Id="1448" Terminals="o=1451, c0t0v=2032, c1t0v=2099" />
+      <Wire Id="1451" Joints="N(1448:o) h(170) v(320) N(1198:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="1170 1265 249 28" Id="1492" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"This VI sets field dependend configuration\r\nparameter for TX processing."</p.Text>
+      </Comment>
+      <WireComment AttachedTo="2100" Bounds="1020 1495.5 108 29" Id="1493" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>108</p.ExpandedWidth>
+        <p.Point>1074 1510</p.Point>
+        <p.Text>"legacy encoded\r\n VHT fields"</p.Text>
+      </WireComment>
+      <Comment Bounds="1235 1690 272 28" Id="1494" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"The tone scaling factor depends on bandwidth\r\nand field type (see table 22-8 in 22.3.7.4). "</p.Text>
+      </Comment>
+      <CaseStructure Bounds="1235 1775 211 75" DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Id="1606" Selected="1620" UserSelectorBounds="50 0 111 17">
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1620" Pattern="&quot;20 MHz&quot;">
+          <Literal Bounds="12 45 179 16" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1647" Label="1649" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x238035</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="10 15 74 15" Id="1648" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(52)</p.Text>
+          </Comment>
+          <Wire Id="1650" Joints="N(1647:Out) N(1624:1620)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1647" Bounds="12 45 0 0" Id="1649" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1621" Pattern="&quot;40 MHz&quot;">
+          <Literal Bounds="10 45 188 15" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1651" Label="1653" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x191A55</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="8 15 83 28" Id="1652" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(104)</p.Text>
+          </Comment>
+          <Wire Id="1654" Joints="N(1651:Out) N(1624:1621)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1651" Bounds="10 45 0 0" Id="1653" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1622" Pattern="&quot;80 MHz&quot;">
+          <Literal Bounds="10 45 188 15" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1655" Label="1657" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x11C01B</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="10 15 83 28" Id="1656" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(208)</p.Text>
+          </Comment>
+          <Wire Id="1658" Joints="N(1655:Out) N(1624:1622)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1655" Bounds="10 45 0 0" Id="1657" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="1623" Terminals="1606=1974, 1620, 1621, 1622" />
+        <CaseStructure.Tunnel Bounds="202 50 13 10" Docking="Right" Id="1624" Terminals="1606=1688, 1620=1650, 1621=1654, 1622=1658" />
+      </CaseStructure>
+      <Wire Id="1688" Joints="N(1624:1606) h(70) v(20) N(1198:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="1235 1910 211 75" DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Id="1609" Selected="1625" UserSelectorBounds="50 0 111 17">
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1625" Pattern="&quot;20 MHz&quot;">
+          <Literal Bounds="12 45 179 16" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1659" Label="1661" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x49E69D</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="10 15 74 15" Id="1660" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(12)</p.Text>
+          </Comment>
+          <Wire Id="1662" Joints="N(1659:Out) N(1629:1625)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1659" Bounds="12 45 0 0" Id="1661" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1626" Pattern="&quot;40 MHz&quot;">
+          <Literal Bounds="10 45 181 15" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1663" Label="1665" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x34417B</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="10 15 76 28" Id="1664" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(24)</p.Text>
+          </Comment>
+          <Wire Id="1666" Joints="N(1663:Out) N(1629:1626)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1663" Bounds="10 45 0 0" Id="1665" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1627" Pattern="&quot;80 MHz&quot;">
+          <Comment Bounds="10 15 76 28" Id="1667" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(48)</p.Text>
+          </Comment>
+          <Literal Bounds="10 45 181 15" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1668" Label="1669" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x24F34F</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Wire Id="1670" Joints="N(1668:Out) N(1629:1627)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1668" Bounds="10 45 0 0" Id="1669" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="1628" Terminals="1609=1974, 1625, 1626, 1627" />
+        <CaseStructure.Tunnel Bounds="202 50 13 10" Docking="Right" Id="1629" Terminals="1609=1246, 1625=1662, 1626=1666, 1627=1670" />
+      </CaseStructure>
+      <CaseStructure Bounds="1240 2050 211 75" DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Id="1612" Selected="1630" UserSelectorBounds="50 0 111 17">
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1630" Pattern="&quot;20 MHz&quot;">
+          <Literal Bounds="12 45 179 16" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1671" Label="1673" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x22359E</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="10 15 74 15" Id="1672" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(56)</p.Text>
+          </Comment>
+          <Wire Id="1674" Joints="N(1671:Out) N(1634:1630)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1671" Bounds="12 45 0 0" Id="1673" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1631" Pattern="&quot;40 MHz&quot;">
+          <Literal Bounds="10 45 188 15" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1675" Label="1677" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x17FA02</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="10 15 83 28" Id="1676" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(114)</p.Text>
+          </Comment>
+          <Wire Id="1678" Joints="N(1675:Out) N(1634:1631)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1675" Bounds="10 45 0 0" Id="1677" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 201 65" Id="1632" Pattern="&quot;80 MHz&quot;">
+          <Literal Bounds="10 45 174 15" DataType="FXP(0.24)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1679" Label="1681" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0x1074D0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LVFXP:FXP_0_24:" />
+          </Literal>
+          <Comment Bounds="10 15 83 28" Id="1680" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>1/sqrt(242)</p.Text>
+          </Comment>
+          <Wire Id="1682" Joints="N(1679:Out) N(1634:1632)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1679" Bounds="10 45 0 0" Id="1681" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>output</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="1633" Terminals="1612=1974, 1630, 1631, 1632" />
+        <CaseStructure.Tunnel Bounds="202 50 13 10" Docking="Right" Id="1634" Terminals="1612=1696, 1630=1674, 1631=1678, 1632=1682" />
+      </CaseStructure>
+      <Wire Id="1696" Joints="N(1634:1612) h(35) v(-95) N(1201:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="1235 1740 215 15" Id="1697" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>tone scaling factors for legacy fields</p.Text>
+      </Comment>
+      <Comment Bounds="1235 1875 195 15" Id="1698" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>tone scaling factors for VHT-STF</p.Text>
+      </Comment>
+      <Comment Bounds="1240 2005 174 28" Id="1699" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"tone scaling factors for VHT \r\n(except VHT-STF)"</p.Text>
+      </Comment>
+      <DataAccessor Bounds="1945 1420 40 15" DataItem="1701" Id="1703" Label="1728" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@21488fb20ed64c3a96d752bcccb9b209" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="1729" Joints="N(936:output) N(1703:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <WireComment AttachedTo="2099" Bounds="927 1624 96 16" Id="1782" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>96</p.ExpandedWidth>
+        <p.Point>975 1632</p.Point>
+        <p.Text>Legacy mode</p.Text>
+      </WireComment>
+      <Wire Facade="WireInvisibleFacade" Id="1792" Joints="N(1311:Out) N(1356:instance in)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <IsEqual Bounds="880 1595 30 30" Id="1805" />
+      <Literal Bounds="786 1610 75 15" DataType="@c958f15602ab42d89409e77a3ef59694" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1807" Label="1809" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>1</p.Data>
+        <EnumBehavior Id="1808" />
+      </Literal>
+      <LogicalAnd Bounds="920 1580 25 20" Id="1817" Terminals="o=1845, c0t0v=1858, c1t0v=1819" />
+      <Wire Id="1819" Joints="N(1805:x = y?) h(5) v(-15) N(1817:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1845" Joints="N(1817:o) h(15) B(1) h(205) v(405) N(1201:s) B(1) v(-75) N(1353:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="550 1420 40 40" DomainName="NI.Appframeworks.802.11" Id="1848" Target="\802\.11\ OFDM\ Symbol\ Type\ Mapper\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="OFDM symbol index" />
+            <Parameter Id="T0" Desc="format" />
+            <Parameter Id="R0" Desc="symbol type" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="UInt16" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="@c958f15602ab42d89409e77a3ef59694" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="@e5dc856fb1f04c22a91b5d6d8eef7126" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <PropertyNode Bounds="600 1420 107 170" HasErrorTerminals="False" Id="1852" InstanceDataType="@e5dc856fb1f04c22a91b5d6d8eef7126" Mode="InstanceProperties" Template="List">
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 45" Id="c0t0v" Path="L-STF-1" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 60" Id="c1t0v" Path="L-STF-2" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 15" Id="c2t0v" Path="L-LTF-1" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 30" Id="c3t0v" Path="L-LTF-2" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 75" Id="c4t0v" Path="L-SIG" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 90" Id="c5t0v" Path="L-Data init" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 105" Id="c6t0v" Path="L-Data" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 120" Id="c7t0v" Path="VHT-SIG-A-1" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 135" Id="c8t0v" Path="VHT-SIG-A-2" Usage="Optional" />
+        <PropertyItemTerminal DataType="Boolean" Hotspot="107 150" Id="c9t0v" Path="VHT-STF" Usage="Optional" />
+      </PropertyNode>
+      <Wire Id="1853" Joints="N(1848:R0) N(1852:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1855" Joints="N(1852:c2t0v) h(83) B(1) N(880:s) B(1) v(40) N(1859:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1857" Joints="N(1852:c3t0v) h(73) B(1) h(35) v(10) N(882:s) B(1) v(35) N(1859:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1858" Joints="N(1852:c9t0v) h(18) v(15) N(1817:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <LogicalOr Bounds="800 1470 25 90" Id="1859" Terminals="o=2032, c0t0v=1855, c1t0v=1857, c2t0v=1868, c3t0v=1867, c4t0v=1866, c5t0v=1863, c6t0v=1862, c7t0v=1861, c8t0v=1860" VerticalChunkCount="9" />
+      <Wire Id="1860" Joints="N(1852:c8t0v) N(1859:c8t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1861" Joints="N(1852:c7t0v) h(28) v(5) N(1859:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1862" Joints="N(1852:c6t0v) h(33) v(10) N(1859:c6t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1863" Joints="N(1852:c5t0v) h(38) v(15) N(1859:c5t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1866" Joints="N(1852:c4t0v) h(43) v(20) N(1859:c4t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1867" Joints="N(1852:c1t0v) h(53) v(25) N(1859:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1868" Joints="N(1852:c0t0v) h(63) v(30) N(1859:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <PropertyNode Bounds="380 1370 144 35" HasErrorTerminals="False" Id="1871" InstanceDataType="@7615bc772e5f45bcba98c3b4d040e28b" Mode="InstanceProperties" Template="List">
+        <PropertyItemTerminal DataType="UInt16" Hotspot="144 15" Id="c0t0v" Path="OFDM symbol index" Usage="Optional" />
+      </PropertyNode>
+      <DataAccessor Bounds="335 1370 40 15" DataItem="1874" Id="1872" Label="1873" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@7615bc772e5f45bcba98c3b4d040e28b" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="1887" Joints="N(1872:Value) N(1871:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1889" Joints="N(1871:c0t0v) h(5) v(40) N(1848:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="1240 1520 269 28" Id="2020" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"tone rotation based on frequency offset index\r\n(see section 22.3.7.5)"</p.Text>
+      </Comment>
+      <Wire Id="2028" Joints="N(2113:2105) h(111) v(-160) N(1356:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2032" Joints="N(1859:o) h(5) v(25) h(145) B(3) N(1353:c0t0v) B(3) v(35) N(1448:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <WireComment AttachedTo="1451" Bounds="1020 1530.5 98 29" Id="2039" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>98</p.ExpandedWidth>
+        <p.Point>1069 1545</p.Point>
+        <p.Text>"legacy carrier\r\noccupation"</p.Text>
+      </WireComment>
+      <Wire Id="2040" Joints="N(200:Value) h(165) B(1) h(25) N(1848:T0) B(1) v(245) B(4) N(1805:x) B(4) v(35) N(1441:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2042" Joints="N(1807:Out) N(1805:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="555 1450 30 15" Id="2043" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>1</p.Text>
+      </Comment>
+      <Wire Id="2099" Joints="N(1441:x = y?) h(65) v(-95) N(1448:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="2100" Joints="N(1353:o) h(185) B(1) h(370) v(-60) N(1356:c2t0v) B(1) v(90) N(2108:2105)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1974" Joints="N(243:Value) h(840) B(1) h(395) v(-645) N(1356:c0t0v) B(1) v(-45) B(5) N(1633:1612) B(5) v(-140) B(7) N(1628:1609) B(7) v(-135) B(9) N(1623:1606) B(9) v(-190) N(2110:2105)" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="1230 1575 235 110" Id="2105" Selected="2106" UserSelectorBounds="74 0 88 17">
+        <CaseStructure.Case Bounds="5 5 225 100" Id="2106" Pattern="True">
+          <Literal Bounds="150.5 40 39.5 16" DataType="Int8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2116" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>31</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+          </Literal>
+          <Wire Id="2117" Joints="N(2116:Out) N(2113:2106)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Comment Bounds="15 20 126 42" Id="2118" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>"just duplicated\r\nparts are rotated\r\nk &gt; legacy subband"</p.Text>
+          </Comment>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 225 100" Id="2107" Pattern="False">
+          <CaseStructure Bounds="45 15 120 70" DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Id="1890" Selected="1891" UserSelectorBounds="8 0 105 17">
+            <CaseStructure.Case Bounds="5 5 110 60" Id="1891" Pattern="&quot;20 MHz&quot;">
+              <Literal Bounds="36 20 44 15" DataType="Int8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2101" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>127</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+              </Literal>
+              <Wire Id="2102" Joints="N(2101:Out) N(1898:1891)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 110 60" Id="1892" Pattern="&quot;40 MHz&quot;">
+              <Literal Bounds="35 20 40 15" DataType="Int8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="2103" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>0</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+              </Literal>
+              <Wire Id="2104" Joints="N(2103:Out) N(1898:1892)" xmlns="http://www.ni.com/PlatformFramework" />
+            </CaseStructure.Case>
+            <CaseStructure.Case Bounds="5 5 110 60" Id="1893" Pattern="&quot;80 MHz&quot;">
+              <Literal Bounds="38 20 42 15" DataType="Int8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="1919" Label="1921" xmlns="http://www.ni.com/MocCommon">
+                <p.Data>-64</p.Data>
+                <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+              </Literal>
+              <Wire Id="1920" Joints="N(1919:Out) N(1898:1893)" xmlns="http://www.ni.com/PlatformFramework" />
+              <NodeLabel AttachedTo="1919" Bounds="38 20 0 0" Id="1921" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+                <p.Text>first subcarrier index to rotate</p.Text>
+              </NodeLabel>
+            </CaseStructure.Case>
+            <CaseStructure.Selector Bounds="-4 30 13 10" Docking="Left" Id="1894" Terminals="1890=2109, 1891, 1892, 1893" />
+            <CaseStructure.Tunnel Bounds="111 25 13 10" Docking="Right" Id="1898" Terminals="1890=2112, 1891=2102, 1892=2104, 1893=1920" />
+          </CaseStructure>
+          <Wire Id="2109" Joints="N(2110:2107) N(1894:1890)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="2112" Joints="N(1898:1890) N(2113:2107)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="2108" Terminals="2105=2100, 2106, 2107" />
+        <CaseStructure.Tunnel Bounds="-4 50 13 10" Docking="Left" Id="2110" Terminals="2105=1974, 2106, 2107=2109" />
+        <CaseStructure.Tunnel Bounds="226 45 13 10" Docking="Right" Id="2113" Terminals="2105=2028, 2106=2117, 2107=2112" />
+      </CaseStructure>
+      <NodeLabel AttachedTo="200" Bounds="293 1350 37 14" Id="204" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>format</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="243" Bounds="272 2135 58 14" Id="244" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>bandwidth</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="884" Bounds="1210.5 1470 0 0" Id="885" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>false case</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="887" Bounds="1212 1415 0 0" Id="888" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>true case</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="891" Bounds="1210.5 1440 0 0" Id="892" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>true case</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1311" Bounds="1608 1420 0 0" Id="1340" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>TX IQ processing parameter</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1443" Bounds="785 1645 0 0" Id="1445" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>y</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1703" Bounds="1990 1420 156 14" Id="1728" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>TX IQ processing parameter</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1807" Bounds="786 1610 0 0" Id="1809" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>y</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="1872" Bounds="278 1370 52 14" Id="1873" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>Timing in</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="201" IsTypeAheadEnabled="[bool]True" Label="[UIModel]203" Left="[float]103" Top="[float]384" Value="{DataItemBinding Id=199}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]121" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <EnumSelectorInfo DisplayValue="[string]a" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]ac" IsEnabled="[bool]True" Value="[ushort]1" ValueType="[Type]UInt16" />
+      </EnumSelector>
+      <Label Height="[float]16" Id="203" LabelOwner="[UIModel]201" Left="[float]103" Text="[string]format" Top="[float]361" Width="[float]36" xmlns="http://www.ni.com/PanelCommon" />
+      <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="238" IsTypeAheadEnabled="[bool]True" Label="[UIModel]241" Left="[float]103" Top="[float]441" Value="{DataItemBinding Id=242}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]121" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <EnumSelectorInfo DisplayValue="[string]20 MHz" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]40 MHz" IsEnabled="[bool]True" Value="[ushort]1" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]80 MHz" IsEnabled="[bool]True" Value="[ushort]2" ValueType="[Type]UInt16" />
+      </EnumSelector>
+      <Label Height="[float]16" Id="241" LabelOwner="[UIModel]238" Left="[float]103" Text="[string]bandwidth" Top="[float]418" Width="[float]57" xmlns="http://www.ni.com/PanelCommon" />
+      <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@21488fb20ed64c3a96d752bcccb9b209" Height="[float]231" Id="1704" Label="[UIModel]1730" Left="[float]554" Top="[float]57" Value="{DataItemBinding Id=1701}" Width="[float]175" xmlns="http://www.ni.com/PanelCommon">
+        <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="1707" InteractionMode="[SelectorInteractionModes]ReadOnly" IsTypeAheadEnabled="[bool]True" Label="[UIModel]1723" Left="[float]5" Top="[float]23" Value="{ClusterBinding FieldName=bandwidth}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+          <EnumSelectorInfo DisplayValue="[string]20 MHz" Value="[ushort]0" ValueType="[Type]UInt16" />
+          <EnumSelectorInfo DisplayValue="[string]40 MHz" Value="[ushort]1" ValueType="[Type]UInt16" />
+          <EnumSelectorInfo DisplayValue="[string]80 MHz" Value="[ushort]2" ValueType="[Type]UInt16" />
+        </EnumSelector>
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1713" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]1724" Left="[float]5" MinHeight="[float]22" Top="[float]65" Value="{ClusterBinding FieldName=CP\ length}" ValueType="[Type]UInt8" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="1716" IsReadOnly="[bool]True" Label="[UIModel]1725" Left="[float]5" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]107" TrueContent="[string]On" Value="{ClusterBinding FieldName=Duplicate\ Channel}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1719" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]1726" Left="[float]5" MinHeight="[float]22" Top="[float]157" Value="{ClusterBinding FieldName=last\ unrotated\ subcarrier\ index}" ValueType="[Type]Int8" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1722" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[Number]0x7FFFFFp-24" Label="[UIModel]1727" Left="[float]5" Maximum="[Number]0x7FFFFFp-24" MinHeight="[float]22" Minimum="[Number]0xFp-1" Top="[float]199" Value="{ClusterBinding FieldName=tone\ scaling\ factor}" ValueFormatter="[string]LVFXP:FXP_0_24&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]FXP(0.24)" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <Label Height="[float]16" Id="1723" LabelOwner="[UIModel]1707" Left="[float]5" Text="[string]bandwidth" Top="[float]0" Width="[float]57" />
+        <Label Height="[float]16" Id="1724" LabelOwner="[UIModel]1713" Left="[float]5" Text="[string]CP length" Top="[float]42" Width="[float]52" />
+        <Label Height="[float]16" Id="1725" LabelOwner="[UIModel]1716" Left="[float]5" Text="[string]Duplicate Channel" Top="[float]84" Width="[float]97" />
+        <Label Height="[float]16" Id="1726" LabelOwner="[UIModel]1719" Left="[float]5" Text="[string]last unrotated subcarrier index" Top="[float]134" Width="[float]162" />
+        <Label Height="[float]16" Id="1727" LabelOwner="[UIModel]1722" Left="[float]5" Text="[string]tone scaling factor" Top="[float]176" Width="[float]98" />
+      </Cluster>
+      <Label Height="[float]16" Id="1730" LabelOwner="[UIModel]1704" Left="[float]554" Text="[string]TX IQ processing parameter" Top="[float]34" Width="[float]148" xmlns="http://www.ni.com/PanelCommon" />
+      <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@7615bc772e5f45bcba98c3b4d040e28b" Height="[float]279" Id="1875" Label="[UIModel]1886" Left="[float]103" Top="[float]57" Value="{DataItemBinding Id=1874}" Width="[float]133" xmlns="http://www.ni.com/PanelCommon">
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1876" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]1881" Left="[float]5" MinHeight="[float]22" Top="[float]23" Value="{ClusterBinding FieldName=Subcarrier\ index}" ValueType="[Type]UInt8" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1877" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]1882" Left="[float]5" MinHeight="[float]22" Top="[float]65" Value="{ClusterBinding FieldName=OFDM\ symbol\ index}" ValueType="[Type]UInt16" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="1878" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]1883" Left="[float]5" MinHeight="[float]22" Top="[float]107" Value="{ClusterBinding FieldName=Frequency\ offset\ index}" ValueType="[Type]Int8" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="1879" IsReadOnly="[bool]False" Label="[UIModel]1884" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]149" TrueContent="[string]On" Value="{ClusterBinding FieldName=Output\ valid}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="1880" IsReadOnly="[bool]False" Label="[UIModel]1885" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]219" TrueContent="[string]On" Value="{ClusterBinding FieldName=OFDM\ symbol\ start}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <Label Height="[float]16" Id="1881" LabelOwner="[UIModel]1876" Left="[float]5" Text="[string]Subcarrier index" Top="[float]0" Width="[float]86" />
+        <Label Height="[float]16" Id="1882" LabelOwner="[UIModel]1877" Left="[float]5" Text="[string]OFDM symbol index" Top="[float]42" Width="[float]108" />
+        <Label Height="[float]16" Id="1883" LabelOwner="[UIModel]1878" Left="[float]5" Text="[string]Frequency offset index" Top="[float]84" Width="[float]120" />
+        <Label Height="[float]16" Id="1884" LabelOwner="[UIModel]1879" Left="[float]5" Text="[string]Output valid" Top="[float]126" Width="[float]66" />
+        <Label Height="[float]16" Id="1885" LabelOwner="[UIModel]1880" Left="[float]5" Text="[string]OFDM symbol start" Top="[float]196" Width="[float]103" />
+      </Cluster>
+      <Label Height="[float]16" Id="1886" LabelOwner="[UIModel]1875" Left="[float]103" Text="[string]Timing in" Top="[float]34" Width="[float]50" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem CallDirection="Input" CallIndex="1" DataType="@c958f15602ab42d89409e77a3ef59694" Id="199" Name="format" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Transmission mode used for the TX packet currently being sent.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="3" DataType="@4f9bb19e878648dfb7a52c6b0779a1fb" Id="242" Name="bandwidth" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Bandwidth for the current packet. Enumeration type: 20 MHz, 40 MHz, 80 MHz&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="@21488fb20ed64c3a96d752bcccb9b209" Id="1701" Name="TX IQ processing parameter" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0_0_False_0_0x0_</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The cluster with additional parameters needed for TX I/Q processing.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="@7615bc772e5f45bcba98c3b4d040e28b" Id="1874" Name="Timing in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0_0_0_False_False_</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;A cluster containing the current OFDM symbol index needed to process parameter decisions.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <IconTable xmlns="http://www.ni.com/PlatformFramework">
+      <p.IconModel Target="\802\.11\ OFDM\ Symbol\ Type\ Mapper\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 7.426,7.684 C 7.34,7.645 7.215,7.596 7.051,7.539 C 6.887,7.482 6.749,7.432 6.637,7.391 C 6.525,7.492 6.424,7.615 6.334,7.76 C 6.244,7.905 6.199,8.066 6.199,8.246 C 6.199,8.517 6.296,8.732 6.49,8.892 C 6.684,9.052 6.937,9.132 7.25,9.132 C 7.333,9.132 7.431,9.12 7.543,9.095 C 7.655,9.07 7.751,9.033 7.832,8.98 C 7.926,8.92 8.001,8.85 8.059,8.77 C 8.117,8.69 8.145,8.58 8.145,8.442 C 8.145,8.254 8.098,8.112 8.004,8.016 C 7.91,7.92 7.717,7.809 7.426,7.684 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 6.93,6.211 C 7.003,6.242 7.102,6.281 7.229,6.326 C 7.356,6.371 7.508,6.423 7.688,6.48 C 7.808,6.339 7.894,6.213 7.946,6.101 C 7.998,5.989 8.024,5.851 8.024,5.687 C 8.024,5.489 7.948,5.332 7.795,5.214 C 7.642,5.096 7.44,5.039 7.188,5.039 C 7.094,5.039 6.999,5.051 6.901,5.074 C 6.803,5.097 6.713,5.131 6.633,5.176 C 6.557,5.22 6.495,5.278 6.445,5.35 C 6.395,5.422 6.371,5.502 6.371,5.594 C 6.371,5.748 6.414,5.867 6.502,5.953 C 6.59,6.039 6.732,6.125 6.93,6.211 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 12.867,5.137 C 12.547,5.137 12.318,5.286 12.179,5.585 C 12.04,5.884 11.972,6.387 11.972,7.096 C 11.972,7.787 12.042,8.284 12.183,8.59 C 12.324,8.896 12.552,9.048 12.867,9.048 C 13.182,9.048 13.41,8.896 13.551,8.59 C 13.692,8.284 13.762,7.785 13.762,7.089 C 13.762,6.385 13.693,5.884 13.555,5.586 C 13.417,5.288 13.188,5.137 12.867,5.137 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,2 L 4,2 C 2.895,2 2,2.895 2,4 L 2,12 L 38,12 L 38,4 C 38,2.895 37.105,2 36,2 Z M 8.979,9.641 C 8.54,9.969 7.938,10.133 7.172,10.133 C 6.742,10.133 6.374,10.089 6.067,10 C 5.76,9.911 5.505,9.789 5.305,9.633 C 5.107,9.479 4.96,9.299 4.865,9.094 C 4.77,8.889 4.723,8.667 4.723,8.43 C 4.723,8.138 4.808,7.88 4.979,7.655 C 5.15,7.43 5.444,7.233 5.864,7.063 L 5.864,7.039 C 5.526,6.883 5.277,6.686 5.118,6.449 C 4.959,6.212 4.879,5.938 4.879,5.625 C 4.879,5.164 5.092,4.787 5.52,4.492 C 5.948,4.197 6.503,4.051 7.188,4.051 C 7.907,4.051 8.47,4.184 8.877,4.451 C 9.284,4.718 9.488,5.074 9.488,5.52 C 9.488,5.796 9.402,6.042 9.23,6.258 C 9.058,6.474 8.795,6.658 8.441,6.809 L 8.441,6.832 C 8.847,6.986 9.148,7.193 9.343,7.453 C 9.538,7.713 9.636,8.021 9.636,8.375 C 9.637,8.891 9.417,9.313 8.979,9.641 Z M 15.141,8.403 C 15.053,8.79 14.914,9.107 14.727,9.355 C 14.534,9.608 14.287,9.799 13.985,9.928 C 13.683,10.057 13.311,10.121 12.868,10.121 C 12.433,10.121 12.062,10.056 11.755,9.926 C 11.448,9.796 11.199,9.603 11.009,9.347 C 10.816,9.092 10.677,8.774 10.591,8.395 C 10.505,8.016 10.462,7.581 10.462,7.091 C 10.462,6.586 10.506,6.147 10.595,5.774 C 10.683,5.401 10.824,5.086 11.017,4.828 C 11.21,4.573 11.46,4.381 11.767,4.253 C 12.074,4.126 12.441,4.062 12.869,4.062 C 13.314,4.062 13.688,4.128 13.99,4.259 C 14.292,4.391 14.539,4.587 14.732,4.847 C 14.922,5.102 15.06,5.417 15.146,5.791 C 15.232,6.165 15.275,6.597 15.275,7.087 C 15.275,7.577 15.229,8.016 15.141,8.403 Z M 21,10 L 16.434,10 L 16.434,9.039 C 16.783,8.787 17.133,8.518 17.483,8.234 C 17.833,7.95 18.114,7.705 18.325,7.5 C 18.64,7.195 18.864,6.93 18.997,6.703 C 19.13,6.476 19.196,6.252 19.196,6.031 C 19.196,5.765 19.111,5.56 18.94,5.416 C 18.769,5.272 18.524,5.199 18.204,5.199 C 17.964,5.199 17.712,5.248 17.448,5.347 C 17.184,5.446 16.938,5.572 16.712,5.726 L 16.587,5.726 L 16.587,4.434 C 16.772,4.353 17.045,4.272 17.405,4.192 C 17.765,4.112 18.127,4.071 18.489,4.071 C 19.218,4.071 19.774,4.224 20.157,4.53 C 20.54,4.836 20.731,5.269 20.731,5.829 C 20.731,6.196 20.639,6.545 20.456,6.876 C 20.273,7.207 19.992,7.548 19.614,7.899 C 19.377,8.118 19.139,8.319 18.899,8.503 C 18.659,8.687 18.489,8.815 18.387,8.888 L 21,8.888 L 21,10 Z M 23.574,10 L 22.113,10 L 22.113,8.465 L 23.574,8.465 L 23.574,10 Z M 29.211,10 L 25.328,10 L 25.328,8.984 L 26.555,8.984 L 26.555,5.91 L 25.328,5.91 L 25.328,4.961 C 25.516,4.961 25.695,4.95 25.867,4.928 C 26.039,4.906 26.182,4.867 26.297,4.813 C 26.432,4.748 26.534,4.663 26.602,4.559 C 26.67,4.455 26.709,4.325 26.719,4.168 L 28.012,4.168 L 28.012,8.984 L 29.211,8.984 L 29.211,10 Z M 34.898,10 L 31.015,10 L 31.015,8.984 L 32.242,8.984 L 32.242,5.91 L 31.015,5.91 L 31.015,4.961 C 31.203,4.961 31.382,4.95 31.554,4.928 C 31.726,4.906 31.869,4.867 31.984,4.813 C 32.119,4.748 32.221,4.663 32.289,4.559 C 32.357,4.455 32.396,4.325 32.406,4.168 L 33.699,4.168 L 33.699,8.984 L 34.898,8.984 L 34.898,10 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]OFDM SMBL&#xD;&#xA;TYPE&#xD;&#xA;MAPPER" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]12" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+    </IconTable>
+  </VirtualInstrument>
+  <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+    <p.TypeReference TypeId="c958f15602ab42d89409e77a3ef59694">
+      <Enumeration>
+        <Members>
+          <EnumerationMember Value="0" Name="a" />
+          <EnumerationMember Value="1" Name="ac" />
+        </Members>
+        <DataType>
+          <UInt16 />
+        </DataType>
+      </Enumeration>
+    </p.TypeReference>
+    <p.TypeReference TypeId="4f9bb19e878648dfb7a52c6b0779a1fb">
+      <Enumeration>
+        <Members>
+          <EnumerationMember Value="0" Name="20 MHz" />
+          <EnumerationMember Value="1" Name="40 MHz" />
+          <EnumerationMember Value="2" Name="80 MHz" />
+        </Members>
+        <DataType>
+          <UInt16 />
+        </DataType>
+      </Enumeration>
+    </p.TypeReference>
+    <p.TypeReference TypeId="2d3be313a7714e568fc465be5958db38">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="bandwidth">
+            <DataType>
+              <Enumeration>
+                <Members>
+                  <EnumerationMember Value="0" Name="20 MHz" />
+                  <EnumerationMember Value="1" Name="40 MHz" />
+                  <EnumerationMember Value="2" Name="80 MHz" />
+                </Members>
+                <DataType>
+                  <UInt16 />
+                </DataType>
+              </Enumeration>
+            </DataType>
+          </Field>
+          <Field FieldAccessPolicy="ReadWrite" Name="CP length" DataType="UInt8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="Duplicate Channel" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="last unrotated frequency offset index" DataType="Int8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="tone scaling factor">
+            <DataType>
+              <FXP Right="24" Left="0" />
+            </DataType>
+          </Field>
+        </Members>
+      </Composite>
+    </p.TypeReference>
+    <p.TypeReference TypeId="21488fb20ed64c3a96d752bcccb9b209">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="bandwidth">
+            <DataType>
+              <Enumeration>
+                <Members>
+                  <EnumerationMember Value="0" Name="20 MHz" />
+                  <EnumerationMember Value="1" Name="40 MHz" />
+                  <EnumerationMember Value="2" Name="80 MHz" />
+                </Members>
+                <DataType>
+                  <UInt16 />
+                </DataType>
+              </Enumeration>
+            </DataType>
+          </Field>
+          <Field FieldAccessPolicy="ReadWrite" Name="CP length" DataType="UInt8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="Duplicate Channel" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="last unrotated subcarrier index" DataType="Int8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="tone scaling factor">
+            <DataType>
+              <FXP Right="24" Left="0" />
+            </DataType>
+          </Field>
+        </Members>
+      </Composite>
+    </p.TypeReference>
+    <p.TypeReference TypeId="e5dc856fb1f04c22a91b5d6d8eef7126">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="L-STF-1" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="L-STF-2" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="L-LTF-1" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="L-LTF-2" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="L-SIG" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="L-Data init" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="L-Data" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="VHT-SIG-A-1" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="VHT-SIG-A-2" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="VHT-STF" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="VHT-LTF" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="VHT-SIG-B" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="VHT-Data init" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="VHT-Data" DataType="Boolean" />
+        </Members>
+      </Composite>
+    </p.TypeReference>
+    <p.TypeReference TypeId="7615bc772e5f45bcba98c3b4d040e28b">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="Subcarrier index" DataType="UInt8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="OFDM symbol index" DataType="UInt16" />
+          <Field FieldAccessPolicy="ReadWrite" Name="Frequency offset index" DataType="Int8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="Output valid" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="OFDM symbol start" DataType="Boolean" />
+        </Members>
+      </Composite>
+    </p.TypeReference>
+  </DataTypeReferenceTable>
+</SourceFile>

@@ -1,0 +1,1467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=Windows-1252">
+    <title>
+        802.11 Application Framework Getting Started Guide
+    </title>
+    <style type="text/css">
+<!--
+
+/***************************************************/
+
+/* MINIMAL STYLES */
+
+/* The following section defines styles that every HTML Help project should need. */
+
+/* Specifies White Background color */
+
+body {
+ background-color: #FFFFFF;
+ font-family: Verdana, sans-serif;
+ font-size: 8pt;
+ color: #000000;
+}
+
+/* The default style of P is red to alert you that you need to apply a style class, such as Body. */
+
+P { margin-top:6.00pt; margin-bottom:6.00pt;}
+
+BR { font-size:4.00pt; }
+
+/* Use H1 for all topic headings. */
+H1 { margin-top:3.00pt; margin-bottom:3.00pt; font-size:150%; font-weight:bold;  }
+
+/* Use H2 for second-level headings. */
+H2 { margin-top:9.00pt; margin-bottom:3.00pt; font-size:125%; font-weight:bold;  }
+
+/* Use H3 for third-level headings. */
+H3 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* Use H4 for fourth-level headings. */
+H4 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* H5 and H6 have the same definition as H4 because you should not need this level of heading in one topic. If you need to use H5 or H6, consider breaking up your topic into more than one topic. */
+H5 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+H6 { margin-top:6.00pt; margin-bottom:3.00pt; font-size:100%; font-weight:bold;  }
+
+/* Use the Body style class for normal paragraphs. */
+P.Body {  }
+
+/* Use the Anchor style class for graphic references on a line by themselves. */
+P.Anchor { font-size:125%;  }
+
+/* Use the Indent style classes to indent a paragraph. If you need to indent text below a list item, use<BR><BR>to start the new paragraph within the same set of
+	<LI></LI>tags. If you need to indent a list within another list, nest the indented list within the first list's set of
+	<OL>
+	</OL>	or
+	<UL>
+	</UL>	tags. */
+	 
+	 P.Indent1 { margin-left:12.00pt; margin-bottom:3.00pt;  }
+	 
+	 P.Indent2 { margin-left:24.00pt; margin-bottom:3.00pt;  }
+	 
+	 P.Indent3 { margin-left:36.00pt; margin-bottom:3.00pt;  }
+	 
+	 P.Indent4 { margin-left:48.00pt; margin-bottom:3.00pt;  }
+	 
+	 P.Indent5 { margin-left:60.00pt; margin-bottom:3.00pt;  }
+	 
+	 
+	 
+	 /* Use the LI style for all list items. */
+	 
+	 LI { margin-top:3.00pt; margin-bottom:3.00pt; }
+	 
+	 
+	 
+	 /* Use the OL style for numbered lists. You do not have to type the number for each list item in a numbered list. */
+	 
+	 OL { margin-left:22.00pt; margin-top:3.00pt; margin-bottom:3.00pt; text-indent:0pt; list-style-type: decimal; }
+	 
+	 
+	 
+	 /* Use the OL style for numbered lists. Nested lists will use the bullet types according to the nesting scheme below */
+	 
+	 ol ol {list-style-type:lower-alpha}
+	 
+	 ol ol ol {list-style-type:decimal}
+	 
+	 ol ol ol ol {list-style-type:lower-alpha}
+	 
+	 ol ol ol ol ol {list-style-type:decimal}
+	 
+	 ol ol ol ol ol ol {list-style-type:lower-alpha}
+	 
+	 ol ol ol ol ol ol ol {list-style-type:decimal}
+	 
+	 ol ol ol ol ol ol ol ol {list-style-type:lower-alpha}
+	 
+	 
+	 
+	 
+	 
+	 /* Use the EquationNum style class for numbered lists of equations. You do not have to type the number for each list item in a numbered list. */
+	 
+	 OL.EquationNum { margin-left:36.00pt; text-indent:0pt; list-style-type: decimal; }
+	 
+	 
+	 
+	 /* Use the List-abc style class for lettered lists. You do not have to type the letter for each list item in a lettered list. */
+	 
+	 OL.List-abc { margin-left:22.00pt; text-indent:0pt; list-style-type:lower-alpha; }
+	 
+	 
+	 
+	 /* Use the UL style for bulleted lists. You do not have to type the bullet for each list item in a bulleted list. */
+	 
+	 UL { margin-left:22.00pt; text-indent:0pt; margin-top:3.00pt; margin-bottom:3.00pt; list-style-type: disc; }
+	 
+	 
+	 
+	 /* Use the UL style for bulleted lists. Nested lists will use the bullet types according to the nesting scheme below. */
+	 
+	 ul ul {list-style-image: none;list-style-type: circle}
+	 
+	 ul ul ul {list-style-image:none;list-style-type:disc}
+	 
+	 ul ul ul ul {list-style-image: none;list-style-type: circle}
+	 
+	 ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+	 
+	 ul ul ul ul ul ul {list-style-image: none;list-style-type: circle}
+	 
+	 ul ul ul ul ul ul ul {list-style-image:none;list-style-type:disc}
+	 
+	 ul ul ul ul ul ul ul ul ul{list-style-image: none;list-style-type: circle}
+	 
+	 
+	 
+	 /* Use the List-Box style class for bulleted lists with boxes instead of bullets. You do not have to type the box for each list item in a box list. */
+	 
+	 UL.List-Box { list-style-image: none;list-style-type: square}
+	 
+	 
+	 
+	 Table { font-size:100%; }
+	 
+	 
+	 
+	 /* Use the Borderless style class for tables that do not need borders, such as for 2-column or 3-column lists with no headings. */
+	 
+	 Table.Borderless { border:none; }
+	 
+	 
+	 
+	 /* Use the Bordered style class for tables that need borders. */
+	 
+	 Table.Bordered { border-width: 1pt; border-style: solid; border-color: #000000; border-collapse: collapse; }
+	 
+	 
+	 
+	 /* Use the TD style for table cells in Borderless or Borderless-Wide tables. */
+	 
+	 TD { vertical-align:top; padding:3px; }
+	 
+	 
+	 
+	 /* Use the Bordered style class for table headings and cells in Bordered or Bordered-Wide tables. */
+	 
+	 .Bordered { border-width: 1pt; border-style: solid; border-color: #000000; }
+	 
+	 
+	 
+	 /* Use the Icon style class for table cells that contain note, caution, warning, or tip icons, or LabVIEW datatype terminals. */
+	 
+	 TD.Icon { width:40px; }
+	 
+	 
+	 
+	 /* Use the TH style for table heading cells in Borderless or Borderless-Wide tables. */
+	 
+	 TH { font-weight:bold; padding:3px; }
+	 
+	 
+	 
+	 /* Use the Left-Align style class for table headings and cells that you want to left align instead of center align. */
+	 
+	 .Left-Align { text-align:left; }
+	 
+	 
+	 
+	 /***************************************************/
+	 
+	 /* CHARACTER FORMATS */
+	 
+	 /* The following section defines character formats that every HTML Help project should need. */
+	 
+	 
+	 
+	 /* CHARACTER FORMATS Updated to conform with the CSE HTML Validator Pro */
+	 
+	 /* The following section defines character formats that every HTML Help project should need. */
+	 
+	 
+	 
+	 /* Use the Dark-Red format for warnings or cautions. */
+	 
+	 .Dark-Red { color: #800000 }
+	 
+	 
+	 
+	 /* Use the Monospace format for code or syntax examples. */
+	 
+	 .Monospace { font-family: Courier New; font-size: 100%; }
+	 
+	 
+	 
+	 /* Use the Monospace-Bold format for messages and responses that the computer automatically prints to the screen. */
+	 
+	 .Monospace-Bold { font-family: Courier New; font-weight: bold; font-size: 100%; }
+	 
+	 
+	 
+	 /* Use the Monospace-Italic format to denote text that is a placeholder for a word or value that the user must supply. */
+	 
+	 .Monospace-Italic { font-family: Courier New; font-style: italic; font-size: 100%; }
+	 
+	 
+	 
+	 /* small class */
+	 
+	 .smallFont { font-size:87.5%; }
+	 
+	 
+	 
+	 /* Bold class */
+	 
+	 .Bold { font-weight: bold; }
+	 
+	 
+	 
+	 /* Italic class */
+	 
+	 .Italic { font-style: italic; }
+	 
+	 
+	 
+	 /* Use the Platform format to denote a specific platform. */
+	 
+	 .Platform { color: #0000FF; font-weight: bold; }
+	 
+	 
+	 
+	 /* Use the Symbol format for characters not in the Verdana character set. Use this format sparingly. When possible, you should use the correct ASCII code for the symbol or use a graphic to recreate the symbol. */
+	 
+	 .Symbol { font-family: Symbol; }
+	 
+	 
+	 
+	 /* Use the Red-text format to call attention to text that needs  information added or edited by techcomm */
+	 
+	 .Red-text {color: #FF0000;}
+	 
+	 
+	 
+	 /* Use the Green-Underline format for the green defintion in the conventions topic */
+	 
+	 .Green-Underline {color: #007700; text-decoration : underline;}
+	 
+	 
+	 
+	 /* Use the glossButton format for the glossary buttons used in the glossary topic */
+	 
+	 .glossButton { font-size:12px; color:black; }
+	 
+	 
+	 
+	 /* Use for text sections and hyphenated words that should not break at line wraps */
+	 
+	 .nobreak{white-space:nowrap}
+	 
+	 
+	 
+	 /* Use for template instructions. */
+	 
+	 .instructions{color:red; font-style:italic}
+	 
+	 
+	 
+	 /*Use for words and text sections that do not need to be localized */
+	 
+	 .DNL { }
+	 
+	 
+	 
+	 /* The following styles define the color of links. */
+	 
+	 a:link { color: #007700 }
+	 
+	 a:visited { color: #7F007F }
+	 
+	 a:link:hover { color: #FF0000 }
+	 
+	 a:link:active { color: #FF0000 }
+	 
+	 
+	 
+	 /***************************************************
+	 
+	 ** Forms */
+	 
+	 
+	 
+	 form { margin-top:0pt; margin-bottom:3pt; color:black; }
+	 
+	 select { font-size:100%; color:black; }
+	 
+	 
+	 
+	 /*******************************************************
+	 
+	 ** Margins **
+	 
+	 ** Use these styles for block-level elements inside tables cells or list items where you do not want extra padding at the top or bottom of a cell. */
+	 
+	 .noTopMargin { margin-top:0pt;}
+	 
+	 .noBottomMargin { margin-bottom:0pt;}
+	 
+	 
+	 
+	 /***************************************************
+	 
+	 ** CODE STYLES **
+	 
+	 ** The following section defines styles that you need to format entire sections of code or syntax examples. If you have just a few words you need to format as a code or syntax example, use the Monospace character format. */
+	 
+	 
+	 
+	 P.Code { margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+	 
+	 P.Code1 { margin-left:12.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+	 
+	 P.Code2 { margin-left:24.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+	 
+	 P.Code3 { margin-left:36.00pt; margin-top:3.00pt; margin-bottom:0.00pt; font-family:Courier New;  }
+	 
+	 --></style>
+<script type="text/javascript">// define hyperlinks and function for launching a URL in a browser
+
+
+function WWW(url) 
+ {
+ var urlWindow;
+ urlWindow = window.open(url, "New", "directories=yes,location=yes,menubar=yes,resizable=yes,scrollbars=yes,status=yes,toolbar=yes");
+ }
+</script>
+</head>
+   <body><h1> 802.11 Application Framework Getting Started Guide
+      </h1>
+<p class="Body">This document provides basic information about how to get started with the 802.11 Application Framework.</p><h2> Table of Contents
+      </h2>
+<p class="Body"><a href="#_Toc438129359">
+System Requirements
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129360">
+Software
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129361">
+Hardware
+</a></p>
+<p class="Body"><a href="#_Toc438129362">
+Understanding the Components of This Sample Project
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129363">
+Folder Structure
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129364">
+Components
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129365">
+Statement of Compliance and Deviations
+</a></p>
+<p class="Body"><a href="#_Toc438129366">
+Running This Sample Project
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129367">
+Configuring the Hardware
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129368">
+Configuring the USRP RIO Setup
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129369">
+Configuring the FlexRIO Setup
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129370">
+Running the LabVIEW Host Code
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129371">
+Application Settings
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129372">
+Static Runtime Settings
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129373">
+Dynamic Runtime Settings
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129374">
+Graphs and Indicators
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129375">
+Advanced Settings
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129376">
+Static Runtime Settings
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129377">
+Dynamic Runtime Setting
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129378">
+Graphs and Indicators
+</a></p>
+<p class="Body"><a href="#_Toc438129379">
+Additional Operation Modes and Configurations Options
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129380">
+RF Multi Station Mode: Cabled
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129381">
+Configuring the NI USRP RIO System
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129382">
+Configuring the FlexRIO System
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129383">
+Running the LabVIEW Host Code
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129384">
+RF Multi Station Mode: Over-the-Air Transmission
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129385">
+Configuring the NI USRP RIO System
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129386">
+Configuring the FlexRIO/FlexRIO Adapter Module Setup
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129387">
+Running the LabVIEW Host Code
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129388">
+Baseband Loopback
+</a></p>
+<p class="Body">&nbsp;&nbsp;<a href="#_Toc438129389">
+Additional Configuration Options
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129390">
+PN Data Generator
+</a></p>
+<p class="Body">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#_Toc438129391">
+Video Transmission
+</a></p>
+<p class="Body"><a href="#_Toc438129392">
+Troubleshooting
+</a></p>
+<p class="Body"><a href="#_Toc438129393">
+Known Issues
+</a></p>
+<p class="Body"><a href="#_Toc438129394">
+Related Information
+</a></p>
+<p class="Body"><a href="#_Toc438129395">
+Legal Information
+</a></p>
+<p class="Body"><a href="#_Toc438129396">
+Abbreviations
+</a></p><h1><a name="_Toc438129359">
+</a><a name="_Toc421106001">
+</a><a name="system_req">
+</a>System Requirements
+      </h1>
+      <h2><a name="_Toc438129360">
+Software
+</a></h2>
+   	<ul>
+   		<li>Windows 7 SP1 (64-bit) or Windows 8.1 (64-bit)</li>
+   		<li>LabVIEW Communications System Design Suite 2.0
+   		<ul>
+   			<li>Installed with the 802.11 Application Framework enabled</li>
+   		</ul></li>
+   	</ul><h2><a name="_Toc438129361">
+</a><a name="_Ref422316730">
+</a><a name="_Ref422127498">
+Hardware
+</a></h2>
+<p class="Body">To use the 802.11 Application Framework for bidirectional data transmission, you need two NI RF devices, either USRP RIO devices with 40&nbsp;MHz, 120 MHz, or 160&nbsp;MHz bandwidth, or FlexRIO modules. The two devices can be connected to either one host computer or several host computers, which can be either a PC or PXI chassis. Special test modes using the loopback functionality provided by the framework can be executed with only one NI USRP device. The setup options are shown in Figure 1.</p>
+<p class="Body"><img alt="figure" src="images/clip_image002.png"></p>
+<p class="Body"><a name="_Ref422125006">
+Figure
+</a>1 Hardware Configuration Options</p>
+<p class="Body">Depending on the chosen configuration, the following hardware is required.</p>
+   	<table border="1" cellpadding="0" cellspacing="0" width="605">
+   		<tbody>
+   			<tr>
+   				<td rowspan="2" valign="top" width="215">Configuration</td>
+   				<td colspan="3" valign="top" width="113">All setups</td>
+   				<td colspan="3" valign="top" width="113">USRP RIO setup</td>
+   				<td colspan="2" valign="top" width="163">FlexRIO/FlexRIO adapter module setup</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="38">Host PC</td>
+   				<td valign="top" width="38">SMA Cable</td>
+   				<td valign="top" width="38">Antenna</td>
+   				<td valign="top" width="38">USRP</td>
+   				<td valign="top" width="38">Attenuator</td>
+   				<td valign="top" width="38">MXI adapter</td>
+   				<td valign="top" width="85">FlexRIO FPGA module</td>
+   				<td valign="top" width="78">FlexRIO adapter module</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="215">Single device, cabled</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">0</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="85">1</td>
+   				<td valign="top" width="78">1</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="215">Single device, over-the-air<a name="_Ref423541147">
+</a><a href="#_ftn1" name="_ftnref1" title="">
+[1]
+</a></td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">-</td>
+   				<td valign="top" width="38">2</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">-</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="85">1</td>
+   				<td valign="top" width="78">1</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="215">Double device, cabled</td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">2</td>
+   				<td valign="top" width="38">-</td>
+   				<td valign="top" width="38">2</td>
+   				<td valign="top" width="38">2</td>
+   				<td valign="top" width="38">2</td>
+   				<td valign="top" width="85">2</td>
+   				<td valign="top" width="78">2</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="215">Double device, over-the-air<a name="_Ref423541147">
+</a><a href="#_ftn1" name="_ftnref1" title="">
+[1]
+</a></td>
+   				<td valign="top" width="38">1</td>
+   				<td valign="top" width="38">-</td>
+   				<td valign="top" width="38">4</td>
+   				<td valign="top" width="38">2</td>
+   				<td valign="top" width="38">-</td>
+   				<td valign="top" width="38">2</td>
+   				<td valign="top" width="85">2</td>
+   				<td valign="top" width="78">2</td>
+   			</tr>
+   		</tbody>
+   	</table>
+   	<ul>
+   		<li>Controller: Recommended&mdash;PXIe-1085 with a PXIe-8135 controller    installed. A second controller is needed for separate host    operation.</li>
+   		<li>SMA cable: Female/female cable that is included with the NI USRP    device.</li>
+   		<li>Antenna: Refer to the <em>RF Multi Station Mode: Over-the-Air    Transmission</em> section for more information about this mode.</li>
+   		<li>NI USRP device: USRP-294xR/295xR with 40 MHz, 120 MHz, or 160 MHz    bandwidth</li>
+   		<li>Attenuator with 30 dB attenuation and male/female SMA connectors    that are included with the NI USRP device.</li>
+   		<li>FlexRIO FPGA module: PXIe-7975R/7976R FlexRIO FPGA Module</li>
+   		<li>FlexRIO adapter module: NI&nbsp;5791 RF transceiver adapter module</li>
+   	</ul>
+<p class="Body">The preceding recommendations assume you are using PXI-based host systems. You can also use a PC with a PCI-based or PCI Express-based MXI adapter, or a laptop with an Express card-based MXI adapter.</p>
+<p class="Body">Ensure your host has at least 20&nbsp;GB of free disk space and 8 GB of RAM. To compile bitfiles for the NI RF device FPGA, your system should be equipped with 16 GB RAM.</p>
+   	<table border="0" cellpadding="0">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="40"><img src="images/clip_image003.png" alt="Caution" height="26" width="28"></td>
+   				<td valign="top">Caution: Before using your hardware, read all product documentation to ensure compliance with safety, EMC, and environmental regulations.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="40"><img src="images/clip_image003.png" alt="Caution" height="26" width="28"></td>
+   				<td valign="top">Caution: To ensure the specified EMC performance, operate the RF devices only with shielded cables and accessories.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="40"><img src="images/clip_image003.png" alt="Caution" height="26" width="28"></td>
+   				<td valign="top">Caution: To ensure the specified EMC performance, the length of all I/O cables except for those connected to the GPS antenna input of the USRP device must be no longer than 3 m (10 ft).</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="40"><img src="images/clip_image003.png" alt="Caution" height="26" width="28"></td>
+   				<td valign="top">Caution: The USRP-29xx and NI&nbsp;5791 RF devices are not approved or licensed for transmission over the air using an antenna. As a result, operating this product with an antenna may violate local laws. Ensure that you are in compliance with all local laws before operating this product with an antenna.</td>
+   			</tr>
+   		</tbody>
+   	</table><h1><a name="_Toc438129362">
+</a><a name="_Toc421106002">
+</a><a name="understand_comp">
+</a>Understanding the Components of This Sample Project
+      </h1>
+<p class="Body">The project is comprised of LabVIEW host code and LabVIEW FPGA code for the supported NI USRP or FlexRIO hardware targets. The related folder structure and the components of the project are described in the next subsections.</p><h2><a name="_Toc438129363">
+Folder Structure
+</a></h2>
+<p class="Body">To create a new instance of the 802.11 Application Framework, select <strong>Launch a Project &raquo; Application Frameworks &raquo; 802.11 Design USRP RIO v2.0.1</strong>. The following files and folders are created inside the specified folder:</p>
+   	<ul>
+   		<li><strong>802.11 Design USRP RIO v2.0.1.lvproject</strong>&mdash;This project file contains information about the linked subGVIs, targets and build specifications.</li>
+   		<li><strong>802.11 Host.gvi</strong>&mdash;This top-level host VI implements an 802.11 station. The host interfaces with the bitfile build from the top-level FPGA VI, <strong>802.11 FPGA STA.gvi</strong>, located in the target specific subfolder.</li>
+   		<li><strong>Builds</strong>&mdash;This folder contains the precompiled    bitfiles for the selected target device.</li>
+   		<li><strong>Common</strong>&mdash;The common library contains generic    subVIs for the host and FPGA that are used in the 802.11    Application Framework. This code includes mathematical functions    and type conversions.</li>
+   		<li><strong>FlexRIO/USRP RIO</strong>&mdash; These folders contain    target-specific implementations of host and FPGA subVIs, which    include code to set gain and frequency. This code is in most cases    adapted from the given target-specific streaming sample projects.    They also contain the target-specific top-level FPGA VIs.</li>
+   		<li><strong>802.11 v2.0.1</strong>&mdash;This folder comprises the    802.11 functionality itself separated into several FPGA folders and    a host directory.</li>
+   	</ul>
+	
+<h2><a name="_Ref422317188">
+</a><a name="_Ref421191485">
+</a><a name="_Ref421190883">
+</a><a name="_Ref421106064">
+</a><a name="_Toc421106003">
+</a><a name="_Ref422312380">
+</a><a name="_Toc438129364">
+</a><a name="run_tsp">
+</a>Components
+      </h2>
+<p class="Body">The 802.11 Application Framework provides a real-time orthogonal frequency-division multiplexing (OFDM) physical layer (PHY) and lower media access control (MAC) implementation for an IEEE 802.11-based system. The 802.11 Application Framework LabVIEW project implements the functionality of one station, including receiver (RX) and transmitter (TX) functionality.</p><h2><a name="_Toc438129365">
+Statement of Compliance and Deviations
+</a></h2>
+<p class="Body">The 802.11 Application Framework is designed to be compliant with the IEEE 802.11 specifications. To keep the design easily modifiable, the 802.11 Application Framework focuses on the core functionality of the IEEE 802.11 standard.</p>
+   	<ul>
+   		<li>802.11a- (Legacy mode) and 802.11ac- (Very High Throughput mode)    compliant PHY</li>
+   		<li>Training field based packet detection</li>
+   		<li>Signal and data field encoding and decoding</li>
+   		<li>Clear Channel Assessment (CCA) based on energy and signal detection</li>
+   		<li>802.11a compliant lower-MAC components to support Data frame and    ACK frame transmission</li>
+   		<li>MPDU generation and multi-node addressing</li>
+   		<li>ACK generation with 802.11 IEEE-compliant SIFS timing (16 &micro;s)</li>
+   	</ul>
+<p class="Body">The 802.11 Application Framework supports the following features:</p>
+   	<ul>
+   		<li>Long guard interval only</li>
+   		<li>Single input single output (SISO) architecture, ready for MIMO</li>
+   		<li>VHT20 and VHT40 for the 802.11ac standard</li>
+   		<li>A-MPDU with a single MPDU for the 802.11ac standard</li>
+   		<li>Initial transmissions only, architecture ready for retransmissions</li>
+   		<li>The backoff value is fixed on the FPGA but is configurable during    run-time through the host interface. A backoff value of 4 is used    to approximate channel sensing for DIFS time for initial channel    access</li>
+   		<li>Packet-by-packet automatic gain control (AGC) allowing for over the    air transmission and reception.</li>
+   	</ul>
+<p class="Body">Refer to the<a href="http://digital.ni.com/express.nsf/bycode/ex6isk">
+802.11 Application Framework white paper
+</a>for more information about the 802.11 Application Framework design.</p><h1><a name="_Toc438129366">
+Running This Sample Project
+</a></h1>
+<p class="Body">This section describes the main steps needed to run the 802.11 Application Framework using the RF loopback operation mode. Other operation modes are described in the <em>Additional Operation Modes and Configurations Options</em> section.</p><h2><a name="_Toc438129367">
+Configuring the Hardware
+</a></h2>
+<p class="Body">Depending on the configuration, follow the steps in either the <em>Configuring USRP Setup</em> or <em>Configuring FlexRIO/FlexRIO Adapter Module Setup</em> section.</p><h3><a name="_Toc438129368">
+</a><a name="_Ref421176185">
+Configuring the USRP RIO Setup
+</a></h3>
+   	<ol>
+   		<li>Ensure the NI USRP device is properly connected to the host system    running LabVIEW.</li>
+   		<li>Create the RF loopback configuration using one RF cable and    attenuator:
+   		<ol>
+   			<li>Connect the cable to RF0/TX1.</li>
+   			<li>Connect the 30 dB attenuator to the other end of the cable.</li>
+   			<li>Connect the attenuator to RF1/RX2.</li>
+   		</ol></li>
+   		<li>Power on the USRP device.</li>
+   		<li>Power on the host system.</li>
+   	</ol>
+<p class="Body"><img alt="figure" src="images/clip_image005.png" height="116" width="343"></p>
+<p class="Body">Figure 2 NI USRP Hardware Configuration</p><h3><a name="_Toc438129369">
+</a><a name="_Ref421176193">
+Configuring the FlexRIO Adapter Module Setup
+</a></h3>
+   	<ol>
+   		<li>Ensure the FlexRIO device is properly installed in the system    running LabVIEW.</li>
+   		<li>Create an RF loopback configuration connecting the TX of the    NI&nbsp;5791 with the RX of the NI&nbsp;5791.</li>
+   	</ol>
+<p class="Body"><img alt="figure" src="images/clip_image007.png" height="81" width="335"></p>
+<p class="Body">Figure 3 FlexRIO Adapter Module Hardware Configuration</p><h2><a name="_Toc438129370">
+</a><a name="_Ref421195795">
+Running the LabVIEW Host Code
+</a></h2>
+<p class="Body">Ensure the LabVIEW Communications System Design Suite and the 802.11 Application Framework are installed on your system. Installation is started by running
+       <span class="Monospace">
+setup.exe</span>from the provided installation media. Follow the installer prompts to complete the installation process.</p>
+   	<ol>
+   		<li>Launch LabVIEW Communications System Design Suite by selecting    <strong>LabVIEW Communications 2.0</strong> from the Start menu.</li>
+   		<li>From the Project Templates on the <strong>Launch A Project</strong>    tab, select <strong>Project Application Frameworks &raquo; 802.11    Design...</strong> to launch the project.
+   		<ul>
+   			<li>Select <strong>802.11 Design USRP RIO v2.0.1</strong> if you          are using a USRP RIO setup</li>
+   			<li>Select <strong>802.11 Design FlexRIO v2.0.1</strong> if you          are using a FlexRIO setup.</li>
+   		</ul></li>
+   		<li>Within that project, the top-level host VI <strong>802.11    Host.gvi</strong> appears.</li>
+   		<li>Configure the RIO identifier in the <strong>RIO Device</strong>    control. You can use NI Measurement &amp; Automation Explorer (MAX)    to get the RIO identifier for your device.</li>
+   		<li>(USRP RIO devices only) Specify the correct device bandwidth.</li>
+   		<li>Run the LabVIEW host VI by clicking the run button (<img alt="figure" src="images/clip_image009.png" height="15" width="18">).
+   		<ul>
+   			<li>If successful, the <strong>Device Ready</strong> indicator          lights.</li>
+   			<li>If you receive an error, try one of the following:
+   			<ul>
+   				<li>Ensure your RIO device is connected properly.</li>
+   				<li>Check the configuration of <strong>RIO Device</strong>.</li>
+   				<li>(USRP RIO devices only) Check that you have specified    the correct device bandwidth.</li>
+   			</ul></li>
+   		</ul></li>
+   		<li>Enable the station by setting the <strong>Station</strong> control    to <strong>On</strong>.</li>
+   		<li>Select the <strong>Basic</strong> tab, and verify the shown RX    Constellation matches the modulation and coding scheme configured    using the <strong>MCS</strong> and <strong>Subcarrier    Format</strong> parameters. For example, 16 QAM is used for MCS 4    and 20 MHz 802.11a.</li>
+   	</ol>
+<p class="Body">The 802.11 Application Framework user interface is shown in Figure 4. All application settings as well as graphs and indicators are described in the following subsections.</p>
+<p class="Body"><img alt="figure" src="images/80211_basic_tab.png"></p>
+<p class="Body"><a name="_Ref422830902">
+Figure
+</a>4 Application Framework Basic Tab</p><h3><a name="_Toc438129371">
+Application Settings
+</a></h3>
+<p class="Body">Application settings are applied when the VI starts, and cannot be changed once the VI is up and running. To change these settings, stop the VI, apply changes, and restart the VI.</p>
+   	<table border="1" cellpadding="0" cellspacing="0" width="100%">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Parameter</strong></td>
+   				<td valign="top" width="66%"><strong>Description</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>RIO Device</strong></td>
+   				<td valign="top" width="66%">The RIO address of the RF hardware device.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Reference Clock</strong></td>
+   				<td valign="top" width="66%">Configures the reference for the device clocks. The reference frequency must be 10 MHz. You can choose from the following sources:
+<p class="Body"><strong>Internal</strong> &ndash; Uses the internal reference clock.</p>
+<p class="Body"><strong>REF IN / ClkIn</strong> &ndash; The reference is taken from the REF IN port (USRP-294xR and USRP-295XR) or the ClkIn port (NI&nbsp;5791).</p>
+<p class="Body"><strong>GPS</strong> &ndash; The reference is taken from the GPS module. Only applicable for the USRP-2950/2952/2953R devices.</p>
+<p class="Body"><strong>PXI_CLK</strong> &ndash; The reference is taken from the PXI chassis. Only applicable for PXIe-7975R/7976R FlexRIO FPGA targets with NI&nbsp;5791 adapter modules.</p></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>USRP Bandwidth</strong></td>
+   				<td valign="top" width="66%">(USRP RIO devices only) Configures the device bandwidth of the USRP RIO device.</td>
+   			</tr>
+   		</tbody>
+   	</table><h3><a name="_Toc438129372">
+Static Runtime Settings
+</a></h3>
+<p class="Body">Static runtime settings can only be changed while the station is switched off. The parameters are applied when the station is switched on.</p>
+   	<table border="1" cellpadding="0" cellspacing="0" width="100%">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Parameter</strong></td>
+   				<td valign="top" width="66%"><strong>Description</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Operation Mode</strong></td>
+   				<td valign="top" width="66%">The 802.11 Application Framework provides three kinds of modes:
+<p class="Body"><strong>RF Loopback -</strong> Connects the TX path of one device with the RX path of the same device using RF cabling. RF loopback is the default operation mode.</p>
+<p class="Body"><strong>RF Multi Station</strong> - Regular data transmission with two independent stations running on individual devices connected either with antennas or by cabled connections.</p>
+<p class="Body"><strong>Baseband loopback</strong> - Similar to RF loopback, but the external cable loopback is replaced by the internal digital baseband loopback path.</p></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>TX Frequency</strong></td>
+   				<td valign="top" width="66%">Center frequency of the transmitter. Valid values depend on the device the station is running on.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Power Level</strong></td>
+   				<td valign="top" width="66%">Output power level considering the transmission of a CW signal that has full DAC range. The high peak-to-average power ratio of OFDM means that the output power of transmitted 802.11 frames is usually 9 dB to 12 dB below the adjusted power level.</td>
+   			</tr>
+   		</tbody>
+   	</table><h3><a name="_Toc438129373">
+Dynamic Runtime Settings
+</a></h3>
+<p class="Body">Dynamic Runtime Settings can be changed any time and are applied immediately, even when the station is active.</p>
+   	<table border="1" cellpadding="0" cellspacing="0" width="100%">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Parameter</strong></td>
+   				<td valign="top" width="66%"><strong>Description</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Subcarrier Format</strong></td>
+   				<td valign="top" width="66%">Allows you to switch between IEEE 802.11 standard formats, 802.11a or 802.11ac, and bandwidth settings (20 MHz or 40 MHz).</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>MCS</strong></td>
+   				<td valign="top" width="66%">Modulation and coding scheme index used to encode data frames. ACK frames are always sent with MCS 0. Be aware that not all MCS values are applicable for all subcarrier formats and the meaning of the MCS changes with the subcarrier format. The text field next to the MCS field shows the modulation scheme and coding rate for the current MCS and Subcarrier Format.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Transmit ACK</strong></td>
+   				<td valign="top" width="66%">If enabled, ACK frames are transmitted after SIFS = 16 &micro;s in response to successfully received data frames.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>AGC</strong></td>
+   				<td valign="top" width="66%">If enabled, the optimum gain setting is chosen depending on the received signal power strength. The RX gain value is taken from Manual RX Gain if the AGC has been disabled.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Manual RX Gain</strong></td>
+   				<td valign="top" width="66%">Manual RX gain value. Applied if AGC is disabled.</td>
+   			</tr>
+   		</tbody>
+   	</table><h3><a name="_Toc438129374">
+<strong>Graphs and Indicators</strong>
+</a></h3>
+<p class="Body">To monitor the status of the station, the 802.11 Application Framework provides a variety of indicators and graphs.</p>
+   	<table border="1" cellpadding="0" cellspacing="0" width="100%">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Parameter</strong></td>
+   				<td valign="top" width="66%"><strong>Description</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Coerced LO Frequency TX</strong></td>
+   				<td valign="top" width="66%">Actually used TX frequency.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Coerced Power Level</strong></td>
+   				<td valign="top" width="66%">Power level a continuous wave of 0 dBFS provides for the current device settings. The average output power of 802.11 signals is approximately 10 dB below this level. Indicates the actual power level considering RF frequency and device-specific calibration values from the EEPROM.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>RX Frequency</strong></td>
+   				<td valign="top" width="66%">The RX frequency is equal to the TX frequency because 802.11 protocols operate in half-duplex mode.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Coerced LO Frequency RX</strong></td>
+   				<td valign="top" width="66%">Actually used RX frequency.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Compensated CFO</strong></td>
+   				<td valign="top" width="66%">Carrier frequency offset detected by coarse frequency estimation unit.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Applied RX Gain</strong></td>
+   				<td valign="top" width="66%">RX gain value currently applied. This value is the Manual RX Gain when the AGC is disabled, or the calculated RX gain when AGC is enabled. In both cases, the gain value is coerced by the capabilities of the device.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Baseband RX Power</strong></td>
+   				<td valign="top" width="66%">Actual receiver&#39;s baseband power. When the AGC is enabled, the 802.11 Application Framework attempts to keep this value at -25&nbsp;dBFS by changing the RX gain accordingly.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>TX Power Spectrum</strong></td>
+   				<td valign="top" width="66%">A snapshot of the current baseband spectrum from the TX.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>TX Block Error Rate</strong></td>
+   				<td valign="top" width="66%">Error rate is calculated as a ratio of sent frames versus received ACKs. In addition, the most recent value is displayed on the upper right of the graph.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>RX Power Spectrum</strong></td>
+   				<td valign="top" width="66%">A snapshot of the current baseband spectrum from the RX.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>RX Constellation</strong></td>
+   				<td valign="top" width="66%">The I/Q constellation of the received data field.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>RX Throughput</strong></td>
+   				<td valign="top" width="66%">The data rate of successful received and decoded frames matching the Device MAC address.</td>
+   			</tr>
+   		</tbody>
+   	</table><h2><a name="_Toc438129375">
+<strong>Advanced Settings</strong>
+</a></h2>
+<p class="Body">The advanced tab provides access to more elaborate settings and display options.</p>
+<p class="Body"><img alt="figure" src="images/80211_advanced_tab.png"></p>
+<p class="Body"><a name="_Ref422830903">
+Figure
+</a>5 Application Framework Advanced Tab</p><h3><a name="_Toc438129376">
+Static Runtime Settings
+</a></h3>
+   	<table border="1" cellpadding="0" cellspacing="0" width="100%">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Parameter</strong></td>
+   				<td valign="top" width="66%"><strong>Description</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>TX Port</strong></td>
+   				<td valign="top" width="66%">The RF port used for TX (applicable only for NI USRP devices).</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>RX Port</strong></td>
+   				<td valign="top" width="66%">The RF port used for RX (applicable only for NI USRP devices).</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Channel Selector</strong></td>
+   				<td valign="top" width="66%">Selects the 20 MHz sub-band used for legacy transmissions in IEEE 802.11ac mode.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Device MAC Address</strong></td>
+   				<td valign="top" width="66%">MAC address associated with the station.</td>
+   			</tr>
+   		</tbody>
+   	</table><h3><a name="_Toc438129377">
+Dynamic Runtime Settings
+</a></h3>
+   	<table border="1" cellpadding="0" cellspacing="0" width="100%">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Parameter</strong></td>
+   				<td valign="top" width="66%"><strong>Description</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Data Source</strong></td>
+   				<td valign="top" width="66%">Determines the source of MAC frames send from the host to the target.
+<p class="Body"><strong>UDP</strong> - This method is useful for showing demos, such as when using an external video streaming application, or for using external network testing tool, such as Iperf. In this method, input data arrives at or is generated from the 802.11 station using UDP.</p>
+<p class="Body"><strong>PN Data</strong> - This method sends random bits and is useful for functional tests. Packet size and rate can be easily adapted.</p>
+<p class="Body"><strong>Manual</strong> - This method is useful to trigger single packets for debugging purposes.</p></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Data Source Options</strong></td>
+   				<td valign="top" width="66%">Each tab shows the options for the corresponding data sources.
+<p class="Body"><strong>Receive Port (UDP) -</strong> A free UDP port to retrieve data for the transmitter. Usually between 1025 and 65535.</p>
+<p class="Body"><strong>PN Data Packet Size (PN Data) -</strong> Packet size in bytes (range is limited to 4061, which is a single A-MPDU reduced by MAC overhead)</p>
+<p class="Body"><strong>PN Packets per second (PN Data) -</strong> Average number of packets to transmit per second (limited to 10,000. The achievable throughput might be less depending on the configuration of the station).</p></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Backoff</strong></td>
+   				<td valign="top" width="66%">Fixed backoff that is applied before a frame is transmitted. The backoff is counted in number of slots of 9 &micro;s duration.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>UDP Data Sink</strong></td>
+   				<td valign="top" width="66%">If enabled, received frames are forwarded to the configured UDP address and port (see below).</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Transmit IP Address</strong></td>
+   				<td valign="top" width="66%">Destination IP address for the UDP output stream.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Transmit Port</strong></td>
+   				<td valign="top" width="66%">Target UDP port for UDP output stream, usually between 1,025 and 65,535.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Destination MAC Address</strong></td>
+   				<td valign="top" width="66%">MAC address of the destination to which packets should be sent. If running in loopback mode, this address is ignored, and the Device MAC address is used instead.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>CCA Energy Detection Threshold</strong></td>
+   				<td valign="top" width="66%">If the energy of the received signal is above the threshold, the station qualifies the medium as busy and interrupts its backoff procedure, if any.</td>
+   			</tr>
+   		</tbody>
+   	</table><h3><a name="_Ref421190810">
+</a><a name="_Toc438129378">
+<strong>Graphs and Indicators</strong>
+</a></h3>
+   	<table border="1" cellpadding="0" cellspacing="0" width="100%">
+   		<tbody>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Parameter</strong></td>
+   				<td valign="top" width="66%"><strong>Comment</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>RF Input Power</strong></td>
+   				<td valign="top" width="66%">Displays the current RF input power in dBm regardless of the type of incoming signal if an 802.11 packet has been detected. This indicator displays the value at the packet start.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Baseband Power</strong></td>
+   				<td valign="top" width="66%">Displays the baseband signal power at packet start.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>Channel Estimation</strong></td>
+   				<td valign="top" width="66%">Amplitude and phase of the estimated channel (based on L-LTF and VHT-LTF).</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>MAC TX Statistics</strong></td>
+   				<td valign="top" width="66%">Number of TX after SIFS/backoff is detected/completed. The number of packets handled by the MAC TX.</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="33%"><strong>MAC RX Statistics</strong></td>
+   				<td valign="top" width="66%">Number of frames detected (by the synchronization), received subframes (frames with valid PLCP header), valid subframes (frames without format violations) and received ACKs.</td>
+   			</tr>
+   		</tbody>
+   	</table><h1><a name="_Toc438129379">
+</a><a name="_Ref422317052">
+Additional Operation Modes and Configurations Options
+</a></h1>
+<p class="Body">This chapter describes further configuration options and operation modes to complete once the initial setup as described in the <em>Running This Sample Project</em> section is complete.</p>
+<p class="Body">In addition to the RF loopback configuration, the 802.11 Application Framework supports interaction with an arbitrary number of stations, hereafter referred to as RF Multi Station Mode. In the Multi Station Mode, each station acts as a single 802.11 device.</p><h2><a name="_Toc438129380">
+</a><a name="_Ref422318309">
+</a><a name="_Ref422317755">
+</a><a name="_Ref421191495">
+RF Multi Station
+</a>Mode: Cabled
+      </h2>
+<p class="Body">The following descriptions assume that a network with two stations is set up. Therefore, two RF devices (either NI USRP or FlexRIO adapter modules) are needed. As described in the <em>Hardware</em> section, you can control the two RF devices in two ways:</p>
+   	<ul>
+   		<li><strong>Option 1</strong> &mdash; Both devices are controlled by a    single host system, such as a single PXI chassis with an embedded    controller. With this option, you need two copies of the 802.11    Application Framework because you cannot open the same LabVIEW    project twice on a single host.</li>
+   		<li><strong>Option 2</strong> &mdash; Each device is controlled by a    separate host.</li>
+   	</ul>
+<p class="Body">The two independent stations, each running on its own RF device, are referred to as station A and station B. Depending on the setup, follow the steps in either the Configuring USRP Setup or Configuring FlexRIO/FlexRIO adapter module Setup section.</p><h3><a name="_Toc438129381">
+Configuring the NI USRP RIO System
+</a></h3>
+   	<ol>
+   		<li>Ensure both NI USRP devices are properly connected to the host    system running LabVIEW.</li>
+   		<li>Create RF connections as shown in the following figure:
+   		<ul>
+   			<li>On station A, connect the cable to RF0/TX1.</li>
+   			<li>Connect the other end of that cable to the 30 dB attenuator.</li>
+   			<li>Connect the attenuator to RF1/RX2 on station B.</li>
+   			<li>On station B, connect the cable to RF0/TX1.</li>
+   			<li>Connect the other end of that cable to the 30 dB attenuator.</li>
+   			<li>Connect the attenuator to RF1/RX2 on station A.</li>
+   		</ul></li>
+   	</ol>
+<p class="Body"><img alt="figure" src="images/clip_image015.png" height="149" width="605"></p>
+<p class="Body">Figure 6 Cabled Connection of NI USRP Devices</p><h3><a name="_Toc438129382">
+Configuring the FlexRIO System
+</a></h3>
+   	<ol>
+   		<li>Ensure both FlexRIO devices are properly connected to the host    system running LabVIEW.</li>
+   		<li>Create RF connections as shown in the following figure:
+   		<ul>
+   			<li>On station A, connect the cable to TX.</li>
+   			<li>Connect the cable RX on station B.</li>
+   			<li>On station B, connect another cable to TX.</li>
+   			<li>Connect the cable to RX on station A.</li>
+   		</ul></li>
+   	</ol>
+<p class="Body"><img alt="figure" src="images/clip_image017.png" height="103" width="605"></p>
+<p class="Body">Figure 7 FlexRIO Adapter Module Cabled Connection</p><h3><a name="_Toc438129383">
+Running the LabVIEW Host Code
+</a></h3>
+<p class="Body">Instructions about running the LabVIEW host code have already been provided in the <em>Running This Sample Project</em> section for the RF Loopback operation mode. In addition to the instructions in that section, also complete the following steps:</p>
+   	<ul>
+   		<li>Set <strong>operation mode</strong> to <strong>RF Multi    Station</strong>.</li>
+   		<li>Properly adjust the settings for <strong>Device MAC    Address</strong> and <strong>Destination MAC Address</strong>.</li>
+   	</ul>
+<p class="Body">If you use a setup in which a single host controls two RF devices, make sure each device is controlled from a separate project to avoid port conflicts.</p><h2><a name="_Toc438129384">
+</a><a name="_Ref422304148">
+RF Multi Station Mode: Over-the-Air Transmission
+</a></h2>
+<p class="Body">Over-the-air transmission is similar to the cabled setup. Cables are replaced by antennas suitable for the selected channel center frequency and system bandwidth.</p>
+   	<table border="0" cellpadding="0">
+   		<tbody>
+   			<tr>
+   				<td><img src="images/clip_image003.png" alt="Caution" height="26" width="28"></td>
+   				<td><strong>Caution</strong> Read the product documentation for all hardware components, especially the NI RF devices, before using the system.
+<p class="Body">NI USRP and FlexRIO devices are not approved or licensed for transmission over the air using an antenna. As a result, operating those products with an antenna may violate local laws. Ensure that you are in compliance with all local laws before operating this product with an antenna.</p></td>
+   			</tr>
+   		</tbody>
+   	</table><h3><a name="_Toc438129385">
+Configuring the NI USRP RIO System
+</a></h3>
+   	<ol>
+   		<li>Ensure both NI USRP devices are properly connected to the host    system running LabVIEW.</li>
+   		<li>Create RF connections as shown in the following figure:
+   		<ul>
+   			<li>RF0/TX1 on station A to Antenna 1</li>
+   			<li>RF1/RX2 on station A to Antenna 2</li>
+   			<li>RF0/TX1 on station B to Antenna 3</li>
+   			<li>RF1/RX2 on station B to Antenna 4</li>
+   		</ul></li>
+   	</ol>
+<p class="Body"><img alt="figure" src="images/clip_image019.png" height="169" width="605"></p>
+<p class="Body">Figure 8 Antenna Connection for NI USRP Devices</p><h3><a name="_Toc438129386">
+Configuring the FlexRIO Setup
+</a></h3>
+   	<ol>
+   		<li>Ensure both FlexRIO adapter module devices are properly connected    to the host system running LabVIEW.</li>
+   		<li>Create RF connections as shown in the following figure:
+   		<ul>
+   			<li>TX on station A to Antenna 1</li>
+   			<li>RX on station A to Antenna 2</li>
+   			<li>TX on station B to Antenna 3</li>
+   			<li>RX on station B to Antenna 4</li>
+   		</ul></li>
+   	</ol>
+<p class="Body"><img alt="figure" src="images/clip_image021.png" height="172" width="605"></p>
+<p class="Body">Figure 9 Antenna Connection for FlexRIO/FlexRIO adapter module Devices</p><h3><a name="_Toc438129387">
+Running the LabVIEW Host Code
+</a></h3>
+<p class="Body">Refer to the <em>RF Multi Station Mode: Cabled</em> sections for information about running the host code.</p><h2><a name="_Toc438129388">
+Baseband Loopback
+</a></h2>
+<p class="Body">The baseband loopback is similar to RF loopback. In this mode, the RF is bypassed. TX samples are transferred directly to the RX processing chain on the FPGA. No wiring on the device connectors is needed.</p><h2><a name="_Toc438129389">
+Additional Configuration Options
+</a></h2>
+      <h3><a name="_Toc438129390">
+PN Data Generator
+</a></h3>
+<p class="Body">You can use the built-in pseudonoise (PN) data generator to create TX data traffic, which is useful for measuring the system throughput performance. The PN data generator is configured by the <strong>PN Data Packet Size</strong> and <strong>PN Packets per Second</strong> parameters. The data rate at the output of the PN Data Generator is equal to the product of both parameters. Notice that the actual system throughput seen on RX side depends on the transmission parameters, including the MCS value, and can be lower than the rate generated by the PN data generator.</p>
+<p class="Body">The following steps provide an example of how the PN data generator can show the impact of the transmission protocol configuration on the achievable throughput. Notice that the given throughput values can be slightly different depending on the actual used hardware platform.</p>
+   	<ol>
+   		<li>Set up, configure, and run the operation mode RF loopback as    described previously.</li>
+   		<li>Enable the station.</li>
+   		<li>With the default settings you should see a throughput of about 8.2    Mbits/s.</li>
+   		<li>Switch to the <strong>Advanced</strong> tab and set the PN Data    Packet Size to 4000.</li>
+   		<li>Set the number of packets per second to 10,000. This setting    saturates the TX buffer for all possible configurations.</li>
+   		<li>Switch back to the <strong>Basic</strong> tab and try different    combinations of Subcarrier Format and MCS. Observe the changes in    RX constellation and RX throughput.</li>
+   		<li>Set Subcarrier Format to 20 MHz (IEEE 802.11a) and MCS to 7.    Observe that the throughput is about 42.6 Mbits/s.</li>
+   		<li>Disable ACK transmission.</li>
+   		<li>Observe that the throughput increases to 46.4 Mbits/s, the BLER    changes to one, and the BPSK dots disappear in the RX constellation    graph.</li>
+   		<li>Switch to the <strong>Advanced</strong> tab and change the backoff    to 0.</li>
+   		<li>Switch back to the <strong>Basic</strong> tab and observe that the    RX throughput increases to 48.9 MBits/s.</li>
+   	</ol><h3><a name="_Toc438129391">
+Video Transmission
+</a></h3>
+<p class="Body">Transmitting videos highlights the capabilities of the 802.11 Application Framework. To perform a video transmission with two devices, set up a configuration as described in the <em>RF Multi Station Mode: Cabled</em> section. The 802.11 Application Framework provides a UDP interface, which is well suited for video streaming. The transmitter and receiver need a video stream application (e.g. VLC which can be downloaded from<a href="http://videolan.org">
+http://videolan.org
+</a>). Any program capable of transmitting UDP data can be used as data source. Similarly, any program capable of receiving UDP data can be used as data sink.</p><h4> Configure the Receiver
+      </h4>
+<p class="Body">The host acting as receiver utilizes the 802.11 Application Framework to pass received 802.11 data frames and pass them via UDP to the video stream player.</p>
+<p class="Body">1. Create a new project as described in Running the LabVIEW Host Code and set the correct RIO identifier in the <strong>RIO device</strong> parameter.</p>
+<p class="Body">2. Set <strong>Operation Mode</strong> to <strong>RF Multi Station.</strong></p>
+<p class="Body">3. Switch to <strong>Advanced</strong> tab and set <strong>Data Source</strong> to <strong>UDP.</strong></p>
+<p class="Body">4. Enable the Station</p>
+<p class="Body">5. Start cmd.exe and change to the VLC installation directory</p>
+<p class="Body">6. Start the VLC application as a streaming client with the following command:<br>
+       <span class="Monospace">
+vlc udp://@:12346</span></p><h4> Configure the Transmitter
+      </h4>
+<p class="Body">The host acting as Transmitter receives UDP packets from the video streaming server and utilizes the 802.11 Application Framework to transmit them as 802.11 data frames.</p>
+<p class="Body">1. Create a new project as described in Running the LabVIEW Host Code and set the correct RIO identifier in the <strong>RIO device</strong> parameter.</p>
+<p class="Body">2. Set <strong>Operation Mode</strong> to <strong>RF Multi Station.</strong></p>
+<p class="Body">3. Switch to <strong>Advanced</strong> tab and set <strong>Data Source</strong> and <strong>Data Sink</strong> both to <strong>UDP.</strong></p>
+<p class="Body">4. Enable the <strong>Station.</strong></p>
+<p class="Body">5. Start cmd.exe and change to the VLC installation directory</p>
+<p class="Body">6. Identify the path to a video file that shall be used for streaming.</p>
+<p class="Body">7. Start the VLC application as a streaming server with the following command<br>
+       <span class="Monospace">
+vlc &quot;<em>PATH_TO_VIDEO_FILE</em>&quot;</span><br>
+       <span class="Monospace">
+:sout=#std{access=udp{ttl=1},mux=ts,dst=127.0.0.1:12345}</span>, where <em>PATH_TO_VIDEO_FILE</em> should be replaced with the location of the video that should be used.</p>
+<p class="Body">The host acting as receiver will display the video streamed by the transmitter.</p><br clear="all">
+<p class="Body"><a name="knownIssues">
+</a></p><h1><a name="_Toc438129392">
+Troubleshooting
+</a></h1>
+<p class="Body">This section provides information about identifying the root cause of a problem if the system is not working as expected. It is described for a multi station setup (in which station A transmits data packets to station B) but it also applies to the RF loopback mode (in which station A and B are represented by the same device).</p>
+<p class="Body">For normal operation, the following steps are performed:</p>
+   	<ol>
+   		<li>Station A is transmitting data packets.</li>
+   		<li>Station B is receiving data packets.</li>
+   		<li>Station B is transmitting ACK packets.</li>
+   		<li>Station A is receiving ACK packets.</li>
+   	</ol>
+<p class="Body">The following tables provide information about how to verify normal operation and how to detect typical errors.</p>
+   	<table border="1" cellpadding="0" cellspacing="0">
+   		<tbody>
+   			<tr>
+   				<td colspan="2" valign="top" width="604"><strong>Step 1: Station A is transmitting data packets</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Normal Operation</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The counter values &quot;TX after Backoff Requests    Detected&quot; and &quot;&hellip; Completed&quot; (part    of &quot;MAC TX Statistic&quot;) are increasing fast</li>
+   						<li>The &quot;TX data dropped&quot; indicator is off</li>
+   					</ul>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Error:<br>No data provided for transmission</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The counter values &quot;TX after Backoff Requests    Detected&quot; and &quot;&hellip; Completed&quot; are    equal and do not increase</li>
+   						<li>The &quot;TX data dropped&quot; indicator is off</li>
+   					</ul>
+<p class="Body">Solution:</p>
+   					<ul>
+   						<li>Set &quot;Data Source&quot; to &quot;PN Data&quot;</li>
+   						<li>Or alternatively: set &quot;Data Source&quot; to    &quot;UDP&quot; and make sure that you use an external    application to provide data to the UDP port configured    as &quot;Receive Port&quot; in the &quot;Data Source    Options&quot;</li>
+   					</ul>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Error:<br>TX data was dropped because MAC TX considers the medium as busy</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The counter value &quot;TX after Backoff Requests    Detected&quot; is &quot;1&quot; and the value &quot;TX    after Backoff Requests Completed&quot; is &quot;0&quot;</li>
+   						<li>The &quot;TX data dropped&quot; indicator is on</li>
+   					</ul>
+<p class="Body">Solution:</p>
+   					<ul>
+   						<li>Check the values of the curve &quot;current&quot; in    the &quot;RF Input Power&quot; graph. Set the &quot;CCA    Energy Detection Threshold [dBm]&quot; control to a    value which is higher than the minimal value of this    curve.</li>
+   					</ul>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Error:<br>TX data was dropped because you try to send more data packets than the MAC ca Provide to the PHY</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The counter value &quot;TX after Backoff Requests    Detected&quot; and &quot;Completed&quot; (part of    &quot;MAC TX Statistic&quot;) are increasing slow</li>
+   						<li>The &quot;TX data dropped&quot; indicator is flickering</li>
+   					</ul>
+<p class="Body">Solution:</p>
+   					<ul>
+   						<li>Choose a higher &quot;MCS&quot; value, chose a lower    packet size (&quot;PN Data Packet Size&quot;) or reduce    the frequency of the packets (&quot;PN Packets per    Second&quot;)</li>
+   					</ul>
+   				</td>
+   			</tr>
+   		</tbody>
+   	</table>
+	<br>
+   	<table border="1" cellpadding="0" cellspacing="0">
+   		<tbody>
+   			<tr>
+   				<td colspan="2" valign="top" width="604"><strong>Step 2: Station B is receiving data packets</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Normal Operation</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The counter values &quot;Packet Starts detected&quot;,    &quot;Frames from PHY&quot; and &quot;Frames with FCS    pass&quot; (part of &quot;MAC RX Statistic&quot;) are    increasing fast</li>
+   						<li>The constellation in the &quot;RX Constellation&quot;    graph matches the modulation order of the    &quot;MCS&quot; selected at the transmitter</li>
+   						<li>The &quot;RX Throughput [bits/s]&quot; is greater than    zero.</li>
+   					</ul>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Error:<br>wrong RF ports</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The &quot;RX Power Spectrum&quot; does not show the    same curve as the &quot;TX Power Spectrum&quot;</li>
+   					</ul>
+<p class="Body">Solution:</p>
+   					<ul>
+   						<li>Verify that you have the cables or antennas connected    to the RF ports which you have configured as &quot;TX    port (USRP only)&quot; and &quot;RX Port (USRP    only)&quot;</li>
+   					</ul>
+   				</td>
+   			</tr>
+   		</tbody>
+   	</table>
+	<br>
+   	<table border="1" cellpadding="0" cellspacing="0">
+   		<tbody>
+   			<tr>
+   				<td colspan="2" valign="top" width="604"><strong>Step 3: Station B is transmitting ACK packets</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Normal Operation</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The counter values &quot;TX after SIFS Requests    Detected&quot; / &quot; Completed)&quot; (part of    &quot;MAC TX Statistic&quot;) are increasing in the    same speed as &quot;Frames with FCS pass&quot; in the    &quot;MAC RX Statistic&quot;</li>
+   					</ul>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Error:<br>ACK transmission is disabled</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>No ACK packet transmission is triggered (see    description for &quot;Normal operation&quot;).</li>
+   					</ul>
+<p class="Body">Solution:</p>
+   					<ul>
+   						<li>Make sure the checkbox &quot;Transmit ACK&quot; is    checked</li>
+   					</ul>
+   				</td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Error:<br>MAC address mismatch</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>No ACK packet transmission is triggered (see    description for &quot;Normal operation&quot;).</li>
+   					</ul>
+<p class="Body">Solution:</p>
+   					<ul>
+   						<li>Check that &quot;Device MAC Address&quot; of Station B    matches the &quot;Destination MAC Address&quot; of    Station A.</li>
+   					</ul>
+   				</td>
+   			</tr>
+   		</tbody>
+   	</table>
+    <br>
+   	<table border="1" cellpadding="0" cellspacing="0">
+   		<tbody>
+   			<tr>
+   				<td colspan="2" valign="top" width="604"><strong>Step 4: Station A is receiving ACK packets</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top" width="132"><strong>Normal Operation</strong></td>
+   				<td valign="top" width="472">Indication:
+   					<ul>
+   						<li>The counter values &quot;ACKs Received&quot; (part of    &quot;MAC RX Statistic&quot;) are increasing in the    same speed as &quot;TX after Backoff Requests    Completed&quot; (part of &quot;MAC TX Statistic&quot;)</li>
+   						<li>The &quot;TX Block Error Rate&quot; is zero.</li>
+   					</ul>
+   				</td>
+   			</tr>
+   		</tbody>
+   	</table><h1><a name="_Toc438129393">
+Known Issues
+</a></h1>
+<p class="Body">Make sure the USRP device is already running and connected to the host before the host is started. Otherwise the NI USRP device may not properly recognized by the host.</p>
+<p class="Body">A complete list of issues and workarounds is located on the<a href="http://digital.ni.com/express.nsf/bycode/ex2shk">
+National Instruments website
+</a>.</p>
+   	<div align="center">
+<hr align="center" size="2" width="100%">
+   	</div><h1><a name="_Toc438129394">
+</a><a name="add_resources">
+</a>Related Information
+      </h1>
+<p class="Body"><a href="http://digital.ni.com/express.nsf/bycode/ex5mwq">
+NI USRP and LabVIEW Communications System Design Suite Getting Started Guide
+</a></p>
+<p class="Body"><a href="http://standards.ieee.org/about/get/802/802.11.html">
+IEEE Standards Association: 802.11 Wireless LANs
+</a></p>
+<p class="Body">Refer to the<a href="http://www.ni.com/documentation/en/labview-comms/latest/manual/labview-comms-manual/">
+LabVIEW Communications System Design Suite Manual</a>, available online, for information about LabVIEW concepts or objects used in this sample project.</p>
+<p class="Body">You also can use the <strong>Context Help</strong> window to learn basic information about LabVIEW objects as you move the cursor over each object. To display the <strong>Context Help</strong> window in LabVIEW, select <strong>View&raquo;Context Help</strong>.</p>
+   	<div align="center">
+<hr align="center" size="2" width="100%">
+   	</div><h1><a name="_Toc438129395">
+</a><a name="_Toc422824532">
+Legal Information
+</a></h1>
+<p class="Body"><strong>Copyright</strong></p>
+<p class="Body">&copy; 2015-2016 National Instruments. All rights reserved.</p>
+<p class="Body">Under the copyright laws, this publication may not be reproduced or transmitted in any form, electronic or mechanical, including photocopying, recording, storing in an information retrieval system, or translating, in whole or in part, without the prior written consent of National Instruments Corporation.</p>
+<p class="Body">National Instruments respects the intellectual property of others, and we ask our users to do the same. NI software is protected by copyright and other intellectual property laws. Where NI software may be used to reproduce software or other materials belonging to others, you may use NI software only to reproduce materials that you may reproduce in accordance with the terms of any applicable license or other legal restriction.</p>
+<p class="Body"><strong>End-User License Agreements and Third-Party Legal Notices</strong></p>
+<p class="Body">You can find end-user license agreements (EULAs) and third-party legal notices in the following locations after installation:</p>
+<p class="Body">Notices are located in the %ProgramFiles(x86)%\National Instruments\_Legal Information and %ProgramFiles(x86)%\National Instruments directories.</p>
+<p class="Body">EULAs are located in the %ProgramFiles(x86)%\National Instruments\Shared\MDF\Legal\license directory.</p>
+<p class="Body">Review %ProgramFiles(x86)%\National Instruments\_Legal Information.txt for information on including legal information in installers built with NI products.</p>
+<p class="Body"><strong>U.S. Government Restricted Rights</strong></p>
+<p class="Body">If you are an agency, department, or other entity of the United States Government (&quot;Government&quot;), the use, duplication, reproduction, release, modification, disclosure or transfer of the technical data included in this manual is governed by the Restricted Rights provisions under Federal Acquisition Regulation 52.227-14 for civilian agencies and Defense Federal Acquisition Regulation Supplement Section 252.227-7014 and 252.227-7015 for military agencies.</p>
+<p class="Body"><strong>Trademarks</strong></p>
+<p class="Body">Refer to the NI Trademarks and Logo Guidelines at<a href="http://digital.ni.com/express.nsf/bycode/rdtrad" target="_blank">
+ni.com/trademarks
+</a>for information on National Instruments trademarks. Other product and company names mentioned herein are trademarks or trade names of their respective companies.</p>
+<p class="Body"><strong>Patents</strong></p>
+<p class="Body">For patents covering the National Instruments products/technology, refer to the appropriate location: <strong>Help&raquo;Patents</strong> in your software, the patents.txt file on your media, or the <em>National Instruments Patent Notice</em> at<a href="http://digital.ni.com/express.nsf/bycode/rdlv17" target="_blank">
+ni.com/patents
+</a>.</p><h1><a name="_Toc438129396">
+</a><a name="_Toc422824533">
+Abbreviations
+</a></h1>
+   	<table border="1" cellpadding="0" cellspacing="0">
+   		<tbody>
+   			<tr>
+   				<td valign="top"><strong>Abbreviation</strong></td>
+   				<td valign="top"><strong>Meaning</strong></td>
+   			</tr>
+   			<tr>
+   				<td valign="top">ACK</td>
+   				<td valign="top">Acknowledgement</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">ADC</td>
+   				<td valign="top">Analog Digital Converter</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">AGC</td>
+   				<td valign="top">Automatic Gain Control</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">A-MPDU</td>
+   				<td valign="top">Aggregated MPDU</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">BLER</td>
+   				<td valign="top">Block Error Rate</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">BW</td>
+   				<td valign="top">Bandwidth</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">CCA</td>
+   				<td valign="top">Clear Channel Assessment</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">CW</td>
+   				<td valign="top">Continuous Wave</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">DAC</td>
+   				<td valign="top">Digital Analog Converter</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">FlexRIO adapter module</td>
+   				<td valign="top">Frontend Adapter Module (RF module)</td>
+   			</tr>
+            <tr>
+   				<td valign="top">H2T</td>
+   				<td valign="top">Host to Target</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">NACK</td>
+   				<td valign="top">Negative Acknowledgement</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">MAC</td>
+   				<td valign="top">Medium Access Control Layer</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">MCS</td>
+   				<td valign="top">Modulation and Coding Scheme</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">MPDU</td>
+   				<td valign="top">MAC PDU</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">OFDM</td>
+   				<td valign="top">Orthogonal Frequency-Division Multiplexing</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">PDU</td>
+   				<td valign="top">Protocol Data Unit</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">PHY</td>
+   				<td valign="top">Physical Layer</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">PLCP</td>
+   				<td valign="top">PHY Layer Convergence Protocol</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">PN</td>
+   				<td valign="top">Pseudo Noise</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">QAM</td>
+   				<td valign="top">Quadrature Amplitude Modulation</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">RF</td>
+   				<td valign="top">Radio Frequency</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">RX</td>
+   				<td valign="top">Receive</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">SIFS</td>
+   				<td valign="top">Short Interframe Spacing</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">SISO</td>
+   				<td valign="top">Single Input Single Output</td>
+   			</tr>
+            <tr>
+   				<td valign="top">T2H</td>
+   				<td valign="top">Target to Host</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">TX</td>
+   				<td valign="top">Transmit</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">UDP</td>
+   				<td valign="top">User Datagram Protocol</td>
+   			</tr>
+   			<tr>
+   				<td valign="top">VHT</td>
+   				<td valign="top">Very High Throughput</td>
+   			</tr>
+   		</tbody>
+   	</table>
+   	<div><br clear="all">
+<hr align="left" size="1" width="33%">
+   		<div id="ftn1">
+<p class="Body"><a href="#_ftnref1" name="_ftn1" title="">
+[1]
+</a>If you are       transmitting over the air, make sure to consider the       instructions given in the <em>RF Multi Station Mode:       Over-the-Air Transmission</em> section. The USRP-29xx and       NI&nbsp;5791 are not approved or licensed for transmission over       the air using an antenna. As a result, operating those products       with an antenna may violate local laws.</p>
+   		</div>
+   	</div>
+	
+<p>376779A-01</p>
+   </body>
+</html>

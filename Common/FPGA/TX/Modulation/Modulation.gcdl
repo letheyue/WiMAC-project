@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="7C2630C465502C530C57AAA5B2920DC0" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Applies modulation based on the defined bit mapping scheme.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Latency: 2 cycles.&lt;/strong&gt;&lt;/p&gt;</p.UserDescription>
+    <Icon Id="81" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="1197" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="1198" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="1199" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="1200" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="1201" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Id="1202" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="1203" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]MODU&#xD;&#xA;LATION" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+            <FontSetting FontSize="5" Id="1204" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="90" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 110" Parameter="375" />
+      <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 80" Parameter="1040" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 35" Parameter="17" />
+      <ConnectorPaneTerminal Hotspot="15 0" ListViewHotspot="0 95" Parameter="402" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 50" Parameter="29" />
+      <ConnectorPaneTerminal Hotspot="40 15" />
+      <ConnectorPaneTerminal Hotspot="40 25" />
+      <ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 65" Parameter="32" />
+      <ConnectorPaneTerminal Hotspot="15 40" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="1770 400 40 15" DataItem="29" Id="30" Label="49" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="CFXP(2.14)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="785 350 40 15" DataItem="17" Id="18" Label="46" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="1770 705 40 15" DataItem="32" Id="33" Label="50" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <LogicalOr Bounds="1635 395 25 50" Id="68" Terminals="o=150, c0t0v=214, c1t0v=145, c2t0v=146, c3t0v=147, c4t0v=213" VerticalChunkCount="5" />
+      <LogicalOr Bounds="1595 700 25 50" Id="69" Terminals="o=113, c0t0v=210, c1t0v=112, c2t0v=111, c3t0v=110, c4t0v=209" VerticalChunkCount="5" />
+      <FeedbackNode ArrowDirection="Right" Bounds="1725 395 30 20" EnableTerminalVisible="False" Id="70" />
+      <FeedbackNode ArrowDirection="Right" Bounds="1725 700 30 20" EnableTerminalVisible="False" Id="71" />
+      <IsEqual Bounds="1255 470 30 30" Id="72" />
+      <LogicalAnd Bounds="1310 470 25 20" Id="73" Terminals="o=104, c0t0v=206, c1t0v=103" />
+      <IsEqual Bounds="1255 530 30 30" Id="74" />
+      <LogicalAnd Bounds="1310 530 25 20" Id="75" Terminals="o=100, c0t0v=206, c1t0v=102" />
+      <IsEqual Bounds="1255 590 30 30" Id="76" />
+      <LogicalAnd Bounds="1310 590 25 20" Id="77" Terminals="o=99, c0t0v=206, c1t0v=101" />
+      <Comment Bounds="1410 335 30 15" Id="80" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>1</p.Text>
+      </Comment>
+      <Wire Id="94" Joints="N(1057:Out) N(76:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="95" Joints="N(1054:Out) N(74:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="96" Joints="N(1051:Out) N(72:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="98" Joints="N(1044:Value) h(420) v(-35) B(2) N(201:y) B(2) v(-60) B(4) N(76:y) B(4) v(-60) B(6) N(74:y) B(6) v(-60) B(8) N(72:y) B(8) v(-60) N(197:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="99" Joints="N(77:o) h(5) v(-10) N(395:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="100" Joints="N(75:o) h(5) v(-10) N(391:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="101" Joints="N(76:x = y?) N(77:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="102" Joints="N(74:x = y?) N(75:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="103" Joints="N(72:x = y?) N(73:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="104" Joints="N(73:o) h(5) v(-10) N(386:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="105" Joints="N(71:output) N(33:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="110" Joints="N(395:R1) h(60) v(145) N(69:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="111" Joints="N(391:R1) h(70) v(195) N(69:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="112" Joints="N(386:R1) h(80) v(245) N(69:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="113" Joints="N(69:o) N(71:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="1545 455 40 40" DomainName="NI.Appframeworks.Common" Id="135" Target="CFX2\.14\ to\ U32\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="CFXP(2.14)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="137" Joints="N(386:R0) N(135:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="138" Joints="N(391:R0) N(140:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="139" Joints="N(395:R0) N(143:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="1545 515 40 40" DomainName="NI.Appframeworks.Common" Id="140" Target="CFX2\.14\ to\ U32\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="CFXP(2.14)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="1545 575 40 40" DomainName="NI.Appframeworks.Common" Id="143" Target="CFX2\.14\ to\ U32\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="CFXP(2.14)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="145" Joints="N(135:R0) h(10) v(-50) N(68:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="146" Joints="N(140:R0) h(20) v(-100) N(68:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="147" Joints="N(143:R0) h(30) v(-150) N(68:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="1675 400 40 40" DomainName="NI.Appframeworks.Common" Id="148" Target="U32\ to\ CFX2\.14\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="UInt32" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="150" Joints="N(68:o) N(148:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="151" Joints="N(148:R0) N(70:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="152" Joints="N(70:output) N(30:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="1595 330 104 42" Id="153" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"cast to U32\r\nto enable usage\r\nof OR gate"</p.Text>
+      </Comment>
+      <IsEqual Bounds="1255 410 30 30" Id="197" />
+      <LogicalAnd Bounds="1310 410 25 20" Id="198" Terminals="o=241, c0t0v=206, c1t0v=199" />
+      <Wire Id="199" Joints="N(197:x = y?) N(198:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <IsEqual Bounds="1255 650 30 30" Id="201" />
+      <LogicalAnd Bounds="1310 650 25 20" Id="202" Terminals="o=235, c0t0v=206, c1t0v=203" />
+      <Wire Id="203" Joints="N(201:x = y?) N(202:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="206" Joints="N(18:Value) h(475) v(60) B(2) N(198:c0t0v) B(2) v(60) B(4) N(73:c0t0v) B(4) v(60) B(6) N(75:c0t0v) B(6) v(60) B(8) N(77:c0t0v) B(8) v(60) N(202:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="209" Joints="N(1023:802) h(16) v(95) N(69:c4t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="210" Joints="N(785:408) h(56) v(295) N(69:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="1545 395 40 40" DomainName="NI.Appframeworks.Common" Id="211" Target="CFX2\.14\ to\ U32\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="CFXP(2.14)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="1545 635 40 40" DomainName="NI.Appframeworks.Common" Id="212" Target="CFX2\.14\ to\ U32\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="data in" />
+            <Parameter Id="R0" Desc="data out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="CFXP(2.14)" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="213" Joints="N(212:R0) h(40) v(-200) N(68:c4t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="214" Joints="N(211:R0) N(68:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="215" Joints="N(788:408) N(211:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="216" Joints="N(1026:802) N(212:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="235" Joints="N(202:o) h(5) v(-10) N(1032:802)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="241" Joints="N(198:o) h(5) v(-10) N(794:408)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="245" Joints="N(1048:Out) N(197:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="258" Joints="N(1060:Out) N(201:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="1365 140 144 15" Id="345" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>Latency: 2 clock cycles</p.Text>
+      </Comment>
+      <NodeLabel AttachedTo="30" Bounds="1815 400 62 14" Id="49" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>symbol out</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="18" Bounds="721 350 59 14" Id="46" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>input valid</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="33" Bounds="1815 705 66 14" Id="50" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>output valid</p.Text>
+      </NodeLabel>
+      <DataAccessor Bounds="785 395 40 15" DataItem="375" Id="384" Label="385" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NodeLabel AttachedTo="384" Bounds="726 395 54 14" Id="385" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>symbol in</p.Text>
+      </NodeLabel>
+      <MethodCall Bounds="1405 455 40 40" DomainName="NI.Appframeworks.Common" Id="386" Target="QPSK\ Modulation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="symbol in" />
+            <Parameter Id="L1" Desc="input valid" />
+            <Parameter Id="R1" Desc="output valid" />
+            <Parameter Id="R0" Desc="symbol out" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="1405 515 40 40" DomainName="NI.Appframeworks.Common" Id="391" Target="\16\-QAM\ Modulation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="symbol in" />
+            <Parameter Id="L1" Desc="input valid" />
+            <Parameter Id="R0" Desc="symbol out" />
+            <Parameter Id="R1" Desc="output valid" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <MethodCall Bounds="1405 575 40 40" DomainName="NI.Appframeworks.Common" Id="395" Target="\64\-QAM\ Modulation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L1" Desc="input valid" />
+            <Parameter Id="L0" Desc="symbol in" />
+            <Parameter Id="R0" Desc="symbol out" />
+            <Parameter Id="R1" Desc="output valid" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <DataAccessor Bounds="785 715 40 15" DataItem="402" Id="406" Label="407" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@583a66bf9ae94a79bda75345afa54841" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NodeLabel AttachedTo="406" Bounds="667 715 113 14" Id="407" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>bit mapping scheme</p.Text>
+      </NodeLabel>
+      <CaseStructure Bounds="1375 365 100 85" DataType="@583a66bf9ae94a79bda75345afa54841" Id="408" Selected="409" UserSelectorBounds="0 0 100 17">
+        <CaseStructure.Case Bounds="5 5 90 75" Id="409" Pattern="&quot;LTE&quot;">
+          <MethodCall Bounds="25 25 40 40" DomainName="NI.Appframeworks.Common" Id="797" Target="LTE\ BPSK\ Modulation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+            <p.MethodDeclaration>
+              <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                <Parameter Id="L0" Desc="symbol in" />
+                <Parameter Id="L1" Desc="input valid" />
+                <Parameter Id="R0" Desc="symbol out" />
+                <Parameter Id="R1" Desc="output valid" />
+              </MethodDeclaration>
+            </p.MethodDeclaration>
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+          </MethodCall>
+          <Wire Id="798" Joints="N(791:409) N(797:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="799" Joints="N(794:409) N(797:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="800" Joints="N(797:R0) N(788:409)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="801" Joints="N(797:R1) N(785:409)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 90 75" Id="410" Pattern="&quot;802.11&quot;">
+          <MethodCall Bounds="25 25 40 40" DomainName="NI.Appframeworks.Common" Id="358" Target="BPSK\ Modulation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+            <p.MethodDeclaration>
+              <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                <Parameter Id="L0" Desc="symbol in" />
+                <Parameter Id="L1" Desc="input valid" />
+                <Parameter Id="R0" Desc="symbol out" />
+                <Parameter Id="R1" Desc="output valid" />
+              </MethodDeclaration>
+            </p.MethodDeclaration>
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+          </MethodCall>
+          <Wire Id="784" Joints="N(358:R1) N(785:410)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="787" Joints="N(358:R0) N(788:410)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="790" Joints="N(791:410) N(358:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="793" Joints="N(794:410) N(358:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 20 13 10" Docking="Left" Id="411" Terminals="408=796, 409, 410" />
+        <CaseStructure.Tunnel Bounds="91 40 13 10" Docking="Right" Id="785" Terminals="408=210, 409=801, 410=784" />
+        <CaseStructure.Tunnel Bounds="91 30 13 10" Docking="Right" Id="788" Terminals="408=215, 409=800, 410=787" />
+        <CaseStructure.Tunnel Bounds="-4 30 13 10" Docking="Left" Id="791" Terminals="408=1074, 409=798, 410=790" />
+        <CaseStructure.Tunnel Bounds="-4 40 13 10" Docking="Left" Id="794" Terminals="408=241, 409=799, 410=793" />
+      </CaseStructure>
+      <Wire Id="796" Joints="N(406:Value) h(10) B(1) h(520) v(-60) B(3) N(805:802) B(3) v(-270) N(411:408) B(1) v(-70) N(1066:1063)" xmlns="http://www.ni.com/PlatformFramework" />
+      <CaseStructure Bounds="1375 615 100 75" DataType="@583a66bf9ae94a79bda75345afa54841" Id="802" Selected="803" UserSelectorBounds="0 0 100 17">
+        <CaseStructure.Case Bounds="5 5 90 65" Id="803" Pattern="&quot;LTE&quot;" />
+        <CaseStructure.Case Bounds="5 5 90 65" Id="804" Pattern="&quot;802.11&quot;">
+          <MethodCall Bounds="25 15 40 40" DomainName="NI.Appframeworks.Common" Id="399" Target="\256\-QAM\ Modulation\.gcdl" xmlns="http://www.ni.com/MocCommon">
+            <p.MethodDeclaration>
+              <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                <Parameter Id="L0" Desc="symbol in" />
+                <Parameter Id="L1" Desc="input valid" />
+                <Parameter Id="R0" Desc="symbol out" />
+                <Parameter Id="R1" Desc="output valid" />
+              </MethodDeclaration>
+            </p.MethodDeclaration>
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="CFXP(2.14)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="Boolean" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+          </MethodCall>
+          <Wire Id="1022" Joints="N(399:R1) N(1023:804)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1025" Joints="N(399:R0) N(1026:804)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1028" Joints="N(1029:804) N(399:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1031" Joints="N(1032:804) N(399:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 40 13 10" Docking="Left" Id="805" Terminals="802=796, 803, 804" />
+        <CaseStructure.Tunnel Bounds="91 30 13 10" DefaultIfUnwired="True" Docking="Right" Id="1023" Terminals="802=209, 803, 804=1022" />
+        <CaseStructure.Tunnel Bounds="91 20 13 10" DefaultIfUnwired="True" Docking="Right" Id="1026" Terminals="802=216, 803, 804=1025" />
+        <CaseStructure.Tunnel Bounds="-4 20 13 10" Docking="Left" Id="1029" Terminals="802=1083, 803, 804=1028" />
+        <CaseStructure.Tunnel Bounds="-4 30 13 10" Docking="Left" Id="1032" Terminals="802=235, 803, 804=1031" />
+      </CaseStructure>
+      <DataAccessor Bounds="785 700 40 15" DataItem="1040" Id="1044" Label="1045" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <NodeLabel AttachedTo="1044" Bounds="718 700 62 14" Id="1045" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>modulation</p.Text>
+      </NodeLabel>
+      <Literal Bounds="1120 410 85.68994 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1048" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0</p.Data>
+        <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+          <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+        </p.TypeDefinitionTargets>
+        <EnumBehavior Id="1049" />
+      </Literal>
+      <Literal Bounds="1120 470 87.6766357 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1051" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>1</p.Data>
+        <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+          <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+        </p.TypeDefinitionTargets>
+        <EnumBehavior Id="1052" />
+      </Literal>
+      <Literal Bounds="1120 530 102.526672 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1054" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>2</p.Data>
+        <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+          <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+        </p.TypeDefinitionTargets>
+        <EnumBehavior Id="1055" />
+      </Literal>
+      <Literal Bounds="1120 590 102.526672 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1057" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>3</p.Data>
+        <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+          <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+        </p.TypeDefinitionTargets>
+        <EnumBehavior Id="1058" />
+      </Literal>
+      <Literal Bounds="1120 650 108.456604 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1060" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>4</p.Data>
+        <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+          <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+        </p.TypeDefinitionTargets>
+        <EnumBehavior Id="1061" />
+      </Literal>
+      <CaseStructure Bounds="850 370 235 305" DataType="@583a66bf9ae94a79bda75345afa54841" Id="1063" Selected="1065" UserSelectorBounds="63 0 109 17">
+        <CaseStructure.Case Bounds="5 5 225 295" Id="1064" Pattern="&quot;802.11&quot;">
+          <Wire Id="1090" Joints="N(1070:1064) h(16) B(1) N(1072:1064) B(1) v(60) B(3) N(1076:1064) B(3) v(60) B(5) N(1084:1064) B(5) v(60) B(7) N(1086:1064) B(7) v(60) N(1088:1064)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 225 295" Id="1065" Pattern="&quot;LTE&quot;">
+          <Wire Id="1091" Joints="N(1070:1065) h(16) B(1) N(1072:1065) B(1) v(60) B(3) N(1092:L0) B(3) v(60) B(5) N(1095:L0) B(5) v(60) B(7) N(1098:L0) B(7) v(60) N(1088:1065)" xmlns="http://www.ni.com/PlatformFramework" />
+          <MethodCall Bounds="150 80 40 40" DomainName="NI.Appframeworks.Common" Id="1092" Target="Map\ LTE\ to\ Common\ Modulation\ Symbol\.gcdl" xmlns="http://www.ni.com/MocCommon">
+            <p.MethodDeclaration>
+              <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                <Parameter Id="L0" Desc="symbol in" />
+                <Parameter Id="L1" Desc="modulation" />
+                <Parameter Id="R0" Desc="symbol out" />
+              </MethodDeclaration>
+            </p.MethodDeclaration>
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+          </MethodCall>
+          <Wire Id="1094" Joints="N(1092:R0) N(1076:1065)" xmlns="http://www.ni.com/PlatformFramework" />
+          <MethodCall Bounds="150 140 40 40" DomainName="NI.Appframeworks.Common" Id="1095" Target="Map\ LTE\ to\ Common\ Modulation\ Symbol\.gcdl" xmlns="http://www.ni.com/MocCommon">
+            <p.MethodDeclaration>
+              <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                <Parameter Id="L0" Desc="symbol in" />
+                <Parameter Id="L1" Desc="modulation" />
+                <Parameter Id="R0" Desc="symbol out" />
+              </MethodDeclaration>
+            </p.MethodDeclaration>
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+          </MethodCall>
+          <Wire Id="1097" Joints="N(1095:R0) N(1084:1065)" xmlns="http://www.ni.com/PlatformFramework" />
+          <MethodCall Bounds="150 200 40 40" DomainName="NI.Appframeworks.Common" Id="1098" Target="Map\ LTE\ to\ Common\ Modulation\ Symbol\.gcdl" xmlns="http://www.ni.com/MocCommon">
+            <p.MethodDeclaration>
+              <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+                <Parameter Id="L0" Desc="symbol in" />
+                <Parameter Id="L1" Desc="modulation" />
+                <Parameter Id="R0" Desc="symbol out" />
+              </MethodDeclaration>
+            </p.MethodDeclaration>
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+            <Terminal DataType="@e0e094b0914f4702993c0ff39791286a" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+          </MethodCall>
+          <Wire Id="1100" Joints="N(1098:R0) N(1086:1065)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Literal Bounds="35 90 87.67667 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1102" Label="1104" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>1</p.Data>
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+            </p.TypeDefinitionTargets>
+            <EnumBehavior Id="1103" />
+          </Literal>
+          <Wire Id="1105" Joints="N(1102:Out) N(1092:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+          <NodeLabel AttachedTo="1102" Bounds="35 90 0 0" Id="1104" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>modulation</p.Text>
+          </NodeLabel>
+          <Literal Bounds="35 150 102.526672 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1106" Label="1108" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>2</p.Data>
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+            </p.TypeDefinitionTargets>
+            <EnumBehavior Id="1107" />
+          </Literal>
+          <NodeLabel AttachedTo="1106" Bounds="35 150 0 0" Id="1108" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>modulation</p.Text>
+          </NodeLabel>
+          <Literal Bounds="35 210 102.526672 15" DataType="@74a6a15c09714036a3cf6e04e48709c3" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="1109" Label="1111" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>3</p.Data>
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+            </p.TypeDefinitionTargets>
+            <EnumBehavior Id="1110" />
+          </Literal>
+          <NodeLabel AttachedTo="1109" Bounds="35 210 0 0" Id="1111" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>modulation</p.Text>
+          </NodeLabel>
+          <Wire Id="1112" Joints="N(1109:Out) N(1098:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="1113" Joints="N(1106:Out) N(1095:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 275 13 10" Docking="Left" Id="1066" Terminals="1063=796, 1064, 1065" />
+        <CaseStructure.Tunnel Bounds="-4 25 13 10" Docking="Left" Id="1070" Terminals="1063=1069, 1064=1090, 1065=1091" />
+        <CaseStructure.Tunnel Bounds="226 25 13 10" Docking="Right" Id="1072" Terminals="1063=1074, 1064=1090, 1065=1091" />
+        <CaseStructure.Tunnel Bounds="226 85 13 10" Docking="Right" Id="1076" Terminals="1063=1078, 1064=1090, 1065=1094" />
+        <CaseStructure.Tunnel Bounds="226 145 13 10" Docking="Right" Id="1084" Terminals="1063=1080, 1064=1090, 1065=1097" />
+        <CaseStructure.Tunnel Bounds="226 205 13 10" Docking="Right" Id="1086" Terminals="1063=1082, 1064=1090, 1065=1100" />
+        <CaseStructure.Tunnel Bounds="226 265 13 10" Docking="Right" Id="1088" Terminals="1063=1083, 1064=1090, 1065=1091" />
+      </CaseStructure>
+      <Wire Id="1069" Joints="N(384:Value) N(1070:1063)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1074" Joints="N(1072:1063) N(791:408)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1078" Joints="N(1076:1063) N(386:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1080" Joints="N(1084:1063) N(391:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1082" Joints="N(1086:1063) N(395:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="1083" Joints="N(1088:1063) N(1029:802)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="855 300 233 28" Id="1114" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"map alternativ bit mapping schemes\r\nto the one used in modulation modules"</p.Text>
+      </Comment>
+      <Comment Bounds="1285 170 285 155" Id="1115" SizeToText="False" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"Modulation is done based on gray code.\r\nFrom negativ to positive the values are \r\nsorted by the gray code index. The lower half of the symbol in constellation bits are converted to the real part where the upper half results are converted to the imaginary part.\r\n\r\nThis scheme is like the 802.11 modulation where the constellations are documented in 802.11-2012 (18.3.5.8) and 802.11ac-2013 (22.3.10.9.1)"</p.Text>
+      </Comment>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="19" IsReadOnly="[bool]False" Label="[UIModel]39" Left="[float]179" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]233" TrueContent="[string]On" Value="{DataItemBinding Id=17}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="31" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[ComplexNumber]0x1;0x0" Label="[UIModel]42" Left="[float]420" Maximum="[ComplexNumber]0x7FFFp-14;0x7FFFp-14" MinHeight="[float]22" Minimum="[ComplexNumber]0xFp+1;0xFp+1" RadixVisibility="[SMVisibility]Collapsed" Top="[float]36" Value="{DataItemBinding Id=29}" ValueFormatter="[string]LVFXP:CFXP_2_14&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]CFXP(2.14)" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="34" IsReadOnly="[bool]True" Label="[UIModel]43" Left="[float]420" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]233" TrueContent="[string]On" Value="{DataItemBinding Id=32}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="39" LabelOwner="[UIModel]19" Left="[float]179" Text="[string]input valid" Top="[float]210" Width="[float]56" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="42" LabelOwner="[UIModel]31" Left="[float]420" Text="[string]symbol out" Top="[float]13" Width="[float]60" xmlns="http://www.ni.com/PanelCommon" />
+      <Label Height="[float]16" Id="43" LabelOwner="[UIModel]34" Left="[float]420" Text="[string]output valid" Top="[float]210" Width="[float]64" xmlns="http://www.ni.com/PanelCommon" />
+      <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@e0e094b0914f4702993c0ff39791286a" Height="[float]167" Id="1156" Label="[UIModel]1162" Left="[float]179" Top="[float]36" Value="{DataItemBinding Id=375}" Width="[float]128" p4:ControlDefinitionChecksum="c7/Nlp0oXMRyJ5FambmPJQ==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/PanelCommon">
+        <p4:p.TypeDefinitionTargets>
+          <p4:TypeDefinitionTarget TargetName="TX\ Modulation\ Symbol\.gtype:ControlDefinition" />
+        </p4:p.TypeDefinitionTargets>
+        <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="1157" IsReadOnly="[bool]False" Label="[UIModel]1159" Left="[float]5" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]23" TrueContent="[string]On" Value="{ClusterBinding FieldName=not\ in\ list}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <p4:ArrayViewer ArrayElement="[UIModel]1161" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]8" Height="[float]64" Id="1158" IsFixedSize="[bool]True" Label="[UIModel]1160" Left="[float]5" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]93" Value="{ClusterBinding FieldName=constellation\ bits}" Width="[float]110">
+          <p.DefaultElementValue>False</p.DefaultElementValue>
+          <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="1161" IsReadOnly="[bool]False" Left="[float]53" Name="[string]Child" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]7" TrueContent="[string]On" Value="[bool]False" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </p4:ArrayViewer>
+        <p4:Label Height="[float]16" Id="1159" LabelOwner="[UIModel]1157" Left="[float]5" Text="[string]not in list" Top="[float]0" Width="[float]50" />
+        <p4:Label Height="[float]16" Id="1160" LabelOwner="[UIModel]1158" Left="[float]5" Text="[string]constellation bits" Top="[float]70" Width="[float]90" />
+      </Cluster>
+      <Label Height="[float]16" Id="1162" LabelOwner="[UIModel]1156" Left="[float]179" Text="[string]symbol in" Top="[float]13" Width="[float]52" xmlns="http://www.ni.com/PanelCommon" />
+      <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="1164" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]1165" Left="[float]179" Top="[float]313" Value="{DataItemBinding Id=1040}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" p4:ControlDefinitionChecksum="ZuCLy+vrbMMDMH4f/3F9jg==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <p4:p.TypeDefinitionTargets>
+          <p4:TypeDefinitionTarget TargetName="Modulation\.gtype:ControlDefinition" />
+        </p4:p.TypeDefinitionTargets>
+        <EnumSelectorInfo DisplayValue="[string]BPSK" Value="[ushort]0" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]QPSK" Value="[ushort]1" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]16-QAM" Value="[ushort]2" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]64-QAM" Value="[ushort]3" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]256-QAM" Value="[ushort]4" ValueType="[Type]UInt16" />
+      </EnumSelector>
+      <Label Height="[float]16" Id="1165" LabelOwner="[UIModel]1164" Left="[float]179" Text="[string]modulation" Top="[float]290" Width="[float]62" xmlns="http://www.ni.com/PanelCommon" />
+      <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="1167" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]1168" Left="[float]179" Top="[float]365" Value="{DataItemBinding Id=402}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" p4:ControlDefinitionChecksum="JDK2kBxyuVV1rTIZgvRbuA==" xmlns:p4="http://www.ni.com/PanelCommon" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <p4:p.TypeDefinitionTargets>
+          <p4:TypeDefinitionTarget TargetName="TX\ Modulation\ Bit\ Mapping\ Scheme\.gtype:ControlDefinition" />
+        </p4:p.TypeDefinitionTargets>
+        <EnumSelectorInfo DisplayValue="[string]802.11" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]LTE" Value="[ushort]1" ValueType="[Type]UInt16" />
+      </EnumSelector>
+      <Label Height="[float]16" Id="1168" LabelOwner="[UIModel]1167" Left="[float]179" Text="[string]bit mapping scheme" Top="[float]342" Width="[float]109" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem CallDirection="Input" CallIndex="2" DataType="Boolean" Id="17" Name="input valid" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Boolean that indicates when &lt;lvParamRef&gt;symbol in&lt;/lvParamRef&gt; is valid.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="1" DataType="CFXP(2.14)" Id="29" Name="symbol out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0;0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;I/Q-modulated symbol. The modulation scheme used is specified by &lt;lvParamRef&gt;modulation&lt;/lvParamRef&gt; and &lt;lvParamRef&gt;bit mapping scheme&lt;/lvParamRef&gt;.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="2" DataType="Boolean" Id="32" Name="output valid" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Boolean that indicates when &lt;lvParamRef&gt;symbol out&lt;/lvParamRef&gt; is valid.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="@e0e094b0914f4702993c0ff39791286a" Id="375" Name="symbol in" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>
+        <Cluster>
+          <Field1>True</Field1>
+          <Field2>
+            <Array Lengths="8" IsBinary="True" Compression="GZip">
+              <BinaryElements>H4sIAAAAAAAEAGNgZGBg+A8EIBoEBEAMDhBmxI64AYECs4UzAAAA</BinaryElements>
+            </Array>
+          </Field2>
+        </Cluster>
+      </p.DefaultValue>
+      <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+        <TypeDefinitionTarget TargetName="TX\ Modulation\ Symbol\.gtype" />
+      </p.TypeDefinitionTargets>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Symbol to encode.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="3" DataType="@583a66bf9ae94a79bda75345afa54841" Id="402" Name="bit mapping scheme" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+        <TypeDefinitionTarget TargetName="TX\ Modulation\ Bit\ Mapping\ Scheme\.gtype" />
+      </p.TypeDefinitionTargets>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;defines the used bit-pattern-to-QAM symbol mapping scheme (LTE, 802.11)&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="1" DataType="@74a6a15c09714036a3cf6e04e48709c3" Id="1040" Name="modulation" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+        <TypeDefinitionTarget TargetName="Modulation\.gtype" />
+      </p.TypeDefinitionTargets>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Modulation scheme to be used.&lt;/p&gt;&lt;p&gt;&lt;!--Are there defined values for this parameter? If so, do they have definitions?--&gt;&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <IconTable xmlns="http://www.ni.com/PlatformFramework">
+      <p.IconModel Target="CFX2\.14\ to\ U32\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]CFX2.14 TO&#xD;&#xA;U32" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="U32\ to\ CFX2\.14\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]U32 TO&#xD;&#xA;CFX2.14" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="QPSK\ Modulation\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]QPSK MOD" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="\16\-QAM\ Modulation\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]16-QAM&#xD;&#xA;MOD" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="\64\-QAM\ Modulation\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]64-QAM&#xD;&#xA;MOD" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="LTE\ BPSK\ Modulation\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]LTE BPSK&#xD;&#xA;MOD" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="BPSK\ Modulation\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]BPSK MOD" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="\256\-QAM\ Modulation\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]256-QAM&#xD;&#xA;MOD" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+      <p.IconModel Target="Map\ LTE\ to\ Common\ Modulation\ Symbol\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]MAP LTE TO&#xD;&#xA;COMMON&#xD;&#xA;MOD SYM" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+    </IconTable>
+  </VirtualInstrument>
+  <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+    <p.TypeReference TypeId="e0e094b0914f4702993c0ff39791286a">
+      <Typedef TypedefName="TX Modulation Symbol.gtype" UnderlyingType="@babc520d824c49dea70987644c6bbb24" />
+    </p.TypeReference>
+    <p.TypeReference TypeId="583a66bf9ae94a79bda75345afa54841">
+      <Typedef TypedefName="TX Modulation Bit Mapping Scheme.gtype" UnderlyingType="@beffd6ec540f4043a887581770d50fe2" />
+    </p.TypeReference>
+    <p.TypeReference TypeId="74a6a15c09714036a3cf6e04e48709c3">
+      <Typedef TypedefName="Modulation.gtype" UnderlyingType="@86155ab615ef42daa1e7e4a2d09bd39f" />
+    </p.TypeReference>
+    <p.TypeReference TypeId="babc520d824c49dea70987644c6bbb24">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="not in list" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="constellation bits">
+            <DataType>
+              <SizedArray LowerBound="8" UpperBound="8" DereferenceType="Boolean" />
+            </DataType>
+          </Field>
+        </Members>
+      </Composite>
+    </p.TypeReference>
+    <p.TypeReference TypeId="beffd6ec540f4043a887581770d50fe2">
+      <Enumeration>
+        <Members>
+          <EnumerationMember Value="0" Name="802.11" />
+          <EnumerationMember Value="1" Name="LTE" />
+        </Members>
+        <DataType>
+          <UInt16 />
+        </DataType>
+      </Enumeration>
+    </p.TypeReference>
+    <p.TypeReference TypeId="86155ab615ef42daa1e7e4a2d09bd39f">
+      <Enumeration>
+        <Members>
+          <EnumerationMember Value="0" Name="BPSK" />
+          <EnumerationMember Value="1" Name="QPSK" />
+          <EnumerationMember Value="2" Name="16-QAM" />
+          <EnumerationMember Value="3" Name="64-QAM" />
+          <EnumerationMember Value="4" Name="256-QAM" />
+        </Members>
+        <DataType>
+          <UInt16 />
+        </DataType>
+      </Enumeration>
+    </p.TypeReference>
+  </DataTypeReferenceTable>
+</SourceFile>

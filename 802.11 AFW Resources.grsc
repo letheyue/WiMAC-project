@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="940F4526BDE00B7A1A9478B8258C54ED" xmlns="http://www.ni.com/PlatformFramework">
+	<SourceModelFeatureSet>
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="GResources" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/GResources/SystemModel" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="SystemDesigner" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/SystemDesigner/Common/SystemModel" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="SystemDesigner" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/SystemDesigner/EnvoyManagement" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="SystemDesigner" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/SystemDesigner/SystemModel" Version="4.5.0.49152" />
+		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="SystemDesigner" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/SystemDesigner/SystemModelCore" Version="4.5.0.49154" />
+		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+	</SourceModelFeatureSet>
+	<GResourceDefinition xmlns="http://www.ni.com/GResources/SystemModel">
+		<EnvoyFacadeManager Id="1" xmlns="http://www.ni.com/SystemDesigner/EnvoyManagement">
+			<MappingManager Id="2" xmlns="http://www.ni.com/SystemDesigner/SystemModelCore">
+				<Instance Id="9" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}DerivedClock">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}DerivedClock]DerivedClock" p7:Clock.Divisor="4" p7:Clock.FreqInHz="250000000" p7:Clock.Multiplier="25" p7:Clock.ParentClockName="RioClk40" p8:Process.AliasName="PHY" p8:Process.AssociatedIdentifier="15" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="67" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Process.AliasName="T2H TX Baseband" p7:Process.AssociatedIdentifier="57" p7:Process.DataType="UInt32" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="71" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}HostToTargetFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}HostToTargetFifo]Fifo" p7:Fifo.Depth="8197" p8:Process.AliasName="H2T TX Data" p8:Process.AssociatedIdentifier="58" p8:Process.DataType="UInt8" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="75" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Fifo.Depth="8191" p8:Process.AliasName="T2H RX Data" p8:Process.AssociatedIdentifier="59" p8:Process.DataType="UInt8" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="79" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Fifo.Depth="8191" p8:Process.AliasName="T2H TX Bit Processing Output" p8:Process.AssociatedIdentifier="60" p8:Process.DataType="UInt8" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="83" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}HostToTargetFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}HostToTargetFifo]Fifo" p7:Process.AliasName="H2T RX Baseband" p7:Process.AssociatedIdentifier="61" p7:Process.DataType="UInt32" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="87" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Process.AliasName="T2H RX Power Spectrum" p7:Process.AssociatedIdentifier="62" p7:Process.DataType="UInt32" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="91" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Process.AliasName="T2H Constellation" p7:Process.AssociatedIdentifier="63" p7:Process.DataType="UInt64" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="95" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Process.AliasName="T2H Channel Estimation" p7:Process.AssociatedIdentifier="64" p7:Process.DataType="UInt64" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="99" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Fifo.Depth="1023" p8:Process.AliasName="T2H RX Bit Processing Output" p8:Process.AssociatedIdentifier="65" p8:Process.DataType="UInt8" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="103" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" p7:Process.AliasName="T2H Events" p7:Process.AssociatedIdentifier="66" p7:Process.DataType="UInt64" xmlns:p7="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="166" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}LocalFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}LocalFifo]Fifo" p7:Fifo.Depth="129" p8:Process.AliasName="AGC Reg Bus 0 Access FIFO" p8:Process.AssociatedIdentifier="164" p8:Process.DataType="UInt64" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="170" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}LocalFifo">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}LocalFifo]Fifo" p7:Fifo.Depth="129" p8:Process.AliasName="AGC Reg Bus 1 Access FIFO" p8:Process.AssociatedIdentifier="165" p8:Process.DataType="UInt64" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Instance Id="237" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}DerivedClock">
+					<Symbols p6:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}DerivedClock]DerivedClock" p7:Clock.Divisor="2" p7:Clock.FreqInHz="100000000" p7:Clock.Multiplier="5" p7:Clock.ParentClockName="RioClk40" p8:Process.AliasName="MAC" p8:Process.AssociatedIdentifier="243" xmlns:p8="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p7="http://www.ni.com/SystemDesigner/Common/SystemModel" xmlns:p6="http://www.ni.com/Core/Proxy" />
+				</Instance>
+				<Superimposition Id="3" Name="Root Superimposition">
+					<Superimpose Source="9" />
+					<Superimpose Source="67" />
+					<Superimpose Source="71" />
+					<Superimpose Source="75" />
+					<Superimpose Source="79" />
+					<Superimpose Source="83" />
+					<Superimpose Source="87" />
+					<Superimpose Source="91" />
+					<Superimpose Source="95" />
+					<Superimpose Source="99" />
+					<Superimpose Source="103" />
+					<Superimpose Source="166" />
+					<Superimpose Source="170" />
+					<Superimpose Source="237" />
+				</Superimposition>
+			</MappingManager>
+		</EnvoyFacadeManager>
+	</GResourceDefinition>
+	<EnvoyManagerFile Id="5" xmlns="http://www.ni.com/PlatformFramework">
+		<ProjectSettings Id="6" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Bindings="Envoy,DefinitionReference,DefaultTarget,EmbeddedReference,ScopingEnvoy,NameScopingEnvoy" Id="7" ModelDefinitionType="DefaultTarget" Name="\802\.11\ AFW\ Resources\.grsc" NameTracksFileName="True">
+			<DefaultTarget />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DerivedClock,ProcessBackedProjectServiceMetaFactory" ContentName="{:/9}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}DerivedClock]DerivedClock" Id="15" Name="PHY" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/67}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="57" Name="T2H\ TX\ Baseband" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/71}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}HostToTargetFifo]Fifo" Id="58" Name="H2T\ TX\ Data" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/75}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="59" Name="T2H\ RX\ Data" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/79}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="60" Name="T2H\ TX\ Bit\ Processing\ Output" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/83}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}HostToTargetFifo]Fifo" Id="61" Name="H2T\ RX\ Baseband" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/87}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="62" Name="T2H\ RX\ Power\ Spectrum" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/91}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="63" Name="T2H\ Constellation" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/95}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="64" Name="T2H\ Channel\ Estimation" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/99}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="65" Name="T2H\ RX\ Bit\ Processing\ Output" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DmaFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/103}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}TargetToHostFifo]Fifo" Id="66" Name="T2H\ Events" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.LocalFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/166}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}LocalFifo]Fifo" Id="164" Name="AGC\ Reg\ Bus\ 0\ Access\ FIFO" />
+			<ContentReference Bindings="Envoy,ContentReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.LocalFifo,ProcessBackedProjectServiceMetaFactory" ContentName="{:/170}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}LocalFifo]Fifo" Id="165" Name="AGC\ Reg\ Bus\ 1\ Access\ FIFO" />
+			<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.Restricted.SystemDesigner.SystemModelCore.Process,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.DerivedClock,ProcessBackedProjectServiceMetaFactory" ContentName="{:/237}[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}DerivedClock]DerivedClock" Id="243" Name="MAC" />
+		</NameScopingEnvoy>
+	</EnvoyManagerFile>
+</SourceFile>

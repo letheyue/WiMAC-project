@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="FDA5F1EC0F37E1747199F121EA491A20" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">"&lt;p&gt;Generates the Service field according to 22.3.10.2 containing the scrambler init, reserved bits, and the VHT-SIG-B CRC (depending on the format).&lt;/p&gt;&lt;p&gt;\n&lt;strong&gt;Latency: 1 cycle&lt;/strong&gt;\n&lt;/p&gt;"</p.UserDescription>
+    <Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="582" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="583" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="584" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="585" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="586" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 7.426,7.684 C 7.34,7.645 7.215,7.596 7.051,7.539 C 6.887,7.482 6.749,7.432 6.637,7.391 C 6.525,7.492 6.424,7.615 6.334,7.76 C 6.244,7.905 6.199,8.066 6.199,8.246 C 6.199,8.517 6.296,8.732 6.49,8.892 C 6.684,9.052 6.937,9.132 7.25,9.132 C 7.333,9.132 7.431,9.12 7.543,9.095 C 7.655,9.07 7.751,9.033 7.832,8.98 C 7.926,8.92 8.001,8.85 8.059,8.77 C 8.117,8.69 8.145,8.58 8.145,8.442 C 8.145,8.254 8.098,8.112 8.004,8.016 C 7.91,7.92 7.717,7.809 7.426,7.684 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Id="587" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 6.93,6.211 C 7.003,6.242 7.102,6.281 7.229,6.326 C 7.356,6.371 7.508,6.423 7.688,6.48 C 7.808,6.339 7.894,6.213 7.946,6.101 C 7.998,5.989 8.024,5.851 8.024,5.687 C 8.024,5.489 7.948,5.332 7.795,5.214 C 7.642,5.096 7.44,5.039 7.188,5.039 C 7.094,5.039 6.999,5.051 6.901,5.074 C 6.803,5.097 6.713,5.131 6.633,5.176 C 6.557,5.22 6.495,5.278 6.445,5.35 C 6.395,5.422 6.371,5.502 6.371,5.594 C 6.371,5.748 6.414,5.867 6.502,5.953 C 6.59,6.039 6.732,6.125 6.93,6.211 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Id="588" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 12.867,5.137 C 12.547,5.137 12.318,5.286 12.179,5.585 C 12.04,5.884 11.972,6.387 11.972,7.096 C 11.972,7.787 12.042,8.284 12.183,8.59 C 12.324,8.896 12.552,9.048 12.867,9.048 C 13.182,9.048 13.41,8.896 13.551,8.59 C 13.692,8.284 13.762,7.785 13.762,7.089 C 13.762,6.385 13.693,5.884 13.555,5.586 C 13.417,5.288 13.188,5.137 12.867,5.137 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Id="589" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,2 L 4,2 C 2.895,2 2,2.895 2,4 L 2,12 L 38,12 L 38,4 C 38,2.895 37.105,2 36,2 Z M 8.979,9.641 C 8.54,9.969 7.938,10.133 7.172,10.133 C 6.742,10.133 6.374,10.089 6.067,10 C 5.76,9.911 5.505,9.789 5.305,9.633 C 5.107,9.479 4.96,9.299 4.865,9.094 C 4.77,8.889 4.723,8.667 4.723,8.43 C 4.723,8.138 4.808,7.88 4.979,7.655 C 5.15,7.43 5.444,7.233 5.864,7.063 L 5.864,7.039 C 5.526,6.883 5.277,6.686 5.118,6.449 C 4.959,6.212 4.879,5.938 4.879,5.625 C 4.879,5.164 5.092,4.787 5.52,4.492 C 5.948,4.197 6.503,4.051 7.188,4.051 C 7.907,4.051 8.47,4.184 8.877,4.451 C 9.284,4.718 9.488,5.074 9.488,5.52 C 9.488,5.796 9.402,6.042 9.23,6.258 C 9.058,6.474 8.795,6.658 8.441,6.809 L 8.441,6.832 C 8.847,6.986 9.148,7.193 9.343,7.453 C 9.538,7.713 9.636,8.021 9.636,8.375 C 9.637,8.891 9.417,9.313 8.979,9.641 Z M 15.141,8.403 C 15.053,8.79 14.914,9.107 14.727,9.355 C 14.534,9.608 14.287,9.799 13.985,9.928 C 13.683,10.057 13.311,10.121 12.868,10.121 C 12.433,10.121 12.062,10.056 11.755,9.926 C 11.448,9.796 11.199,9.603 11.009,9.347 C 10.816,9.092 10.677,8.774 10.591,8.395 C 10.505,8.016 10.462,7.581 10.462,7.091 C 10.462,6.586 10.506,6.147 10.595,5.774 C 10.683,5.401 10.824,5.086 11.017,4.828 C 11.21,4.573 11.46,4.381 11.767,4.253 C 12.074,4.126 12.441,4.062 12.869,4.062 C 13.314,4.062 13.688,4.128 13.99,4.259 C 14.292,4.391 14.539,4.587 14.732,4.847 C 14.922,5.102 15.06,5.417 15.146,5.791 C 15.232,6.165 15.275,6.597 15.275,7.087 C 15.275,7.577 15.229,8.016 15.141,8.403 Z M 21,10 L 16.434,10 L 16.434,9.039 C 16.783,8.787 17.133,8.518 17.483,8.234 C 17.833,7.95 18.114,7.705 18.325,7.5 C 18.64,7.195 18.864,6.93 18.997,6.703 C 19.13,6.476 19.196,6.252 19.196,6.031 C 19.196,5.765 19.111,5.56 18.94,5.416 C 18.769,5.272 18.524,5.199 18.204,5.199 C 17.964,5.199 17.712,5.248 17.448,5.347 C 17.184,5.446 16.938,5.572 16.712,5.726 L 16.587,5.726 L 16.587,4.434 C 16.772,4.353 17.045,4.272 17.405,4.192 C 17.765,4.112 18.127,4.071 18.489,4.071 C 19.218,4.071 19.774,4.224 20.157,4.53 C 20.54,4.836 20.731,5.269 20.731,5.829 C 20.731,6.196 20.639,6.545 20.456,6.876 C 20.273,7.207 19.992,7.548 19.614,7.899 C 19.377,8.118 19.139,8.319 18.899,8.503 C 18.659,8.687 18.489,8.815 18.387,8.888 L 21,8.888 L 21,10 Z M 23.574,10 L 22.113,10 L 22.113,8.465 L 23.574,8.465 L 23.574,10 Z M 29.211,10 L 25.328,10 L 25.328,8.984 L 26.555,8.984 L 26.555,5.91 L 25.328,5.91 L 25.328,4.961 C 25.516,4.961 25.695,4.95 25.867,4.928 C 26.039,4.906 26.182,4.867 26.297,4.813 C 26.432,4.748 26.534,4.663 26.602,4.559 C 26.67,4.455 26.709,4.325 26.719,4.168 L 28.012,4.168 L 28.012,8.984 L 29.211,8.984 L 29.211,10 Z M 34.898,10 L 31.015,10 L 31.015,8.984 L 32.242,8.984 L 32.242,5.91 L 31.015,5.91 L 31.015,4.961 C 31.203,4.961 31.382,4.95 31.554,4.928 C 31.726,4.906 31.869,4.867 31.984,4.813 C 32.119,4.748 32.221,4.663 32.289,4.559 C 32.357,4.455 32.396,4.325 32.406,4.168 L 33.699,4.168 L 33.699,8.984 L 34.898,8.984 L 34.898,10 Z" Fill="[SMSolidColorBrush]#ff892121" Height="[float]40" Id="590" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="591" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]SERVICE&#xD;&#xA;FIELD GEN" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]12" Width="[float]38">
+            <FontSetting FontSize="5" Id="592" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="105" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="268" />
+      <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="375" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="371" />
+      <ConnectorPaneTerminal Hotspot="15 0" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 95" Parameter="432" />
+      <ConnectorPaneTerminal Hotspot="40 15" />
+      <ConnectorPaneTerminal Hotspot="40 25" />
+      <ConnectorPaneTerminal Hotspot="40 35" ListViewHotspot="150 80" Parameter="395" />
+      <ConnectorPaneTerminal Hotspot="15 40" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <Comment Bounds="780 250 75 15" Id="28" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>Latency: 1</p.Text>
+      </Comment>
+      <DataAccessor Bounds="515 450 40 15" DataItem="268" Id="238" Label="257" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <BuildArray Bounds="810 400 40 30" CanToggle="False" ConcatenateInputs="True" Id="85" Terminals="outArray=94, c0t0v=90, c1t0v=92, c2t0v=98" VerticalChunkCount="3" />
+      <Literal Bounds="516.000061 335 74.99992 16" DataType="UFXP(7.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="86" Label="87" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" Radix="Binary" RadixVisibility="Visible" ValueFormatter="LVFXP:UFXP_7_0:" />
+      </Literal>
+      <NumberToBooleanArray Bounds="765 335 30 10" Id="88" />
+      <Literal Bounds="514 355 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="91" Label="96" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>False</p.Data>
+        <BooleanBehavior />
+      </Literal>
+      <BooleanArrayToNumber Bounds="870 400 30 10" Id="93">
+        <ConfigurableDataTypeTerminal DataType="UInt32" DesiredType="UInt32" Direction="Output" GuardBits="12" Hotspot="30 5" Id="number" TypeOverrideKind="Exact" xmlns="http://www.ni.com/PlatformFramework" />
+      </BooleanArrayToNumber>
+      <NumberToBooleanArray Bounds="765 420 30 10" Id="97" />
+      <Comment Bounds="510 295 214 15" Id="99" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>Service field according to 22.3.10.2</p.Text>
+      </Comment>
+      <Literal Bounds="571 425 75 15" DataType="@c958f15602ab42d89409e77a3ef59694" Facade="NationalInstruments.MocCommon.SourceModel.IEnumBehavior" Id="101" Label="103" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>1</p.Data>
+        <EnumBehavior Id="216" />
+      </Literal>
+      <Select Bounds="720 405 40 40" Id="104" />
+      <IsNotEqual Bounds="660 410 30 30" Id="106" />
+      <Literal Bounds="517.000061 375 81.99992 16" DataType="UFXP(8.0)" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="109" Label="111" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0x0</p.Data>
+        <NumericBehavior Interpretation="Exact" Radix="Binary" RadixVisibility="Visible" ValueFormatter="LVFXP:UFXP_8_0&gt;&gt;Binary, Uppercase, Unsigned:" />
+      </Literal>
+      <Wire Id="89" Joints="N(86:Out) N(88:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="90" Joints="N(88:Boolean array) h(10) v(65) N(85:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="92" Joints="N(91:Out) h(255) v(55) N(85:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="94" Joints="N(85:outArray) h(10) B(1) N(93:Boolean array) B(1) v(15) N(469:array)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="98" Joints="N(97:Boolean array) N(85:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="102" Joints="N(101:Out) N(106:y)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="105" Joints="N(104:s? t:f) N(97:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="107" Joints="N(106:x != y?) N(104:s)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="110" Joints="N(109:Out) h(116) v(30) N(104:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="366" Joints="N(93:number) N(404:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="515 475 40 15" DataItem="371" Id="369" Label="370" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="515 410 40 15" DataItem="375" Id="377" Label="381" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@c958f15602ab42d89409e77a3ef59694" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Wire Id="383" Joints="N(377:Value) N(106:x)" xmlns="http://www.ni.com/PlatformFramework" />
+      <DataAccessor Bounds="1215 475 40 15" DataItem="395" Id="393" Label="394" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <PropertyNode Bounds="950 390 141 80" HasErrorTerminals="False" Id="404" InstanceDataType="@d0a3f508f092473788205ee820da05c5" Mode="InstanceProperties" Template="List">
+        <PropertyItemTerminal Action="Write" DataType="UInt32" Hotspot="0 15" Id="c0t0v" Path="data" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="UInt8" Hotspot="0 30" Id="c1t0v" Path="length" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 45" Id="c2t0v" Path="output valid" Usage="Required" />
+        <PropertyItemTerminal Action="Write" DataType="Boolean" Hotspot="0 60" Id="c3t0v" Path="enable scrambler" Usage="Required" />
+      </PropertyNode>
+      <DataAccessor Bounds="1210 405 40 15" DataItem="432" Id="405" Label="430" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="@d0a3f508f092473788205ee820da05c5" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Select Bounds="1130 390 40 40" Id="407" />
+      <Wire Id="409" Joints="N(404:instance out) N(407:t)" xmlns="http://www.ni.com/PlatformFramework" />
+      <ClusterLiteral Bounds="938 390 12 10" DataType="@d0a3f508f092473788205ee820da05c5" Facade="DockedConstantFacade" Id="410" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0_0_False_False_</p.Data>
+        <ClusterBehavior AutoArrange="ArrangeVertically" />
+        <Literal Bounds="5 21 40 15" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="411" Label="415">
+          <p.Data>0</p.Data>
+          <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+        </Literal>
+        <Literal Bounds="5 55 40 15" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="412" Label="416">
+          <p.Data>0</p.Data>
+          <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+        </Literal>
+        <Literal Bounds="5 123 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="413" Label="417">
+          <p.Data>False</p.Data>
+          <BooleanBehavior />
+        </Literal>
+        <Literal Bounds="5 89 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="414" Label="418">
+          <p.Data>False</p.Data>
+          <BooleanBehavior />
+        </Literal>
+        <DockedConstantFacade UndockedSize="114 148" />
+        <NodeLabel AttachedTo="411" Bounds="5 2 24 16" Id="415" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>data</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="412" Bounds="5 36 34 16" Id="416" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>length</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="413" Bounds="5 104 91 16" Id="417" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>enable scrambler</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="414" Bounds="5 70 64 16" Id="418" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>output valid</p.Text>
+        </NodeLabel>
+      </ClusterLiteral>
+      <Wire Facade="WireInvisibleFacade" Id="419" Joints="N(410:Out) h(5) v(90) h(-60) v(-90) N(404:instance in)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <ClusterLiteral Bounds="1118 420 12 10" DataType="@4fe59b349f94416a9a436061ef89e6aa" Facade="DockedConstantFacade" Id="420" Label="431" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>0_0_False_False_</p.Data>
+        <ClusterBehavior AutoArrange="ArrangeVertically" />
+        <Literal Bounds="5 21 40 15" DataType="UInt32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="421" Label="422">
+          <p.Data>0</p.Data>
+          <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
+        </Literal>
+        <Literal Bounds="5 55 40 15" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="423" Label="424">
+          <p.Data>0</p.Data>
+          <NumericBehavior Interpretation="Numeric" ValueFormatter="LV:G6" />
+        </Literal>
+        <Literal Bounds="5 89 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="425" Label="426">
+          <p.Data>False</p.Data>
+          <BooleanBehavior />
+        </Literal>
+        <Literal Bounds="5 123 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="427" Label="428">
+          <p.Data>False</p.Data>
+          <BooleanBehavior />
+        </Literal>
+        <DockedConstantFacade UndockedSize="114 148" />
+        <NodeLabel AttachedTo="421" Bounds="5 2 24 16" Id="422" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>data</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="423" Bounds="5 36 34 16" Id="424" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>length</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="425" Bounds="5 70 46 16" Id="426" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>valid out</p.Text>
+        </NodeLabel>
+        <NodeLabel AttachedTo="427" Bounds="5 104 91 16" Id="428" xmlns="http://www.ni.com/PlatformFramework">
+          <p.Text>enable scrambler</p.Text>
+        </NodeLabel>
+      </ClusterLiteral>
+      <Wire Facade="WireInvisibleFacade" Id="429" Joints="N(420:Out) h(45) v(10) h(-50) v(-10) N(407:f)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="1175 400 30 20" EnableTerminalVisible="False" Id="450" />
+      <Wire Id="451" Joints="N(407:s? t:f) N(450:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="452" Joints="N(450:output) N(405:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="453" Joints="N(369:Value) h(380) B(1) h(175) B(2) N(454:input) B(2) v(-70) N(407:s) B(1) v(-30) B(6) N(404:c3t0v) B(6) v(-15) N(404:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="1180 470 30 20" EnableTerminalVisible="False" Id="454" />
+      <Wire Id="458" Joints="N(454:output) N(393:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <ToFixedPoint Bounds="575 450 50 10" Id="464" />
+      <Wire Id="466" Joints="N(464:fixed-point) h(90) v(-15) N(104:f)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="467" Joints="N(238:Value) N(464:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <ArraySize Bounds="865 415 40 20" Id="469" />
+      <ToUnsignedByteInteger Bounds="915 415 30 10" Id="471" />
+      <Wire Id="472" Joints="N(469:size(s\)) h(5) v(-10) N(471:number)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="473" Joints="N(471:unsigned 8bit integer) N(404:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="855 440 54 15" Id="474" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>16 bits</p.Text>
+      </Comment>
+      <NodeLabel AttachedTo="238" Bounds="422 450 88 14" Id="257" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>VHT-SIG-B CRC</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="86" Bounds="435 335 76 14" Id="87" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>scrambler init</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="91" Bounds="460 355 49 14" Id="96" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>reserved</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="101" Bounds="571 425 0 0" Id="103" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>y</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="109" Bounds="400 375 112 14" Id="111" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>reserved in "a" case</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="369" Bounds="473 475 37 14" Id="370" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>enable</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="377" Bounds="473 410 37 14" Id="381" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>format</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="393" Bounds="1260 475 28 14" Id="394" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>done</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="405" Bounds="1255 405 47 14" Id="430" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>data out</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="420" Bounds="1118 420 0 0" Id="431" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>output</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="279" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]459" Left="[float]148" MinHeight="[float]22" Top="[float]56" Value="{DataItemBinding Id=268}" ValueType="[Type]UInt8" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="459" LabelOwner="[UIModel]279" Left="[float]148" Text="[string]VHT-SIG-B CRC" Top="[float]33" Width="[float]82" xmlns="http://www.ni.com/PanelCommon" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="396" IsReadOnly="[bool]True" Label="[UIModel]460" Left="[float]540" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]284" TrueContent="[string]On" Value="{DataItemBinding Id=395}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="460" LabelOwner="[UIModel]396" Left="[float]540" Text="[string]done" Top="[float]261" Width="[float]28" xmlns="http://www.ni.com/PanelCommon" />
+      <EnumSelector AllowUndefinedValueEntry="[bool]False" BaseName="[string]Enum" Height="[float]22" Id="378" InteractionMode="[SelectorInteractionModes]ArrowKeys, Keyboard, MouseClick, ScrollWheel, ButtonClicks" IsTypeAheadEnabled="[bool]True" Label="[UIModel]461" Left="[float]148" Top="[float]116" Value="{DataItemBinding Id=375}" ValueType="[Type]UInt16" VisualMode="[SelectorVisualMode]RingStyle" Width="[float]90" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+        <EnumSelectorInfo DisplayValue="[string]a" Value="[ushort]0" ValueType="[Type]UInt16" />
+        <EnumSelectorInfo DisplayValue="[string]ac" Value="[ushort]1" ValueType="[Type]UInt16" />
+      </EnumSelector>
+      <Label Height="[float]16" Id="461" LabelOwner="[UIModel]378" Left="[float]148" Text="[string]format" Top="[float]93" Width="[float]36" xmlns="http://www.ni.com/PanelCommon" />
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="372" IsReadOnly="[bool]False" Label="[UIModel]462" Left="[float]148" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]284" TrueContent="[string]On" Value="{DataItemBinding Id=371}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Height="[float]16" Id="462" LabelOwner="[UIModel]372" Left="[float]148" Text="[string]enable" Top="[float]261" Width="[float]36" xmlns="http://www.ni.com/PanelCommon" />
+      <Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@d0a3f508f092473788205ee820da05c5" Height="[float]197" Id="433" Label="[UIModel]463" Left="[float]540" Top="[float]56" Value="{DataItemBinding Id=432}" Width="[float]104" xmlns="http://www.ni.com/PanelCommon">
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="434" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]438" Left="[float]5" MinHeight="[float]22" Top="[float]23" Value="{ClusterBinding FieldName=data}" ValueType="[Type]UInt32" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="435" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]439" Left="[float]5" MinHeight="[float]22" Top="[float]65" Value="{ClusterBinding FieldName=length}" ValueType="[Type]UInt8" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="436" IsReadOnly="[bool]True" Label="[UIModel]440" Left="[float]5" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]107" TrueContent="[string]On" Value="{ClusterBinding FieldName=output\ valid}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="437" IsReadOnly="[bool]True" Label="[UIModel]441" Left="[float]5" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]157" TrueContent="[string]On" Value="{ClusterBinding FieldName=enable\ scrambler}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        <Label Height="[float]16" Id="438" LabelOwner="[UIModel]434" Left="[float]5" Text="[string]data" Top="[float]0" Width="[float]24" />
+        <Label Height="[float]16" Id="439" LabelOwner="[UIModel]435" Left="[float]5" Text="[string]length" Top="[float]42" Width="[float]34" />
+        <Label Height="[float]16" Id="440" LabelOwner="[UIModel]436" Left="[float]5" Text="[string]output valid" Top="[float]84" Width="[float]64" />
+        <Label Height="[float]16" Id="441" LabelOwner="[UIModel]437" Left="[float]5" Text="[string]enable scrambler" Top="[float]134" Width="[float]91" />
+      </Cluster>
+      <Label Height="[float]16" Id="463" LabelOwner="[UIModel]433" Left="[float]540" Text="[string]data out" Top="[float]33" Width="[float]45" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem CallDirection="Input" CallIndex="1" DataType="UInt8" Id="268" Name="VHT-SIG-B CRC" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The CRC of the first word of the VHT-SIG-B field (LSB = c7).&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="Boolean" Id="371" Name="enable" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;A Boolean that triggers generation of the SERVICE field.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="2" DataType="@c958f15602ab42d89409e77a3ef59694" Id="375" Name="format" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The 802.11 format type to apply. Valid values are a and ac. If the value is ac, the VHT-SIG-B CRC incorporates into the SERVICE field.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="4" DataType="Boolean" Id="395" Name="done" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Marks the last sample that the module generates, and can trigger the start of the next sample.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="@d0a3f508f092473788205ee820da05c5" Id="432" Name="data out" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0_0_False_False_</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;The 16 bits of the SERVICE field, if valid. Otherwise, data out contains zero.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+  </VirtualInstrument>
+  <DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
+    <p.TypeReference TypeId="c958f15602ab42d89409e77a3ef59694">
+      <Enumeration>
+        <Members>
+          <EnumerationMember Value="0" Name="a" />
+          <EnumerationMember Value="1" Name="ac" />
+        </Members>
+        <DataType>
+          <UInt16 />
+        </DataType>
+      </Enumeration>
+    </p.TypeReference>
+    <p.TypeReference TypeId="d0a3f508f092473788205ee820da05c5">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="data" DataType="UInt32" />
+          <Field FieldAccessPolicy="ReadWrite" Name="length" DataType="UInt8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="output valid" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="enable scrambler" DataType="Boolean" />
+        </Members>
+      </Composite>
+    </p.TypeReference>
+    <p.TypeReference TypeId="4fe59b349f94416a9a436061ef89e6aa">
+      <Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+        <Members>
+          <Field FieldAccessPolicy="ReadWrite" Name="data" DataType="UInt32" />
+          <Field FieldAccessPolicy="ReadWrite" Name="length" DataType="UInt8" />
+          <Field FieldAccessPolicy="ReadWrite" Name="valid out" DataType="Boolean" />
+          <Field FieldAccessPolicy="ReadWrite" Name="enable scrambler" DataType="Boolean" />
+        </Members>
+      </Composite>
+    </p.TypeReference>
+  </DataTypeReferenceTable>
+</SourceFile>

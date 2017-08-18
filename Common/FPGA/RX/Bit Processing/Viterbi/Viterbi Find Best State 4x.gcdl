@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="BD72CAFD32C76C504A9C60BD4415D401" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Calculates the index of the state with the biggest path metric out of 4 states.&lt;/p&gt;&lt;p&gt;&lt;strong&gt;Latency: 2 cycles&lt;/strong&gt;&lt;/p&gt;</p.UserDescription>
+    <Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="214" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="215" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="216" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="217" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="218" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Id="219" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="220" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]VITERBI&#xD;&#xA;FIND BEST&#xD;&#xA;STATE 4X" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+            <FontSetting FontSize="5" Id="221" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="90" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 50" Parameter="117" />
+      <ConnectorPaneTerminal Hotspot="0 15" ListViewHotspot="0 65" Parameter="134" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" />
+      <ConnectorPaneTerminal Hotspot="15 0" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 35" Parameter="69" />
+      <ConnectorPaneTerminal Hotspot="40 15" ListViewHotspot="150 80" Parameter="110" />
+      <ConnectorPaneTerminal Hotspot="40 25" />
+      <ConnectorPaneTerminal Hotspot="40 35" />
+      <ConnectorPaneTerminal Hotspot="15 40" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="310 -70 40 15" DataItem="69" Id="71" Label="73" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UFXP(8.1)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="310 -55 40 15" DataItem="110" Id="112" Label="115" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UFXP(6.0)" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="-65 -70 40 15" DataItem="117" Id="122" Label="124" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UFXP(8.1)[4]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="-65 5 40 15" DataItem="134" Id="139" Label="141" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UFXP(6.0)[4]" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <Split1DArray Bounds="0 -70 40 30" Id="147" />
+      <Wire Id="148" Joints="N(122:Value) N(147:array)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="-65 -50 40 15" DataType="Int32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="149" Label="150" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>2</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+      </Literal>
+      <Wire Id="151" Joints="N(149:Out) N(147:index)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="110 -70 40 40" DomainName="NI.Appframeworks.Common" Id="152" Target="Viterbi\ Find\ Best\ State\ 2x\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="path metric" />
+            <Parameter Id="L1" Desc="state indizes" />
+            <Parameter Id="R0" Desc="max path metric" />
+            <Parameter Id="R1" Desc="state index" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="UFXP(8.1)[2]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(6.0)[2]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(8.1)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(6.0)" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="153" Joints="N(147:first subarray) N(152:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Split1DArray Bounds="0 5 40 30" Id="154" />
+      <Wire Id="155" Joints="N(139:Value) N(154:array)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Literal Bounds="-65 25 40 15" DataType="Int32" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="156" Label="157" xmlns="http://www.ni.com/MocCommon">
+        <p.Data>2</p.Data>
+        <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+      </Literal>
+      <Wire Id="158" Joints="N(156:Out) N(154:index)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="159" Joints="N(154:first subarray) h(50) v(-65) N(152:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="110 15 40 40" DomainName="NI.Appframeworks.Common" Id="160" Target="Viterbi\ Find\ Best\ State\ 2x\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="path metric" />
+            <Parameter Id="L1" Desc="state indizes" />
+            <Parameter Id="R0" Desc="max path metric" />
+            <Parameter Id="R1" Desc="state index" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="UFXP(8.1)[2]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(6.0)[2]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(8.1)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(6.0)" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <Wire Id="161" Joints="N(147:second subarray) h(60) v(65) N(160:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="162" Joints="N(154:second subarray) N(160:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <MethodCall Bounds="260 -70 40 40" DomainName="NI.Appframeworks.Common" Id="163" Target="Viterbi\ Find\ Best\ State\ 2x\.gcdl" xmlns="http://www.ni.com/MocCommon">
+        <p.MethodDeclaration>
+          <MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+            <Parameter Id="L0" Desc="path metric" />
+            <Parameter Id="L1" Desc="state indizes" />
+            <Parameter Id="R0" Desc="max path metric" />
+            <Parameter Id="R1" Desc="state index" />
+          </MethodDeclaration>
+        </p.MethodDeclaration>
+        <Terminal DataType="UFXP(8.1)[2]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(6.0)[2]" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(8.1)" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+        <Terminal DataType="UFXP(6.0)" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+      </MethodCall>
+      <BuildArray Bounds="195 -70 40 20" CanToggle="False" Id="165" Terminals="outArray=168, c0t0v=166, c1t0v=167" VerticalChunkCount="2" />
+      <Wire Id="166" Joints="N(152:R0) N(165:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="167" Joints="N(160:R0) h(20) v(-75) N(165:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="168" Joints="N(165:outArray) N(163:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+      <BuildArray Bounds="195 -45 40 20" CanToggle="False" Id="169" Terminals="outArray=172, c0t0v=171, c1t0v=170" VerticalChunkCount="2" />
+      <Wire Id="170" Joints="N(160:R1) h(40) v(-60) N(169:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="171" Joints="N(152:R1) h(5) v(15) N(169:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="172" Joints="N(169:outArray) h(10) v(-15) N(163:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="173" Joints="N(163:R0) N(71:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="174" Joints="N(163:R1) h(5) v(5) N(112:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <NodeLabel AttachedTo="71" Bounds="355 -70 86 16" Id="73" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>max path metric</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="112" Bounds="355 -55 58 16" Id="115" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>state index</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="122" Bounds="-131 -70 61 16" Id="124" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>path metric</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="139" Bounds="-136 5 66 16" Id="141" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>state indizes</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="149" Bounds="-65 -50 0 0" Id="150" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>index</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="156" Bounds="-65 25 0 0" Id="157" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>index</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <ArrayViewer ArrayElement="[UIModel]120" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]4" Height="[float]36" Id="123" IsFixedSize="[bool]True" Label="[UIModel]175" Left="[float]131" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]64" Value="{DataItemBinding Id=117}" Width="[float]129" xmlns="http://www.ni.com/PanelCommon">
+        <p.DefaultElementValue>0x0</p.DefaultElementValue>
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="120" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1" Left="[float]0" Maximum="[Number]0x1FFp-1" MinHeight="[float]22" Minimum="[Number]0x0" Name="[string]Child" Top="[float]0" ValueFormatter="[string]LVFXP:UFXP_8_1&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]UFXP(8.1)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      </ArrayViewer>
+      <Label Id="175" LabelOwner="[UIModel]123" Left="[float]131" Text="[string]path metric" Top="[float]41" xmlns="http://www.ni.com/PanelCommon" />
+      <ArrayViewer ArrayElement="[UIModel]137" BaseName="[string]Array" Columns="[int]1" Dimensions="[int]1" FixedSize="[int]4" Height="[float]36" Id="140" IsFixedSize="[bool]True" Label="[UIModel]176" Left="[float]131" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]128" Value="{DataItemBinding Id=134}" Width="[float]129" xmlns="http://www.ni.com/PanelCommon">
+        <p.DefaultElementValue>0x0</p.DefaultElementValue>
+        <NumericText BaseName="[string]Numeric" Height="[float]22" Id="137" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Interval="[Number]0x1" Left="[float]0" Maximum="[Number]0x3F" MinHeight="[float]22" Minimum="[Number]0x0" Name="[string]Child" Top="[float]0" ValueFormatter="[string]LVFXP:UFXP_6_0&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]UFXP(6.0)" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      </ArrayViewer>
+      <Label Id="176" LabelOwner="[UIModel]140" Left="[float]131" Text="[string]state indizes" Top="[float]105" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="72" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[Number]0x1" Label="[UIModel]177" Left="[float]327" Maximum="[Number]0x1FFp-1" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]71" Value="{DataItemBinding Id=69}" ValueFormatter="[string]LVFXP:UFXP_8_1&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]UFXP(8.1)" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="177" LabelOwner="[UIModel]72" Left="[float]327" Text="[string]max path metric" Top="[float]48" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="113" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Interval="[Number]0x1" Label="[UIModel]178" Left="[float]327" Maximum="[Number]0x3F" MinHeight="[float]22" Minimum="[Number]0x0" Top="[float]135" Value="{DataItemBinding Id=110}" ValueFormatter="[string]LVFXP:UFXP_6_0&gt;&gt;Decimal, Uppercase, Signed:" ValueType="[Type]UFXP(6.0)" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="178" LabelOwner="[UIModel]113" Left="[float]327" Text="[string]state index" Top="[float]112" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="0" DataType="UFXP(8.1)" Id="69" Name="max path metric" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;maximum path metric from path metric input&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem AdaptToDiagramType="True" CallDirection="Output" CallIndex="1" DataType="UFXP(6.0)" Id="110" Name="state index" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0x0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;index of state with biggest path metric&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="0" DataType="UFXP(8.1)[4]" Id="117" Name="path metric" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>null</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;path metric of all states to compare&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="2" DataType="UFXP(6.0)[4]" Id="134" Name="state indizes" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>null</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;indizes of all states to compare&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <IconTable xmlns="http://www.ni.com/PlatformFramework">
+      <p.IconModel Target="Viterbi\ Find\ Best\ State\ 2x\.gcdl">
+        <MergeScript>
+          <MergeItem Path="." IsPrimary="True">
+            <Icon ListViewIconCrop="0 0 40 40">
+              <IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+                <Canvas Left="[float]0" Top="[float]0">
+                  <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+                  <Text Height="[float]27" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]VITERBI&#xD;&#xA;FIND BEST&#xD;&#xA;STATE 2X" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+                    <FontSetting FontSize="5" />
+                  </Text>
+                </Canvas>
+              </IconPanel>
+            </Icon>
+          </MergeItem>
+        </MergeScript>
+      </p.IconModel>
+    </IconTable>
+  </VirtualInstrument>
+</SourceFile>

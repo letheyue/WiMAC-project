@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SourceFile Checksum="F199EF591D107A4CDA85971AEAA318AE" xmlns="http://www.ni.com/PlatformFramework">
+  <SourceModelFeatureSet>
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Virtual Instrument" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.VI" Version="4.5.0.49156" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PanelCommon" Version="4.5.0.49152" />
+    <ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
+    <ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
+  </SourceModelFeatureSet>
+  <VirtualInstrument Id="1" Reentrancy="Stateful" xmlns="http://www.ni.com/LabVIEW.VI" LicenseFeatureNames="LVCOMMS_WLAN">
+    <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Converts a pulse to a strobe of length N.&lt;/p&gt;&lt;p&gt;N must not be zero.&lt;/p&gt;&lt;p&gt;The behaviour for pulses during a strobe is not defined.&lt;/p&gt;&lt;p&gt;Triggering a pulse at the last cycle of the strobe results in a continuous strobe extended by the new N.&lt;/p&gt;&lt;p&gt;N needs to be valid when the pulse is triggered only.&lt;/p&gt;&lt;p&gt;no latency&lt;/p&gt;</p.UserDescription>
+    <Icon Id="54" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
+      <IconPanel Height="[float]40" Id="297" Left="[float]0" Top="[float]0" Width="[float]40">
+        <Canvas Id="298" Left="[float]0" Top="[float]0">
+          <Path Data="[PathGeometry]M 36,40 L 4,40 C 1.791,40 0,38.209 0,36 L 0,4 C 0,1.791 1.791,0 4,0 L 36,0 C 38.209,0 40,1.791 40,4 L 40,36 C 40,38.209 38.209,40 36,40 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]40" Id="299" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 36,39 L 4,39 C 2.343,39 1,37.657 1,36 L 1,4 C 1,2.343 2.343,1 4,1 L 36,1 C 37.657,1 39,2.343 39,4 L 39,36 C 39,37.657 37.657,39 36,39 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]40" Id="300" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 4,2 L 36,2 C 37.105,2 38,2.895 38,4 L 38,36 C 38,37.105 37.105,38 36,38 L 4,38 C 2.895,38 2,37.105 2,36 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]40" Id="301" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Path Data="[PathGeometry]M 19.903,31.49 L 20.619,33.574 L 19.187,33.574 L 19.903,31.49 Z M 38,28 L 38,36 C 38,37.1 37.1,38 36,38 L 4,38 L 18,28 L 38,28 Z M 22.934,35.816 L 20.785,30 L 19.058,30 L 16.91,35.816 L 18.422,35.816 L 18.827,34.64 L 20.979,34.64 L 21.384,35.816 L 22.934,35.816 Z M 27.937,30 L 23.77,30 L 23.77,35.816 L 25.262,35.816 L 25.262,33.332 L 27.742,33.332 L 27.742,32.207 L 25.262,32.207 L 25.262,31.125 L 27.938,31.125 L 27.938,30 Z M 37,30 L 35.471,30 L 34.534,34.004 L 33.516,30 L 32.02,30 L 30.947,34.004 L 30.054,30 L 28.489,30 L 30.055,35.816 L 31.714,35.816 L 32.731,32.027 L 33.771,35.816 L 35.434,35.816 L 37,30 Z" Fill="[SMSolidColorBrush]#ff93278f" Height="[float]40" Id="302" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]40" />
+          <Text Height="[float]27" Id="303" Left="[float]1" SizeMode="[TextModelSizeMode]Fixed" Text="[string]PULSE TO&#xD;&#xA;STROBE U8" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]1" Width="[float]38">
+            <FontSetting FontSize="5" Id="304" />
+          </Text>
+        </Canvas>
+      </IconPanel>
+    </Icon>
+    <ConnectorPane Height="40" Id="9" ListViewHeight="90" ListViewWidth="150" Width="40" xmlns="http://www.ni.com/PlatformFramework">
+      <ConnectorPaneTerminal ListViewHotspot="0 35" Parameter="156" />
+      <ConnectorPaneTerminal Hotspot="0 15" />
+      <ConnectorPaneTerminal Hotspot="0 25" />
+      <ConnectorPaneTerminal Hotspot="0 35" ListViewHotspot="0 50" Parameter="158" />
+      <ConnectorPaneTerminal Hotspot="15 0" />
+      <ConnectorPaneTerminal Hotspot="25 0" />
+      <ConnectorPaneTerminal Hotspot="40 5" ListViewHotspot="150 80" Parameter="157" />
+      <ConnectorPaneTerminal Hotspot="40 15" />
+      <ConnectorPaneTerminal Hotspot="40 25" ListViewHotspot="150 65" Parameter="159" />
+      <ConnectorPaneTerminal Hotspot="40 35" />
+      <ConnectorPaneTerminal Hotspot="15 40" />
+      <ConnectorPaneTerminal Hotspot="25 40" />
+    </ConnectorPane>
+    <DiagramUnplacedItems Id="10" xmlns="http://www.ni.com/MocCommon" />
+    <FrontPanelUnplacedItems Id="11" Left="[float]0" Top="[float]0" />
+    <BlockDiagram Id="12">
+      <DataAccessor Bounds="60 200 40 15" DataItem="156" Id="107" Label="152" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="451 200 40 15" DataItem="157" Id="108" Label="153" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="Boolean" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="60 255 40 15" DataItem="158" Id="109" Label="154" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt8" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <DataAccessor Bounds="451 265 40 15" DataItem="159" Id="110" Label="155" xmlns="http://www.ni.com/MocCommon">
+        <Terminal DataType="UInt8" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+      </DataAccessor>
+      <CaseStructure Bounds="160 70 255 315" Default="112" Id="111" Selected="113" UserSelectorBounds="86 0 82 17">
+        <CaseStructure.Case Bounds="5 5 245 305" Id="112" Pattern="False">
+          <Literal Bounds="175 260 40 15" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="121" Label="175" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>1</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+          </Literal>
+          <Wire Id="122" Joints="N(121:Out) N(115:112)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="123" Joints="N(118:112) N(117:112)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Literal Bounds="175 190 40 15" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="124" Label="174" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LV:" />
+          </Literal>
+          <Wire Id="125" Joints="N(124:Out) N(120:112)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Comment Bounds="25 35 171 42" Id="169" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>"ground state of strober\r\nstart index will be 0, next 1"</p.Text>
+          </Comment>
+          <NodeLabel AttachedTo="124" Bounds="118 190 52 16" Id="174" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>first index</p.Text>
+          </NodeLabel>
+          <NodeLabel AttachedTo="121" Bounds="115 260 55 16" Id="175" xmlns="http://www.ni.com/PlatformFramework">
+            <p.Text>next index</p.Text>
+          </NodeLabel>
+        </CaseStructure.Case>
+        <CaseStructure.Case Bounds="5 5 245 305" Id="113" Pattern="True">
+          <Literal Bounds="115 275 40 15" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="126" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>1</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+          </Literal>
+          <Literal Bounds="115 205 40 15" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="127" xmlns="http://www.ni.com/MocCommon">
+            <p.Data>0</p.Data>
+            <NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+          </Literal>
+          <Increment Bounds="115 230 30 30" Id="128" />
+          <LogicalOr Bounds="170 125 25 20" Id="129" Terminals="o=135, c0t0v=139, c1t0v=133" />
+          <Select Bounds="170 245 40 40" Id="130" />
+          <Select Bounds="170 175 40 40" Id="131" />
+          <Wire Id="132" Joints="N(127:Out) N(131:f)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="133" Joints="N(142:x &gt; y?) h(30) B(1) N(131:s) B(1) v(-55) N(129:c1t0v) B(1) v(70) N(130:s)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="134" Joints="N(131:s? t:f) N(120:113)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="135" Joints="N(129:o) h(26) v(-5) N(117:113)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="136" Joints="N(126:Out) N(130:f)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="137" Joints="N(128:x+1) h(5) v(5) N(130:t)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="138" Joints="N(130:s? t:f) N(115:113)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="139" Joints="N(118:113) N(129:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Comment Bounds="10 25 226 95" Id="170" xmlns="http://www.ni.com/MocCommon">
+            <p.Text>"Counting state of strober\r\nThe OR gate enables continuous\r\nstrobe in last cycle of previous\r\nstrobe. In this case the false\r\nterminals of the selects reset \r\nindex and next index to initial values."</p.Text>
+          </Comment>
+          <IsGreater Bounds="30 180 30 30" Id="142" />
+          <Wire Id="245" Joints="N(246:113) N(142:x)" xmlns="http://www.ni.com/PlatformFramework" />
+          <Wire Id="248" Joints="N(119:113) h(10) B(1) h(91) B(2) N(128:x) B(2) v(-65) N(131:t) B(1) v(-45) N(142:y)" xmlns="http://www.ni.com/PlatformFramework" />
+        </CaseStructure.Case>
+        <CaseStructure.Selector Bounds="-4 215 13 10" Docking="Left" Id="114" Terminals="111=253, 112, 113" />
+        <CaseStructure.Tunnel Bounds="246 265 13 10" Docking="Right" Id="115" Terminals="111=149, 112=122, 113=138" />
+        <CaseStructure.Tunnel Bounds="246 130 13 10" Docking="Right" Id="117" Terminals="111=145, 112=123, 113=135" />
+        <CaseStructure.Tunnel Bounds="-4 130 13 10" Docking="Left" Id="118" Terminals="111=252, 112=123, 113=139" />
+        <CaseStructure.Tunnel Bounds="-4 245 13 10" Docking="Left" Id="119" Terminals="111=217, 112, 113=248" />
+        <CaseStructure.Tunnel Bounds="246 195 13 10" Docking="Right" Id="120" Terminals="111=146, 112=125, 113=134" />
+        <CaseStructure.Tunnel Bounds="-4 185 13 10" Docking="Left" Id="246" Terminals="111=260, 112, 113=245" />
+      </CaseStructure>
+      <FeedbackNode Bounds="275 420 30 20" EnableTerminalVisible="False" Id="143" />
+      <FeedbackNode Bounds="275 395 30 20" EnableTerminalVisible="False" Id="144" />
+      <Wire Id="145" Joints="N(117:111) h(21) B(1) N(108:Value) B(1) v(225) N(143:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="146" Joints="N(120:111) N(110:Value)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="149" Joints="N(115:111) h(6) v(65) N(144:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Comment Bounds="115 -25 363 82" Id="168" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>"Converts a pulse to a strobe of length N.\r\nN must not be zero and has to be constant during the strobe. \r\nAdditional pulses during the strobe are ignored.\r\nTriggering a pulse at the last cycle of the strobe \r\nresults in a continuous strobe extended by the new N."</p.Text>
+      </Comment>
+      <Comment Bounds="245 -75 75 28" Id="171" xmlns="http://www.ni.com/MocCommon">
+        <p.Text>no latency</p.Text>
+      </Comment>
+      <WireComment AttachedTo="217" Bounds="170 397.5 80 15" Id="172" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>80</p.ExpandedWidth>
+        <p.Point>210 405</p.Point>
+        <p.Text>next index</p.Text>
+      </WireComment>
+      <WireComment AttachedTo="253" Bounds="170 422.5 93 15" Id="173" xmlns="http://www.ni.com/PlatformFramework">
+        <p.ExpandedWidth>93</p.ExpandedWidth>
+        <p.Point>216.5 430</p.Point>
+        <p.Text>strobe active</p.Text>
+      </WireComment>
+      <Wire Id="217" Joints="N(144:output) h(-125) v(-85) N(119:111)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="252" Joints="N(107:Value) h(10) B(1) N(118:111) B(1) v(70) N(256:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="253" Joints="N(143:output) h(-140) v(-140) N(114:111)" xmlns="http://www.ni.com/PlatformFramework" />
+      <FeedbackNode ArrowDirection="Right" Bounds="120 250 30 30" Id="256" />
+      <Wire Id="260" Joints="N(256:output) N(246:111)" xmlns="http://www.ni.com/PlatformFramework" />
+      <Wire Id="261" Joints="N(109:Value) N(256:input)" xmlns="http://www.ni.com/PlatformFramework" />
+      <NodeLabel AttachedTo="107" Bounds="26 200 29 16" Id="152" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>pulse</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="108" Bounds="496 200 34 16" Id="153" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>strobe</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="109" Bounds="46 255 9 16" Id="154" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>N</p.Text>
+      </NodeLabel>
+      <NodeLabel AttachedTo="110" Bounds="496 265 29 16" Id="155" xmlns="http://www.ni.com/PlatformFramework">
+        <p.Text>index</p.Text>
+      </NodeLabel>
+    </BlockDiagram>
+    <CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000">
+      <Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="160" IsReadOnly="[bool]False" Label="[UIModel]161" Left="[float]471" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]123" TrueContent="[string]On" Value="{DataItemBinding Id=156}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="161" LabelOwner="[UIModel]160" Left="[float]471" Text="[string]pulse" Top="[float]100" xmlns="http://www.ni.com/PanelCommon" />
+      <LED BaseName="[string]Square LED" FalseContent="[string]Off" Height="[float]30" Id="162" IsReadOnly="[bool]True" Label="[UIModel]163" Left="[float]645" MinHeight="[float]16" MinWidth="[float]16" Shape="[LEDShape]Square" Top="[float]123" TrueContent="[string]On" Value="{DataItemBinding Id=157}" Width="[float]30" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="163" LabelOwner="[UIModel]162" Left="[float]645" Text="[string]strobe" Top="[float]100" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="164" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]165" Left="[float]471" MinHeight="[float]22" Top="[float]227" Value="{DataItemBinding Id=158}" ValueType="[Type]UInt8" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="165" LabelOwner="[UIModel]164" Left="[float]471" Text="[string]N" Top="[float]204" xmlns="http://www.ni.com/PanelCommon" />
+      <NumericText BaseName="[string]Numeric" Height="[float]22" Id="166" InteractionMode="[NumericTextBoxInteractionModes]ReadOnly" Label="[UIModel]167" Left="[float]645" MinHeight="[float]22" Top="[float]227" Value="{DataItemBinding Id=159}" ValueType="[Type]UInt8" Width="[float]54" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+      <Label Id="167" LabelOwner="[UIModel]166" Left="[float]645" Text="[string]index" Top="[float]204" xmlns="http://www.ni.com/PanelCommon" />
+    </CPFrontPanel>
+    <DataItem AdaptToDiagramType="True" CallDirection="Input" CallIndex="0" DataType="Boolean" Id="156" Name="pulse" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;Triggers a new strobe. Trigger new strobes is only defined when no strobe is active or the strobe is in the last active cycle (which will produce a continuous strobe)&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="1" DataType="Boolean" Id="157" Name="strobe" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>False</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;indicates whether strobe is active or not&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Input" CallIndex="1" DataType="UInt8" Id="158" Name="N" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;length of strobe in cycles. The length is limited be the size of the unsigned 8 bit integer.&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+    <DataItem CallDirection="Output" CallIndex="0" DataType="UInt8" Id="159" Name="index" xmlns="http://www.ni.com/MocCommon">
+      <p.DefaultValue>0</p.DefaultValue>
+      <p.UserDescription xmlns="http://www.ni.com/PlatformFramework">&lt;p&gt;current strobe cycle (zero based)&lt;/p&gt;</p.UserDescription>
+    </DataItem>
+  </VirtualInstrument>
+</SourceFile>
