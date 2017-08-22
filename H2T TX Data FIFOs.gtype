@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="21FEDECB2F654B5BABCD91FF71F75796" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="51B46EE5FFC3B21D20BB5B385419B7C2" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Common Language Components" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/MocCommon" Version="4.5.0.49153" />
@@ -7,7 +7,7 @@
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Editor" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/PlatformFramework" Version="4.5.0.49153" />
 		<ApplicationVersionInfo Build="4.5.2.51305" Name="LabVIEW Communications System Design Suite" Version="2.0.1" />
 	</SourceModelFeatureSet>
-	<TypeDefinition DataType="@333570e88a11453db5477749eaef6815" Friends="" Id="1" xmlns="http://www.ni.com/MocCommon">
+	<TypeDefinition DataType="@cdf0138916a2419bac9f64a2d7bb0454" Friends="" Id="1" xmlns="http://www.ni.com/MocCommon">
 		<Icon Id="2" ListViewIconCrop="0 0 40 40" xmlns="http://www.ni.com/PlatformFramework">
 			<IconPanel Height="[float]40" Id="3" Left="[float]0" Top="[float]0" Width="[float]40">
 				<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Id="4" Left="[float]0" TemplateName="Gray" Top="[float]0">
@@ -20,7 +20,7 @@
 				<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Id="9" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
 			</IconPanel>
 		</Icon>
-		<DataItem DataType="@333570e88a11453db5477749eaef6815" Id="33" Name="Cluster">
+		<DataItem DataType="@cdf0138916a2419bac9f64a2d7bb0454" Id="33" Name="Cluster">
 			<p.DefaultValue>
 				<Cluster>
 					<Field1>""</Field1>
@@ -34,20 +34,20 @@
 	</TypeDefinition>
 	<EnvoyManagerFile Id="10" xmlns="http://www.ni.com/PlatformFramework">
 		<ProjectSettings Id="11" ModelDefinitionType="ProjectSettings" Name="ZProjectSettings" />
-		<NameScopingEnvoy AutomaticallyResolveUp="True" Bindings="Envoy,DefinitionReference,DefaultTarget,EmbeddedReference,ScopingEnvoy,NameScopingEnvoy" Id="12" ModelDefinitionType="DefaultTarget" Name="H2T\ TX\ Data\ Queues\.gtype" NameTracksFileName="True">
+		<NameScopingEnvoy AutomaticallyResolveUp="True" Bindings="Envoy,DefinitionReference,DefaultTarget,EmbeddedReference,ScopingEnvoy,NameScopingEnvoy" Id="12" ModelDefinitionType="DefaultTarget" Name="H2T\ TX\ Data\ FIFOs\.gtype" NameTracksFileName="True">
 			<DefaultTarget />
 			<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,NationalInstruments.PanelCommon.SourceModel.ControlDefinition,EmbeddedReference" Id="13" ModelDefinitionType="NationalInstruments.PanelCommon.SourceModel.ControlDefinition" Name="ControlDefinition">
 				<ControlDefinition DefaultDirection="Control" Id="14" xmlns="http://www.ni.com/MocCommon">
-					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@333570e88a11453db5477749eaef6815" Height="[float]286" Id="21" Label="[UIModel]32" Left="[float]107" Top="[float]51" Value="{DataItemBinding Id=33}" Width="[float]176" xmlns="http://www.ni.com/PanelCommon">
-						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@e5c5a8ea2b104e6ca618cea2d1785ea6" Height="[float]27" Id="22" Label="[UIModel]23" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 0}" Top="[float]26" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+					<Cluster BaseName="[string]Cluster" BorderThickness="[SMThickness]1,1,1,1" ClusterType="[Type]@cdf0138916a2419bac9f64a2d7bb0454" Height="[float]286" Id="21" Label="[UIModel]32" Left="[float]107" Top="[float]51" Value="{DataItemBinding Id=33}" Width="[float]176" xmlns="http://www.ni.com/PanelCommon">
+						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@b9c96ce99be740f5964a0f28c5272ffe" Height="[float]27" Id="22" Label="[UIModel]23" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 0}" Top="[float]26" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 						<Label Height="[float]16" Id="23" LabelOwner="[UIModel]22" Left="[float]6" Text="[string]H2T TX Data 0" Top="[float]3" Width="[float]76" />
-						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@e5c5a8ea2b104e6ca618cea2d1785ea6" Height="[float]27" Id="24" Label="[UIModel]25" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 1}" Top="[float]83" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@b9c96ce99be740f5964a0f28c5272ffe" Height="[float]27" Id="24" Label="[UIModel]25" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 1}" Top="[float]83" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 						<Label Height="[float]16" Id="25" LabelOwner="[UIModel]24" Left="[float]6" Text="[string]H2T TX Data 1" Top="[float]60" Width="[float]76" />
-						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@e5c5a8ea2b104e6ca618cea2d1785ea6" Height="[float]27" Id="26" Label="[UIModel]28" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 2}" Top="[float]137" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@e5c5a8ea2b104e6ca618cea2d1785ea6" Height="[float]27" Id="27" Label="[UIModel]29" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 3}" Top="[float]194" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@b9c96ce99be740f5964a0f28c5272ffe" Height="[float]27" Id="26" Label="[UIModel]28" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 2}" Top="[float]137" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@b9c96ce99be740f5964a0f28c5272ffe" Height="[float]27" Id="27" Label="[UIModel]29" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 3}" Top="[float]194" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 						<Label Height="[float]16" Id="28" LabelOwner="[UIModel]26" Left="[float]6" Text="[string]H2T TX Data 2" Top="[float]114" Width="[float]76" />
 						<Label Height="[float]16" Id="29" LabelOwner="[UIModel]27" Left="[float]6" Text="[string]H2T TX Data 3" Top="[float]171" Width="[float]76" />
-						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@e5c5a8ea2b104e6ca618cea2d1785ea6" Height="[float]27" Id="30" Label="[UIModel]31" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 4}" Top="[float]246" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+						<FpgaNameControl BaseName="[string]FIFO" DataType="[Type]@b9c96ce99be740f5964a0f28c5272ffe" Height="[float]27" Id="30" Label="[UIModel]31" Left="[float]6" SelectedResource="{ClusterBinding FieldName=H2T\ TX\ Data\ 4}" Top="[float]246" UdrClass="[string]Fifo" UdrNamespace="[string]FPGA" Width="[float]150" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 						<Label Height="[float]16" Id="31" LabelOwner="[UIModel]30" Left="[float]6" Text="[string]H2T TX Data 4" Top="[float]223" Width="[float]76" />
 					</Cluster>
 					<Label Height="[float]16" Id="32" LabelOwner="[UIModel]21" Left="[float]107" Text="[string]Cluster" Top="[float]28" Width="[float]37" xmlns="http://www.ni.com/PanelCommon" />
@@ -56,7 +56,7 @@
 		</NameScopingEnvoy>
 	</EnvoyManagerFile>
 	<DataTypeReferenceTable xmlns="http://www.ni.com/PlatformFramework">
-		<p.TypeReference TypeId="333570e88a11453db5477749eaef6815">
+		<p.TypeReference TypeId="cdf0138916a2419bac9f64a2d7bb0454">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="H2T TX Data 0">
@@ -112,7 +112,7 @@
 															</Attributed>
 														</GenericTypeDefinition>
 														<ClosedGenericParameters>
-															<Int32 />
+															<UInt8 />
 														</ClosedGenericParameters>
 														<BaseType>
 															<Void />
@@ -128,86 +128,9 @@
 																	<Void />
 																</GenericTypeDefinition>
 																<Parameters>
-																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="Int32" />
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="UInt8" />
 																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
 																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
-																</Parameters>
-															</Function>
-														</Members>
-													</Composite>
-												</AttributedType>
-												<AttributeValues>
-													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-												</AttributeValues>
-											</Attributed>
-											<Attributed>
-												<AttributedType>
-													<Composite Id="6" Name="FifoWriteInterface" ReferenceClass="" Interface="">
-														<GenericTypeDefinition>
-															<Attributed>
-																<AttributedType>
-																	<Composite Id="7" Name="FifoWriteInterface" ReferenceClass="" Interface="">
-																		<GenericTypeDefinition>
-																			<Composite RefId="7" />
-																		</GenericTypeDefinition>
-																		<GenericParameters>
-																			<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
-																		</GenericParameters>
-																		<BaseType>
-																			<Void />
-																		</BaseType>
-																		<Members>
-																			<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
-																			<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
-																			<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
-																				<DeclaringType>
-																					<Composite RefId="7" />
-																				</DeclaringType>
-																				<GenericTypeDefinition>
-																					<Void />
-																				</GenericTypeDefinition>
-																				<Parameters>
-																					<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
-																					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
-																						<DataType>
-																							<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
-																						</DataType>
-																					</Parameter>
-																					<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
-																				</Parameters>
-																			</Function>
-																		</Members>
-																	</Composite>
-																</AttributedType>
-																<AttributeValues>
-																	<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-																	<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-																	<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-																</AttributeValues>
-															</Attributed>
-														</GenericTypeDefinition>
-														<ClosedGenericParameters>
-															<Int32 />
-														</ClosedGenericParameters>
-														<BaseType>
-															<Void />
-														</BaseType>
-														<Members>
-															<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
-															<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
-															<Function Id="9" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
-																<DeclaringType>
-																	<Composite RefId="6" />
-																</DeclaringType>
-																<GenericTypeDefinition>
-																	<Void />
-																</GenericTypeDefinition>
-																<Parameters>
-																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
-																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="Int32" />
-																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
 																</Parameters>
 															</Function>
 														</Members>
@@ -246,16 +169,6 @@
 													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
 												</AttributeValues>
 											</Attributed>
-											<Attributed>
-												<AttributedType>
-													<Composite RefId="6" />
-												</AttributedType>
-												<AttributeValues>
-													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-												</AttributeValues>
-											</Attributed>
 										</Constraints>
 									</Generic>
 								</AttributedType>
@@ -276,16 +189,6 @@
 											<Attributed>
 												<AttributedType>
 													<Composite RefId="2" />
-												</AttributedType>
-												<AttributeValues>
-													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-												</AttributeValues>
-											</Attributed>
-											<Attributed>
-												<AttributedType>
-													<Composite RefId="6" />
 												</AttributedType>
 												<AttributeValues>
 													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
@@ -320,16 +223,6 @@
 													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
 												</AttributeValues>
 											</Attributed>
-											<Attributed>
-												<AttributedType>
-													<Composite RefId="6" />
-												</AttributedType>
-												<AttributeValues>
-													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-												</AttributeValues>
-											</Attributed>
 										</Constraints>
 									</Generic>
 								</AttributedType>
@@ -357,16 +250,6 @@
 													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
 												</AttributeValues>
 											</Attributed>
-											<Attributed>
-												<AttributedType>
-													<Composite RefId="6" />
-												</AttributedType>
-												<AttributeValues>
-													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-												</AttributeValues>
-											</Attributed>
 										</Constraints>
 									</Generic>
 								</AttributedType>
@@ -381,7 +264,7 @@
 				</Members>
 			</Composite>
 		</p.TypeReference>
-		<p.TypeReference TypeId="e5c5a8ea2b104e6ca618cea2d1785ea6">
+		<p.TypeReference TypeId="b9c96ce99be740f5964a0f28c5272ffe">
 			<Attributed>
 				<AttributedType>
 					<Generic>
@@ -433,7 +316,7 @@
 											</Attributed>
 										</GenericTypeDefinition>
 										<ClosedGenericParameters>
-											<Int32 />
+											<UInt8 />
 										</ClosedGenericParameters>
 										<BaseType>
 											<Void />
@@ -449,86 +332,9 @@
 													<Void />
 												</GenericTypeDefinition>
 												<Parameters>
-													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="Int32" />
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="UInt8" />
 													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="outputValid" DataType="Boolean" />
 													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="readyForOutput" DataType="Boolean" />
-												</Parameters>
-											</Function>
-										</Members>
-									</Composite>
-								</AttributedType>
-								<AttributeValues>
-									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-									<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-								</AttributeValues>
-							</Attributed>
-							<Attributed>
-								<AttributedType>
-									<Composite Id="5" Name="FifoWriteInterface" ReferenceClass="" Interface="">
-										<GenericTypeDefinition>
-											<Attributed>
-												<AttributedType>
-													<Composite Id="6" Name="FifoWriteInterface" ReferenceClass="" Interface="">
-														<GenericTypeDefinition>
-															<Composite RefId="6" />
-														</GenericTypeDefinition>
-														<GenericParameters>
-															<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
-														</GenericParameters>
-														<BaseType>
-															<Void />
-														</BaseType>
-														<Members>
-															<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
-															<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
-															<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
-																<DeclaringType>
-																	<Composite RefId="6" />
-																</DeclaringType>
-																<GenericTypeDefinition>
-																	<Void />
-																</GenericTypeDefinition>
-																<Parameters>
-																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
-																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
-																		<DataType>
-																			<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
-																		</DataType>
-																	</Parameter>
-																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
-																</Parameters>
-															</Function>
-														</Members>
-													</Composite>
-												</AttributedType>
-												<AttributeValues>
-													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-													<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-												</AttributeValues>
-											</Attributed>
-										</GenericTypeDefinition>
-										<ClosedGenericParameters>
-											<Int32 />
-										</ClosedGenericParameters>
-										<BaseType>
-											<Void />
-										</BaseType>
-										<Members>
-											<Field FieldAccessPolicy="Read" Name="free elements" DataType="UInt32" />
-											<Field FieldAccessPolicy="Read" Name="empty threshold met?" DataType="Boolean" />
-											<Function Id="8" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
-												<DeclaringType>
-													<Composite RefId="5" />
-												</DeclaringType>
-												<GenericTypeDefinition>
-													<Void />
-												</GenericTypeDefinition>
-												<Parameters>
-													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="readyForInput" DataType="Boolean" />
-													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="Int32" />
-													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="inputValid" DataType="Boolean" />
 												</Parameters>
 											</Function>
 										</Members>
