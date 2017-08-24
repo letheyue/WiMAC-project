@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="6146E0E86321A00C780499A6235AF242" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="3375F20EBB643869311FEC8A554EF8EB" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -536,6 +536,10 @@
 			<Label Height="[float]16" Id="2483" LabelOwner="[UIModel]2482" Left="[float]315" Text="[string]spi address" Top="[float]675" Width="[float]60" xmlns="http://www.ni.com/PanelCommon" />
 			<Switch BaseName="[string]Switch" FalseContent="[string]Off" Height="[float]50" Id="2489" IsReadOnly="[bool]False" Label="[UIModel]2490" Left="[float]335" MinHeight="[float]36" MinWidth="[float]36" Orientation="[SMOrientation]Vertical" Shape="[SwitchShape]Slider" Top="[float]756" TrueContent="[string]On" Value="{DataItemBinding Id=2488}" Width="[float]50" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
 			<Label Height="[float]16" Id="2490" LabelOwner="[UIModel]2489" Left="[float]335" Text="[string]cpld enable" Top="[float]733" Width="[float]62" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="3588" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]3589" Left="[float]130" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]60" Value="{DataItemBinding Id=3586}" ValueFormatter="[string]LV:" ValueType="[Type]UInt32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Id="3589" LabelOwner="[UIModel]3588" Left="[float]130" Text="[string]time to wait for CCA signal detect" Top="[float]37" xmlns="http://www.ni.com/PanelCommon" />
+			<NumericText BaseName="[string]Numeric" Height="[float]22" Id="3590" InteractionMode="[NumericTextBoxInteractionModes]ArrowKeys, ScrollWheel, ButtonClicks, TextInput" Label="[UIModel]3591" Left="[float]130" MinHeight="[float]22" RadixBase="[RadixBase]Decimal" RadixVisibility="[SMVisibility]Collapsed" Top="[float]60" Value="{DataItemBinding Id=3587}" ValueFormatter="[string]LV:" ValueType="[Type]UInt32" Width="[float]69" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+			<Label Id="3591" LabelOwner="[UIModel]3590" Left="[float]130" Text="[string]time to wait for decoding packet" Top="[float]37" xmlns="http://www.ni.com/PanelCommon" />
 		</FrontPanelUnplacedItems>
 		<BlockDiagram Id="12">
 			<ClockDrivenLoop Bounds="-4042 1690 1104 830" DiagramId="19" Id="18" xmlns="http://www.ni.com/LabVIEW.FPGA">
@@ -710,7 +714,7 @@
 					<Terminal DataType="@826e5b7fa2094d0c8a4147340319068d" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@10dc9fcb03fc49e6b108b4e7859cd006" Direction="Input" Hotspot="15 50" Id="B0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@88390ab25ecd4637a92bc85a5702e173" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
-					<Terminal DataType="@3642f56662ca43bf8b748a2b4e12ae7b" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@39429cb1963b47e6bc08555e927016ee" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@a6d8a40e2a5642d3a03f250baa9870ba" Direction="Input" Hotspot="35 0" Id="T2" xmlns="http://www.ni.com/PlatformFramework" />
@@ -844,7 +848,7 @@
 				<Wire Id="971" Joints="N(981:output) h(-345) v(-70) N(980:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="972" Joints="N(980:c0t0v) h(36) v(-130) N(973:Control Protocol Input)" xmlns="http://www.ni.com/PlatformFramework" />
 				<FIFORead Bounds="475 375 46 65" Id="973" />
-				<IONameConstant Bounds="55 375 332.156738 15" DataType="@9857fc51328646069f8a397930352f31" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="974" Label="985" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+				<IONameConstant Bounds="55 375 332.156738 15" DataType="@64665c3f6de44fd5a451140ef4204453" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="974" Label="985" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>"802.11 AFW Resources.grsc\\AGC Reg Bus 0 Access FIFO"</p.Data>
 					<IONameConstantBehavior />
 				</IONameConstant>
@@ -917,7 +921,7 @@
 					<p.Text>daughterboard</p.Text>
 				</NodeLabel>
 				<DataAccessor Bounds="520 210 40 15" DataItem="2474" Id="2478" Label="2479" xmlns="http://www.ni.com/MocCommon">
-					<Terminal DataType="@3642f56662ca43bf8b748a2b4e12ae7b" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@39429cb1963b47e6bc08555e927016ee" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 				</DataAccessor>
 				<Wire Id="2480" Joints="N(2478:Value) h(40) v(5) N(884:L2)" xmlns="http://www.ni.com/PlatformFramework" />
 				<NodeLabel AttachedTo="2478" Bounds="393 210 122 14" Id="2479" xmlns="http://www.ni.com/PlatformFramework">
@@ -996,13 +1000,15 @@
 			<Wire Id="1009" Joints="N(1008:Out) N(1007:depth)" xmlns="http://www.ni.com/PlatformFramework" />
 			<RegisterCreate Bounds="-4455 -120 40 40" Id="1010" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 			<Wire Id="1011" Joints="N(1010:reference out) h(20) v(-60) N(1012:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<PropertyNode Bounds="-4325 -220 193 110" HasErrorTerminals="False" Id="1012" InstanceDataType="@927697ed018942d3bb74f0c540f23432" Mode="InstanceProperties" Template="List">
+			<PropertyNode Bounds="-4325 -220 192.8 140" HasErrorTerminals="False" Id="1012" InstanceDataType="@33eb7ac760f34b51974e092c36675167" Mode="InstanceProperties" Template="List">
 				<PropertyItemTerminal Action="Write" DataType="@340eeba9a2174f02b9a9f7a59901433a" Hotspot="0 15" Id="c0t0v" Path="global timestamp" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@a2f3ce9af3f04251a2af74a8220663ec" Hotspot="0 45" Id="c1t0v" Path="MPDU generation request" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@a33b847508ad45538acec4e18f37e949" Hotspot="0 75" Id="c2t0v" Path="channel state indication" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@fe727365e16a43739fc579617e572605" Hotspot="0 60" Id="c3t0v" Path="TX active" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@fe727365e16a43739fc579617e572605" Hotspot="0 30" Id="c4t0v" Path="OFDM symbol pulse" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@77748a8ce7614c8cad3484dc22a37d67" Hotspot="0 90" Id="c5t0v" Path="shared properties" Usage="Required" />
+				<PropertyItemTerminal Action="Write" DataType="@9c9c62c553384ff7870fdecdb95837b0" Hotspot="0 105" Id="c6t0v" Path="PHY CCA indication" Usage="Required" />
+				<PropertyItemTerminal Action="Write" DataType="@fe727365e16a43739fc579617e572605" Hotspot="0 120" Id="c7t0v" Path="TX after backoff done" Usage="Required" />
 			</PropertyNode>
 			<Wire Id="1013" Joints="N(1005:reference out) h(30) v(-90) N(1012:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<PropertyNode Bounds="-4307 675 175.2 80" HasErrorTerminals="False" Id="1014" InstanceDataType="@94a0671fdf014f698ac2e03e1ea53083" Mode="InstanceProperties" Template="List">
@@ -1014,8 +1020,8 @@
 			<Wire Id="1015" Joints="N(1007:reference out) h(40) v(-60) N(1014:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="1016" Joints="N(1000:reference out) N(1014:c0t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="1017" Joints="N(997:reference out) h(25) v(-30) N(1014:c1t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<RegisterCreate Bounds="-4455 370 40 40" Id="1018" xmlns="http://www.ni.com/LabVIEW.FPGA" />
-			<Wire Id="1019" Joints="N(1018:reference out) h(50) v(-505) N(1012:c5t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<RegisterCreate Bounds="-4455 65 40 40" Id="1018" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<Wire Id="1019" Joints="N(1018:reference out) h(50) v(-200) N(1012:c5t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<FIFOCreate Bounds="-4455 820 40 40" Id="1020" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 			<Wire Id="1021" Joints="N(1006:reference out) h(40) v(-120) N(1012:c2t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="1022" Joints="N(1020:reference out) h(55) v(-90) N(1014:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -1143,7 +1149,7 @@
 				</NodeLabel>
 			</ClusterLiteral>
 			<Wire Facade="WireInvisibleFacade" Id="1056" Joints="N(1047:Out) h(5) v(-10) h(-10) v(10) N(1010:initial value)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
-			<ClusterLiteral Bounds="-4337 -220 12 10" DataType="@927697ed018942d3bb74f0c540f23432" Facade="DockedConstantFacade" Id="1057" xmlns="http://www.ni.com/MocCommon">
+			<ClusterLiteral Bounds="-4715 20 165 375" DataType="@33eb7ac760f34b51974e092c36675167" Facade="NationalInstruments.MocCommon.SourceModel.IClusterBehavior" Id="1057" Label="3542" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>
 					<Cluster>
 						<Field1>""</Field1>
@@ -1152,66 +1158,85 @@
 						<Field4>""</Field4>
 						<Field5>""</Field5>
 						<Field6>""</Field6>
+						<Field7>""</Field7>
+						<Field8>""</Field8>
 					</Cluster>
 				</p.Data>
 				<ClusterBehavior AutoArrange="ArrangeVertically" />
-				<IONameConstant Bounds="5 157 63 15" DataType="@a2f3ce9af3f04251a2af74a8220663ec" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1058" Label="1064" UdrClass="Register" UdrNamespace="FPGA">
+				<IONameConstant Bounds="5 195 71 27" DataType="@a2f3ce9af3f04251a2af74a8220663ec" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1058" Label="1064" UdrClass="Register" UdrNamespace="FPGA">
 					<p.Data>""</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1070" Key="ElementDataTypeFilter" Value="[Type]@f8196e0c0f9e48918de7565dedecf317" />
 					<InstanceDataEntry Id="1071" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<IONameConstant Bounds="5 89 63 15" DataType="@fe727365e16a43739fc579617e572605" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1059" Label="1065" UdrClass="Register" UdrNamespace="FPGA">
+				<IONameConstant Bounds="5 107 71 27" DataType="@fe727365e16a43739fc579617e572605" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1059" Label="1065" UdrClass="Register" UdrNamespace="FPGA">
 					<p.Data>""</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1072" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
 					<InstanceDataEntry Id="1073" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<IONameConstant Bounds="5 55 63 15" DataType="@fe727365e16a43739fc579617e572605" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1060" Label="1066" UdrClass="Register" UdrNamespace="FPGA">
+				<IONameConstant Bounds="5 63 71 27" DataType="@fe727365e16a43739fc579617e572605" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1060" Label="1066" UdrClass="Register" UdrNamespace="FPGA">
 					<p.Data>""</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1074" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
 					<InstanceDataEntry Id="1075" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<IONameConstant Bounds="5 21 63 15" DataType="@340eeba9a2174f02b9a9f7a59901433a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1061" Label="1067" UdrClass="Register" UdrNamespace="FPGA">
+				<IONameConstant Bounds="5 19 71 27" DataType="@340eeba9a2174f02b9a9f7a59901433a" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1061" Label="1067" UdrClass="Register" UdrNamespace="FPGA">
 					<p.Data>""</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1076" Key="ElementDataTypeFilter" Value="[Type]UInt32" />
 					<InstanceDataEntry Id="1077" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<IONameConstant Bounds="5 191 63 15" DataType="@77748a8ce7614c8cad3484dc22a37d67" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1062" Label="1068" UdrClass="Register" UdrNamespace="FPGA">
+				<IONameConstant Bounds="5 239 71 27" DataType="@77748a8ce7614c8cad3484dc22a37d67" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1062" Label="1068" UdrClass="Register" UdrNamespace="FPGA">
 					<p.Data>""</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1078" Key="ElementDataTypeFilter" Value="[Type]@12c639ba0e2443418c6029667435a634" />
 					<InstanceDataEntry Id="1079" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<IONameConstant Bounds="5 123 63 15" DataType="@a33b847508ad45538acec4e18f37e949" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1063" Label="1069" UdrClass="Register" UdrNamespace="FPGA">
+				<IONameConstant Bounds="5 151 71 27" DataType="@a33b847508ad45538acec4e18f37e949" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1063" Label="1069" UdrClass="Register" UdrNamespace="FPGA">
 					<p.Data>""</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1080" Key="ElementDataTypeFilter" Value="[Type]@890f0244975a4a858838c72f1bcaa190" />
 					<InstanceDataEntry Id="1081" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<DockedConstantFacade UndockedSize="161 216" />
-				<NodeLabel AttachedTo="1058" Bounds="5 138 142 14" Id="1064" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1058" Bounds="5 178 142 14" Id="1064" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>MPDU generation request</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1059" Bounds="5 70 51 14" Id="1065" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1059" Bounds="5 90 51 14" Id="1065" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>TX active</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1060" Bounds="5 36 110 14" Id="1066" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1060" Bounds="5 46 110 14" Id="1066" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>OFDM symbol pulse</p.Text>
 				</NodeLabel>
 				<NodeLabel AttachedTo="1061" Bounds="5 2 96 14" Id="1067" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>global timestamp</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1062" Bounds="5 172 98 14" Id="1068" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1062" Bounds="5 222 98 14" Id="1068" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>shared properties</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1063" Bounds="5 104 132 14" Id="1069" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1063" Bounds="5 134 132 14" Id="1069" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>channel state indication</p.Text>
 				</NodeLabel>
+				<IONameConstant Bounds="5 283 71 27" DataType="@9c9c62c553384ff7870fdecdb95837b0" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3535" Label="3538" UdrClass="Register" UdrNamespace="FPGA">
+					<p.Data>""</p.Data>
+					<IONameConstantBehavior />
+					<InstanceDataEntry Id="3536" Key="ElementDataTypeFilter" Value="[Type]@11920cf228224d9ea320e2ad327a9a58" />
+					<InstanceDataEntry Id="3537" Key="ElementShapeFilter" Value="Scalar" />
+				</IONameConstant>
+				<NodeLabel AttachedTo="3535" Bounds="5 266 106 14" Id="3538" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>PHY CCA indication</p.Text>
+				</NodeLabel>
+				<IONameConstant Bounds="5 327 71 27" DataType="@fe727365e16a43739fc579617e572605" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3597" Label="3600" UdrClass="Register" UdrNamespace="FPGA">
+					<p.Data>""</p.Data>
+					<IONameConstantBehavior />
+					<InstanceDataEntry Id="3598" Key="ElementDataTypeFilter" Value="[Type]Boolean" />
+					<InstanceDataEntry Id="3599" Key="ElementShapeFilter" Value="Scalar" />
+				</IONameConstant>
+				<NodeLabel AttachedTo="3597" Bounds="5 310 120 14" Id="3600" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>TX after backoff done</p.Text>
+				</NodeLabel>
 			</ClusterLiteral>
-			<Wire Facade="WireInvisibleFacade" Id="1082" Joints="N(1057:Out) N(1012:instance in)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="1082" Joints="N(1057:Out) h(150) v(-240) N(1012:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
 			<ClusterLiteral Bounds="-4319 675 12 10" DataType="@94a0671fdf014f698ac2e03e1ea53083" Facade="DockedConstantFacade" Id="1083" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>
 					<Cluster>
@@ -1265,7 +1290,7 @@
 				<DockedConstantFacade UndockedSize="148 188" />
 			</ClusterLiteral>
 			<Wire Facade="WireInvisibleFacade" Id="1104" Joints="N(1083:Out) h(5) v(80) h(-22) v(-80) N(1014:instance in)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
-			<ClusterLiteral Bounds="-4467 370 12 10" DataType="@12c639ba0e2443418c6029667435a634" Facade="DockedConstantFacade" Id="1105" Label="1144" xmlns="http://www.ni.com/MocCommon">
+			<ClusterLiteral Bounds="-4467 65 12 10" DataType="@12c639ba0e2443418c6029667435a634" Facade="DockedConstantFacade" Id="1105" Label="1144" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>
 					<Cluster>
 						<Field1>0</Field1>
@@ -1408,7 +1433,7 @@
 			<NodeLabel AttachedTo="1047" Bounds="-4467 -120 0 0" Id="1143" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>MPDU generation request</p.Text>
 			</NodeLabel>
-			<NodeLabel AttachedTo="1105" Bounds="-4467 370 0 0" Id="1144" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="1105" Bounds="-4467 65 0 0" Id="1144" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>value</p.Text>
 			</NodeLabel>
 			<NodeLabel AttachedTo="1131" Bounds="-4467 820 0 0" Id="1145" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
@@ -2065,7 +2090,7 @@
 				<DataAccessor Bounds="795 225 40 15" DataItem="2092" Id="1734" Label="1832" xmlns="http://www.ni.com/MocCommon">
 					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 				</DataAccessor>
-				<PropertyNode Bounds="40 80 144 65" HasErrorTerminals="False" Id="1735" InstanceDataType="@927697ed018942d3bb74f0c540f23432" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
+				<PropertyNode Bounds="40 80 144 65" HasErrorTerminals="False" Id="1735" InstanceDataType="@33eb7ac760f34b51974e092c36675167" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
 					<PropertyItemTerminal DataType="@77748a8ce7614c8cad3484dc22a37d67" Hotspot="144 45" Id="c0t0v" Path="shared properties" Usage="Optional" />
 					<PropertyItemTerminal DataType="@340eeba9a2174f02b9a9f7a59901433a" Hotspot="144 15" Id="c1t0v" Path="global timestamp" Usage="Optional" />
 					<PropertyItemTerminal DataType="@fe727365e16a43739fc579617e572605" Hotspot="144 30" Id="c2t0v" Path="OFDM symbol pulse" Usage="Optional" />
@@ -2744,7 +2769,7 @@
 				<Wire Id="1541" Joints="N(1538:R2) N(1502:L2)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1542" Joints="N(1491:Value) h(493) N(1493:T1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1543" Joints="N(1494:data) h(378) N(1493:T0)" xmlns="http://www.ni.com/PlatformFramework" />
-				<IONameConstant Bounds="970 585 253.116669 15" DataType="@6aa1ad1695e44cc7a00e96f2178dd477" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1557" Label="1614" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+				<IONameConstant Bounds="970.2 585 252.916672 15" DataType="@6aa1ad1695e44cc7a00e96f2178dd477" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1557" Label="1614" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>"802.11 AFW Resources.grsc\\T2H Events"</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1622" Key="InterfaceFilter" Value="Write" />
@@ -2824,7 +2849,7 @@
 				<NodeLabel AttachedTo="1497" Bounds="1925 555 75 14" Id="1609" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>PhyTxEnd.ind</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1557" Bounds="970 585 0 0" Id="1614" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1557" Bounds="970.2 585 0 0" Id="1614" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>T2H FIFO reference</p.Text>
 				</NodeLabel>
 				<NodeLabel AttachedTo="1569" Bounds="958 155 127 14" Id="1616" xmlns="http://www.ni.com/PlatformFramework">
@@ -2841,7 +2866,7 @@
 				</NodeLabel>
 				<Wire Id="1529" Joints="N(1528:R0) N(1496:Value)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1558" Joints="N(1557:Out) h(651.88) N(1524:T1)" xmlns="http://www.ni.com/PlatformFramework" />
-				<MethodCall Bounds="510 290 50 50" DomainName="NI.Appframeworks.802.11" Id="1183" Target="\802\.11\ MAC\ RX\.gcdl" xmlns="http://www.ni.com/MocCommon">
+				<MethodCall Bounds="510 290 50 60" DomainName="NI.Appframeworks.802.11" Id="1183" Target="\802\.11\ MAC\ RX\.gcdl" xmlns="http://www.ni.com/MocCommon">
 					<p.MethodDeclaration>
 						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
 							<Parameter Id="L2" Desc="PSDU" />
@@ -2857,6 +2882,7 @@
 							<Parameter Id="R0" Desc="ICP SDU" />
 							<Parameter Id="R1" Desc="output valid" />
 							<Parameter Id="R2" Desc="MPDU generation request" />
+							<Parameter Id="B2" Desc="ACK Received Pulse" />
 						</MethodDeclaration>
 					</p.MethodDeclaration>
 					<Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
@@ -2872,6 +2898,7 @@
 					<Terminal DataType="UInt8" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@f8196e0c0f9e48918de7565dedecf317" Direction="Output" Hotspot="50 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="35 60" Id="B2" xmlns="http://www.ni.com/PlatformFramework" />
 				</MethodCall>
 				<DataAccessor Bounds="752 335 40 15" DataItem="2005" Id="1184" Label="1365" xmlns="http://www.ni.com/MocCommon">
 					<Terminal DataType="@62a197377d2042e98487a474562c9cc1" Direction="Input" Hotspot="3 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
@@ -2924,22 +2951,22 @@
 				<Wire Id="1233" Joints="N(1183:R0) N(1232:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1234" Joints="N(1183:R1) N(1232:L1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1235" Joints="N(1232:R0) N(1194:Value)" xmlns="http://www.ni.com/PlatformFramework" />
-				<IONameConstant Bounds="157 355 260.623322 15" DataType="@2a0b8125125e4dad85c9a51136ac8c90" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1261" Label="1382" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+				<IONameConstant Bounds="157.199982 355 260.42334 15" DataType="@2a0b8125125e4dad85c9a51136ac8c90" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1261" Label="1382" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>"802.11 AFW Resources.grsc\\T2H RX Data"</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1422" Key="InterfaceFilter" Value="Write" />
 					<InstanceDataEntry Id="1423" Key="ElementDataTypeFilter" Value="[Type]UInt8" />
 					<InstanceDataEntry Id="1424" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<Wire Id="1262" Joints="N(1261:Out) h(287.379974) v(-35) N(1232:L3)" xmlns="http://www.ni.com/PlatformFramework" />
-				<IONameConstant Bounds="162 375 253.116669 15" DataType="@6aa1ad1695e44cc7a00e96f2178dd477" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1265" Label="1384" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+				<Wire Id="1262" Joints="N(1261:Out) h(287.38) v(-35) N(1232:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+				<IONameConstant Bounds="162.2 375 252.916672 15" DataType="@6aa1ad1695e44cc7a00e96f2178dd477" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1265" Label="1384" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>"802.11 AFW Resources.grsc\\T2H Events"</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1428" Key="InterfaceFilter" Value="Write" />
 					<InstanceDataEntry Id="1429" Key="ElementDataTypeFilter" Value="[Type]UInt64" />
 					<InstanceDataEntry Id="1430" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<Wire Id="1266" Joints="N(1265:Out) h(231.880035) N(1217:T1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="1266" Joints="N(1265:Out) h(231.88) N(1217:T1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<DataAccessor Bounds="357 250 40 15" DataItem="2018" Id="1267" Label="1385" xmlns="http://www.ni.com/MocCommon">
 					<Terminal DataType="@4188e1e1ee8043e19084b128140c37d1" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 				</DataAccessor>
@@ -2954,34 +2981,36 @@
 				<NodeLabel AttachedTo="1194" Bounds="800 290 122 14" Id="1370" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>T2H RX Data overflow</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1261" Bounds="157 355 0 0" Id="1382" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1261" Bounds="157.199982 355 0 0" Id="1382" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>FIFO reference</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1265" Bounds="162 375 0 0" Id="1384" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1265" Bounds="162.2 375 0 0" Id="1384" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>T2H FIFO reference</p.Text>
 				</NodeLabel>
 				<NodeLabel AttachedTo="1267" Bounds="253 250 99 14" Id="1385" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>MPDU filter config</p.Text>
 				</NodeLabel>
-				<WireComment AttachedTo="3167" Bounds="992 112 154 16" Id="1186" xmlns="http://www.ni.com/PlatformFramework">
-					<p.ExpandedWidth>154</p.ExpandedWidth>
-					<p.Point>1069 120</p.Point>
+				<WireComment AttachedTo="3167" Bounds="992.000061 112 153.6 16" Id="1186" xmlns="http://www.ni.com/PlatformFramework">
+					<p.ExpandedWidth>153.6</p.ExpandedWidth>
+					<p.Point>1068.8 120</p.Point>
 					<p.Text>channel state indication</p.Text>
 				</WireComment>
-				<RegisterRead Bounds="230 75 40 40" Id="1489" />
-				<Wire Id="2506" Joints="N(1489:data) h(367) B(1) h(996) B(2) h(232) N(1524:T0) B(2) N(1493:T2) B(1) N(1217:T0)" xmlns="http://www.ni.com/PlatformFramework" />
-				<WireComment AttachedTo="2506" Bounds="1250 82 140 16" Id="1490" xmlns="http://www.ni.com/PlatformFramework">
+				<RegisterRead Bounds="250 70 40 40" Id="1489" />
+				<Wire Id="2506" Joints="N(1489:data) h(347) B(1) h(163) B(2) h(833) B(3) h(232) N(1524:T0) B(3) N(1493:T2) B(2) v(395) N(3568:L4) B(1) N(1217:T0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<WireComment AttachedTo="2506" Bounds="1250 77 140 16" Id="1490" xmlns="http://www.ni.com/PlatformFramework">
 					<p.ExpandedWidth>140</p.ExpandedWidth>
-					<p.Point>1320 90</p.Point>
+					<p.Point>1320 85</p.Point>
 					<p.Text>global time reference</p.Text>
 				</WireComment>
-				<PropertyNode Bounds="50 90 166 65" HasErrorTerminals="False" Id="2520" InstanceDataType="@927697ed018942d3bb74f0c540f23432" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
-					<PropertyItemTerminal DataType="@77748a8ce7614c8cad3484dc22a37d67" Hotspot="166 45" Id="c0t0v" Path="shared properties" Usage="Optional" />
-					<PropertyItemTerminal DataType="@340eeba9a2174f02b9a9f7a59901433a" Hotspot="166 15" Id="c1t0v" Path="global timestamp" Usage="Optional" />
-					<PropertyItemTerminal DataType="@a33b847508ad45538acec4e18f37e949" Hotspot="166 30" Id="c2t0v" Path="channel state indication" Usage="Optional" />
+				<PropertyNode Bounds="35 90 166.4 95.2" HasErrorTerminals="False" Id="2520" InstanceDataType="@33eb7ac760f34b51974e092c36675167" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
+					<PropertyItemTerminal DataType="@77748a8ce7614c8cad3484dc22a37d67" Hotspot="166.4 45" Id="c0t0v" Path="shared properties" Usage="Optional" />
+					<PropertyItemTerminal DataType="@340eeba9a2174f02b9a9f7a59901433a" Hotspot="166.4 15" Id="c1t0v" Path="global timestamp" Usage="Optional" />
+					<PropertyItemTerminal DataType="@a33b847508ad45538acec4e18f37e949" Hotspot="166.4 30" Id="c2t0v" Path="channel state indication" Usage="Optional" />
+					<PropertyItemTerminal DataType="@9c9c62c553384ff7870fdecdb95837b0" Hotspot="166.4 60" Id="c3t0v" Path="PHY CCA indication" Usage="Optional" />
+					<PropertyItemTerminal DataType="@fe727365e16a43739fc579617e572605" Hotspot="166.4 75" Id="c4t0v" Path="TX after backoff done" Usage="Optional" />
 				</PropertyNode>
 				<Wire Id="2535" Joints="N(2534:i0) N(2520:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wire Id="2542" Joints="N(2520:c1t0v) h(5.399994) v(-25) N(1489:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="2542" Joints="N(2520:c1t0v) h(20) v(-30) N(1489:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="2546" Joints="N(1183:R2) h(9) v(-90) N(1503:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 				<MethodCall Bounds="1800 330 40 40" DomainName="NI.MocCommon" Id="2931" Target="\802\.11\ PHY\-SAP\ Write\ MAC\.gcdl" xmlns="http://www.ni.com/MocCommon">
 					<p.MethodDeclaration>
@@ -2994,7 +3023,7 @@
 							<Parameter Id="R3" Desc="PSDU TX ready for input" />
 						</MethodDeclaration>
 					</p.MethodDeclaration>
-					<Terminal DataType="@9b2df9f52e3b4ffe9721495cc377ea62" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@4acf12b96caa4e30a3bc3bdab660674e" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@9c4d0a96a53f499a9b7a3b2a1719bafc" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="UInt8" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
@@ -3017,7 +3046,7 @@
 							<Parameter Id="B2" Desc="PHY RX Gain change indication" />
 						</MethodDeclaration>
 					</p.MethodDeclaration>
-					<Terminal DataType="@9b2df9f52e3b4ffe9721495cc377ea62" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@4acf12b96caa4e30a3bc3bdab660674e" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@11920cf228224d9ea320e2ad327a9a58" Direction="Output" Hotspot="50 45" Id="R4" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="UInt8" Direction="Output" Hotspot="50 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
@@ -3030,18 +3059,18 @@
 				<Wire Id="2973" Joints="N(2971:R1) h(20) B(1) N(1183:L1) B(1) v(120) N(1217:L2)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="2975" Joints="N(2971:R2) N(1183:L2)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="2976" Joints="N(2971:R3) N(1183:L3)" xmlns="http://www.ni.com/PlatformFramework" />
-				<RegisterRead Bounds="232 160 40 40" Id="2979" />
-				<Wire Id="2980" Joints="N(2520:c0t0v) h(5.399994) v(30) N(2979:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wire Id="2981" Joints="N(2979:data) h(20) v(-15) N(2982:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
-				<PropertyNode Bounds="297 155 145 50" HasErrorTerminals="False" Id="2982" InstanceDataType="@12c639ba0e2443418c6029667435a634" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
-					<PropertyItemTerminal DataType="@c958f15602ab42d89409e77a3ef59694" Hotspot="145 15" Id="c0t0v" Path="format" Usage="Optional" />
-					<PropertyItemTerminal DataType="UInt8[6]" Hotspot="145 30" Id="c1t0v" Path="device MAC address" Usage="Optional" />
+				<RegisterRead Bounds="245 165 40 40" Id="2979" />
+				<Wire Id="2980" Joints="N(2520:c0t0v) h(33.6000061) v(35) N(2979:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="2981" Joints="N(2979:data) h(7) v(-20) N(2982:instance in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<PropertyNode Bounds="297 155 144.8 49.6" HasErrorTerminals="False" Id="2982" InstanceDataType="@12c639ba0e2443418c6029667435a634" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
+					<PropertyItemTerminal DataType="@c958f15602ab42d89409e77a3ef59694" Hotspot="144.8 15" Id="c0t0v" Path="format" Usage="Optional" />
+					<PropertyItemTerminal DataType="UInt8[6]" Hotspot="144.8 30" Id="c1t0v" Path="device MAC address" Usage="Optional" />
 				</PropertyNode>
-				<PropertyNode Bounds="297 210 61 35" HasErrorTerminals="False" Id="2984" InstanceDataType="@d666bd702a6b4c2bb5fa4e5001a66854" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
-					<PropertyItemTerminal DataType="Boolean" Hotspot="61 15" Id="c0t0v" Path="valid" Usage="Optional" />
+				<PropertyNode Bounds="297 210 60.8 35.2" HasErrorTerminals="False" Id="2984" InstanceDataType="@d666bd702a6b4c2bb5fa4e5001a66854" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
+					<PropertyItemTerminal DataType="Boolean" Hotspot="60.8 15" Id="c0t0v" Path="valid" Usage="Optional" />
 				</PropertyNode>
 				<FeedbackNode ArrowDirection="Right" Bounds="487 200 30 30" Id="2987" xmlns="http://www.ni.com/LabVIEW.VI" />
-				<Wire Id="2988" Joints="N(2982:c1t0v) h(5) v(25) N(2987:input)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="2988" Joints="N(2982:c1t0v) h(5.200012) v(25) N(2987:input)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="2989" Joints="N(2984:c0t0v) N(2987:enable?)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="2993" Joints="N(2987:output) h(18) N(1183:T1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<ArrayLiteral Bounds="507 188 12 10" DataType="UInt8[6]" Facade="DockedConstantFacade" Id="2994" Label="2996" xmlns="http://www.ni.com/MocCommon">
@@ -3071,7 +3100,7 @@
 				<Wire Id="3173" Joints="N(1562:R2) N(2931:L2)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="3176" Joints="N(1183:R4) h(20) B(1) v(-205) N(1185:data) B(1) v(70) B(4) N(1217:L0) B(4) v(130) h(1235) N(2931:B0)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="3177" Joints="N(2908:i0) h(24) B(1) h(1770) v(275) N(2931:L0) B(1) v(235) N(2971:L0)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wire Id="3225" Joints="N(2982:c0t0v) h(996) N(1503:T0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="3225" Joints="N(2982:c0t0v) h(996.2) N(1503:T0)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="3425" Joints="N(2971:R4) h(10) B(1) N(1183:L4) B(1) v(100) N(1217:L3)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="3430" Joints="N(2971:B0) v(265) h(1523) B(2) N(1524:L0) B(2) v(-60) B(4) N(1528:L0) B(4) v(-150) N(1493:L5)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="3431" Joints="N(2971:B2) v(105) h(557) N(1217:B0)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -3116,7 +3145,7 @@
 					<BooleanBehavior />
 				</Literal>
 				<Wire Id="3498" Joints="N(3497:Out) N(3445:L7)" xmlns="http://www.ni.com/PlatformFramework" />
-				<ClusterLiteral Bounds="644.8 630 291.75 232" DataType="@49ac3baa4dc34bc6bd43815b759df2c6" Facade="NationalInstruments.MocCommon.SourceModel.IClusterBehavior" Id="3524" xmlns="http://www.ni.com/MocCommon">
+				<ClusterLiteral Bounds="645 630 291.55 232" DataType="@49ac3baa4dc34bc6bd43815b759df2c6" Facade="NationalInstruments.MocCommon.SourceModel.IClusterBehavior" Id="3524" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>
 						<Cluster>
 							<Field1>"802.11 AFW Resources.grsc\\H2T TX Data 0"</Field1>
@@ -3130,35 +3159,35 @@
 						<TypeDefinitionTarget TargetName="H2T\ TX\ Data\ FIFOs\.gtype" />
 					</p.TypeDefinitionTargets>
 					<ClusterBehavior AutoArrange="ArrangeVertically" />
-					<IONameConstant Bounds="5 19 268.75 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3525" Label="3526" UdrClass="Fifo" UdrNamespace="FPGA">
+					<IONameConstant Bounds="5 19 268.55 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3525" Label="3526" UdrClass="Fifo" UdrNamespace="FPGA">
 						<p.Data>"802.11 AFW Resources.grsc\\H2T TX Data 0"</p.Data>
 						<IONameConstantBehavior />
 					</IONameConstant>
 					<NodeLabel AttachedTo="3525" Bounds="5 2 81 14" Id="3526" xmlns="http://www.ni.com/PlatformFramework">
 						<p.Text>H2T TX Data 0</p.Text>
 					</NodeLabel>
-					<IONameConstant Bounds="5 63 268.75 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3527" Label="3528" UdrClass="Fifo" UdrNamespace="FPGA">
+					<IONameConstant Bounds="5 63 268.55 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3527" Label="3528" UdrClass="Fifo" UdrNamespace="FPGA">
 						<p.Data>"802.11 AFW Resources.grsc\\H2T TX Data 1"</p.Data>
 						<IONameConstantBehavior />
 					</IONameConstant>
 					<NodeLabel AttachedTo="3527" Bounds="5 46 81 14" Id="3528" xmlns="http://www.ni.com/PlatformFramework">
 						<p.Text>H2T TX Data 1</p.Text>
 					</NodeLabel>
-					<IONameConstant Bounds="5 107 268.75 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3529" Label="3530" UdrClass="Fifo" UdrNamespace="FPGA">
+					<IONameConstant Bounds="5 107 268.55 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3529" Label="3530" UdrClass="Fifo" UdrNamespace="FPGA">
 						<p.Data>"802.11 AFW Resources.grsc\\H2T TX Data 2"</p.Data>
 						<IONameConstantBehavior />
 					</IONameConstant>
 					<NodeLabel AttachedTo="3529" Bounds="5 90 81 14" Id="3530" xmlns="http://www.ni.com/PlatformFramework">
 						<p.Text>H2T TX Data 2</p.Text>
 					</NodeLabel>
-					<IONameConstant Bounds="5 151 268.75 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3531" Label="3532" UdrClass="Fifo" UdrNamespace="FPGA">
+					<IONameConstant Bounds="5 151 268.55 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3531" Label="3532" UdrClass="Fifo" UdrNamespace="FPGA">
 						<p.Data>"802.11 AFW Resources.grsc\\H2T TX Data 3"</p.Data>
 						<IONameConstantBehavior />
 					</IONameConstant>
 					<NodeLabel AttachedTo="3531" Bounds="5 134 81 14" Id="3532" xmlns="http://www.ni.com/PlatformFramework">
 						<p.Text>H2T TX Data 3</p.Text>
 					</NodeLabel>
-					<IONameConstant Bounds="5 195 268.75 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3533" Label="3534" UdrClass="Fifo" UdrNamespace="FPGA">
+					<IONameConstant Bounds="5 195 268.55 27" DataType="@b9c96ce99be740f5964a0f28c5272ffe" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="3533" Label="3534" UdrClass="Fifo" UdrNamespace="FPGA">
 						<p.Data>"802.11 AFW Resources.grsc\\H2T TX Data 4"</p.Data>
 						<IONameConstantBehavior />
 					</IONameConstant>
@@ -3166,15 +3195,60 @@
 						<p.Text>H2T TX Data 4</p.Text>
 					</NodeLabel>
 				</ClusterLiteral>
+				<RegisterRead Bounds="430 15 40 40" Id="3566" />
+				<Wire Id="3567" Joints="N(2520:c3t0v) h(20) v(-130) N(3566:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="870 435 40 60" DomainName="NI.MocCommon" Id="3568" Target="Check\ ACK\ Received\.gcdl" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="ACK Received Pluse In" />
+							<Parameter Id="L1" Desc="TX after backoff done" />
+							<Parameter Id="L2" Desc="time to wait for CCA signal detect" />
+							<Parameter Id="L3" Desc="time to wait for decoding packet" />
+							<Parameter Id="L4" Desc="global clock counter" />
+							<Parameter Id="L5" Desc="PHY CCA indication" />
+							<Parameter Id="R0" Desc="ACK Received" />
+							<Parameter Id="R1" Desc="ID and Counter" />
+							<Parameter Id="R3" Desc="valid?" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="UInt32" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@11920cf228224d9ea320e2ad327a9a58" Direction="Input" Hotspot="0 55" Id="L5" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@5f6e4920f59d462f99fae48df5265449" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 35" Id="R3" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="3579" Joints="N(3566:data) h(205) v(355) h(96) v(105) N(3568:L5)" xmlns="http://www.ni.com/PlatformFramework" />
+				<DataAccessor Bounds="695 455 40 15" DataItem="3586" Id="3582" Label="3584" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<DataAccessor Bounds="695 480 40 15" DataItem="3587" Id="3583" Label="3585" xmlns="http://www.ni.com/MocCommon">
+					<Terminal DataType="UInt32" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+				</DataAccessor>
+				<NodeLabel AttachedTo="3582" Bounds="503 455 187 14" Id="3584" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>time to wait for CCA signal detect</p.Text>
+				</NodeLabel>
+				<NodeLabel AttachedTo="3583" Bounds="510 480 180 14" Id="3585" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>time to wait for decoding packet</p.Text>
+				</NodeLabel>
+				<Wire Id="3594" Joints="N(3582:Value) N(3568:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="3595" Joints="N(3583:Value) h(5) v(-15) N(3568:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+				<RegisterRead Bounds="805 10 40 40" Id="3605" />
+				<Wire Id="3606" Joints="N(2520:c4t0v) h(8.600006) v(-160) h(590) v(10) N(3605:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="3607" Joints="N(3605:data) h(5) v(425) N(3568:L1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="3608" Joints="N(1183:B2) v(5) h(315) v(85) N(3568:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 				<ClockDrivenLoop.ClockBorderNode Bounds="1 20 22 20" Docking="Left" Id="2497" Terminals="2495=2502" />
 				<ClockDrivenLoop.Tunnel Bounds="-3 95 26 10" Docking="Left" Id="2534" Terminals="o0=3189, i0=2535" />
 				<ClockDrivenLoop.Tunnel Bounds="-3 60 26 10" Docking="Left" Id="2908" Terminals="o0=3191, i0=3177" />
 			</ClockDrivenLoop>
-			<IONameConstant Bounds="-4356 -735 223.176666 15" DataType="@30b93da27ff64f4b958f582c02ad4bdf" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="2500" Label="2501" ShowType="False" UdrClass="Clock" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+			<IONameConstant Bounds="-4355.8 -735 222.976669 15" DataType="@30b93da27ff64f4b958f582c02ad4bdf" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="2500" Label="2501" ShowType="False" UdrClass="Clock" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>"802.11 AFW Resources.grsc\\MAC"</p.Data>
 				<IONameConstantBehavior />
 			</IONameConstant>
-			<NodeLabel AttachedTo="2500" Bounds="-4356 -735 0 0" Id="2501" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+			<NodeLabel AttachedTo="2500" Bounds="-4355.8 -735 0 0" Id="2501" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>clock input</p.Text>
 			</NodeLabel>
 			<Wire Id="2502" Joints="N(2500:Out) N(2497:2495)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -3437,7 +3511,7 @@
 			</NodeLabel>
 			<Wire Id="2840" Joints="N(2643:reference out) h(70) v(-210) N(3005:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3003" Joints="N(2636:reference out) h(30) v(-90) N(3005:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<PropertyNode Bounds="-4315 -700 225 170" HasErrorTerminals="False" Id="3005" InstanceDataType="@9b2df9f52e3b4ffe9721495cc377ea62" Mode="InstanceProperties" Template="List">
+			<PropertyNode Bounds="-4315 -700 224.8 170" HasErrorTerminals="False" Id="3005" InstanceDataType="@4acf12b96caa4e30a3bc3bdab660674e" Mode="InstanceProperties" Template="List">
 				<PropertyItemTerminal Action="Write" DataType="@454b2805d43743acbf51b8b7b64cc032" Hotspot="0 15" Id="c0t0v" Path="PSDU (RX)" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@454b2805d43743acbf51b8b7b64cc032" Hotspot="0 30" Id="c1t0v" Path="PSDU (TX)" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@9c9c62c553384ff7870fdecdb95837b0" Hotspot="0 45" Id="c2t0v" Path="CCA detection" Usage="Required" />
@@ -3802,11 +3876,11 @@
 					<InstanceDataEntry Id="1427" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
 				<Wire Id="1264" Joints="N(1263:Out) N(1228:L3)" xmlns="http://www.ni.com/PlatformFramework" />
-				<PropertyNode Bounds="2103 105 71 35" HasErrorTerminals="False" Id="1275" InstanceDataType="@12c639ba0e2443418c6029667435a634" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
-					<PropertyItemTerminal DataType="@c958f15602ab42d89409e77a3ef59694" Hotspot="71 15" Id="c0t0v" Path="format" Usage="Optional" />
+				<PropertyNode Bounds="2103 105 71.2 35" HasErrorTerminals="False" Id="1275" InstanceDataType="@12c639ba0e2443418c6029667435a634" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
+					<PropertyItemTerminal DataType="@c958f15602ab42d89409e77a3ef59694" Hotspot="71.2 15" Id="c0t0v" Path="format" Usage="Optional" />
 				</PropertyNode>
-				<Wire Id="1276" Joints="N(1275:instance out) h(404) N(1165:T0)" xmlns="http://www.ni.com/PlatformFramework" />
-				<Wire Id="1278" Joints="N(1275:c0t0v) h(79) v(475) N(1249:L2)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="1276" Joints="N(1275:instance out) h(403.800049) N(1165:T0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="1278" Joints="N(1275:c0t0v) h(78.80005) v(475) N(1249:L2)" xmlns="http://www.ni.com/PlatformFramework" />
 				<DataAccessor Bounds="1606 835 40 15" DataItem="2019" Id="1279" Label="1386" xmlns="http://www.ni.com/MocCommon">
 					<Terminal DataType="FXP(10.3)" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 				</DataAccessor>
@@ -4019,7 +4093,7 @@
 							<Parameter Id="B2" Desc="PHY RX AGC state indication" />
 						</MethodDeclaration>
 					</p.MethodDeclaration>
-					<Terminal DataType="@9b2df9f52e3b4ffe9721495cc377ea62" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@4acf12b96caa4e30a3bc3bdab660674e" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="UInt8" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@11920cf228224d9ea320e2ad327a9a58" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
@@ -4341,7 +4415,7 @@
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="15 0" Id="T0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
-					<Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@626049776dd34816b9adc18ebb6be289" Direction="Input" Hotspot="0 45" Id="L4" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="45 0" Id="T3" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@8ace0e2f323d45a39e727dd3d861d388" Direction="Input" Hotspot="55 0" Id="T4" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="CFXP(3.13)" Direction="Output" Hotspot="70 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
@@ -4393,7 +4467,7 @@
 					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Output" Hotspot="50 45" Id="R4" xmlns="http://www.ni.com/PlatformFramework" />
-					<Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Output" Hotspot="50 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@626049776dd34816b9adc18ebb6be289" Direction="Output" Hotspot="50 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
 				</MethodCall>
 				<RegisterRead Bounds="295 400 40 40" Id="1480" />
 				<MethodCall Bounds="557 560 50 50" DomainName="NI.LabVIEW.ExtShared" Id="1481" Target="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__Detect\ Rising\ Edge\.gcdl" xmlns="http://www.ni.com/MocCommon">
@@ -4436,7 +4510,7 @@
 					</p.MethodDeclaration>
 					<Terminal DataType="Boolean" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
-					<Terminal DataType="@74a6a15c09714036a3cf6e04e48709c3" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@626049776dd34816b9adc18ebb6be289" Direction="Input" Hotspot="0 25" Id="L2" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="@2a0b8125125e4dad85c9a51136ac8c90" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="UInt16" Direction="Output" Hotspot="40 5" Id="R0" xmlns="http://www.ni.com/PlatformFramework" />
 				</MethodCall>
@@ -4470,7 +4544,7 @@
 				<Wire Id="1536" Joints="N(1474:R1) N(1531:L1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1544" Joints="N(1481:R2) N(1475:L0)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="1545" Joints="N(1480:data) h(17) v(170) N(1481:L2)" xmlns="http://www.ni.com/PlatformFramework" />
-				<PropertyNode Bounds="70 415 144 80" HasErrorTerminals="False" Id="1546" InstanceDataType="@927697ed018942d3bb74f0c540f23432" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
+				<PropertyNode Bounds="70 415 144 80" HasErrorTerminals="False" Id="1546" InstanceDataType="@33eb7ac760f34b51974e092c36675167" Mode="InstanceProperties" Template="List" xmlns="http://www.ni.com/LabVIEW.VI">
 					<PropertyItemTerminal DataType="@340eeba9a2174f02b9a9f7a59901433a" Hotspot="144 15" Id="c0t0v" Path="global timestamp" Usage="Optional" />
 					<PropertyItemTerminal DataType="@77748a8ce7614c8cad3484dc22a37d67" Hotspot="144 60" Id="c1t0v" Path="shared properties" Usage="Optional" />
 					<PropertyItemTerminal DataType="@fe727365e16a43739fc579617e572605" Hotspot="144 45" Id="c2t0v" Path="TX active" Usage="Optional" />
@@ -4500,7 +4574,7 @@
 					<InstanceDataEntry Id="1630" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
 				<Wire Id="1582" Joints="N(1581:Out) h(572.74) N(1531:T2)" xmlns="http://www.ni.com/PlatformFramework" />
-				<IONameConstant Bounds="275 755 342.526672 15" DataType="@2a0b8125125e4dad85c9a51136ac8c90" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1583" Label="1620" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
+				<IONameConstant Bounds="275.2 755 342.32666 15" DataType="@2a0b8125125e4dad85c9a51136ac8c90" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1583" Label="1620" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>"802.11 AFW Resources.grsc\\T2H TX Bit Processing Output"</p.Data>
 					<IONameConstantBehavior />
 					<InstanceDataEntry Id="1631" Key="InterfaceFilter" Value="Write" />
@@ -4521,7 +4595,7 @@
 							<Parameter Id="R0" Desc="PhyTxStart.req" />
 						</MethodDeclaration>
 					</p.MethodDeclaration>
-					<Terminal DataType="@9b2df9f52e3b4ffe9721495cc377ea62" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@4acf12b96caa4e30a3bc3bdab660674e" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Input" Hotspot="0 35" Id="L3" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="UInt8" Direction="Output" Hotspot="40 15" Id="R1" xmlns="http://www.ni.com/PlatformFramework" />
 					<Terminal DataType="Boolean" Direction="Output" Hotspot="40 25" Id="R2" xmlns="http://www.ni.com/PlatformFramework" />
@@ -4550,12 +4624,12 @@
 				<NodeLabel AttachedTo="1581" Bounds="58.2000122 245 0 0" Id="1619" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>T2H FIFO</p.Text>
 				</NodeLabel>
-				<NodeLabel AttachedTo="1583" Bounds="275 755 0 0" Id="1620" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<NodeLabel AttachedTo="1583" Bounds="275.2 755 0 0" Id="1620" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 					<p.Text>FIFO reference</p.Text>
 				</NodeLabel>
-				<WireComment AttachedTo="1545" Bounds="380 577 105 16" Id="1487" xmlns="http://www.ni.com/PlatformFramework">
-					<p.ExpandedWidth>105</p.ExpandedWidth>
-					<p.Point>432.5 585</p.Point>
+				<WireComment AttachedTo="1545" Bounds="380 577 104.8 16" Id="1487" xmlns="http://www.ni.com/PlatformFramework">
+					<p.ExpandedWidth>104.8</p.ExpandedWidth>
+					<p.Point>432.4 585</p.Point>
 					<p.Text>Symbol trigger</p.Text>
 				</WireComment>
 				<Wire Id="3205" Joints="N(1553:c3t0v) h(10.8000031) v(645) N(1309:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
@@ -4584,9 +4658,9 @@
 			<NodeLabel AttachedTo="3154" Bounds="-4351.8 385 0 0" Id="3155" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
 				<p.Text>clock input</p.Text>
 			</NodeLabel>
-			<Wire Id="3189" Joints="N(1012:instance out) h(72) B(1) v(-445) N(2534:o0) B(1) v(990) B(4) N(3140:o0) B(4) v(845) h(1190) v(160) N(1642:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="3189" Joints="N(1012:instance out) h(72.2001953) B(1) v(-445) N(2534:o0) B(1) v(990) B(4) N(3140:o0) B(4) v(845) h(1190) v(160) N(1642:o0)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3190" Joints="N(3154:Out) N(3056:3054)" xmlns="http://www.ni.com/PlatformFramework" />
-			<Wire Id="3191" Joints="N(3005:instance out) h(10) B(1) N(2908:o0) B(1) v(1105) N(3157:o0)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="3191" Joints="N(3005:instance out) h(10.1999512) B(1) N(2908:o0) B(1) v(1105) N(3157:o0)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3192" Joints="N(1014:instance out) h(51.7998047) B(1) N(3137:o0) B(1) v(965) B(3) h(1190) v(335) N(1643:o0) B(3) v(105) N(1148:o0)" xmlns="http://www.ni.com/PlatformFramework" />
 			<HandshakeCreate Bounds="-4455 -330 40 40" Id="3257" xmlns="http://www.ni.com/LabVIEW.FPGA" />
 			<HandshakeCreate Bounds="-4455 -285 40 40" Id="3258" xmlns="http://www.ni.com/LabVIEW.FPGA" />
@@ -4637,7 +4711,7 @@
 			</NodeLabel>
 			<Wire Id="3367" Joints="N(3257:reference out) h(80) v(-240) N(3005:c8t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3368" Joints="N(3258:reference out) h(90) v(-270) N(3005:c9t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<ClusterLiteral Bounds="-4674 -520 194 452" DataType="@9b2df9f52e3b4ffe9721495cc377ea62" Facade="NationalInstruments.MocCommon.SourceModel.IClusterBehavior" Id="3396" xmlns="http://www.ni.com/MocCommon">
+			<ClusterLiteral Bounds="-4674 -520 194 452" DataType="@4acf12b96caa4e30a3bc3bdab660674e" Facade="NationalInstruments.MocCommon.SourceModel.IClusterBehavior" Id="3396" xmlns="http://www.ni.com/MocCommon">
 				<p.Data>
 					<Cluster>
 						<Field1>""</Field1>
@@ -4727,6 +4801,38 @@
 					<p.Text>PHY RX Gain change indication</p.Text>
 				</NodeLabel>
 			</ClusterLiteral>
+			<NodeLabel AttachedTo="1057" Bounds="-4715 20 0 0" Id="3542" Visible="False" xmlns="http://www.ni.com/PlatformFramework">
+				<p.Text>Cluster Constant</p.Text>
+			</NodeLabel>
+			<RegisterCreate Bounds="-4450 130 40 40" Id="3554" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<ClusterLiteral Bounds="-4462 130 12 10" DataType="@af0324a763564efe8cf8958b5f9056ea" Facade="DockedConstantFacade" Id="3555" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>0_False_</p.Data>
+				<ClusterBehavior />
+				<Literal Bounds="15 25 39.5 16" DataType="UInt8" Facade="NationalInstruments.MocCommon.SourceModel.INumericBehavior" Id="3557" Label="3558">
+					<p.Data>0</p.Data>
+					<NumericBehavior Interpretation="Exact" ValueFormatter="LV:G6" />
+				</Literal>
+				<NodeLabel AttachedTo="3557" Bounds="15 8 150 14" Id="3558" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>CCA energy detection busy</p.Text>
+				</NodeLabel>
+				<Literal Bounds="15 65 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="3559" Label="3560">
+					<p.Data>False</p.Data>
+					<BooleanBehavior />
+				</Literal>
+				<NodeLabel AttachedTo="3559" Bounds="15 48 144 14" Id="3560" xmlns="http://www.ni.com/PlatformFramework">
+					<p.Text>CCA signal betection busy</p.Text>
+				</NodeLabel>
+				<DockedConstantFacade UndockedSize="190 100" />
+			</ClusterLiteral>
+			<Wire Facade="WireInvisibleFacade" Id="3561" Joints="N(3555:Out) N(3554:initial value)" Visible="False" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="3565" Joints="N(3554:reference out) h(70) v(-250) N(1012:c6t0v)" xmlns="http://www.ni.com/PlatformFramework" />
+			<RegisterCreate Bounds="-4450 195 40 40" Id="3601" xmlns="http://www.ni.com/LabVIEW.FPGA" />
+			<Literal Bounds="-4515 200 26 15" DataType="Boolean" Facade="NationalInstruments.MocCommon.SourceModel.IBooleanBehavior" Id="3602" xmlns="http://www.ni.com/MocCommon">
+				<p.Data>False</p.Data>
+				<BooleanBehavior />
+			</Literal>
+			<Wire Id="3603" Joints="N(3602:Out) h(34) v(-5) N(3601:initial value)" xmlns="http://www.ni.com/PlatformFramework" />
+			<Wire Id="3604" Joints="N(3601:reference out) h(80) v(-300) N(1012:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 		</BlockDiagram>
 		<CPFrontPanel Height="[float]1600" Id="13" Left="[float]0" Top="[float]0" Width="[float]2000" />
 		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="32" Name="reg.host read.go rcvd 0" xmlns="http://www.ni.com/MocCommon">
@@ -5071,7 +5177,7 @@
 				<TypeDefinitionTarget TargetName="niUsrpRio\ Config\ v1\ Host\.lvlib__DB\ Types\.gtype" />
 			</p.TypeDefinitionTargets>
 		</DataItem>
-		<DataItem DataType="@3642f56662ca43bf8b748a2b4e12ae7b" Id="2474" Name="antenna configuration" xmlns="http://www.ni.com/MocCommon">
+		<DataItem DataType="@39429cb1963b47e6bc08555e927016ee" Id="2474" Name="antenna configuration" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>0</p.DefaultValue>
 			<p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
 				<TypeDefinitionTarget TargetName="niUsrpRio\ Config\ v1\ Host\.lvlib__Antenna\ Configuration\.gtype" />
@@ -5082,6 +5188,12 @@
 		</DataItem>
 		<DataItem AdaptToDiagramType="True" DataType="Boolean" Id="2488" Name="cpld enable" xmlns="http://www.ni.com/MocCommon">
 			<p.DefaultValue>True</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32" Id="3586" Name="time to wait for CCA signal detect" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
+		</DataItem>
+		<DataItem AdaptToDiagramType="True" DataType="UInt32" Id="3587" Name="time to wait for decoding packet" xmlns="http://www.ni.com/MocCommon">
+			<p.DefaultValue>0</p.DefaultValue>
 		</DataItem>
 		<IconTable xmlns="http://www.ni.com/PlatformFramework">
 			<p.IconModel Target="niInstr\ Register\ Bus\ v1\ FPGA\.lvlib__Process\.gcdl">
@@ -5498,9 +5610,9 @@
 			<p.IconModel Target="\802\.11\ MAC\ RX\.gcdl">
 				<MergeScript>
 					<MergeItem Path="." IsPrimary="True">
-						<Icon ListViewIconCrop="0 0 50 50">
-							<IconPanel Height="[float]50" Left="[float]0" Top="[float]0" Width="[float]50">
-								<Canvas Left="[float]0" Top="[float]0">
+						<Icon ListViewIconCrop="0 0 50 60">
+							<IconPanel Height="[float]60" Left="[float]0" Top="[float]0" Width="[float]50">
+								<Canvas Height="[float]60" Left="[float]0" Top="[float]0" Width="[float]50">
 									<Path Data="[PathGeometry]M 46,50 L 4,50 C 1.791,50 0,48.209 0,46 L 0,4 C 0,1.791 1.791,0 4,0 L 46,0 C 48.209,0 50,1.791 50,4 L 50,46 C 50,48.209 48.209,50 46,50 Z" Fill="[SMSolidColorBrush]#ff727272" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
 									<Path Data="[PathGeometry]M 46,49 L 4,49 C 2.343,49 1,47.657 1,46 L 1,4 C 1,2.343 2.343,1 4,1 L 46,1 C 47.657,1 49,2.343 49,4 L 49,46 C 49,47.657 47.657,49 46,49 Z" Fill="[SMSolidColorBrush]#fff2f2f2" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
 									<Path Data="[PathGeometry]M 4,2 L 46,2 C 47.105,2 48,2.895 48,4 L 48,46 C 48,47.105 47.105,48 46,48 L 4,48 C 2.895,48 2,47.105 2,46 L 2,4 C 2,2.895 2.895,2 4,2 Z" Fill="[SMSolidColorBrush]#ffe5e5e5" Height="[float]50" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" Top="[float]0" Width="[float]50" />
@@ -5618,6 +5730,24 @@
 									</FileNameText>
 								</IconTemplate>
 								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]84" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]44" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
+			<p.IconModel Target="Check\ ACK\ Received\.gcdl">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 60">
+							<IconPanel Height="[float]60" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]Check ACK Received" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]54" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
 							</IconPanel>
 						</Icon>
 					</MergeItem>
@@ -7290,7 +7420,7 @@
 		<p.TypeReference TypeId="88390ab25ecd4637a92bc85a5702e173">
 			<Typedef TypedefName="niUsrpRio Config v1 Host.lvlib__DB Types.gtype" UnderlyingType="@5a5186cc35184cc4af7f00115df6ee10" />
 		</p.TypeReference>
-		<p.TypeReference TypeId="3642f56662ca43bf8b748a2b4e12ae7b">
+		<p.TypeReference TypeId="39429cb1963b47e6bc08555e927016ee">
 			<Typedef TypedefName="niUsrpRio Config v1 Host.lvlib__Antenna Configuration.gtype" UnderlyingType="@5a9ac69e4ac04d3f893166ac2c8252ef" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="94a0671fdf014f698ac2e03e1ea53083">
@@ -7980,7 +8110,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="9857fc51328646069f8a397930352f31">
+		<p.TypeReference TypeId="64665c3f6de44fd5a451140ef4204453">
 			<Attributed>
 				<AttributedType>
 					<Generic>
@@ -8244,7 +8374,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="927697ed018942d3bb74f0c540f23432">
+		<p.TypeReference TypeId="33eb7ac760f34b51974e092c36675167">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
 					<Field FieldAccessPolicy="ReadWrite" Name="global timestamp">
@@ -8673,6 +8803,90 @@
 											</Function>
 										</Members>
 									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="PHY CCA indication">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="24" Name="RegisterDataType" ReferenceClass="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="3" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Composite Id="25" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+												<Members>
+													<Field FieldAccessPolicy="ReadWrite" Name="CCA energy detection busy" DataType="UInt8" />
+													<Field FieldAccessPolicy="ReadWrite" Name="CCA signal detection busy" DataType="Boolean" />
+												</Members>
+											</Composite>
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="26" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="24" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+														<DataType>
+															<Composite RefId="25" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+											<Function Id="27" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="24" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+														<DataType>
+															<Composite RefId="25" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="TX after backoff done">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite RefId="8" />
 								</AttributedType>
 								<AttributeValues>
 									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
@@ -9264,6 +9478,116 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
+		<p.TypeReference TypeId="9c9c62c553384ff7870fdecdb95837b0">
+			<Attributed>
+				<AttributedType>
+					<Composite Id="1" Name="RegisterDataType" ReferenceClass="">
+						<GenericTypeDefinition>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="2" Name="RegisterDataType" ReferenceClass="">
+										<GenericTypeDefinition>
+											<Composite RefId="2" />
+										</GenericTypeDefinition>
+										<GenericParameters>
+											<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+										</GenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="3" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="2" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+														<DataType>
+															<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="2" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+														<DataType>
+															<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</GenericTypeDefinition>
+						<ClosedGenericParameters>
+							<Composite Id="5" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+								<Members>
+									<Field FieldAccessPolicy="ReadWrite" Name="CCA energy detection busy" DataType="UInt8" />
+									<Field FieldAccessPolicy="ReadWrite" Name="CCA signal detection busy" DataType="Boolean" />
+								</Members>
+							</Composite>
+						</ClosedGenericParameters>
+						<BaseType>
+							<Void />
+						</BaseType>
+						<Members>
+							<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+								<DeclaringType>
+									<Composite RefId="1" />
+								</DeclaringType>
+								<GenericTypeDefinition>
+									<Void />
+								</GenericTypeDefinition>
+								<Parameters>
+									<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+										<DataType>
+											<Composite RefId="5" />
+										</DataType>
+									</Parameter>
+								</Parameters>
+							</Function>
+							<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+								<DeclaringType>
+									<Composite RefId="1" />
+								</DeclaringType>
+								<GenericTypeDefinition>
+									<Void />
+								</GenericTypeDefinition>
+								<Parameters>
+									<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+										<DataType>
+											<Composite RefId="5" />
+										</DataType>
+									</Parameter>
+								</Parameters>
+							</Function>
+						</Members>
+					</Composite>
+				</AttributedType>
+				<AttributeValues>
+					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+					<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+				</AttributeValues>
+			</Attributed>
+		</p.TypeReference>
 		<p.TypeReference TypeId="7f56305224174c13b6c48f636677ecd8">
 			<Attributed>
 				<AttributedType>
@@ -9527,6 +9851,14 @@
 							</Composite>
 						</DataType>
 					</Field>
+				</Members>
+			</Composite>
+		</p.TypeReference>
+		<p.TypeReference TypeId="11920cf228224d9ea320e2ad327a9a58">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="CCA energy detection busy" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="CCA signal detection busy" DataType="Boolean" />
 				</Members>
 			</Composite>
 		</p.TypeReference>
@@ -10222,14 +10554,6 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="11920cf228224d9ea320e2ad327a9a58">
-			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
-				<Members>
-					<Field FieldAccessPolicy="ReadWrite" Name="CCA energy detection busy" DataType="UInt8" />
-					<Field FieldAccessPolicy="ReadWrite" Name="CCA signal detection busy" DataType="Boolean" />
-				</Members>
-			</Composite>
-		</p.TypeReference>
 		<p.TypeReference TypeId="a69d22aa383445f7bb785c436062728f">
 			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
 				<Members>
@@ -10356,7 +10680,7 @@
 				</AttributeValues>
 			</Attributed>
 		</p.TypeReference>
-		<p.TypeReference TypeId="9b2df9f52e3b4ffe9721495cc377ea62">
+		<p.TypeReference TypeId="4acf12b96caa4e30a3bc3bdab660674e">
 			<Typedef TypedefName="802.11 PHY-SAP.gtype" UnderlyingType="@3ef5f8af000346bcae89fc3349bcb9ab" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="49ac3baa4dc34bc6bd43815b759df2c6">
@@ -10533,6 +10857,15 @@
 		</p.TypeReference>
 		<p.TypeReference TypeId="aa4d11d2413140ef91e7272bf20eb77b">
 			<Typedef TypedefName="Rx to Tx Wn Data.gtype" UnderlyingType="@8cfbd398d11944a0a9a009500ab6a884" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="5f6e4920f59d462f99fae48df5265449">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="ACK Received Pluse Counter" DataType="Int8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="ACK Received Valid Counter" DataType="Int32" />
+					<Field FieldAccessPolicy="ReadWrite" Name="ID" DataType="Int32" />
+				</Members>
+			</Composite>
 		</p.TypeReference>
 		<p.TypeReference TypeId="454b2805d43743acbf51b8b7b64cc032">
 			<Attributed>
@@ -10766,116 +11099,6 @@
 				<AttributeValues>
 					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
 					<AttributeValue Name="NI_UdrClass" Value="[string]Fifo" />
-					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-				</AttributeValues>
-			</Attributed>
-		</p.TypeReference>
-		<p.TypeReference TypeId="9c9c62c553384ff7870fdecdb95837b0">
-			<Attributed>
-				<AttributedType>
-					<Composite Id="1" Name="RegisterDataType" ReferenceClass="">
-						<GenericTypeDefinition>
-							<Attributed>
-								<AttributedType>
-									<Composite Id="2" Name="RegisterDataType" ReferenceClass="">
-										<GenericTypeDefinition>
-											<Composite RefId="2" />
-										</GenericTypeDefinition>
-										<GenericParameters>
-											<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
-										</GenericParameters>
-										<BaseType>
-											<Void />
-										</BaseType>
-										<Members>
-											<Function Id="3" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
-												<DeclaringType>
-													<Composite RefId="2" />
-												</DeclaringType>
-												<GenericTypeDefinition>
-													<Void />
-												</GenericTypeDefinition>
-												<Parameters>
-													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
-														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
-														</DataType>
-													</Parameter>
-												</Parameters>
-											</Function>
-											<Function Id="4" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
-												<DeclaringType>
-													<Composite RefId="2" />
-												</DeclaringType>
-												<GenericTypeDefinition>
-													<Void />
-												</GenericTypeDefinition>
-												<Parameters>
-													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
-														<DataType>
-															<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
-														</DataType>
-													</Parameter>
-												</Parameters>
-											</Function>
-										</Members>
-									</Composite>
-								</AttributedType>
-								<AttributeValues>
-									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
-									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
-								</AttributeValues>
-							</Attributed>
-						</GenericTypeDefinition>
-						<ClosedGenericParameters>
-							<Composite Id="5" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
-								<Members>
-									<Field FieldAccessPolicy="ReadWrite" Name="CCA energy detection busy" DataType="UInt8" />
-									<Field FieldAccessPolicy="ReadWrite" Name="CCA signal detection busy" DataType="Boolean" />
-								</Members>
-							</Composite>
-						</ClosedGenericParameters>
-						<BaseType>
-							<Void />
-						</BaseType>
-						<Members>
-							<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
-								<DeclaringType>
-									<Composite RefId="1" />
-								</DeclaringType>
-								<GenericTypeDefinition>
-									<Void />
-								</GenericTypeDefinition>
-								<Parameters>
-									<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
-										<DataType>
-											<Composite RefId="5" />
-										</DataType>
-									</Parameter>
-								</Parameters>
-							</Function>
-							<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
-								<DeclaringType>
-									<Composite RefId="1" />
-								</DeclaringType>
-								<GenericTypeDefinition>
-									<Void />
-								</GenericTypeDefinition>
-								<Parameters>
-									<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
-										<DataType>
-											<Composite RefId="5" />
-										</DataType>
-									</Parameter>
-								</Parameters>
-							</Function>
-						</Members>
-					</Composite>
-				</AttributedType>
-				<AttributeValues>
-					<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
-					<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
 					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
 				</AttributeValues>
 			</Attributed>
@@ -12918,8 +13141,16 @@
 				</DataType>
 			</Enumeration>
 		</p.TypeReference>
-		<p.TypeReference TypeId="74a6a15c09714036a3cf6e04e48709c3">
+		<p.TypeReference TypeId="626049776dd34816b9adc18ebb6be289">
 			<Typedef TypedefName="Modulation.gtype" UnderlyingType="@86155ab615ef42daa1e7e4a2d09bd39f" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="af0324a763564efe8cf8958b5f9056ea">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="CCA energy detection busy" DataType="UInt8" />
+					<Field FieldAccessPolicy="ReadWrite" Name="CCA signal betection busy" DataType="Boolean" />
+				</Members>
+			</Composite>
 		</p.TypeReference>
 		<p.TypeReference TypeId="c843328a30f744cbb29e05526807c415">
 			<Generic />

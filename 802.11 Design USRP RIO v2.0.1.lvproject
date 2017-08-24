@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="C2E2F595E1E4F0D24407618396BC8D98" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="F74A94B74E94A21D5AF70AEBFA87B76E" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="Data" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Data" Version="4.5.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="GComponentFeatureSet" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/GComponent.xsd" Version="4.5.0.49152" />
@@ -40,7 +40,7 @@
 							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:eth14" p9:Process.HardwareAlias="Bluetooth Device (Personal Area Network)" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="31" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
-							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:wlan13" p9:Process.HardwareAlias="Intel(R) Centrino(R) Advanced-N 6235" p9:Process.NetworkConfig.Ipv4Address="10.202.36.245" p9:Process.NetworkConfig.Ipv4DnsServer="128.194.254.1" p9:Process.NetworkConfig.Ipv4Gateway="10.202.36.1" p9:Process.NetworkConfig.Ipv4SubnetMask="255.255.254.0" p9:Process.NetworkConfig.NetworkAdapterMode="32" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.DiscoveryAddress="localhost:nisyscfg:wlan13" p9:Process.HardwareAlias="Intel(R) Centrino(R) Advanced-N 6235" p9:Process.NetworkConfig.Ipv4Address="10.202.37.127" p9:Process.NetworkConfig.Ipv4DnsServer="128.194.254.1" p9:Process.NetworkConfig.Ipv4Gateway="10.202.36.1" p9:Process.NetworkConfig.Ipv4SubnetMask="255.255.254.0" p9:Process.NetworkConfig.NetworkAdapterMode="32" p9:Process.NetworkConfig.SupportsConfiguration="False" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
 						<Instance Id="35" Source="{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter">
 							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Common/SystemModel}NetworkAdapter]NetworkAdapter" p9:Process.HardwareAlias="VMware Virtual Ethernet Adapter for VMnet8" xmlns:p9="http://www.ni.com/SystemDesigner/Discovery" xmlns:p8="http://www.ni.com/Core/Proxy" />
@@ -1331,6 +1331,15 @@
 						<Instance Id="128661" Source="{http://www.ni.com/SystemDesigner/Vi}Process.Vi">
 							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Vi}Process.Vi]Process.Vi" p9:Process.AliasName="802.11 Send TX ICP_2.gvi" p9:Process.AssociatedIdentifier="128659" p9:Process.Visible="False" xmlns:p9="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p8="http://www.ni.com/Core/Proxy" />
 						</Instance>
+						<Instance Id="130188" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.SclVi">
+							<Symbols p8:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.SclVi]Process.SclVi" p9:Process.AliasName="FPGA MAC Scheduler.gcdl" p9:Process.AssociatedIdentifier="130185" p9:Process.Visible="False" xmlns:p9="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p8="http://www.ni.com/Core/Proxy" />
+						</Instance>
+						<Instance Id="130256" Source="{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.SclVi">
+							<Symbols p8:Path="[{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.SclVi]Process.SclVi" p9:Process.AliasName="Check ACK Received.gcdl" p9:Process.AssociatedIdentifier="130253" p9:Process.Visible="False" xmlns:p9="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p8="http://www.ni.com/Core/Proxy" />
+						</Instance>
+						<Instance Id="130212" Source="{http://www.ni.com/SystemDesigner/Vi}Process.Vi">
+							<Symbols p8:Path="[{http://www.ni.com/SystemDesigner/Vi}Process.Vi]Process.Vi" p9:Process.AliasName="Configure FPGA MAC.gvi" p9:Process.AssociatedIdentifier="130210" p9:Process.Visible="False" xmlns:p9="http://www.ni.com/SystemDesigner/SystemModel" xmlns:p8="http://www.ni.com/Core/Proxy" />
+						</Instance>
 						<Superimposition Id="7" Name="Root Superimposition">
 							<Superimpose Source="11">
 								<Superimpose Parent="{:/11}[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost/[{http://www.ni.com/SystemDesigner/Common/SystemModel}EthernetConnector]EthernetConnector" Source="27" />
@@ -1415,6 +1424,7 @@
 								<Superimpose Parent="{:/11}[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost" Source="128667" />
 								<Superimpose Parent="{:/11}[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost" Source="128673" />
 								<Superimpose Parent="{:/11}[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost" Source="128679" />
+								<Superimpose Parent="{:/11}[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop/DesktopHost" Source="130212" />
 								<Superimpose Parent="{:/11}[{http://www.ni.com/SystemDesigner/Desktop/SystemModel}Desktop]Desktop" Source="229" />
 							</Superimpose>
 							<Superimpose Source="105770" />
@@ -1716,6 +1726,8 @@
 								<Superimpose Parent="{:/107671}[{http://www.ni.com/SystemDesigner/Usrp/SystemModel}USRP-2953R]USRP-2953R/USRP 294xR; 295xR 120 MSps" Source="123429">
 									<Symbols p10:Path="{:/123429}[{http://www.ni.com/SystemDesigner/Vi}Process.Vi]Process.Vi" p11:Bitfile.AskBeforeOverwrite="True" p11:Bitfile.AutoNumber="False" p11:Bitfile.AutoRun="False" p11:Bitfile.BaseOutputFileName="802.11 FPGA USRP RIO 40 MHz BW STA" p11:Bitfile.BuildName="STA 40" p11:Bitfile.CompilerSymbolNames="" p11:Bitfile.CompilerSymbolValues="" p11:Bitfile.NumberOfAutoNumberDigits="4" p11:Bitfile.OutputFileNameIsCustom="True" p11:Bitfile.ResourceThreshold="80" p11:Bitfile.StartingNumberForAutoNumber="1" xmlns:p11="http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel" xmlns:p10="http://www.ni.com/Core/Proxy" />
 								</Superimpose>
+								<Superimpose Parent="{:/107671}[{http://www.ni.com/SystemDesigner/Usrp/SystemModel}USRP-2953R]USRP-2953R/USRP 294xR; 295xR 120 MSps" Source="130188" />
+								<Superimpose Parent="{:/107671}[{http://www.ni.com/SystemDesigner/Usrp/SystemModel}USRP-2953R]USRP-2953R/USRP 294xR; 295xR 120 MSps" Source="130256" />
 							</Superimpose>
 							<Superimpose Endpoints="{:/229}[{http://www.ni.com/Mxi.Devices.LabVIEW.Extensions/SystemModel}Pcie8371]Pcie8371/[{http://www.ni.com/Mxi.Framework.LabVIEW.Extensions/SystemModel}CopperG1X4Def]Port 1/ExternalPort_CopperG1X4Def,{:/107671}[{http://www.ni.com/SystemDesigner/Usrp/SystemModel}USRP-2953R]USRP-2953R/USRP 294xR; 295xR 120 MSps/[{http://www.ni.com/Mxi.Framework.LabVIEW.Extensions/SystemModel}CopperG1X4Def]PCIe x4 (Upstream)/ExternalPort_CopperG1X4Def" Source="108504" />
 						</Superimposition>
@@ -1914,6 +1926,7 @@
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,ProcessBackedProjectServiceMetaFactory" Id="128665" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ Send\ TX\ ICP_3\.gvi" StoragePath="802.11 v2.0.1\Host\Transmission\802.11 Send TX ICP_3.gvi" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,ProcessBackedProjectServiceMetaFactory" Id="128671" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ Send\ TX\ ICP_4\.gvi" StoragePath="802.11 v2.0.1\Host\Transmission\802.11 Send TX ICP_4.gvi" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,ProcessBackedProjectServiceMetaFactory" Id="128677" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ Send\ TX\ ICP_5\.gvi" StoragePath="802.11 v2.0.1\Host\Transmission\802.11 Send TX ICP_5.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,ProcessBackedProjectServiceMetaFactory" Id="130210" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Configure\ FPGA\ MAC\.gvi" StoragePath="Configure FPGA MAC.gvi" />
 					</EmbeddedDefinitionReference>
 					<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,RepositoryManagerDefinition,EmbeddedReference" Id="63" ModelDefinitionType="RepositoryManagerDefinition" Name="vi\.lib\.Common" Reparentable="False">
 						<RepositoryManagerDefinition Location="&quot;&lt;AppDir&gt;\\Resources\\vi.lib\\Common&quot;" />
@@ -2066,6 +2079,7 @@
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="35818" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="FPGA_Template_NextGen_RemoteCallOpen_InputNames\ in\.gtype" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="35819" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="FPGA_Template_SclRemoteCall_RunSimulation\.gvi" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="125420" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="niUsrpRio\ Time\ v1\ Shared\.lvlib__Time\ Registers\.gtype" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130223" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="niUsrpRio\ Synchronization\ v1\ Shared\.lvlib__Register\ Addresses\.gtype" />
 					</EmbeddedDefinitionReference>
 					<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,RepositoryManagerDefinition,EmbeddedReference" Id="64" ModelDefinitionType="RepositoryManagerDefinition" Name="instr\.lib" Reparentable="False">
 						<RepositoryManagerDefinition Location="&quot;&lt;AppDir&gt;\\Resources\\instr.lib&quot;" />
@@ -2422,6 +2436,44 @@
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="127080" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Unflatten\ Error\ \(multiple\)\.gvi" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="127138" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Check\ for\ Equality\.gvi" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="128683" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Send\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130216" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__FPGA\ Self\ Synchronization\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130217" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Set\ Master\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130218" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Enable\ Measurements\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130219" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Disable\ Measurements\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130220" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Measure\ and\ FPGA\ Align\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130221" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Set\ CPTR\ Period\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130222" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Check\ Versions\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130224" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Try\ to\ Take\ a\ Measurement\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130225" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ Host\.lvlib__Take\ a\ Measurement\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130226" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="MT\ LDPC\ Generate\ Irregular\ Parity\ Check\ Matrix\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130227" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="mod_Validate\ j\ for\ LDPC\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130228" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="mod_LDPC\ Generate\ Irregular\ Matrix\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130229" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="mod_matrix\ rank\ GF\(2\)\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary.Moc,FileReference,SourceFileReference" Id="130230" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="Modulation_nilvdmt\.sli">
+							<NameScopingContentReference Bindings="Envoy,ContentReference,NameScopingContentReference" ContentName="Modulation_nilvdmt.sli" Id="130231" Name="Modulation_nilvdmt\.sli" SynchronizeNameWithOwningEnvoy="True">
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="10" Id="130232" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="createSparseRowMatrix" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="46" Id="130233" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="createSparseColMatrix" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="83" Id="130234" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="LDPCDecodeSparse" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="158" Id="130235" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="RSEncode" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="214" Id="130236" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="RSEncodeShortened" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="266" Id="130237" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="findMatrixInverse" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="298" Id="130238" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="calculateMatrixRankGF2" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="327" Id="130239" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="performConvolutionalEncoding" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="387" Id="130240" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="symbolDetect" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="488" Id="130241" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="ApplyFrequencyOffset" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="533" Id="130242" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="mapBitsToSymbols" />
+								<ContentReference Bindings="Envoy,ContentReference,NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibraryEntryPoint,SharedLibraryEntryPoint,NationalInstruments.ExternalCodeReference.SourceModel.SharedLibraryEntryPointContent.Moc" ContentIdentifier="574" Id="130243" ModelDefinitionType="NationalInstruments.MocCommon.ExternalCode.SourceModel.SharedLibrary" Name="symbolsToBits" />
+							</NameScopingContentReference>
+						</SourceFileReference>
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130244" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="mod_sym_encoder_state\.gtype" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130245" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="mod_sym_encoder_options\.gtype" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130246" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="mod_sym_detect_params\.gtype" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130247" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="mod_sym_detect_state\.gtype" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130248" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="MT\ LDPC\ Generate\ Regular\ Parity\ Check\ Matrix\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130249" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="mod_LDPC\ Find\ 1\'s\ Position\ in\ columns\ \(regular\ matrix\)\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130250" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="mod_LDPC\ Generate\ Matrix\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130251" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="mod_LDPC\ Find\ and\ Replace\ \-1\'s\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc" Id="130252" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="mod_LDPC\ Replace\ \-1\'s\.gvi" />
 					</EmbeddedDefinitionReference>
 					<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.UserDefinedRefnums.UdrRepositoryManagerDefinition,EmbeddedReference" Id="66" ModelDefinitionType="NationalInstruments.LabVIEW.VI.UserDefinedRefnums.UdrRepositoryManagerDefinition" Name="udr\.lib" Reparentable="False">
 						<UDRRepositoryManagerDefinition Location="" />
@@ -3837,6 +3889,10 @@
 							<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="120444" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="TX\ Modulation\ Symbol\.gtype" StoragePath="Common\Types\TX Modulation Symbol.gtype" />
 							<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="120446" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="TX\ Modulation\ Bit\ Mapping\ Scheme\.gtype" StoragePath="Common\Types\TX Modulation Bit Mapping Scheme.gtype" />
 							<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.FPGA.OutsideSingleCycleLoop.Moc" Id="123927" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ FPGA\ STA\.gvi" StoragePath="USRP RIO\802.11 FPGA STA.gvi" />
+							<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130187" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="FPGA\ MAC\ Scheduler\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" StoragePath="FPGA MAC Scheduler.gcdl" />
+							<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130194" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="H2T\ TX\ Data\ FIFOs\.gtype" StoragePath="H2T TX Data FIFOs.gtype" />
+							<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130197" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Rx\ to\ Tx\ Wn\ Data\.gtype" StoragePath="Rx to Tx Wn Data.gtype" />
+							<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130255" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Check\ ACK\ Received\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" StoragePath="Check ACK Received.gcdl" />
 						</EmbeddedDefinitionReference>
 						<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.UserDefinedRefnums.UdrRepositoryManagerDefinition,EmbeddedReference" Id="108377" ModelDefinitionType="NationalInstruments.LabVIEW.VI.UserDefinedRefnums.UdrRepositoryManagerDefinition" Name="udr\.lib" Reparentable="False">
 							<UDRRepositoryManagerDefinition Location="" />
@@ -4364,6 +4420,10 @@
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="120443" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="TX\ Modulation\ Symbol\.gtype" StoragePath="Common\Types\TX Modulation Symbol.gtype" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="120445" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="TX\ Modulation\ Bit\ Mapping\ Scheme\.gtype" StoragePath="Common\Types\TX Modulation Bit Mapping Scheme.gtype" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,ContentKind_{http://www.ni.com/SystemDesigner/Vi}Process.Vi,ProcessBackedProjectServiceMetaFactory,NationalInstruments.LabVIEW.FPGA.OutsideSingleCycleLoop.Moc" Id="118918" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ FPGA\ STA\.gvi" StoragePath="USRP RIO\802.11 FPGA STA.gvi" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.SclVi,ProcessBackedProjectServiceMetaFactory" Id="130185" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="FPGA\ MAC\ Scheduler\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" StoragePath="FPGA MAC Scheduler.gcdl" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130192" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="H2T\ TX\ Data\ FIFOs\.gtype" StoragePath="H2T TX Data FIFOs.gtype" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130195" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Rx\ to\ Tx\ Wn\ Data\.gtype" StoragePath="Rx to Tx Wn Data.gtype" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,ContentKind_{http://www.ni.com/LabVIEW.FPGA/SystemDesigner/SystemModel}Process.SclVi,ProcessBackedProjectServiceMetaFactory" Id="130253" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Check\ ACK\ Received\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" StoragePath="Check ACK Received.gcdl" />
 					</EmbeddedDefinitionReference>
 					<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.UserDefinedRefnums.UdrRepositoryManagerDefinition,EmbeddedReference" Id="108382" ModelDefinitionType="NationalInstruments.LabVIEW.VI.UserDefinedRefnums.UdrRepositoryManagerDefinition" Name="udr\.lib" Reparentable="False">
 						<UDRRepositoryManagerDefinition Location="" />
@@ -4556,6 +4616,25 @@
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.FPGA.OutsideSingleCycleLoop.Moc" Id="117902" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="FPGA_Template_EmulationFifoFullThreshold\.gvi" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.FPGA.OutsideSingleCycleLoop.Moc" Id="117904" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="FPGA_Template_EmulationHandshakeWrite\.gvi" />
 						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.FPGA.OutsideSingleCycleLoop.Moc" Id="117905" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="nifxpmath_Atan2Temp\.gvi" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130260" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Synchronize\ over\ AUX\ IO\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130261" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Host\ Align\ Bus\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130262" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Synchronize\ Signal\ Bus\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130263" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Delta\ Between\ Signals\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130264" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Broadcast\ on\ FPGA\ IO\ Bus\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130265" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Signal\ Out\ High\ For\ Next\ Two\ Edges\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130266" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Read\ cptr\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130267" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Process\ CPTR\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130268" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Write\ meas\.value\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130269" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Write\ meas\.valid\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130270" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Write\ meas\.ready\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130271" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niInstr\ Overclocked\ TDC\ v1\ FPGA\.lvlib__Overclocked\ TDC\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<FileReference Bindings="Envoy,DefinitionReference,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.Project.SourceModel.IPIntegrationModelDefinition,FileReference" Id="130272" ModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.Project.SourceModel.IPIntegrationModelDefinition" Name="TDC\.eip" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130273" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__Write\ cptr\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130283" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niInstr\ Basic\ Elements\ v1\ FPGA\.lvlib__D\ Latch\ U8\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130284" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__FPGA\ Align\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130285" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="niUsrpRio\ Synchronization\ v1\ FPGA\.lvlib__CPTR\ Align\ Math\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.FPGA.OutsideSingleCycleLoop.Moc" Id="130286" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="nifxpmath_SubtracterTemp\.gvi" />
+						<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference,NationalInstruments.LabVIEW.FPGA.OutsideSingleCycleLoop.Moc" Id="130287" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="nifxpmath_AdderTemp\.gvi" />
 					</EmbeddedDefinitionReference>
 					<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,RepositoryManagerDefinition,EmbeddedReference" Id="108384" ModelDefinitionType="RepositoryManagerDefinition" Name="vi\.lib\.Common" Reparentable="False">
 						<RepositoryManagerDefinition Location="&quot;&lt;AppDir&gt;\\Resources\\vi.lib\\Common&quot;" />
@@ -5098,6 +5177,11 @@
 				<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,FileReference,SourceFileReference" Id="128666" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ Send\ TX\ ICP_3\.gvi" StoragePath="802.11 v2.0.1\Host\Transmission\802.11 Send TX ICP_3.gvi" />
 				<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,FileReference,SourceFileReference" Id="128672" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ Send\ TX\ ICP_4\.gvi" StoragePath="802.11 v2.0.1\Host\Transmission\802.11 Send TX ICP_4.gvi" />
 				<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,FileReference,SourceFileReference" Id="128678" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="\802\.11\ Send\ TX\ ICP_5\.gvi" StoragePath="802.11 v2.0.1\Host\Transmission\802.11 Send TX ICP_5.gvi" />
+				<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130186" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="FPGA\ MAC\ Scheduler\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" StoragePath="FPGA MAC Scheduler.gcdl" />
+				<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130193" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="H2T\ TX\ Data\ FIFOs\.gtype" StoragePath="H2T TX Data FIFOs.gtype" />
+				<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.MocCommon.Modeling.TypeDefinition,FileReference,SourceFileReference" Id="130196" ModelDefinitionType="NationalInstruments.MocCommon.Modeling.TypeDefinition" Name="Rx\ to\ Tx\ Wn\ Data\.gtype" StoragePath="Rx to Tx Wn Data.gtype" />
+				<SourceFileReference Bindings="Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument.Moc,FileReference,SourceFileReference" Id="130211" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Configure\ FPGA\ MAC\.gvi" StoragePath="Configure FPGA MAC.gvi" />
+				<SourceFileReference Bindings="NationalInstruments.LabVIEW.FPGA.InsideSingleCycleLoop.Moc,SCL,NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic,Envoy,DefinitionReference,NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument,FileReference,SourceFileReference" Id="130254" ModelDefinitionType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Name="Check\ ACK\ Received\.gcdl" OverridingModelDefinitionType="NationalInstruments.Restricted.LabVIEW.FPGA.Editor.ClockDrivenLogic" StoragePath="Check ACK Received.gcdl" />
 			</EmbeddedDefinitionReference>
 			<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,PackageReferencesDefinition,EmbeddedReference" Id="67" ModelDefinitionType="PackageReferencesDefinition" Name="ProjectReferences">
 				<PackageReferencesDefinition xmlns="http://www.ni.com/GComponent.xsd" />
@@ -5211,6 +5295,15 @@
 					</EmbeddedDefinitionReference>
 				</EmbeddedDefinitionReference>
 			</EmbeddedDefinitionReference>
+			<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,TDMSRootDefinition,EmbeddedReference" Id="130277" ModelDefinitionType="TDMSRootDefinition" Name="TDMS_Root_2">
+				<TDMSRootDefinition StoragePath="Data-2017-08-23 215753 814.tdms" xmlns="http://www.ni.com/Data" />
+				<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,TDMSGroupDefinition,EmbeddedReference" Id="130278" ModelDefinitionType="TDMSGroupDefinition" Name="TDMS_GROUP_2">
+					<TDMSGroupDefinition GroupName="Capture 2" Source="802.11 FPGA STA.gvi" SourceType="NationalInstruments.LabVIEW.VI.Modeling.VirtualInstrument" Timestamp="08/23/2017 21:57:53" xmlns="http://www.ni.com/Data" />
+					<EmbeddedDefinitionReference Bindings="Envoy,DefinitionReference,TDMSDataItemDefinition,ProjectDefaultDragDropServiceOptOut,ProjectDefaultCopyPasteServiceOptOut,EmbeddedReference" Id="130279" ModelDefinitionType="TDMSDataItemDefinition" Name="Cluster\ Constant">
+						<TDMSDataItemDefinition DataName="Cluster Constant" DataType="@14a5acf6ca614c0eb5ca8c787581ee6a" xmlns="http://www.ni.com/Data" />
+					</EmbeddedDefinitionReference>
+				</EmbeddedDefinitionReference>
+			</EmbeddedDefinitionReference>
 		</NameScopingEnvoy>
 	</Project>
 	<ProjectInformation Author="" xmlns="http://www.ni.com/PlatformFramework">
@@ -5245,6 +5338,9 @@
 		</p.TypeReference>
 		<p.TypeReference TypeId="e03d618dfcd1415a8e51e568a5a869e0">
 			<Typedef TypedefName="802.11 FGPA Reference.gtype" UnderlyingType="@e30c50d8f39a4f6b865e4307c32f28b3" />
+		</p.TypeReference>
+		<p.TypeReference TypeId="14a5acf6ca614c0eb5ca8c787581ee6a">
+			<Typedef TypedefName="Cluster Constant.gtype" UnderlyingType="@927697ed018942d3bb74f0c540f23432" />
 		</p.TypeReference>
 		<p.TypeReference TypeId="e30c50d8f39a4f6b865e4307c32f28b3">
 			<Attributed>
@@ -10798,6 +10894,447 @@
 					<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
 				</AttributeValues>
 			</Attributed>
+		</p.TypeReference>
+		<p.TypeReference TypeId="927697ed018942d3bb74f0c540f23432">
+			<Composite Id="1" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+				<Members>
+					<Field FieldAccessPolicy="ReadWrite" Name="global timestamp">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="2" Name="RegisterDataType" ReferenceClass="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite Id="3" Name="RegisterDataType" ReferenceClass="">
+														<GenericTypeDefinition>
+															<Composite RefId="3" />
+														</GenericTypeDefinition>
+														<GenericParameters>
+															<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+														</GenericParameters>
+														<BaseType>
+															<Void />
+														</BaseType>
+														<Members>
+															<Function Id="4" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="3" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+																		</DataType>
+																	</Parameter>
+																</Parameters>
+															</Function>
+															<Function Id="5" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+																<DeclaringType>
+																	<Composite RefId="3" />
+																</DeclaringType>
+																<GenericTypeDefinition>
+																	<Void />
+																</GenericTypeDefinition>
+																<Parameters>
+																	<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+																		<DataType>
+																			<Typedef TypedefName="Element" UnderlyingType="@c843328a30f744cbb29e05526807c415" />
+																		</DataType>
+																	</Parameter>
+																</Parameters>
+															</Function>
+														</Members>
+													</Composite>
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<UInt32 />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="6" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="2" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="UInt32" />
+												</Parameters>
+											</Function>
+											<Function Id="7" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="2" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="UInt32" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="OFDM symbol pulse">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="8" Name="RegisterDataType" ReferenceClass="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="3" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Boolean />
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="9" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="8" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data" DataType="Boolean" />
+												</Parameters>
+											</Function>
+											<Function Id="10" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="8" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data" DataType="Boolean" />
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="TX active">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite RefId="8" />
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="channel state indication">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="11" Name="RegisterDataType" ReferenceClass="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="3" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Composite Id="12" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+												<Members>
+													<Field FieldAccessPolicy="ReadWrite" Name="CCA energy detection busy" DataType="UInt8" />
+													<Field FieldAccessPolicy="ReadWrite" Name="CCA signal detection busy" DataType="Boolean" />
+													<Field FieldAccessPolicy="ReadWrite" Name="frame timing valid" DataType="Boolean" />
+													<Field FieldAccessPolicy="ReadWrite" Name="frame timing value" DataType="UInt32" />
+													<Field FieldAccessPolicy="ReadWrite" Name="frame timing use DIFS" DataType="Boolean" />
+												</Members>
+											</Composite>
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="13" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="11" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+														<DataType>
+															<Composite RefId="12" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+											<Function Id="14" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="11" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+														<DataType>
+															<Composite RefId="12" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="MPDU generation request">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="15" Name="RegisterDataType" ReferenceClass="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="3" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Composite Id="16" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+												<Members>
+													<Field FieldAccessPolicy="ReadWrite" Name="MPDU subtype">
+														<DataType>
+															<Enumeration>
+																<Members>
+																	<EnumerationMember Value="0" Name="ACK" />
+																</Members>
+																<DataType>
+																	<UInt16 />
+																</DataType>
+															</Enumeration>
+														</DataType>
+													</Field>
+													<Field FieldAccessPolicy="ReadWrite" Name="destination MAC address">
+														<DataType>
+															<SizedArray LowerBound="6" UpperBound="6" DereferenceType="UInt8" />
+														</DataType>
+													</Field>
+													<Field FieldAccessPolicy="ReadWrite" Name="valid" DataType="Boolean" />
+												</Members>
+											</Composite>
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="17" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="15" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+														<DataType>
+															<Composite RefId="16" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+											<Function Id="18" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="15" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+														<DataType>
+															<Composite RefId="16" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+					<Field FieldAccessPolicy="ReadWrite" Name="shared properties">
+						<DataType>
+							<Attributed>
+								<AttributedType>
+									<Composite Id="19" Name="RegisterDataType" ReferenceClass="">
+										<GenericTypeDefinition>
+											<Attributed>
+												<AttributedType>
+													<Composite RefId="3" />
+												</AttributedType>
+												<AttributeValues>
+													<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+													<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+													<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+												</AttributeValues>
+											</Attributed>
+										</GenericTypeDefinition>
+										<ClosedGenericParameters>
+											<Composite Id="20" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+												<Members>
+													<Field FieldAccessPolicy="ReadWrite" Name="format">
+														<DataType>
+															<Enumeration>
+																<Members>
+																	<EnumerationMember Value="0" Name="a" />
+																	<EnumerationMember Value="1" Name="ac" />
+																</Members>
+																<DataType>
+																	<UInt16 />
+																</DataType>
+															</Enumeration>
+														</DataType>
+													</Field>
+													<Field FieldAccessPolicy="ReadWrite" Name="channel selector">
+														<DataType>
+															<UFXP Right="0" Left="2" />
+														</DataType>
+													</Field>
+													<Field FieldAccessPolicy="ReadWrite" Name="device MAC address">
+														<DataType>
+															<SizedArray LowerBound="6" UpperBound="6" DereferenceType="UInt8" />
+														</DataType>
+													</Field>
+													<Field FieldAccessPolicy="ReadWrite" Name="DC centered signal" DataType="Boolean" />
+													<Field FieldAccessPolicy="ReadWrite" Name="supported bandwidths">
+														<DataType>
+															<Composite Id="21" Name="" Cluster="" GenericTypeDefinition="Void" BaseType="Void">
+																<Members>
+																	<Field FieldAccessPolicy="ReadWrite" Name="5 MHz" DataType="Boolean" />
+																	<Field FieldAccessPolicy="ReadWrite" Name="10 MHz" DataType="Boolean" />
+																	<Field FieldAccessPolicy="ReadWrite" Name="20 MHz" DataType="Boolean" />
+																	<Field FieldAccessPolicy="ReadWrite" Name="40 MHz" DataType="Boolean" />
+																	<Field FieldAccessPolicy="ReadWrite" Name="80 Mhz" DataType="Boolean" />
+																	<Field FieldAccessPolicy="ReadWrite" Name="160 MHz" DataType="Boolean" />
+																</Members>
+															</Composite>
+														</DataType>
+													</Field>
+												</Members>
+											</Composite>
+										</ClosedGenericParameters>
+										<BaseType>
+											<Void />
+										</BaseType>
+										<Members>
+											<Function Id="22" IsStatic="False" IsConstructor="False" Name="Read" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="19" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="NotAllowed" OutputParameterPassingRule="Optional" Name="data">
+														<DataType>
+															<Composite RefId="20" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+											<Function Id="23" IsStatic="False" IsConstructor="False" Name="Write" ReturnType="Void">
+												<DeclaringType>
+													<Composite RefId="19" />
+												</DeclaringType>
+												<GenericTypeDefinition>
+													<Void />
+												</GenericTypeDefinition>
+												<Parameters>
+													<Parameter InputParameterPassingRule="Required" OutputParameterPassingRule="NotAllowed" Name="data">
+														<DataType>
+															<Composite RefId="20" />
+														</DataType>
+													</Parameter>
+												</Parameters>
+											</Function>
+										</Members>
+									</Composite>
+								</AttributedType>
+								<AttributeValues>
+									<AttributeValue Name="NI_PlatformFramework_RefnumAttributes" Value="[NI_PlatformFramework_RefnumAttributes]TagRefnum" />
+									<AttributeValue Name="NI_UdrClass" Value="[string]Register" />
+									<AttributeValue Name="NI_UdrNamespace" Value="[string]FPGA" />
+								</AttributeValues>
+							</Attributed>
+						</DataType>
+					</Field>
+				</Members>
+			</Composite>
 		</p.TypeReference>
 		<p.TypeReference TypeId="c843328a30f744cbb29e05526807c415">
 			<Generic />
