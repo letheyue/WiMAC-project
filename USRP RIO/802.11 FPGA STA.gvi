@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="3375F20EBB643869311FEC8A554EF8EB" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="8F182666EDC31DA7905FD9A2A66C6CB8" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW Controls" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/Controls.LabVIEW.Design" Version="4.5.0.49153" />
 		<ParsableNamespace AssemblyFileVersion="4.5.2.51305" FeatureSetName="LabVIEW FPGA" MinimumParsableVersion="4.5.0.0" MinimumSemanticallyEquivalentVersion="4.5.0.0" Name="http://www.ni.com/LabVIEW.FPGA" Version="4.5.0.49152" />
@@ -2958,7 +2958,7 @@
 					<InstanceDataEntry Id="1423" Key="ElementDataTypeFilter" Value="[Type]UInt8" />
 					<InstanceDataEntry Id="1424" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<Wire Id="1262" Joints="N(1261:Out) h(287.38) v(-35) N(1232:L3)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="1262" Joints="N(1261:Out) h(287.379974) v(-35) N(1232:L3)" xmlns="http://www.ni.com/PlatformFramework" />
 				<IONameConstant Bounds="162.2 375 252.916672 15" DataType="@6aa1ad1695e44cc7a00e96f2178dd477" Facade="NationalInstruments.MocCommon.SourceModel.IIONameConstantBehavior" Id="1265" Label="1384" ShowType="False" UdrClass="Fifo" UdrNamespace="FPGA" xmlns="http://www.ni.com/MocCommon">
 					<p.Data>"802.11 AFW Resources.grsc\\T2H Events"</p.Data>
 					<IONameConstantBehavior />
@@ -2966,7 +2966,7 @@
 					<InstanceDataEntry Id="1429" Key="ElementDataTypeFilter" Value="[Type]UInt64" />
 					<InstanceDataEntry Id="1430" Key="ElementShapeFilter" Value="Scalar" />
 				</IONameConstant>
-				<Wire Id="1266" Joints="N(1265:Out) h(231.88) N(1217:T1)" xmlns="http://www.ni.com/PlatformFramework" />
+				<Wire Id="1266" Joints="N(1265:Out) h(231.880035) N(1217:T1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<DataAccessor Bounds="357 250 40 15" DataItem="2018" Id="1267" Label="1385" xmlns="http://www.ni.com/MocCommon">
 					<Terminal DataType="@4188e1e1ee8043e19084b128140c37d1" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
 				</DataAccessor>
@@ -3240,6 +3240,17 @@
 				<Wire Id="3606" Joints="N(2520:c4t0v) h(8.600006) v(-160) h(590) v(10) N(3605:reference in)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="3607" Joints="N(3605:data) h(5) v(425) N(3568:L1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<Wire Id="3608" Joints="N(1183:B2) v(5) h(315) v(85) N(3568:L0)" xmlns="http://www.ni.com/PlatformFramework" />
+				<MethodCall Bounds="980 435 40 40" DomainName="NI.MocCommon" Id="3609" Target="calculator\.gcdl" xmlns="http://www.ni.com/MocCommon">
+					<p.MethodDeclaration>
+						<MethodDeclaration xmlns="http://www.ni.com/PlatformFramework">
+							<Parameter Id="L0" Desc="payload" />
+							<Parameter Id="L1" Desc="ID and Counter" />
+						</MethodDeclaration>
+					</p.MethodDeclaration>
+					<Terminal DataType="UInt8[]" Direction="Input" Id="L0" xmlns="http://www.ni.com/PlatformFramework" />
+					<Terminal DataType="@5f6e4920f59d462f99fae48df5265449" Direction="Input" Hotspot="0 15" Id="L1" xmlns="http://www.ni.com/PlatformFramework" />
+				</MethodCall>
+				<Wire Id="3610" Joints="N(3568:R1) N(3609:L1)" xmlns="http://www.ni.com/PlatformFramework" />
 				<ClockDrivenLoop.ClockBorderNode Bounds="1 20 22 20" Docking="Left" Id="2497" Terminals="2495=2502" />
 				<ClockDrivenLoop.Tunnel Bounds="-3 95 26 10" Docking="Left" Id="2534" Terminals="o0=3189, i0=2535" />
 				<ClockDrivenLoop.Tunnel Bounds="-3 60 26 10" Docking="Left" Id="2908" Terminals="o0=3191, i0=3177" />
@@ -3511,7 +3522,7 @@
 			</NodeLabel>
 			<Wire Id="2840" Joints="N(2643:reference out) h(70) v(-210) N(3005:c7t0v)" xmlns="http://www.ni.com/PlatformFramework" />
 			<Wire Id="3003" Joints="N(2636:reference out) h(30) v(-90) N(3005:c3t0v)" xmlns="http://www.ni.com/PlatformFramework" />
-			<PropertyNode Bounds="-4315 -700 224.8 170" HasErrorTerminals="False" Id="3005" InstanceDataType="@4acf12b96caa4e30a3bc3bdab660674e" Mode="InstanceProperties" Template="List">
+			<PropertyNode Bounds="-4315 -700 224.8 169.6" HasErrorTerminals="False" Id="3005" InstanceDataType="@4acf12b96caa4e30a3bc3bdab660674e" Mode="InstanceProperties" Template="List">
 				<PropertyItemTerminal Action="Write" DataType="@454b2805d43743acbf51b8b7b64cc032" Hotspot="0 15" Id="c0t0v" Path="PSDU (RX)" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@454b2805d43743acbf51b8b7b64cc032" Hotspot="0 30" Id="c1t0v" Path="PSDU (TX)" Usage="Required" />
 				<PropertyItemTerminal Action="Write" DataType="@9c9c62c553384ff7870fdecdb95837b0" Hotspot="0 45" Id="c2t0v" Path="CCA detection" Usage="Required" />
@@ -5196,6 +5207,24 @@
 			<p.DefaultValue>0</p.DefaultValue>
 		</DataItem>
 		<IconTable xmlns="http://www.ni.com/PlatformFramework">
+			<p.IconModel Target="calculator\.gcdl">
+				<MergeScript>
+					<MergeItem Path="." IsPrimary="True">
+						<Icon ListViewIconCrop="0 0 40 40">
+							<IconPanel Height="[float]40" Left="[float]0" Top="[float]0" Width="[float]40">
+								<IconTemplate ClipMargin="[SMThickness]3,3,3,3" Left="[float]0" TemplateName="Gray" Top="[float]0">
+									<Rectangle Fill="[SMSolidColorBrush]#ff727272" IsHitTestVisible="[bool]False" Left="[float]0" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]4" RadiusY="[float]4" Top="[float]0" />
+									<Rectangle Fill="[SMSolidColorBrush]#ffe5e5e5" IsHitTestVisible="[bool]False" Left="[float]0" Margin="[SMThickness]1,1,1,1" MinHeight="[float]1" MinWidth="[float]1" RadiusX="[float]2.5" RadiusY="[float]2.5" Stroke="[SMSolidColorBrush]#fff2f2f2" Top="[float]0" />
+									<FileNameText Attached="[bool]True" Left="[float]0" Margin="[SMThickness]2,2,2,2" SizeMode="[TextModelSizeMode]AutoFont" Text="[string]calculator" TextAlignment="[TextAlignment]Center" TextWrapping="[TextWrapping]Wrap" Top="[float]0" VerticalScrollBarVisibility="[ScrollBarVisibility]Hidden">
+										<FontSetting FontFamily="Verdana" FontSize="6" />
+									</FileNameText>
+								</IconTemplate>
+								<Canvas Background="[SMSolidColorBrush]#00ffffff" ClipToBounds="[bool]True" Height="[float]34" Left="[float]0" Margin="[SMThickness]3,3,3,3" MinHeight="[float]0" MinWidth="[float]0" Top="[float]0" Width="[float]34" />
+							</IconPanel>
+						</Icon>
+					</MergeItem>
+				</MergeScript>
+			</p.IconModel>
 			<p.IconModel Target="niInstr\ Register\ Bus\ v1\ FPGA\.lvlib__Process\.gcdl">
 				<MergeScript>
 					<MergeItem Path="." IsPrimary="True">
